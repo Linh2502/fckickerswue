@@ -216,7 +216,7 @@ angular.module('starter', [
         views: {
           'menuContent': {
             templateUrl: 'templates/matchcenter.html',
-            controller: 'MatchCenterCtrl'
+            controller: 'MatchCenterCtrl as mcVM'
           }
         }
       })

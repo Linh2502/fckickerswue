@@ -53,7 +53,7 @@
               vm.detailsFeed = success.data.details;
               setLiveTickerTime();
               checkLiveTicker();
-              $rootScope.$broadcast('show_loader');
+              $rootScope.$broadcast('hide_loader');
             });
       });
     }

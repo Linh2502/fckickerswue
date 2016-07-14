@@ -17,7 +17,7 @@
       <div class="matchcenter-liveticker custom-title">
         <div class="row">
           <div class="col col-25"></div>
-          <div class="col col-50">{{detailsFeed.matchday}}</div>
+          <div class="col col-50">{{mcVM.detailsFeed.matchday}}</div>
           <div class="col col-25 text-align-right">
             <img src="img/bilddaten/3x/logo-dfl-dritte-liga@3x.png" class="spiel-feed-matchcenter-emptyheight" />
           </div>
@@ -27,50 +27,50 @@
     <div class="row custom-row-border">
       <div class="col col-40 col-center remove-col-padding text-align-center">
         <div class="text-align-center">
-          <img src="{{detailsFeed.logo_home}}" class="soccer-logo" image-lazy-loader="dots"/>
+          <img src="{{mcVM.detailsFeed.logo_home}}" class="soccer-logo" image-lazy-loader="dots"/>
         </div>
-        <div class="game-soccerteam-fontstyle">{{detailsFeed.team_home}}</div>
+        <div class="game-soccerteam-fontstyle">{{mcVM.detailsFeed.team_home}}</div>
       </div>
       <div class="col col-20 col-center remove-col-padding">
-        <div class="news-games-result">{{detailsFeed.result}}</div>
+        <div class="news-games-result">{{mcVM.detailsFeed.result}}</div>
       </div>
       <div class="col col-40 col-center remove-col-padding text-align-center">
         <div class="text-align-center">
-          <img src="{{detailsFeed.logo_away}}" class="soccer-logo" image-lazy-loader="dots"/>
+          <img src="{{mcVM.detailsFeed.logo_away}}" class="soccer-logo" image-lazy-loader="dots"/>
         </div>
-        <div class="game-soccerteam-fontstyle">{{detailsFeed.team_away}}</div>
+        <div class="game-soccerteam-fontstyle">{{mcVM.detailsFeed.team_away}}</div>
       </div>
     </div>
     <tab-slide-box>
       <div class="col tsb-icons matchcenter-slide-box-title">
-        <div class="col custom-col-5 matchcenter-caret-left" ng-click="previousView()">
+        <div class="col custom-col-5 matchcenter-caret-left" ng-click="mcVM.previousView()">
           <div class="col">
             <i class="fa fa-caret-left singleplayer-caret-size"></i>
           </div>
         </div>
-        <div class="col custom-col-5 matchcenter-caret-right" ng-click="nextView()">
+        <div class="col custom-col-5 matchcenter-caret-right" ng-click="mcVM.nextView()">
           <div class="col">
             <i class="fa fa-caret-right singleplayer-caret-size"></i>
           </div>
         </div>
         <div class="col custom-title tsb-ic-wrp matchcenter-slide-box-width">
-          <div class="row remove-col-padding matchcenter-slide-box-width" ng-if="isLive">
+          <div class="row remove-col-padding matchcenter-slide-box-width" ng-if="mcVM.isLive">
             <span class="col vertical-align-mid font-size font-color-gray">Spielbericht</span>
             <span class="col vertical-align-mid font-size font-color-gray">Daten</span>
             <span class="col vertical-align-mid font-size tabelle-font-color">Live-Ticker</span>
             <span class="col vertical-align-mid font-size font-color-gray">Kickers TV</span>
-            <span ng-show="detailsFeed.matchday.indexOf('Liga-Spiel') > -1" class="col vertical-align-mid font-size font-color-gray">Tabelle</span>
+            <span ng-show="mcVM.detailsFeed.matchday.indexOf('Liga-Spiel') > -1" class="col vertical-align-mid font-size font-color-gray">Tabelle</span>
           </div>
           <div class="row remove-col-padding matchcenter-slide-box-width" id="standard">
-            <span class="col vertical-align-mid font-size" ng-click="loadDetailsFeed()"><a class="remove-href-link font-size" href="javascript:;">Spielbericht</a></span>
-            <span class="col vertical-align-mid font-size" ng-click="loadDetailsFeed()"><a class="remove-href-link font-size" href="javascript:;">Daten</a></span>
-            <span class="col vertical-align-mid font-size" ng-click="loadLiveTicker()"><a class="remove-href-link font-size" href="javascript:;">Live-Ticker</a></span>
-            <span class="col vertical-align-mid font-size" ng-click="loadVideosFeed()"><a class="remove-href-link font-size" href="javascript:;">Kickers TV</a></span>
-            <span ng-show="detailsFeed.matchday.indexOf('Liga-Spiel') > -1" class="col vertical-align-mid font-size" ng-click="loadTableFeed()"><a class="remove-href-link font-size" href="javascript:;">Tabelle</a></span>
+            <span class="col vertical-align-mid font-size" ng-click="mcVM.loadDetailsFeed()"><a class="remove-href-link font-size" href="javascript:;">Spielbericht</a></span>
+            <span class="col vertical-align-mid font-size" ng-click="mcVM.loadDetailsFeed()"><a class="remove-href-link font-size" href="javascript:;">Daten</a></span>
+            <span class="col vertical-align-mid font-size" ng-click="mcVM.loadLiveTicker()"><a class="remove-href-link font-size" href="javascript:;">Live-Ticker</a></span>
+            <span class="col vertical-align-mid font-size" ng-click="mcVM.loadVideosFeed()"><a class="remove-href-link font-size" href="javascript:;">Kickers TV</a></span>
+            <span ng-show="mcVM.detailsFeed.matchday.indexOf('Liga-Spiel') > -1" class="col vertical-align-mid font-size" ng-click="mcVM.loadTableFeed()"><a class="remove-href-link font-size" href="javascript:;">Tabelle</a></span>
           </div>
         </div>
       </div>
-      <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)" ng-init="disableSwipe()" delegate-handle="matchcenter" dynamic-height>
+      <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)" ng-init="mcVM.disableSwipe()" delegate-handle="matchcenter" dynamic-height>
         <ion-slide dynamic-slides="detailsFeed">
           <div>
             <div id="spielbericht">
@@ -79,9 +79,9 @@
                   <div class="row remove-col-padding">
                     <div class="col">
                       <div class="col">
-                        <p class="custom-font-bold arena-line-height">{{detailsFeed.title || 'Kein Spielbericht vorhanden'}}</p>
-                        <div ng-if="detailsFeed.title!==undefined">
-                          <p class="font-size arena-line-height-double" ng-bind-html="detailsFeed.text_report | externalLinks"></p>
+                        <p class="custom-font-bold arena-line-height">{{mcVM.detailsFeed.title || 'Kein Spielbericht vorhanden'}}</p>
+                        <div ng-if="mcVM.detailsFeed.title!==undefined">
+                          <p class="font-size arena-line-height-double" ng-bind-html="mcVM.detailsFeed.text_report | externalLinks"></p>
                         </div>
                       </div>
                     </div>
@@ -100,10 +100,10 @@
                     <div class="col">
                       <div class="col">
                         <p class="custom-title custom-font-bold kontakt-kickers-font">Aufstellung</p>
-                        <div ng-if="detailsFeed.text_lineup!==undefined">
-                          <p ng-bind-html="detailsFeed.text_lineup"></p>
+                        <div ng-if="mcVM.detailsFeed.text_lineup!==undefined">
+                          <p ng-bind-html="mcVM.detailsFeed.text_lineup"></p>
                         </div>
-                        <div ng-if="detailsFeed.text_lineup==undefined">
+                        <div ng-if="mcVM.detailsFeed.text_lineup==undefined">
                           <p>Keine Daten vorhanden</p>
                         </div>
                       </div>
@@ -115,10 +115,10 @@
                     <div class="col">
                       <div class="col">
                         <p class="custom-title custom-font-bold kontakt-kickers-font">Daten:</p>
-                        <div ng-if="detailsFeed.text_data!==undefined">
-                          <p ng-bind-html="detailsFeed.text_data"></p>
+                        <div ng-if="mcVM.detailsFeed.text_data!==undefined">
+                          <p ng-bind-html="mcVM.detailsFeed.text_data"></p>
                         </div>
-                        <div ng-if="detailsFeed.text_data==undefined">
+                        <div ng-if="mcVM.detailsFeed.text_data==undefined">
                           <p>Keine Daten vorhanden</p>
                         </div>
                       </div>
@@ -133,7 +133,7 @@
           <div>
             <ion-spinner id="spinner" class="vertical-align-mid"></ion-spinner>
             <div id="live">
-              <div ng-repeat="info in liveTickerFeed">
+              <div ng-repeat="info in mcVM.liveTickerFeed">
                 <div class="row remove-col-padding arena-border-color font-size" ng-if="info.minute">
                   <div class="col-20 row remove-col-padding even" ng-if="!info.type">
                     <div class="col col-center">
@@ -209,11 +209,11 @@
         <ion-slide dynamic-slides="videosFeed">
           <div>
             <div id="kickersTV">
-              <div ng-repeat="video in videosFeed">
+              <div ng-repeat="video in mcVM.videosFeed">
                 <div class="custom-background videos-position-relative">
                   <div ng-attr-id="{{ 'matchcenter-' + video.id}}" class="overlay-image">
                     <img src="{{video.image}}" class="video-image-red-style" />
-                    <img src="img/bilddaten/3x/play_Button@3x.png" class="video-image-play-button-style" ng-click="playVideo(player, video)" />
+                    <img src="img/bilddaten/3x/play_Button@3x.png" class="video-image-play-button-style" ng-click="mcVM.playVideo(player, video)" />
                   </div>
                   <div class="video-height">
                     <youtube-video video-url="video.link" class="home-video-image video-z-index" player="player"></youtube-video>
@@ -227,7 +227,7 @@
                 </div>
                 <div class="row"></div>
               </div>
-              <div class="col kontakt-column-padding" ng-if="videosFeed == null">
+              <div class="col kontakt-column-padding" ng-if="mcVM.videosFeed == null">
                 <div class="col custom-font-regular text-align-left font-size">
                   <div class="row remove-col-padding">
                     <div class="col">
@@ -241,7 +241,7 @@
             </div>
           </div>
         </ion-slide>
-        <ion-slide dynamic-slides="tableFeed" ng-if="detailsFeed.matchday.indexOf('Liga-Spiel') > -1">
+        <ion-slide dynamic-slides="tableFeed" ng-if="mcVM.detailsFeed.matchday.indexOf('Liga-Spiel') > -1">
           <div>
             <div id="tabelle">
               <div class="row remove-col-padding tabelle-ueberschrift">
@@ -257,7 +257,7 @@
                     <span class="col col-10 tabelle-margin-right">Pkt.</span>
                   </div>
                   <div class="tabelle-ueberschrift-bottom-border">
-                    <div ng-repeat="table in tableFeed">
+                    <div ng-repeat="table in mcVM.tableFeed">
                       <div class="row remove-col-padding" ng-class-odd="'odd'" ng-class-even="'even'" ng-if="table.is_kickers">
                         <span class="col col-10 tabelle-margin-left tabelle-font-color">{{table.position}}</span>
                         <span class="col custom-col-35 tabelle-font-color">{{table.name}}</span>
