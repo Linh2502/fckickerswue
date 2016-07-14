@@ -42,6 +42,8 @@
         var transform = function (data) {
           return $.param(data);
         };
+        vm.showSubscriptionForm = false;
+        vm.showSuccess = true;
 
         //$http.post("https://www.wuerzburger-kickers.de/de/newsletter", data, {
         //  headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
