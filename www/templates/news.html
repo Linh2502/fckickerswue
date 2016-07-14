@@ -1,13 +1,14 @@
 <!--
     Created by Linh on 02.09.15.
     Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
-    - final -
+
+    status: 14.07.2016 3:41 PM
 -->
 <ion-view hide-back-button="true">
   <ion-content lazy-scroll class="has-subheader">
-    <ion-refresher on-refresh="refresh()"></ion-refresher>
+    <ion-refresher on-refresh="newsVM.refresh()"></ion-refresher>
     <div class="set-max-width" id="news">
-      <div ng-if="!isLive">
+      <div ng-if="!newsVM.isLive">
         <div class="row custom-row-border spiel-feed-columns spiel-feed-first-column-height">
           <div class="spiel-feed-first-column-style">
             <div class="custom-title spiel-feed-game-title">{{game[0].title}}</div>
@@ -44,7 +45,7 @@
           </div>
         </div>
       </div>
-      <div ng-if="isLive">
+      <div ng-if="newsVM.isLive">
         <div class="row custom-row-border spiel-feed-columns spiel-feed-first-column-height">
           <div class="spiel-feed-first-column-style">
             <div class="custom-title spiel-feed-game-title">Live</div>
@@ -71,7 +72,7 @@
             <div class="col remove-col-padding">
               <div class="row remove-col-padding">
                 <div class="col">
-                  <div class="game-islive" ng-click="navigateToLiveTicker()"></div>
+                  <div class="game-islive" ng-click="newsVM.navigateToLiveTicker()"></div>
                 </div>
               </div>
             </div>
@@ -81,8 +82,8 @@
     </div>
     <div class="col"></div>
     <div class="news">
-      <div ng-repeat="news in newsFeed">
-        <a nav-transition="ios" class="remove-href-link" ng-click="navigateToNews(news.id)">
+      <div ng-repeat="news in newsVM.newsFeed">
+        <a nav-transition="ios" class="remove-href-link" ng-click="newsVM.navigateToNews(news.id)">
           <div class="custom-background">
             <div class="image-height">
               <img src="{{news.image}}" class="news-image" image-lazy-loader="dots"/>

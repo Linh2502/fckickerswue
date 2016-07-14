@@ -227,7 +227,7 @@ angular.module('starter', [
         views: {
           'menuContent': {
             templateUrl: 'templates/news.html',
-            controller: 'NewsCtrl'
+            controller: 'NewsCtrl as newsVM'
           }
         }
       })
