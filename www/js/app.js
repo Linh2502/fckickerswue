@@ -1,12 +1,13 @@
 /**
  * Created by Linh on 02.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
+ *
+ * status: 14.07.2016 6:53 PM
  */
 angular.module('starter', [
   'ionic',
   'ngCordova',
   'tabSlideBox',
-  'loadingInterceptor',
   'ionicLazyLoad',
   'dateFilter',
   'ngSanitize',
@@ -98,9 +99,13 @@ angular.module('starter', [
       .state('werbepartner', {
         cache: true,
         url: '/werbepartner',
-        templateUrl: 'templates/werbepartner.html',
-        controller: 'AdvertisementCtrl',
-        params: {connection: null, localAd: null}
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/werbepartner.html',
+            controller: 'AdvertisementCtrl as adVM',
+            params: {connection: null, localAd: null}
+          }
+        }
       })
 
       .state('reload', {
@@ -114,8 +119,12 @@ angular.module('starter', [
         cache: true,
         url: '/app',
         abstract: true,
-        templateUrl: 'templates/menu.html',
-        controller: 'AppCtrl'
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/menu.html',
+            controller: 'AppCtrl as appVM'
+          }
+        }
       })
 
       .state('app.arena', {
@@ -146,12 +155,7 @@ angular.module('starter', [
         views: {
           'menuContent': {
             templateUrl: 'templates/error.html',
-            controller: 'ErrorCtrl',
-            resolve: {
-              splash: function(SplashScreen){
-                return SplashScreen.removeSplash();
-              }
-            }
+            controller: 'ErrorCtrl as errorVM'
           }
         }
       })
@@ -312,6 +316,6 @@ angular.module('starter', [
             controller: 'ReconnectCtrl'
           }
         }
-      })
+      });
     $urlRouterProvider.otherwise('/');
   });

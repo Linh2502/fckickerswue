@@ -2,31 +2,53 @@
  * Created by Linh on 25.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
  *
- * - final -
+ * status: 14.07.2016 6:25 PM
  */
-angular.module('module.advertisement', [])
-  .controller('AdvertisementCtrl', function($rootScope, $scope, $state, $stateParams, $timeout, AdvertisementService, $cordovaSplashscreen){
-    var ads = AdvertisementService.getAdsData();
-    var time = new Date().getTime();
-    var boolean = false;
-    $scope.showBanner = null;
+(function () {
+  'use strict';
 
-    checkBanner();
-    function checkBanner(){
-      //if($stateParams.localAd){
-      //  $scope.showBanner = ads;
-      //  boolean = true;
-      //}else{
-      //  if(ads.data.image[0].valid_from*1000 <= time) {
-      //    $scope.showBanner = ads.data.image[0].url;
-      //    AdvertisementService.saveToLocalSystem();
-      //    boolean = true;
-      //  }
-      //}
+  angular
+    .module('module.advertisement', [])
+    .controller('AdvertisementCtrl', AdvertisementController);
+
+  AdvertisementController.$inject = ['$state', '$stateParams', '$timeout', 'AdvertisementService', '$cordovaSplashscreen'];
+
+  function AdvertisementController($state, $stateParams, $timeout, AdvertisementService, $cordovaSplashscreen) {
+    var vm = this;
+
+    vm.time = new Date().getTime();
+    vm.boolean = false;
+    vm.showBanner = null;
+
+    vm._init = _init;
+
+    function _init() {
+      vm.boolean = true;
       nextState();
+      //AdvertisementService.getAdsData()
+      //  .then(function(success) {
+      //    if($stateParams.localAd){
+      //      vm.showBanner = success;
+      //      vm.boolean = true;
+      //      nextState();
+      //    }else{
+      //      if(success.data.image[0].valid_from*1000 <= time) {
+      //        vm.showBanner = success.data.image[0].url;
+      //        AdvertisementService.saveToLocalSystem()
+      //          .then(function(success) {
+      //            vm.boolean = true;
+      //            nextState();
+      //          });
+      //      }
+      //    }
+      //    nextState();
+      //  }, function(error) {
+      //    vm.boolean = false;
+      //    nextState();
+      //  });
     }
 
-    function nextState(){
+    function nextState() {
       $state.transitionTo('app.home');
       //if(boolean){
       //  $timeout(function(){
@@ -42,7 +64,7 @@ angular.module('module.advertisement', [])
       //    $state.transitionTo('app.error');
       //  }
       //}else{
-      //  $scope.showBanner = null;
+      //  vm.showBanner = null;
       //  if($stateParams.connection.hasInternet){
       //    $state.transitionTo('app.home');
       //  }else{
@@ -51,4 +73,5 @@ angular.module('module.advertisement', [])
       //  }
       //}
     }
-  })
+  }
+})();

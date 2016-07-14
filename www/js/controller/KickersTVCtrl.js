@@ -6,8 +6,8 @@
  */
 (function () {
   angular
-    .module('module.kickerstv', ['ionicLazyLoad', 'loadingInterceptor'])
-    .controller('KickersTVCtrl', KTVController)
+    .module('module.kickerstv', ['ionicLazyLoad'])
+    .controller('KickersTVCtrl', KTVController);
 
   KTVController.$inject = ['$scope', '$rootScope', 'KickersTVService', '$ionicSideMenuDelegate', '$ionicPopup', '$timeout'];
 

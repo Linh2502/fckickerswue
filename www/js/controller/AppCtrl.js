@@ -2,11 +2,20 @@
  * Created by Linh on 15.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
  *
- * - final -
+ * status: 14.07.2016 7:00 PM
  */
-angular.module('module.app', ['ionic', 'loadingInterceptor'])
-  .controller('AppCtrl', function($location, $rootScope, $scope, $http, $ionicModal, $timeout, $state, $ionicSideMenuDelegate,
-                                  $ionicHistory, $ionicScrollDelegate, $ionicPlatform) {
+(function () {
+  'use strict';
+
+  angular
+    .module('module.app', ['ionic'])
+    .controller('AppCtrl', AppController);
+
+  AppController.$inject = ['$location', '$rootScope', '$timeout', '$state', '$ionicSideMenuDelegate',
+    '$ionicHistory', '$ionicScrollDelegate', '$ionicPlatform'];
+
+  function AppController($location, $rootScope, $timeout, $state, $ionicSideMenuDelegate,
+                         $ionicHistory, $ionicScrollDelegate, $ionicPlatform) {
     $ionicSideMenuDelegate.edgeDragThreshold(20);
     $ionicSideMenuDelegate.canDragContent(true);
     $ionicHistory.nextViewOptions({
@@ -15,94 +24,107 @@ angular.module('module.app', ['ionic', 'loadingInterceptor'])
       expire: 100
     });
 
+    var vm = this;
+
+    vm.closeSettings = closeSettings;
+    vm.navigateToSettings = navigateToSettings;
+    vm.closeMenu = closeMenu;
+    vm.navigateBack = navigateBack;
+
     $rootScope.devWidth = ((window.innerWidth > 0) ? window.innerWidth : screen.width);
-    $rootScope.$on('show_loader', function(){
+    $rootScope.$on('show_loader', function () {
       $('#loaderInterceptor').show();
     });
-    $rootScope.$on('hide_loader', function(){
+    $rootScope.$on('hide_loader', function () {
       $('#loaderInterceptor').hide();
     });
 
     var lockButton = false;
     $('#submenu').hide();
-    $scope.detailsFeed = [];
 
     checkSettingsNotification();
-    function checkSettingsNotification(){
-      if(window.localStorage['showSettingsNotificationOnce']){
+    function checkSettingsNotification() {
+      if (window.localStorage['showSettingsNotificationOnce']) {
         window.localStorage['showSettingsNotificationCounter'] = +window.localStorage['showSettingsNotificationCounter'] + 1;
-      }else{
+      } else {
         window.localStorage['showSettingsNotificationCounter'] = 1;
-        $timeout(function(){
+        $timeout(function () {
           $('#settings-notification').show();
         }, 5000);
       }
     }
 
-    $scope.closeSettings = function (){
+    function closeSettings() {
       window.localStorage['showSettingsNotificationOnce'] = 'true';
       $('#settings-notification').hide();
     }
 
-    $scope.navigateToSettings = function (){
+    function navigateToSettings() {
       window.localStorage['showSettingsNotificationOnce'] = 'true';
       $('#settings-notification').hide();
       handleNavigation("app.settings");
     }
 
-    $scope.closeMenu = function() {
+    function closeMenu() {
       $ionicSideMenuDelegate.toggleLeft(false);
     }
 
-    $scope.navigateBack = function() {
-      if(/\d/.test($location.path()) && $location.path().indexOf("kader") > -1){
+    function navigateBack() {
+      if (/\d/.test($location.path()) && $location.path().indexOf("kader") > -1) {
         handleNavigation("app.kader");
       }
-      if (/\d/.test($location.path()) && $location.path().indexOf("news") > -1){
-        if($ionicHistory.backView().stateName == "app.home") {
+      if (/\d/.test($location.path()) && $location.path().indexOf("news") > -1) {
+        if ($ionicHistory.backView().stateName == "app.home") {
           handleNavigation("app.home");
-        }else{
+        } else {
           handleNavigation("app.news");
         }
       }
-      if ($location.path().indexOf("settings") > -1){
+      if ($location.path().indexOf("settings") > -1) {
         handleNavigation("app.home");
       }
     }
 
-    function handleNavigation(state){
-      if(lockButton == false){
+    function handleNavigation(state) {
+      if (lockButton == false) {
         $state.transitionTo(state);
         lockButton = true;
-        setTimeout(function(){ lockButton = false; }, 1000);
+        setTimeout(function () {
+          lockButton = false;
+        }, 1000);
       }
     }
 
-    $scope.clearHistory = function(){
+    vm.clearHistory = clearHistory;
+    vm.resizeContent = resizeContent;
+    vm.navigateToLiveTicker = navigateToLiveTicker;
+
+    function clearHistory() {
       $ionicHistory.nextViewOptions({
         historyRoot: true,
         disableBack: true
       })
     }
 
-    $scope.resizeContent = function() {
+    function resizeContent() {
       $ionicScrollDelegate.$getByHandle('resize').resize();
     }
 
-    $scope.navigateToLiveTicker = function(){
-      if($rootScope.isLive){
+    function navigateToLiveTicker() {
+      if ($rootScope.isLive) {
         $state.go('app.matchcenter', {game: {isLive: true}});
-      }else{
+      } else {
         $state.go('app.matchcenter', {game: {isLive: false}});
       }
     }
 
     //@only Android
     $ionicPlatform.registerBackButtonAction(function (event) {
-      if($ionicHistory.backView() == undefined){
+      if ($ionicHistory.backView() == undefined) {
         ionic.Platform.exitApp();
-      }else{
+      } else {
         handleNavigation($ionicHistory.backView().stateName);
       }
     }, 100);
-  })
+  }
+})();

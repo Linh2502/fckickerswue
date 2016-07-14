@@ -7,10 +7,10 @@
         </ion-nav-title>
         <div class="bar bar-subheader subheader">
           <div class="row div-kickers-slogan bar-subheader" logo-switcher></div>
-          <ion-nav-back-button class="button nav-back-button" ng-click="navigateBack()">
+          <ion-nav-back-button class="button nav-back-button" ng-click="appVM.navigateBack()">
           </ion-nav-back-button>
         </div>
-        <div class="fwk-logo kickers-logo" ui-sref="app.home" ng-click="clearHistory()"></div>
+        <div class="fwk-logo kickers-logo" ui-sref="app.home" ng-click="appVM.clearHistory()"></div>
       </div>
       <ion-nav-buttons side="left">
         <button class="button button-clear fa fa-bars custom-button" menu-toggle="left">
@@ -29,37 +29,37 @@
     </ion-header-bar>
     <ion-content class="custom-side-menu" scroll="true" delegate-handle="resize">
       <ion-list class="list">
-        <ion-item nav-clear class="custom-side-menu-item navigation-setting" ui-sref-active="active" menu-toggle ui-sref="app.settings" ng-click="closeMenu()">
+        <ion-item nav-clear class="custom-side-menu-item navigation-setting" ui-sref-active="active" menu-toggle ui-sref="app.settings" ng-click="appVM.closeMenu()">
           <span>Einstellungen</span>
           <i class="fa fa-cog navigation-cog"></i>
         </ion-item>
-        <ion-item nav-clear class="custom-side-menu-item matchcenter-title-background" ui-sref-active="active" menu-toggle ng-click="navigateToLiveTicker()">
+        <ion-item nav-clear class="custom-side-menu-item matchcenter-title-background" ui-sref-active="active" menu-toggle ng-click="appVM.navigateToLiveTicker()">
           <img src="img/bilddaten/3x/kickers_Ball@3x.png" class="navigation-match-center-ball"/>
           <span class="navigation-match-center">Match Center</span>
         </ion-item>
-        <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small active" ui-sref-active="active" menu-toggle ui-sref="app.home" ng-click="closeMenu()">
+        <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small active" ui-sref-active="active" menu-toggle ui-sref="app.home" ng-click="appVM.closeMenu()">
           Home
         </ion-item>
-        <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active" menu-toggle ui-sref="app.news" ng-click="closeMenu()">
+        <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active" menu-toggle ui-sref="app.news" ng-click="appVM.closeMenu()">
           News
         </ion-item>
-        <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active" menu-toggle ui-sref="app.spielplan" ng-click="closeMenu()">
+        <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active" menu-toggle ui-sref="app.spielplan" ng-click="appVM.closeMenu()">
           Spielplan
         </ion-item>
-        <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active" menu-toggle ui-sref="app.tabelle" ng-click="closeMenu()">
+        <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active" menu-toggle ui-sref="app.tabelle" ng-click="appVM.closeMenu()">
           Tabelle
         </ion-item>
-        <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active" menu-toggle ui-sref="app.kickerstv" ng-click="closeMenu()">
+        <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active" menu-toggle ui-sref="app.kickerstv" ng-click="appVM.closeMenu()">
           Kickers TV
         </ion-item>
         <!---<ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active" menu-toggle ui-sref="app.kader" ng-click="closeMenu()">
           Kader
         </ion-item>-->
-        <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active" menu-toggle ui-sref="app.arena" ng-click="closeMenu()">
+        <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active" menu-toggle ui-sref="app.arena" ng-click="appVM.closeMenu()">
           Arena
         </ion-item>
         <div ng-click="showDropDown = ! showDropDown">
-          <ion-item class="custom-side-menu-item" ng-click="resizeContent()">
+          <ion-item class="custom-side-menu-item" ng-click="appVM.resizeContent()">
             <span>... Mehr</span>
             <i class="fa fa-caret-down dropdown-caret"></i>
           </ion-item>

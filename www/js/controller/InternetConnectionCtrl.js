@@ -2,34 +2,39 @@
  * Created by Linh on 24.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
  *
- * - final -
+ * status: 14.07.2016 6:41 PM
  */
-angular.module('module.internet', ['ionic'])
-  .run(function($ionicPlatform, $state, $ionicHistory, AdvertisementService, $cordovaFile){
-    AdvertisementService.fetchAdsData();
-    //$ionicPlatform.ready(function(){
-    //  $ionicHistory.nextViewOptions({
-    //    disableAnimate: true
-    //  });
-    //  if(window.Connection){
-    //    if(navigator.connection.type == Connection.NONE || navigator.connection.type == Connection.UNKNOWN) {
-    //      $state.go('app.error');
-    //    }else {
-    //      $cordovaFile.checkFile(cordova.file.documentsDirectory, "adImage.png")
-    //        .then(function (success) {
-    //          AdvertisementService.skipFetching(cordova.file.documentsDirectory + "adImage.png");
-    //        }, function (error) {
-    //          AdvertisementService.fetchAdsData();
-    //        });
-    //    }
-    //  }
-    //})
-  })
-  .controller('InternetConnectionCtrl', function($rootScope, $state) {
-    $rootScope.$on('http_request_success_ads', function(){
-      $state.go('werbepartner', {connection: {hasInternet: true}, localAd: false});
-    });
-    $rootScope.$on('http_skip_request_ads', function(){
-      $state.go('werbepartner', {connection: {hasInternet: true}, localAd: true})
-    });
-  });
+(function () {
+  angular
+    .module('module.internet', ['ionic'])
+    .run(function($ionicPlatform, $state, $ionicHistory, AdvertisementService, $cordovaFile){
+      AdvertisementService.fetchAdsData()
+        .then(function(success) {
+          $state.go('werbepartner', {connection: {hasInternet: true}, localAd: true})
+        });
+      //$ionicPlatform.ready(function(){
+      //  $ionicHistory.nextViewOptions({
+      //    disableAnimate: true
+      //  });
+      //  if(window.Connection){
+      //    if(navigator.connection.type == Connection.NONE || navigator.connection.type == Connection.UNKNOWN) {
+      //      $state.go('app.error');
+      //    }else {
+      //      $cordovaFile.checkFile(cordova.file.documentsDirectory, "adImage.png")
+      //        .then(function (success) {
+      //          AdvertisementService.skipFetching(cordova.file.documentsDirectory + "adImage.png")
+      //            .then(function(success) {
+      //              $state.go('werbepartner', {connection: {hasInternet: true}, localAd: false});
+      //            });
+      //        }, function (error) {
+      //          AdvertisementService.fetchAdsData()
+      //            .then(function(success) {
+      //              $state.go('werbepartner', {connection: {hasInternet: true}, localAd: true})
+      //            });
+      //        });
+      //    }
+      //  }
+      //})
+    })
+    .controller('InternetConnectionCtrl', function($rootScope, $state) {});
+})();

@@ -4,7 +4,7 @@
  *
  * - final -
  */
-angular.module('module.kader', ['ionicLazyLoad', 'loadingInterceptor'])
+angular.module('module.kader', ['ionicLazyLoad'])
   .controller('KaderCtrl', function($rootScope, $scope, $ionicModal, KaderService, SinglePlayerService, $state, $ionicSideMenuDelegate, $ionicScrollDelegate, $timeout){
     $ionicSideMenuDelegate.canDragContent(true);
     $scope.tab = 3;

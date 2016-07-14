@@ -47,14 +47,14 @@
         vm.showSubscriptionForm = false;
         vm.showSuccess = true;
 
-        //$http.post("https://www.wuerzburger-kickers.de/de/newsletter", data, {
-        //  headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
-        //  transformRequest: transform
-        //}).success(function (responseData) {
-        //  vm.showSubscriptionForm = false;
-        //  vm.showSuccess = true;
-        //}).error(function (response) {
-        //});
+        $http.post("https://www.wuerzburger-kickers.de/de/newsletter", data, {
+          headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
+          transformRequest: transform
+        }).success(function (responseData) {
+          vm.showSubscriptionForm = false;
+          vm.showSuccess = true;
+        }).error(function (response) {
+        });
       }
     }
   }
