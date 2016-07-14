@@ -1,0 +1,202 @@
+<!--
+    Created by Linh on 02.09.15.
+    Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
+    - final -
+-->
+<ion-view hide-back-button="true">
+  <ion-content lazy-scroll class="has-subheader" delegate-handle="content">
+    <div class="news-feed">
+      <p class="custom-title custom-heading">News</p>
+      <ion-slide-box does-continue="true" auto-play="autoPlay" slide-interval="5000" delegate-handle="news" on-slide-changed="reslide($index)">
+        <ion-slide ng-repeat="news in newsFeed">
+          <a nav-transition="ios" class="remove-href-link" ng-click="navigateToNews(news.id)">
+            <div class="custom-background">
+              <div class="image-height text-align-center">
+                <img src="{{news.image}}" class="news-image" image-lazy-loader="dots"/>
+              </div>
+              <div class="news-image-text custom-background">
+                <div class="news-image-text-display">
+                  <div class="custom-title news-image-date">| {{news.date | dateFilter}}</div>
+                  <div class="custom-title news-image-title">{{news.title}}</div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </ion-slide>
+      </ion-slide-box>
+    </div>
+    <div class="spiel-feed">
+      <ion-slide-box delegate-handle="spiel" auto-play="autoPlay" slide-interval="6000" on-slide-changed="switch($index)" ng-if="zeroCountdown === false">
+        <ion-slide ng-repeat="game in gamesFeed">
+          <div class="set-max-width">
+            <div class="row custom-row-border spiel-feed-columns spiel-feed-first-column-height">
+              <div class="spiel-feed-first-column-style">
+                <div class="custom-title spiel-feed-game-title">{{game.title}}</div>
+                <div class="custom-title" ng-if="game.date">{{game.date | dateFilter}} {{game.time | timeFilter}} Uhr</div>
+                <div class="custom-title" ng-if="!game.date"></div>
+              </div>
+              <div class="spiel-feed-rest-column-style"></div>
+              <div class="spiel-feed-rest-column-style" ng-if="game.tickets">
+                <div ng-if="game.soccerTeam.team_home.name == 'FC Würzburger Kickers'">
+                  <a class="custom-title remove-href-link text-align-center" browse-to="https://www.wuerzburger-kickers.de/de/flyeralarm-arena/tickets-bestellen">
+                    <div class="custom-title custom-background">
+                      <div>
+                        <span class="tabelle-margin-left">{{game.tickets}}</span>
+                        <i class="tabelle-margin-right fa fa-external-link spiel-fa-link"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div ng-if="game.soccerTeam.team_home.name != 'FC Würzburger Kickers'"></div>
+              </div>
+              <div class="col col-30" ng-if="!game.tickets">
+              </div>
+            </div>
+            <div class="row custom-row-border spiel-feed-columns">
+              <div class="col col-40 col-center remove-col-padding text-align-center">
+                <img ng-src="{{game.soccerTeam.team_home.image}}" class="soccer-logo"/>
+                <div class="game-soccerteam-fontstyle">{{game.soccerTeam.team_home.name}}</div>
+              </div>
+              <div class="col col-20 col-center remove-col-padding">
+                <div class="news-games-result">{{game.result}}</div>
+              </div>
+              <div class="col col-40 col-center remove-col-padding text-align-center">
+                <img ng-src="{{game.soccerTeam.team_away.image}}" class="soccer-logo"/>
+                <div class="game-soccerteam-fontstyle">{{game.soccerTeam.team_away.name}}</div>
+              </div>
+            </div>
+            <div class="row custom-row-border spiel-feed-columns spiel-feed-third-column-height" ng-if="game.tickets === 'Tickets'">
+              <div class="col">
+                <div class="col remove-col-padding">
+                  <div class="row remove-col-padding">
+                    <div class="col-20 game-countdown-font-size">
+                      <img class="game-countdown-images" ng-src="{{days[0]}}" />
+                      <img class="game-countdown-images game-countdown-padding" ng-src="{{days[1]}}" />
+                    </div>
+                    <div class="game-countdown-empty-column col-center">{{doublepoint}}</div>
+                    <div class="col-20 game-countdown-font-size">
+                      <img class="game-countdown-images" ng-src="{{hours[0]}}" />
+                      <img class="game-countdown-images game-countdown-padding" ng-src="{{hours[1]}}" />
+                    </div>
+                    <div class="game-countdown-empty-column col-center">{{doublepoint}}</div>
+                    <div class="col-20 game-countdown-font-size">
+                      <img class="game-countdown-images" ng-src="{{minutes[0]}}" />
+                      <img class="game-countdown-images game-countdown-padding" ng-src="{{minutes[1]}}" />
+                    </div>
+                    <div class="game-countdown-empty-column col-center">{{doublepoint}}</div>
+                    <div class="col-20 game-countdown-font-size">
+                      <img class="game-countdown-images" ng-src="{{seconds[0]}}" />
+                      <img class="game-countdown-images game-countdown-padding" ng-src="{{seconds[1]}}" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col remove-col-padding spiel-feed-date-height">
+                  <div class="row remove-col-padding">
+                    <div class="col-20 custom-title game-countdown-style">Tage</div>
+                    <div class="game-countdown-empty-column"></div>
+                    <div class="col-20 custom-title game-countdown-style">Std</div>
+                    <div class="game-countdown-empty-column"></div>
+                    <div class="col-20 custom-title game-countdown-style">Min</div>
+                    <div class="game-countdown-empty-column"></div>
+                    <div class="col-20 custom-title game-countdown-style">Sek</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="custom-row-border spiel-feed-columns spiel-feed-third-column-height" ng-if="game.tickets !=='Tickets'">
+              <div class="col spiel-feed-matchcenter-emtpyheight"></div>
+              <a class="remove-href-link custom-row-border" nav-clear ng-click="navigateToMatchCenter()">
+                <div class="col matchcenter-title-background">
+                  <div class="col custom-title text-align-center matchcenter-title-size">
+                    <img src="img/bilddaten/3x/kickers_Ball@3x.png" class="matchcenter-ball"/>
+                    <span class="vertical-align-mid">Match Center</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </ion-slide>
+      </ion-slide-box>
+      <div ng-if="zeroCountdown === true">
+        <div class="set-max-width">
+          <div class="row custom-row-border spiel-feed-columns spiel-feed-first-column-height">
+            <div class="spiel-feed-first-column-style">
+              <div class="custom-title spiel-feed-game-title">Live</div>
+              <div class="custom-title">{{liveDateDay | dateFilter}} {{liveDateTime | timeFilter}} Uhr</div>
+            </div>
+            <div class="spiel-feed-rest-column-style"></div>
+            <div class="spiel-feed-rest-column-style"></div>
+          </div>
+          <div class="row custom-row-border spiel-feed-columns">
+            <div class="col col-40 col-center remove-col-padding text-align-center">
+              <img ng-src="{{detailsFeed.logo_home}}" class="soccer-logo"/>
+              <div class="game-soccerteam-fontstyle">{{detailsFeed.team_home}}</div>
+            </div>
+            <div class="col col-20 col-center remove-col-padding">
+              <div class="news-games-result">{{detailsFeed.result}}</div>
+            </div>
+            <div class="col col-40 col-center remove-col-padding text-align-center">
+              <img ng-src="{{detailsFeed.logo_away}}" class="soccer-logo"/>
+              <div class="game-soccerteam-fontstyle">{{detailsFeed.team_away}}</div>
+            </div>
+          </div>
+          <div class="row custom-row-border spiel-feed-columns spiel-feed-third-column-height">
+            <div class="col">
+              <div class="col remove-col-padding">
+                <div class="row remove-col-padding">
+                  <div class="col">
+                    <div class="game-islive" ng-click="navigateToLiveTicker()"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="videos-feed">
+      <p class="custom-title custom-heading">Kickers TV</p>
+      <ion-slide-box delegate-handle="video" does-continue="true" >
+        <ion-slide ng-repeat="video in videosFeed">
+          <div class="custom-background videos-position-relative">
+            <div ng-attr-id="{{ 'home-' + video.id}}" class="overlay-image">
+              <img src="{{video.image_red}}" class="video-image-red-style" />
+              <img src="img/bilddaten/3x/play_Button@3x.png" class="video-image-play-button-style" ng-click="playVideo(player, video)" />
+            </div>
+            <div class="video-height">
+              <youtube-video video-url="video.link" class="home-video-image video-z-index" player="player"></youtube-video>
+            </div>
+            <div class="custom-background news-image-text">
+              <div class="news-image-text-display">
+                <div class="custom-title news-image-date">| {{video.title}}</div>
+                <div class="custom-title news-image-title">{{video.subtitle}}</div>
+              </div>
+            </div>
+          </div>
+        </ion-slide>
+      </ion-slide-box>
+    </div>
+    <span class="display-none" my-current-time="format"></span>
+  </ion-content>
+  <div id="settings-notification" class="col settings-notification-font display-none video-image-red-div popup-notification">
+    <div class="col">
+      <div class="col text-align-center">
+        <div class="custom-title">Bleibe immer auf dem Laufenden!</div>
+        <div>Welche Push-Nachrichten du empfangen möchtest, kannst du einfach in den Einstellungen festlegen!</div>
+      </div>
+      <div class="col text-align-center">
+        <div class="row">
+          <div class="col-10"></div>
+          <div class="popup-button-width">
+            <button class="settings-button button button-full settings-notification-font popup-button-background" ng-click="closeSettings()">Später</button>
+          </div>
+          <div class="custom-col-5"></div>
+          <div class="popup-button-width">
+            <button class="settings-button button button-full settings-notification-font popup-button-background" nav-clear ng-click="navigateToSettings()">Anzeigen</button>
+          </div>
+          <div class="col-10"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-view>

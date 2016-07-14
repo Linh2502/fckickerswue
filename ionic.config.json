@@ -1,0 +1,17 @@
+{
+  "name": "FC Würzburger Kickers",
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://www.wuerzburger-kickers.de/ajax/kickers/"
+    }
+  ],
+  "browsers": [
+    {
+      "platform": "android",
+      "browser": "crosswalk",
+      "version": "12.41.296.5"
+    }
+  ]
+}

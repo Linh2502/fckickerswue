@@ -1,0 +1,30 @@
+<!--
+    Created by Linh on 02.09.15.
+    Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
+    - final -
+-->
+<ion-view hide-back-button="true">
+  <ion-content lazy-scroll class="has-subheader">
+    <ion-refresher on-refresh="refresh()"></ion-refresher>
+    <div id="kickerstv">
+      <div ng-repeat="video in videosFeed">
+        <div class="custom-background videos-position-relative">
+          <div ng-attr-id="{{ 'kickerstv-' + video.id}}" class="overlay-image">
+            <img src="{{video.image_red}}" class="video-image-red-style" />
+            <img src="img/bilddaten/3x/play_Button@3x.png" class="video-image-play-button-style" ng-click="playVideo(player, video)" />
+          </div>
+          <div class="video-height">
+            <youtube-video video-url="video.link" class="home-video-image video-z-index" player="player"></youtube-video>
+          </div>
+          <div class="custom-background news-image-text">
+            <div class="news-image-text-display">
+              <div class="custom-title news-image-date">| {{video.title}}</div>
+              <div class="custom-title news-image-title">{{video.subtitle}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="row"></div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

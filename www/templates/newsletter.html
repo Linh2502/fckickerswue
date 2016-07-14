@@ -1,0 +1,66 @@
+<!--
+    Created by Linh on 02.09.15.
+    Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
+    - final -
+-->
+<ion-view hide-back-button="true">
+  <ion-content class="has-subheader">
+    <div class="col">
+      <div class="col custom-font-regular font-size">
+        <div id="success" class="display-none">
+          <div class="custom-font-bold">Vielen Dank für Ihre Anmeldung.</div>
+          <div>Sie erhalten in Kürze eine E-Mail um Ihre Anmeldung zu bestätigen.</div>
+        </div>
+        <form name="subscriptionForm" novalidate="" ng-submit="subscribe(subscriptionForm)" id="form">
+          <div class="row display-table">
+            <p>Anrede</p>
+            <div class="row remove-col-padding" ng-init="gender=''">
+              <label class="custom-col-33">
+                <input class="tabelle-margin-right font-size" type="radio" name="gender" ng-model="gender" value="Herr">Herr
+              </label>
+              <label class="custom-col-33">
+                <input class="tabelle-margin-right font-size" type="radio" name="gender" ng-model="gender" value="Frau">Frau
+              </label>
+            </div>
+          </div>
+          <div class="col"></div>
+          <div class="row display-table font-size">
+            <label>
+              <p>Vorname</p>
+              <input class="newsletter-input-text" type="text" name="surname" ng-model="surname" value="">
+            </label>
+            <div class="row spiel-feed-matchcenter-emptyheight"></div>
+            <label>
+              <p>Nachname</p>
+              <input class="newsletter-input-text" type="text" name="name" ng-model="name" value="">
+            </label>
+            <div class="row spiel-feed-matchcenter-emptyheight"></div>
+            <label>
+              <p>E-Mail*</p>
+              <input class="newsletter-input-text" name="email" type="email" ng-model="email" required>
+            </label>
+            <label>
+              <p ng-show="subscriptionForm.email.$error.required" id="emailError" class="newsletter-error font-size">Bitte geben Sie eine gültige E-Mail-Adresse ein!</p>
+            </label>
+            <div class="row spiel-feed-matchcenter-emptyheight"></div>
+            <label class="row remove-col-padding">
+              <div class="settings-options font-size">
+                Ja, bitte senden Sie mir den Newsletter kostenlos an die oben genannte E-Mail-Adresse
+              </div>
+              <div class="settings-toggle-div">
+                <ion-toggle class="settings-toggle" name="subscribe" ng-model="permission" ng-true-value="true" ng-false-value="false" required>
+                </ion-toggle>
+              </div>
+            </label>
+            <label>
+              <p ng-show="subscriptionForm.subscribe.$error.required" id="subscriptionError"  class="newsletter-error">Wir benötigen Ihre Zustimmung.</p>
+            </label>
+          </div>
+          <button class="button button-full custom-title newsletter-submit" type="submit">
+            Jetzt abonnieren
+          </button>
+        </form>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

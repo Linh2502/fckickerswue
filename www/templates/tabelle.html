@@ -1,0 +1,50 @@
+<!--
+    Created by Linh on 02.09.15.
+    Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
+    - final -
+-->
+<ion-view hide-back-button="true">
+  <ion-content class="has-subheader">
+    <ion-refresher on-refresh="refresh()"></ion-refresher>
+    <div id="tabelle">
+      <div class="row remove-col-padding tabelle-ueberschrift">
+        <div class="col remove-col-padding custom-title">
+          <div class="row remove-col-padding custom-font-bold tabelle-ueberschrift-bottom-border">
+            <span class="col col-10 tabelle-margin-left">RG.</span>
+            <span class="col custom-col-35">Verein</span>
+            <span class="col col-10">SP.</span>
+            <span class="col custom-col-7-5">S</span>
+            <span class="col custom-col-7-5">U</span>
+            <span class="col custom-col-7-5">N</span>
+            <span class="col custom-col-12-5">Tore</span>
+            <span class="col col-10 tabelle-margin-right">Pkt.</span>
+          </div>
+          <div class="tabelle-ueberschrift-bottom-border">
+            <div ng-repeat="table in tableFeed">
+              <div class="row remove-col-padding" ng-class-odd="'odd'" ng-class-even="'even'" ng-if="table.is_kickers">
+                <span class="col col-10 tabelle-margin-left tabelle-font-color">{{table.position}}</span>
+                <span class="col custom-col-35 tabelle-font-color">{{table.name}}</span>
+                <span class="col col-10 tabelle-font-color">{{table.matches}}</span>
+                <span class="col custom-col-7-5 tabelle-font-color">{{table.wins}}</span>
+                <span class="col custom-col-7-5 tabelle-font-color">{{table.draws}}</span>
+                <span class="col custom-col-7-5 tabelle-font-color">{{table.losses}}</span>
+                <span class="col custom-col-12-5 tabelle-font-color">{{table.goals}}</span>
+                <span class="col col-10 tabelle-margin-right tabelle-font-color">{{table.points}}</span>
+              </div>
+              <div class="row remove-col-padding" ng-class-odd="'odd'" ng-class-even="'even'" ng-if="!table.is_kickers">
+                <span class="col col-10 tabelle-margin-left">{{table.position}}</span>
+                <span class="col custom-col-35">{{table.name}}</span>
+                <span class="col col-10">{{table.matches}}</span>
+                <span class="col custom-col-7-5">{{table.wins}}</span>
+                <span class="col custom-col-7-5">{{table.draws}}</span>
+                <span class="col custom-col-7-5">{{table.losses}}</span>
+                <span class="col custom-col-12-5">{{table.goals}}</span>
+                <span class="col col-10 tabelle-margin-right">{{table.points}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

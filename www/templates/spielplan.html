@@ -1,0 +1,92 @@
+<!--
+    Created by Linh on 02.09.15.
+    Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
+    - final -
+-->
+<ion-view hide-back-button="true">
+  <ion-content lazy-scroll class="has-subheader" delegate-handle="spielplan-scroll">
+    <ion-refresher on-refresh="refresh()"></ion-refresher>
+    <div ng-repeat="game in matchListing">
+      <div id="{{game.date}}">
+        <div ng-if="game.date == anchorDate">
+          <div class="arena-border-box-shadow spielplan-first-column anchor-highlight-item">
+            <div class="news-image-text row remove-col-padding">
+              <div class="news-image-text-display anchor-highlight-item-width">
+                <div class="custom-title news-image-date">| {{game.date | dateFilter}} {{game.time | timeFilter}} Uhr - {{game.matchday}}</div>
+              </div>
+              <div class="spiel-feed-rest-column-style anchor-highlight-item-ticket-width" ng-if="game.team_home == 'FC Würzburger Kickers'">
+                <div>
+                  <a class="custom-title remove-href-link text-align-center" browse-to="https://www.wuerzburger-kickers.de/de/flyeralarm-arena/tickets-bestellen">
+                    <div class="custom-title custom-background news-ticket-margin">
+                      <div>
+                        <span class="tabelle-margin-left">Tickets </span>
+                        <i class="tabelle-margin-right fa fa-external-link spiel-fa-link"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div ng-if="game.team_home != 'FC Würzburger Kickers'"></div>
+            </div>
+          </div>
+          <div class="row custom-row-border spielplan-first-column">
+            <div class="col col-40 col-center remove-col-padding text-align-center">
+              <div class="text-align-center">
+                <img src="{{game.logo_home}}" class="soccer-logo" image-lazy-loader="dots"/>
+              </div>
+              <div class="game-soccerteam-fontstyle">{{game.team_home}}</div>
+            </div>
+            <div class="col col-20 col-center remove-col-padding">
+              <div class="news-games-result">{{game.result}}</div>
+            </div>
+            <div class="col col-40 col-center remove-col-padding text-align-center">
+              <div class="text-align-center">
+                <img src="{{game.logo_away}}" class="soccer-logo" image-lazy-loader="dots"/>
+              </div>
+              <div class="game-soccerteam-fontstyle">{{game.team_away}}</div>
+            </div>
+          </div>
+          <div class="col"></div>
+        </div>
+        <div ng-if="game.date != anchorDate">
+          <div class="arena-border-box-shadow spielplan-first-column">
+            <div class="news-image-text">
+              <div class="news-image-text-display">
+                <div class="custom-title news-image-date">| {{game.date | dateFilter}} {{game.time | timeFilter}} Uhr - {{game.matchday}}</div>
+              </div>
+            </div>
+          </div>
+          <div class="row custom-row-border spielplan-first-column">
+            <div class="col col-40 col-center remove-col-padding text-align-center">
+              <div class="text-align-center">
+                <img src="{{game.logo_home}}" class="soccer-logo" image-lazy-loader="dots"/>
+              </div>
+              <div class="game-soccerteam-fontstyle">{{game.team_home}}</div>
+            </div>
+            <div class="col col-20 col-center remove-col-padding">
+              <div class="news-games-result">{{game.result}}</div>
+            </div>
+            <div class="col col-40 col-center remove-col-padding text-align-center">
+              <div class="text-align-center">
+                <img src="{{game.logo_away}}" class="soccer-logo" image-lazy-loader="dots"/>
+              </div>
+              <div class="game-soccerteam-fontstyle">{{game.team_away}}</div>
+            </div>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col spielplan-last-column">
+      <div class="matchcenter-liveticker custom-title">
+        <div class="row">
+          <div class="col col-25"></div>
+          <div class="col col-50">2. Liga</div>
+          <div class="col col-25 text-align-right">
+            <img src="img/bilddaten/3x/logo-dfl-dritte-liga@3x.png" class="spielplan-last-column-logo" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

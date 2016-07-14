@@ -1,0 +1,218 @@
+<!--
+    Created by Linh on 02.09.15.
+    Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
+    - final -
+-->
+<ion-view hide-back-button="true">
+  <ion-content lazy-scroll class="has-subheader" delegate-handle="resize">
+    <div class="arena-column-height">
+      <div class="col kontakt-column-padding arena-column-height">
+        <div class="col custom-title arena-border-box-shadow text-align-center arena-border-color">
+          <div class="row remove-col-padding">
+            <span class="col active vertical-align-mid" ng-class="{ active: showTab(1)}" ng-click="setTab(1)">Stadionplan</span>
+            <span class="col vertical-align-mid" ng-class="{ active: showTab(2)}" ng-click="setTab(2)">Parken</span>
+            <span class="col vertical-align-mid" ng-class="{ active: showTab(3)}" ng-click="setTab(3)">Anfahrt</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Stadionplan" ng-show="showTab(1)">
+      <div>
+        <div class="col arena-plan-margin text-align-center">
+          <img class="arena-image-width" image-lazy-src="img/appbilder/arena-Plan@3x.png" image-lazy-loader="dots"/>
+        </div>
+      </div>
+      <div class="col"></div>
+      <div class="arena-column-height">
+        <div class="col kontakt-column-padding arena-column-height">
+          <div class="col custom-font-regular font-size text-align-left">
+            <div class="row remove-col-padding">
+              <div class="col-10">
+              </div>
+              <div class="col-80">
+                <div class="row">
+                  <div class="col-50">
+                    <div class="fa fa-square arena-stehplätze-oberrang"></div>Stehplätze
+                  </div>
+                  <div class="col-50">
+                    <div class="fa fa-square arena-sitzplätze-oberrang"></div>Sitzplätze Oberrang
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-50">
+                    <div class="fa fa-square arena-stehplätze-tribüne"></div>Stehplätze
+                  </div>
+                  <div class="col-50">
+                    <div class="fa fa-square arena-sitzplätze-tribüne"></div>Sitzplätze Tribüne
+                  </div>
+                </div>
+                <p></p>
+                <div class="row">
+                  <div class="col-50">
+                    <div class="fa fa-square arena-sitzplätze-medien"></div>Sitzplätze
+                  </div>
+                  <div class="col-50">
+                    <div class="fa fa-square arena-medien"></div>Medienbereich
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-50">
+                    <div class="fa fa-square arena-sitzplätze-vip"></div>Sitzplätze VIP
+                  </div>
+                  <div class="col-50">
+                    <div class="fa fa-square arena-kabine"></div>Kabine
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-50"></div>
+                  <div class="col-50">
+                    <div class="fa fa-square arena-mixed-zone"></div>Mixed Zone</div>
+                </div>
+              </div>
+              <div class="col-10"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Parken" ng-show="showTab(2)">
+      <div class="custom-row-border">
+        <div class="col text-align-center">
+          <img class="arena-image-width" image-lazy-src="img/appbilder/parken@3x.png" image-lazy-loader="lines"/>
+        </div>
+      </div>
+      <div class="custom-row-border">
+        <div class="col kontakt-column-padding">
+          <div class="col custom-font-regular remove-col-padding font-size text-align-left">
+            <div class="row remove-col-padding">
+              <div class="col-25 text-align-center margin-auto">
+                <h2 class="arena-parken-color">P1</h2>
+              </div>
+              <div class="col-75 custom-list">
+                <h5 class="custom-title custom-font-bold">Parkplatz am Dallenberg</h5>
+                <ul>
+                  <li>Gästeparkplatz mit ca. 231 PKW-Stellplätzen bzw. 58 PKW-Stellplätzen und 25 Busstellplätzen je nach Auslastung (kostenpflichtig: 3€)</li>
+                  <li>Heimparkplatz mit ca. 260 PKW-Stellplätzen (kostenpflichtig: 3€)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="custom-row-border">
+        <div class="col kontakt-column-padding">
+          <div class="col custom-font-regular remove-col-padding font-size text-align-left">
+            <div class="row remove-col-padding">
+              <div class="col-25 text-align-center margin-auto">
+                <h2 class="arena-parken-color">P2</h2>
+              </div>
+              <div class="col-75 custom-list">
+                <h5 class="custom-title custom-font-bold">Parkplätze um die S. Oliver Arena (Stettiner Straße)</h5>
+                <ul>
+                  <li>Ca. 120 kostenfreie Stellplätze, die am Abend um am Wochenende nicht genutzt werden</li>
+                  <li>Fußläufig ca. 10 Minuten bis zur FLYERALARM Arena</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="col kontakt-column-padding">
+          <div class="col custom-font-regular remove-col-padding font-size text-align-left">
+            <div class="row remove-col-padding">
+              <div class="col-25 text-align-center margin-auto">
+                <h2 class="arena-parken-color">P3</h2>
+              </div>
+              <div class="col-75 custom-list">
+                <h5 class="custom-title custom-font-bold">Parkplätze Am Wiesenweg Ecke Mergentheimer Straße</h5>
+                <ul>
+                  <li>Ca. 50 kostenfreie Parkplätze auf dem Schotterparkplatz</li>
+                  <li>Fußläufig ca. 10 Minuten bis zur FLYERALARM Arena</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row"></div>
+      <div class="col custom-background">
+        <a class="col custom-title" browse-to="http://www.wuerzburger-kickers.de/de/flyeralarm-arena/parkmoeglichkeiten">
+          <div class="col text-align-center">
+            <span>Weitere Parkmöglichkeiten</span>
+            <i class="fa fa-external-link navigation-external-link"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div id="Anfahrt" ng-show="showTab(3)">
+      <div>
+        <a class="remove-href-link" browse-to="https://www.google.de/maps/place/FC+W%C3%BCrzburger+Kickers/@49.7673476,9.9315861,17z/data=!3m1!4b1!4m2!3m1!1s0x47a29004af6dc71b:0xb4e13b93f4337623">
+          <div class="set-max-width arena-maps" ></div>
+        </a>
+      </div>
+      <div class="custom-row-border">
+        <div class="col kontakt-column-padding">
+          <div class="col custom-font-regular font-size text-align-left">
+            <div class="row remove-col-padding">
+              <div class="col">
+                <div class="col">
+                  <p class="custom-title custom-font-bold">FC Würzburger Kickers</p>
+                  <p></p>
+                  <p>flyeralarm Arena <br>
+                  Mittlerer Dallenbergweg 49 <br>
+                  97082 Würzburg </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="custom-row-border">
+        <div class="col kontakt-column-padding">
+          <div class="col custom-font-regular font-size text-align-left">
+            <div class="row remove-col-padding">
+              <div class="col">
+                <div class="col">
+                  <p class="custom-title custom-font-bold arena-line-height-half">Anreise:</p>
+                  <p class="custom-font-bold arena-line-height">mit öffentlichen Verkehrsmitteln</p>
+                  <p></p>
+                  <p>Vom Würzburger Hauptbahnhof erreichen Sie die flyeralarm Arena problemlos mit den Straßenbahnlinien 3 (Richtung Heuchelhof) und 5 (Richtung Rottenbauer). Von der Ausstiegshaltestelle "Dallenbergbad" beträgt der Fußweg zum Stadion ca. 500 Meter.</p>
+                  <p>Das Bayernticket ist als Fahrschein im Würzburger Nahverkehr gültig!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="col kontakt-column-padding">
+          <div class="col custom-font-regular font-size text-align-left">
+            <div class="row remove-col-padding">
+              <div class="col">
+                <div class="col">
+                  <p class="custom-font-bold arena-line-height">mit dem PKW/Bus</p>
+                  <p></p>
+                  <p>Autobahn A3 Anschlussstelle WÜ-Heidingsfeld, <br>
+                  B19 Richtung Würzburg Stadtring</p>
+                  <p>Autobahn A7 Anschlussstelle WÜ/Estenfeld, <br>
+                  B19 Richtung Würzburg Stadtring-Süd <br>
+                  Ausschilderung "flyeralarm Arena" gleich nach der Stadtgrenze</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row"></div>
+      <div class="col custom-background">
+        <a class="col custom-title" browse-to="https://www.google.de/maps/place/FC+W%C3%BCrzburger+Kickers/@49.7673476,9.9315861,17z/data=!3m1!4b1!4m2!3m1!1s0x47a29004af6dc71b:0xb4e13b93f4337623">
+          <div class="col text-align-center">
+            <span>In Google Maps</span>
+            <i class="fa fa-external-link navigation-external-link"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
