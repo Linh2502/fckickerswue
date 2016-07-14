@@ -2,73 +2,81 @@
  * Created by Linh on 02.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
  *
- * - final -
+ * status: 14.07.2016 3:04 PM
  */
-angular.module('module.kickerstv', ['ionicLazyLoad', 'loadingInterceptor'])
-  .controller('KickersTVCtrl', function($rootScope, $scope, $ionicModal, KickersTVService, $ionicSideMenuDelegate, $ionicPopup, $timeout){
+(function () {
+  angular
+    .module('module.kickerstv', ['ionicLazyLoad', 'loadingInterceptor'])
+    .controller('KickersTVCtrl', KTVController)
+
+  KTVController.$inject = ['$log', '$scope', '$rootScope', 'KickersTVService', '$ionicSideMenuDelegate', '$ionicPopup', '$timeout'];
+
+  function KTVController($log, $scope, $rootScope, KickersTVService, $ionicSideMenuDelegate, $ionicPopup, $timeout) {
     $ionicSideMenuDelegate.canDragContent(true);
-    var showContent = false;
-    $scope.videosFeed = [];
+    var vm = this;
+    vm.videosFeed = [];
 
-    $scope.$on('$ionicView.beforeEnter', function() {
-      $ionicSideMenuDelegate.toggleLeft(false);
+    vm._init = _init;
+    vm.refresh = refresh;
+    vm.playVideo = playVideo;
+
+    function _init() {
       $rootScope.$broadcast('show_loader');
-      KickersTVService.fetchKickersTVData().then(function(success) {
-        setVideosFeed(KickersTVService.getData());
-        showContent = true;
-        hideLoader();
-      });
-    });
+      KickersTVService.fetchKickersTVData()
+        .then(function (success) {
+          setVideosFeed(success);
+          $timeout(function() {
+            $rootScope.$broadcast('hide_loader');
+          }, 2500);
+        });
+    }
 
-    $scope.refresh = function() {
-      $scope.videosFeed = [];
-      KickersTVService.fetchKickersTVData().then(function(success) {
-        setVideosFeed(KickersTVService.getData());
-        $scope.$broadcast('scroll.refreshComplete');
-      });
-    };
+    function refresh() {
+      vm.videosFeed = [];
+      KickersTVService.fetchKickersTVData()
+        .then(function (success) {
+          setVideosFeed(success);
+          $timeout(function() {
+            $scope.$broadcast('scroll.refreshComplete');
+          }, 2500);
+        });
+    }
 
-    function setVideosFeed(videos){
-      for(var i = 0; i < videos.item.length; i++) {
-        $scope.videosFeed.push(videos.item[i]);
+    function setVideosFeed(videos) {
+      for (var i = 0; i < videos.item.length; i++) {
+        vm.videosFeed.push(videos.item[i]);
       }
     }
 
-    $scope.playVideo = function(player, video){
-      if(navigator.connection.type == Connection.NONE || navigator.connection.type == Connection.UNKNOWN) {
+    function playVideo(player, video) {
+      if (navigator.connection.type == Connection.NONE || navigator.connection.type == Connection.UNKNOWN) {
         $ionicPopup.alert({
           title: "Keine Internetverbindung",
           content: "Beim Herstellen der Verbindung zum Würzburger Kickers - Server ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
-        }).then(function(res) {
+        }).then(function (res) {
         });
-      }else{
-        if(window.localStorage['WifiEnabled'] == 'true'){
-          if(navigator.connection.type == Connection.WIFI){
+      } else {
+        if (window.localStorage['WifiEnabled'] == 'true') {
+          if (navigator.connection.type == Connection.WIFI) {
             $('#kickerstv-' + video.id).hide();
             $('.video-z-index').show();
             player.playVideo();
-          }else{
+          } else {
             $ionicPopup.alert({
               title: "Keine WiFi-Verbindung vorhanden",
               content: "Sie sind nicht mit dem WiFi verbunden. Um Videos dennoch abspielen zu können, überprüfen Sie erneut Ihre Einstellungen."
-            }).then(function(res) {
+            }).then(function (res) {
             });
           }
-        }else{
+        } else {
           $('#kickerstv-' + video.id).hide();
           $('.video-z-index').show();
           player.playVideo();
         }
       }
-    };
-
-    function hideLoader(){
-      if(showContent){
-        $rootScope.$broadcast('hide_loader');
-      }else{
-        $timeout(function(){
-          hideLoader();
-        }, 1000);
-      }
     }
-  })
+
+    vm._init();
+  }
+
+})();

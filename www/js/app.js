@@ -53,6 +53,7 @@ angular.module('starter', [
   })
 
   .run(function($rootScope, $ionicLoading, $ionicPlatform) {
+    $rootScope.uuid = '&uuid=' + ionic.Platform.device().uuid;
     //$ionicPlatform.ready(function() {
     //  $rootScope.uuid = '&uuid=' + ionic.Platform.device().uuid;
     //  if (window.cordova && window.cordova.plugins.Keyboard) {
@@ -193,7 +194,7 @@ angular.module('starter', [
         views: {
           'menuContent': {
             templateUrl: 'templates/kickerstv.html',
-            controller: 'KickersTVCtrl'
+            controller: 'KickersTVCtrl as ktvVM'
           }
         }
       })
