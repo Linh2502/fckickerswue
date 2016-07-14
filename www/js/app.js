@@ -162,7 +162,7 @@ angular.module('starter', [
         views: {
           'menuContent': {
             templateUrl: 'templates/home.html',
-            controller: 'HomeCtrl'
+            controller: 'HomeCtrl as homeVM'
           }
         }
       })
@@ -238,7 +238,7 @@ angular.module('starter', [
         views: {
           'menuContent': {
             templateUrl: 'templates/singlenews.html',
-            controller: 'SingleNewsCtrl',
+            controller: 'SingleNewsCtrl as snVM',
             params: {newsId: null}
           }
         }

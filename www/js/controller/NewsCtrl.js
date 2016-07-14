@@ -16,8 +16,6 @@
   function NewsController($rootScope, $scope, NewsService, HomeService, $state, $timeout, $ionicSideMenuDelegate) {
     $ionicSideMenuDelegate.canDragContent(true);
     var vm = this;
-
-    vm.lockButton = false;
     vm.newsFeed = [];
     vm.game = [];
 
@@ -29,7 +27,7 @@
       $rootScope.$broadcast('show_loader');
       HomeService.fetchHomeData()
         .then(function(success) {
-          setGamesFeed(success);
+          setGamesFeed(success.data.matches);
           NewsService.fetchNewsData()
             .then(function(success) {
               setNewsFeed(success);
@@ -89,13 +87,7 @@
     }
 
     function navigateToNews(id) {
-      if (vm.lockButton == false) {
-        $state.go('app.singlenews', {newsId: id});
-        vm.lockButton = true;
-        setTimeout(function () {
-          vm.lockButton = false;
-        }, 1000);
-      }
+      $state.go('app.singlenews', {newsId: id});
     }
 
     vm._init();

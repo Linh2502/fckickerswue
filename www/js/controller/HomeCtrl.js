@@ -1,181 +1,201 @@
 /**
  * Created by Linh on 02.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
+ *
+ * status: 14.07.2016 4:20 PM
  */
-angular.module('module.home', ['ionicLazyLoad', 'dateFilter'])
-  .controller('HomeCtrl', function($rootScope, $scope, $ionicModal, $timeout, HomeService, MatchcenterService, $ionicSideMenuDelegate, $ionicSlideBoxDelegate, $state, $ionicHistory, $ionicPopup, $cordovaSplashscreen){
+(function () {
+  'use strict';
+
+  angular
+    .module('module.home', ['ionicLazyLoad', 'dateFilter'])
+    .controller('HomeCtrl', HomeController);
+
+  HomeController.$inject = ['$rootScope', '$timeout', 'HomeService', 'MatchcenterService', '$ionicSideMenuDelegate', '$ionicSlideBoxDelegate', '$state', '$ionicPopup', '$cordovaSplashscreen'];
+
+  function HomeController($rootScope, $timeout, HomeService, MatchcenterService, $ionicSideMenuDelegate, $ionicSlideBoxDelegate, $state, $ionicPopup, $cordovaSplashscreen) {
     $ionicSideMenuDelegate.canDragContent(true);
-    $scope.newsFeed = [];
-    $scope.gamesFeed = [];
-    $scope.videosFeed = [];
-    $scope.matchCenterFeed = [];
-    $scope.doublepoint = ':';
-    $scope.liveDate = null;
-    $scope.liveDateDay = null;
-    $scope.liveDateTime = null;
-    $scope.detailsFeed = null;
-    var showContent = false;
-    $scope.$on('$ionicView.beforeEnter', function() {
-      $cordovaSplashscreen.hide();
+    var vm = this;
+    vm.newsFeed = [];
+    vm.gamesFeed = [];
+    vm.videosFeed = [];
+    vm.matchCenterFeed = [];
+    vm.doublepoint = ':';
+    vm.liveDate = null;
+    vm.liveDateDay = null;
+    vm.liveDateTime = null;
+    vm.detailsFeed = null;
+    vm.getHomeData = null;
+    vm.getMatchCenterData = null;
+
+    vm._init = _init;
+    vm.autoPlay = autoPlay;
+    vm.switchView = switchView;
+    vm.playVideo = playVideo;
+    vm.navigateToNews = navigateToNews;
+    vm.navigateToMatchCenter = navigateToMatchCenter;
+
+    function _init() {
+      //$cordovaSplashscreen.hide();
       $rootScope.$broadcast('show_loader');
-      MatchcenterService.refreshLiveTicker();
-      HomeService.fetchHomeData().then(function(success) {
-        setNewsFeed(HomeService.getNewsData());
-        setGamesFeed(HomeService.getMatchesData());
-        setVideosFeed(HomeService.getVideosData());
-        $ionicSlideBoxDelegate.$getByHandle('news').update();
-        $ionicSlideBoxDelegate.$getByHandle('spiel').update();
-        $ionicSlideBoxDelegate.$getByHandle('video').update();
-        $scope.detailsFeed = MatchcenterService.getDetailsData();
-        setLiveTickerTime();
-        checkLiveTicker();
-        showContent = true;
+      HomeService.fetchHomeData()
+        .then(function (success) {
+          vm.getHomeData = success;
+          setNewsFeed(success.data.news);
+          setGamesFeed(success.data.matches);
+          setVideosFeed(success.data.videos);
+          $ionicSlideBoxDelegate.$getByHandle('news').update();
+          $ionicSlideBoxDelegate.$getByHandle('spiel').update();
+          $ionicSlideBoxDelegate.$getByHandle('video').update();
+          MatchcenterService.refreshLiveTicker()
+            .then(function(success) {
+              vm.getMatchCenterData = success;
+              vm.detailsFeed = success.data.details;
+              setLiveTickerTime();
+              checkLiveTicker();
+              $rootScope.$broadcast('show_loader');
+            });
       });
-    });
+    }
 
-    $scope.$on('$ionicView.afterEnter', function() {
-      hideLoader();
-    });
-
-    $rootScope.$on('isLive', function(){
+    $rootScope.$on('isLive', function () {
       checkLiveTicker();
     });
 
-    $rootScope.$on('isNotLive', function() {
-      $scope.gamesFeed = [];
-      $scope.detailsFeed = [];
-      $scope.detailsFeed = MatchcenterService.getDetailsData();
-      setGamesFeed(HomeService.getMatchesData());
+    $rootScope.$on('isNotLive', function () {
+      vm.gamesFeed = [];
+      vm.detailsFeed = [];
+      vm.detailsFeed = MatchcenterService.getDetailsData();
+      setGamesFeed(vm.getHomeData.data.matches);
       $timeout.cancel();
     });
 
-    function setLiveTickerTime(){
+    function setLiveTickerTime() {
       var splitLiveDate = MatchcenterService.getDetailsData().eventdate_start.split(" ");
       var liveDate = splitLiveDate[0];
       var liveTime = splitLiveDate[1];
-      $scope.liveDateDay = liveDate;
-      $scope.liveDateTime = liveTime;
-      $scope.liveDate = liveDate + "T" + liveTime;
+      vm.liveDateDay = liveDate;
+      vm.liveDateTime = liveTime;
+      vm.liveDate = liveDate + "T" + liveTime;
     }
 
-    function setNewsFeed(news){
-      $scope.newsFeed1 = [];
-      for(var i = 0; i < news.item.length; i++){
+    function setNewsFeed(news) {
+      vm.newsFeed = [];
+      for (var i = 0; i < news.item.length; i++) {
         var splitDate = news.item[i].eventdate_start.split(" ");
         var date = splitDate[0];
         var time = splitDate[1];
-        $scope.newsFeed1.push({
-          id: news.item[i].id, title: news.item[i].title, date: date, time: time, image: news.item[i].image, slug: news.item[i].slug
+        vm.newsFeed.push({
+          id: news.item[i].id,
+          title: news.item[i].title,
+          date: date,
+          time: time,
+          image: news.item[i].image,
+          slug: news.item[i].slug
         })
-      };
-      $scope.newsFeed = [];
-      $scope.newsFeed = $scope.newsFeed1;
+      }
     }
 
-    function setGamesFeed(matches){
+    function setGamesFeed(matches) {
       var splitDate = matches.next.eventdate_start.split(" ");
       var date = splitDate[0];
       var time = splitDate[1];
-      $scope.date = date + "T" + time;
+      vm.date = date + "T" + time;
 
-      $scope.gamesFeed.push(
-        { title: 'Nächstes Spiel', date: date, time: time, tickets: 'Tickets',
+      vm.gamesFeed.push(
+        {
+          title: 'Nächstes Spiel', date: date, time: time, tickets: 'Tickets',
           soccerTeam: {
-            team_away: { name: matches.next.team_away, image: matches.next.logo_away },
-            team_home: { name: matches.next.team_home, image: matches.next.logo_home }
+            team_away: {name: matches.next.team_away, image: matches.next.logo_away},
+            team_home: {name: matches.next.team_home, image: matches.next.logo_home}
           },
           result: matches.next.result
         },
-        { title: 'Letztes Spiel', matchCenter: 'Match Center',
+        {
+          title: 'Letztes Spiel', matchCenter: 'Match Center',
           soccerTeam: {
-            team_away: { name: matches.previous.team_away, image: matches.previous.logo_away },
-            team_home: { name: matches.previous.team_home, image: matches.previous.logo_home }
+            team_away: {name: matches.previous.team_away, image: matches.previous.logo_away},
+            team_home: {name: matches.previous.team_home, image: matches.previous.logo_home}
           },
           result: matches.previous.result
         }
       )
     }
 
-    function setVideosFeed(videos){
-      for(var i = 0; i < videos.item.length; i++) {
-        $scope.videosFeed.push(videos.item[i]);
+    function setVideosFeed(videos) {
+      for (var i = 0; i < videos.item.length; i++) {
+        vm.videosFeed.push(videos.item[i]);
       }
     }
 
-    function checkLiveTicker(){
-      if($rootScope.isLive){
-        MatchcenterService.refreshLiveTicker();
-        $scope.gamesFeed = [];
-        $scope.detailsFeed = [];
-        $scope.detailsFeed = MatchcenterService.getDetailsData();
-        setGamesFeed(HomeService.getMatchesData());
-        $timeout(function(){
-          console.log("live ticker refreshed");
-          checkLiveTicker();
-        }, 30000);
+    function checkLiveTicker() {
+      if ($rootScope.isLive) {
+        MatchcenterService.refreshLiveTicker()
+          .then(function(success) {
+            vm.gamesFeed = [];
+            vm.detailsFeed = [];
+            vm.detailsFeed = success.data.details;
+            setGamesFeed(vm.getMatchCenterData.data.matches);
+            $timeout(function () {
+              checkLiveTicker();
+            }, 30000);
+          });
       }
     }
 
-    $scope.autoPlay = function(){
+    function autoPlay() {
       return true;
-    };
+    }
 
-    $scope.switch = function(index){
-      if(index == 0){
-        $timeout(function(){
+    function switchView(index) {
+      if (index == 0) {
+        $timeout(function () {
           $ionicSlideBoxDelegate.$getByHandle('spiel').next();
         }, 6000);
-      }else if(index == 1){
-        $timeout(function() {
+      } else if (index == 1) {
+        $timeout(function () {
           $ionicSlideBoxDelegate.$getByHandle('spiel').previous();
         }, 6000);
       }
-    };
+    }
 
-    $scope.playVideo = function(player, video){
-      if(navigator.connection.type == Connection.NONE || navigator.connection.type == Connection.UNKNOWN) {
+    function playVideo(player, video) {
+      if (navigator.connection.type == Connection.NONE || navigator.connection.type == Connection.UNKNOWN) {
         $ionicPopup.alert({
           title: "Keine Internetverbindung",
           content: "Beim Herstellen der Verbindung zum Würzburger Kickers - Server ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
-        }).then(function(res) {
+        }).then(function (res) {
         });
-      }else{
-        if(window.localStorage['WifiEnabled'] == 'true'){
-          if(navigator.connection.type == Connection.WIFI){
+      } else {
+        if (window.localStorage['WifiEnabled'] == 'true') {
+          if (navigator.connection.type == Connection.WIFI) {
             $('#home-' + video.id).hide();
             $('.video-z-index').show();
             player.playVideo();
-          }else{
+          } else {
             $ionicPopup.alert({
               title: "Keine WiFi-Verbindung vorhanden",
               content: "Sie sind nicht mit dem WiFi verbunden. Um Videos dennoch abspielen zu können, überprüfen Sie erneut Ihre Einstellungen."
-            }).then(function(res) {
+            }).then(function (res) {
             });
           }
-        }else{
+        } else {
           $('#home-' + video.id).hide();
           $('.video-z-index').show();
           player.playVideo();
         }
       }
-    };
+    }
 
-    $scope.navigateToNews = function(id){
-      $state.go('app.singlenews', {newsId:id});
-    };
+    function navigateToNews(id) {
+      $state.go('app.singlenews', {newsId: id});
+    }
 
-    $scope.navigateToMatchCenter = function(){
+    function navigateToMatchCenter() {
       $ionicSideMenuDelegate.toggleLeft(false);
       $state.go('app.matchcenter', {game: {isLive: false}});
-    };
-
-    function hideLoader(){
-      if(showContent){
-        $rootScope.$broadcast('hide_loader');
-      }else{
-        $timeout(function(){
-          hideLoader();
-        }, 1000);
-      }
     }
-  });
+
+    vm._init();
+  }
+})();
