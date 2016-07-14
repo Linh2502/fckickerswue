@@ -53,19 +53,19 @@ angular.module('starter', [
   })
 
   .run(function($rootScope, $ionicLoading, $ionicPlatform) {
-    $ionicPlatform.ready(function() {
-      $rootScope.uuid = '&uuid=' + ionic.Platform.device().uuid;
-      if (window.cordova && window.cordova.plugins.Keyboard) {
-        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-        cordova.plugins.Keyboard.disableScroll(true);
-      }
-      window.parsePlugin.initialize('H68ppzb0DIIIujrb2obzFuv66sclqsPLTuBprOoG', 'AyGtfTXRzcvVYMnCfZmPkjTK7TPVcfzmPcEkTOUt', function() {
-        console.log('Parse initialized successfully.');
-        window.parsePlugin.getInstallationId(function(id) {}, function(e) {});
-      }, function(e) {
-        console.log('Failure to initialize Parse.');
-      });
-    });
+    //$ionicPlatform.ready(function() {
+    //  $rootScope.uuid = '&uuid=' + ionic.Platform.device().uuid;
+    //  if (window.cordova && window.cordova.plugins.Keyboard) {
+    //    cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    //    cordova.plugins.Keyboard.disableScroll(true);
+    //  }
+    //  window.parsePlugin.initialize('H68ppzb0DIIIujrb2obzFuv66sclqsPLTuBprOoG', 'AyGtfTXRzcvVYMnCfZmPkjTK7TPVcfzmPcEkTOUt', function() {
+    //    console.log('Parse initialized successfully.');
+    //    window.parsePlugin.getInstallationId(function(id) {}, function(e) {});
+    //  }, function(e) {
+    //    console.log('Failure to initialize Parse.');
+    //  });
+    //});
   })
 
   .filter('trusted', ['$sce', function($sce){
@@ -123,7 +123,7 @@ angular.module('starter', [
         views: {
           'menuContent': {
             templateUrl: 'templates/arena.html',
-            controller: 'ArenaCtrl'
+            controller: 'ArenaCtrl as arenaVM'
           }
         }
       })
@@ -265,7 +265,7 @@ angular.module('starter', [
         views: {
           'menuContent': {
             templateUrl: 'templates/newsletter.html',
-            controller: 'NewsletterCtrl'
+            controller: 'NewsletterCtrl as newsLetterVM'
           }
         }
       })

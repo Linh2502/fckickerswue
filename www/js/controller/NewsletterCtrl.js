@@ -4,12 +4,24 @@
  *
  * - final -
  */
-angular.module('module.newsletter', [])
-  .controller('NewsletterCtrl', function($scope, $http, $ionicSideMenuDelegate){
+(function () {
+  angular
+    .module('module.newsletter', [])
+    .controller('NewsletterCtrl', NewsLetterController);
+
+  NewsLetterController.$inject = ['$http', '$ionicSideMenuDelegate'];
+
+  function NewsLetterController($http, $ionicSideMenuDelegate) {
     $ionicSideMenuDelegate.canDragContent(true);
-    $('#success').hide();
-    $scope.subscribe = function(subscriptionForm){
-      if(subscriptionForm.$invalid) {
+    var vm = this;
+    vm.showSuccess = false;
+    vm.showSubscriptionForm = true;
+
+    vm.subscribe = subscribe;
+
+    function subscribe(subscriptionForm) {
+      console.log(subscriptionForm);
+      if (subscriptionForm.$invalid) {
         if (!subscriptionForm.email.$valid) {
           $('#emailError').show();
           subscriptionForm.email.$error.required = true;
@@ -19,7 +31,7 @@ angular.module('module.newsletter', [])
           subscriptionForm.subscribe.$error.required = true;
         }
       }
-      else{
+      else {
         var data = {
           'anrede': subscriptionForm.gender.$viewValue,
           'firstname': subscriptionForm.surname.$viewValue,
@@ -27,18 +39,19 @@ angular.module('module.newsletter', [])
           'email': subscriptionForm.email.$viewValue,
           'datenschutz[]': 'aktzeptiert'
         };
-        var transform = function(data){
+        var transform = function (data) {
           return $.param(data);
-        }
+        };
 
-        $http.post("https://www.wuerzburger-kickers.de/de/newsletter", data, {
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
-          transformRequest: transform
-        }).success(function(responseData) {
-          $('#form').hide();
-          $('#success').show();
-        }).error(function(response) {
-        });
+        //$http.post("https://www.wuerzburger-kickers.de/de/newsletter", data, {
+        //  headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
+        //  transformRequest: transform
+        //}).success(function (responseData) {
+        //  vm.showSubscriptionForm = false;
+        //  vm.showSuccess = true;
+        //}).error(function (response) {
+        //});
       }
     }
-  })
+  }
+})();

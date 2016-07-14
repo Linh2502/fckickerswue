@@ -5,16 +5,16 @@
 
 angular.module('factory.splash', [])
   .factory('SplashScreen', function ($q, $ionicPlatform, $timeout, $cordovaSplashscreen) {
-    return {
-      removeSplash: function() {
-        var deferred = $q.defer();
-        $ionicPlatform.ready(function(){
-          $timeout(function(){
-            $cordovaSplashscreen.hide();
-            deferred.resolve();
-          }, 500);
-        });
-        return deferred.promise;
-      }
-    };
+    //return {
+    //  removeSplash: function() {
+    //    var deferred = $q.defer();
+    //    $ionicPlatform.ready(function(){
+    //      $timeout(function(){
+    //        $cordovaSplashscreen.hide();
+    //        deferred.resolve();
+    //      }, 500);
+    //    });
+    //    return deferred.promise;
+    //  }
+    //};
   })

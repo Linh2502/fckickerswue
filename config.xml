@@ -1,73 +1,73 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.icue.fwk" version="1.0.30" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>FC Würzburger Kickers</name>
-    <description>
+  <name>FC Würzburger Kickers</name>
+  <description>
     Offizielle FC Würzburger Kickers App für Android und iOS.
   </description>
-    <author email="bui@icue-medien.de" href="http://www.i-cue-medien.de/">
+  <author email="bui@icue-medien.de" href="http://www.i-cue-medien.de/">
     Linh Bui @icue-medien
   </author>
-    <content src="index.html" />
-    <access origin="*" />
-    <allow-navigation href="file://*/*" />
-    <allow-navigation href="*" />
-    <allow-navigation href="https://*youtube.com/*" />
-    <preference name="webviewbounce" value="false" />
-    <preference name="UIWebViewBounce" value="false" />
-    <preference name="DisallowOverscroll" value="true" />
-    <preference name="android-minSdkVersion" value="16" />
-    <preference name="BackupWebStorage" value="none" />
-    <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="3000" />
-    <preference name="ShowSplashScreenSpinner" value="false" />
-    <preference name="AutoHideSplashScreen" value="false" />
-    <preference name="orientation" value="portrait" />
-    <feature name="StatusBar">
-        <param name="ios-package" onload="true" value="CDVStatusBar" />
-    </feature>
-    <platform name="ios">
-        <icon height="60" src="icons/ios/iconround/Icon-60.png" width="60" />
-        <icon height="120" src="icons/ios/iconround/Icon-60@2x.png" width="120" />
-        <icon height="180" src="icons/ios/iconround/Icon-60@3x.png" width="180" />
-        <icon height="40" src="icons/ios/iconround/Icon-Small-40.png" width="40" />
-        <icon height="80" src="icons/ios/iconround/Icon-Small-40@2x.png" width="80" />
-        <icon height="50" src="icons/ios/iconround/Icon-Small-50.png" width="50" />
-        <icon height="29" src="icons/ios/iconround/Icon-Small.png" width="29" />
-        <icon height="100" src="icons/ios/iconround/Icon-Small-50@2x.png" width="100" />
-        <icon height="120" src="icons/ios/iconround/Icon-Small-40@3x.png" width="120" />
-        <icon height="114" src="icons/ios/iconround/Icon-Small-114@3x.png" width="114" />
-        <icon height="72" src="icons/ios/iconround/Icon-72.png" width="72" />
-        <icon height="57" src="icons/ios/iconround/Icon-57.png" width="57" />
-        <icon height="144" src="icons/ios/iconround/Icon-72@2x.png" width="144" />
-        <icon height="76" src="icons/ios/iconround/Icon-76.png" width="76" />
-        <icon height="152" src="icons/ios/iconround/Icon-76@2x.png" width="152" />
-        <icon height="29" src="icons/ios/iconround/Icon-Small.png" width="29" />
-        <icon height="58" src="icons/ios/iconround/Icon-Small@2x.png" width="58" />
-        <icon height="87" src="icons/ios/iconround/Icon-Small@3x.png" width="87" />
-        <icon height="1024" src="icons/ios/iconround/iTunesArtwork@2x.png" width="1024" />
-        <splash height="1136" src="splash/ios/640x1136.png" width="640" />
-        <splash height="1334" src="splash/ios/750x1334.png" width="750" />
-        <splash height="2208" src="splash/ios/1242x2208.png" width="1242" />
-        <splash height="1024" src="splash/ios/768x1024.png" width="768" />
-        <splash height="960" src="splash/ios/640x960.png" width="640" />
-        <splash height="480" src="splash/ios/320x480.png" width="320" />
-    </platform>
-    <platform name="android">
-        <icon density="ldpi" src="icons/android/Icon-36@2x.png" />
-        <icon density="mdpi" src="icons/android/Icon-48@2x.png" />
-        <icon density="hdpi" src="icons/android/Icon-72@2x.png" />
-        <icon density="xhdpi" src="icons/android/Icon-96@2x.png" />
-        <icon density="xxhdpi" src="icons/android/Icon-144@2x.png" />
-        <icon density="xxxhdpi" src="icons/android/Icon-192@2x.png" />
-        <splash density="port-ldpi" src="splash/android/200x320.png" />
-        <splash density="port-mdpi" src="splash/android/320x480.png" />
-        <splash density="port-hdpi" src="splash/android/480x800.png" />
-        <splash density="port-xhdpi" src="splash/android/720x1280.png" />
-        <splash density="port-xxhdpi" src="splash/android/960x1600.png" />
-        <splash density="port-xxxhdpi" src="splash/android/1280x1920.png" />
-    </platform>
-    <preference name="xwalkVersion" value="15+" />
-    <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
-    <preference name="xwalkMode" value="embedded" />
-    <preference name="xwalkMultipleApk" value="true" />
+  <content src="index.html"/>
+  <access origin="*"/>
+  <allow-navigation href="file://*/*"/>
+  <allow-navigation href="*"/>
+  <allow-navigation href="https://*youtube.com/*"/>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="android-minSdkVersion" value="16"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreenDelay" value="3000"/>
+  <preference name="ShowSplashScreenSpinner" value="false"/>
+  <preference name="AutoHideSplashScreen" value="false"/>
+  <preference name="orientation" value="portrait"/>
+  <preference name="xwalkVersion" value="15+"/>
+  <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect"/>
+  <preference name="xwalkMode" value="embedded"/>
+  <preference name="xwalkMultipleApk" value="true"/>
+  <feature name="StatusBar">
+    <param name="ios-package" onload="true" value="CDVStatusBar"/>
+  </feature>
+  <platform name="ios">
+    <icon height="60" src="icons/ios/iconround/Icon-60.png" width="60"/>
+    <icon height="120" src="icons/ios/iconround/Icon-60@2x.png" width="120"/>
+    <icon height="180" src="icons/ios/iconround/Icon-60@3x.png" width="180"/>
+    <icon height="40" src="icons/ios/iconround/Icon-Small-40.png" width="40"/>
+    <icon height="80" src="icons/ios/iconround/Icon-Small-40@2x.png" width="80"/>
+    <icon height="50" src="icons/ios/iconround/Icon-Small-50.png" width="50"/>
+    <icon height="29" src="icons/ios/iconround/Icon-Small.png" width="29"/>
+    <icon height="100" src="icons/ios/iconround/Icon-Small-50@2x.png" width="100"/>
+    <icon height="120" src="icons/ios/iconround/Icon-Small-40@3x.png" width="120"/>
+    <icon height="114" src="icons/ios/iconround/Icon-Small-114@3x.png" width="114"/>
+    <icon height="72" src="icons/ios/iconround/Icon-72.png" width="72"/>
+    <icon height="57" src="icons/ios/iconround/Icon-57.png" width="57"/>
+    <icon height="144" src="icons/ios/iconround/Icon-72@2x.png" width="144"/>
+    <icon height="76" src="icons/ios/iconround/Icon-76.png" width="76"/>
+    <icon height="152" src="icons/ios/iconround/Icon-76@2x.png" width="152"/>
+    <icon height="29" src="icons/ios/iconround/Icon-Small.png" width="29"/>
+    <icon height="58" src="icons/ios/iconround/Icon-Small@2x.png" width="58"/>
+    <icon height="87" src="icons/ios/iconround/Icon-Small@3x.png" width="87"/>
+    <icon height="1024" src="icons/ios/iconround/iTunesArtwork@2x.png" width="1024"/>
+    <splash height="1136" src="splash/ios/640x1136.png" width="640"/>
+    <splash height="1334" src="splash/ios/750x1334.png" width="750"/>
+    <splash height="2208" src="splash/ios/1242x2208.png" width="1242"/>
+    <splash height="1024" src="splash/ios/768x1024.png" width="768"/>
+    <splash height="960" src="splash/ios/640x960.png" width="640"/>
+    <splash height="480" src="splash/ios/320x480.png" width="320"/>
+  </platform>
+  <platform name="android">
+    <icon density="ldpi" src="icons/android/Icon-36@2x.png"/>
+    <icon density="mdpi" src="icons/android/Icon-48@2x.png"/>
+    <icon density="hdpi" src="icons/android/Icon-72@2x.png"/>
+    <icon density="xhdpi" src="icons/android/Icon-96@2x.png"/>
+    <icon density="xxhdpi" src="icons/android/Icon-144@2x.png"/>
+    <icon density="xxxhdpi" src="icons/android/Icon-192@2x.png"/>
+    <splash density="port-ldpi" src="splash/android/200x320.png"/>
+    <splash density="port-mdpi" src="splash/android/320x480.png"/>
+    <splash density="port-hdpi" src="splash/android/480x800.png"/>
+    <splash density="port-xhdpi" src="splash/android/720x1280.png"/>
+    <splash density="port-xxhdpi" src="splash/android/960x1600.png"/>
+    <splash density="port-xxxhdpi" src="splash/android/1280x1920.png"/>
+  </platform>
 </widget>
