@@ -17,7 +17,6 @@ angular.module('starter', [
   'directive.logo',
   'directive.slideboxheight',
   'ngIOS9UIWebViewPatch',
-  'factory.splash',
   'service.advertisement',
   'service.home',
   'service.kader',
