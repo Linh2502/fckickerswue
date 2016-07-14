@@ -2,9 +2,11 @@
  * Created by Linh on 02.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
  *
- * - final -
+ * status: 14.07.2016 1:58 PM
  */
 (function () {
+  'use strict';
+
   angular
     .module('module.newsletter', [])
     .controller('NewsletterCtrl', NewsLetterController);

@@ -2,126 +2,143 @@
  * Created by Linh on 02.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
  *
- * - final -
+ * status: 14.07.2016 2:26 PM
  */
-angular.module('module.settings', [])
-  .controller('SettingsCtrl', function($scope, $ionicModal, $timeout, $ionicSideMenuDelegate){
+(function () {
+  'use strict';
+
+  angular
+    .module('module.settings', [])
+    .controller('SettingsCtrl', SettingsController);
+
+  SettingsController.$inject = ['$timeout', '$ionicSideMenuDelegate'];
+
+  function SettingsController($timeout, $ionicSideMenuDelegate) {
     $ionicSideMenuDelegate.canDragContent(true);
-    $scope.$on('$ionicView.beforeEnter', function() {
-      if(window.localStorage['LiveTickerChannelSubscription'] == 'true'){
-        $scope.goals = { checked: true };
-      }else {
-        $scope.goals = { checked: false };
-      }
+    var vm = this;
+    vm.goals = window.localStorage['LiveTickerChannelSubscription'];
+    vm.game = window.localStorage['GameChannelSubscription'];
+    vm.news = window.localStorage['TopNewsChannelSubscription'];
+    vm.kickerstv = window.localStorage['KickersTVChannelSubscription'];
+    vm.offer = window.localStorage['OffersChannelSubscription'];
+    vm.wifi = window.localStorage['WifiEnabled'];
 
-      if(window.localStorage['GameChannelSubscription'] == 'true'){
-        $scope.game = { checked: true };
-      }else {
-        $scope.game = { checked: false };
-      }
+    vm.goalsChange = goalsChange;
+    vm.gameChange = gameChange;
+    vm.newsChange = newsChange;
+    vm.kickerstvChange = kickerstvChange;
+    vm.offerChange = offerChange;
+    vm.wifiChange = wifiChange;
 
-      if(window.localStorage['TopNewsChannelSubscription'] == 'true'){
-        $scope.news = { checked: true };
-      }else {
-        $scope.news = { checked: false };
-      }
-
-      if(window.localStorage['KickersTVChannelSubscription'] == 'true'){
-        $scope.kickerstv = { checked: true };
-      }else {
-        $scope.kickerstv = { checked: false };
-      }
-
-      if(window.localStorage['OffersChannelSubscription'] == 'true'){
-        $scope.offer = { checked: true };
-      }else {
-        $scope.offer = { checked: false };
-      }
-
-      if(window.localStorage['WifiEnabled'] == 'true'){
-        $scope.wifi = { checked: true };
-      }else {
-        $scope.wifi = { checked: false };
-      }
-    });
-
-    $scope.goalsChange = function() {
-      $timeout(function() {
-        if($scope.goals.checked){
+    function goalsChange() {
+      $timeout(function () {
+        if (vm.goals) {
           window.localStorage['LiveTickerChannelSubscription'] = 'true';
-          window.parsePlugin.subscribe('LiveTickerChannel', function() {}, function(e) {});
-          window.parsePlugin.subscribe('subscribed', function() {}, function(e) {});
+          window.parsePlugin.subscribe('LiveTickerChannel', function () {
+          }, function (e) {
+          });
+          window.parsePlugin.subscribe('subscribed', function () {
+          }, function (e) {
+          });
         }
-        if(!$scope.goals.checked){
+        if (!vm.goals) {
           window.localStorage['LiveTickerChannelSubscription'] = 'false';
-          window.parsePlugin.unsubscribe('LiveTickerChannel', function() {}, function(e) {});
+          window.parsePlugin.unsubscribe('LiveTickerChannel', function () {
+          }, function (e) {
+          });
         }
       }, 0);
     }
-    $scope.gameChange = function() {
-      $timeout(function() {
-        if($scope.game.checked){
+
+    function gameChange() {
+      $timeout(function () {
+        if (vm.game) {
           window.localStorage['GameChannelSubscription'] = 'true';
-          window.parsePlugin.subscribe('GameChannel', function() {}, function(e) {});
-          window.parsePlugin.subscribe('subscribed', function() {}, function(e) {});
+          window.parsePlugin.subscribe('GameChannel', function () {
+          }, function (e) {
+          });
+          window.parsePlugin.subscribe('subscribed', function () {
+          }, function (e) {
+          });
         }
-        if(!$scope.game.checked){
+        if (!vm.game) {
           window.localStorage['GameChannelSubscription'] = 'false';
-          window.parsePlugin.unsubscribe('GameChannel', function() {}, function(e) {});
+          window.parsePlugin.unsubscribe('GameChannel', function () {
+          }, function (e) {
+          });
         }
       }, 0);
     }
 
-    $scope.newsChange = function() {
-      $timeout(function() {
-        if($scope.news.checked){
+    function newsChange() {
+      $timeout(function () {
+        if (vm.news) {
           window.localStorage['TopNewsChannelSubscription'] = 'true';
-          window.parsePlugin.subscribe('TopNewsChannel', function() {}, function(e) {});
-          window.parsePlugin.subscribe('subscribed', function() {}, function(e) {});
+          window.parsePlugin.subscribe('TopNewsChannel', function () {
+          }, function (e) {
+          });
+          window.parsePlugin.subscribe('subscribed', function () {
+          }, function (e) {
+          });
         }
-        if(!$scope.news.checked){
+        if (!vm.news) {
           window.localStorage['TopNewsChannelSubscription'] = 'false';
-          window.parsePlugin.unsubscribe('TopNewsChannel', function() {}, function(e) {});
+          window.parsePlugin.unsubscribe('TopNewsChannel', function () {
+          }, function (e) {
+          });
         }
       }, 0);
     }
 
-    $scope.kickerstvChange = function() {
-      $timeout(function() {
-        if($scope.kickerstv.checked){
+    function kickerstvChange() {
+      $timeout(function () {
+        if (vm.kickerstv) {
           window.localStorage['KickersTVChannelSubscription'] = 'true';
-          window.parsePlugin.subscribe('KickersTVChannel', function() {}, function(e) {});
-          window.parsePlugin.subscribe('subscribed', function() {}, function(e) {});
+          window.parsePlugin.subscribe('KickersTVChannel', function () {
+          }, function (e) {
+          });
+          window.parsePlugin.subscribe('subscribed', function () {
+          }, function (e) {
+          });
         }
-        if(!$scope.kickerstv.checked){
+        if (!vm.kickerstv) {
           window.localStorage['KickersTVChannelSubscription'] = 'false';
-          window.parsePlugin.unsubscribe('KickersTVChannel', function() {}, function(e) {});
+          window.parsePlugin.unsubscribe('KickersTVChannel', function () {
+          }, function (e) {
+          });
         }
       }, 0);
     }
 
-    $scope.offerChange = function() {
-      $timeout(function() {
-        if($scope.offer.checked){
+    function offerChange() {
+      $timeout(function () {
+        if (vm.offer) {
           window.localStorage['OffersChannelSubscription'] = 'true';
-          window.parsePlugin.subscribe('OffersChannel', function() {}, function(e) {});
-          window.parsePlugin.subscribe('subscribed', function() {}, function(e) {});
+          window.parsePlugin.subscribe('OffersChannel', function () {
+          }, function (e) {
+          });
+          window.parsePlugin.subscribe('subscribed', function () {
+          }, function (e) {
+          });
         }
-        if(!$scope.offer.checked){
+        if (!vm.offer) {
           window.localStorage['OffersChannelSubscription'] = 'false';
-          window.parsePlugin.unsubscribe('OffersChannel', function() {}, function(e) {});
+          window.parsePlugin.unsubscribe('OffersChannel', function () {
+          }, function (e) {
+          });
         }
       }, 0);
     }
 
-    $scope.wifiChange = function() {
-      $timeout(function() {
-        if($scope.wifi.checked) {
+    function wifiChange() {
+      $timeout(function () {
+        if (vm.wifi) {
           window.localStorage['WifiEnabled'] = 'true';
         }
-        if(!$scope.wifi.checked) {
+        if (!vm.wifi) {
           window.localStorage['WifiEnabled'] = 'false';
         }
       }, 0);
     }
-  })
+  }
+})();

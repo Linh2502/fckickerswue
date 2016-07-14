@@ -1,7 +1,8 @@
 <!--
     Created by Linh on 02.09.15.
     Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
-    - final -
+
+    status: 14.07.2016 2:26 PM
 -->
 <ion-view hide-back-button="true">
   <ion-content class="has-subheader">
@@ -16,7 +17,7 @@
               <div class="row remove-col-padding">
                 <div class="settings-options font-size">Live-Ticker Tore</div>
                 <div class="settings-toggle-div">
-                  <ion-toggle class="settings-toggle" name="goals" ng-model="goals.checked" ng-change="goalsChange()">
+                  <ion-toggle class="settings-toggle" name="goals" ng-model="settingsVM.goals" ng-change="settingsVM.goalsChange()">
                   </ion-toggle>
                 </div>
               </div>
@@ -25,7 +26,7 @@
               <div class="row remove-col-padding">
                 <div class="settings-options font-size">Spielende und Ergebnis</div>
                 <div class="settings-toggle-div">
-                  <ion-toggle class="settings-toggle" name="game" ng-model="game.checked" ng-change="gameChange()">
+                  <ion-toggle class="settings-toggle" name="game" ng-model="settingsVM.game" ng-change="settingsVM.gameChange()">
                   </ion-toggle>
                 </div>
               </div>
@@ -34,7 +35,7 @@
               <div class="row remove-col-padding">
                 <div class="settings-options font-size">Top News</div>
                 <div class="settings-toggle-div">
-                  <ion-toggle class="settings-toggle" name="news" ng-model="news.checked" ng-change="newsChange()">
+                  <ion-toggle class="settings-toggle" name="news" ng-model="settingsVM.news" ng-change="settingsVM.newsChange()">
                   </ion-toggle>
                 </div>
               </div>
@@ -43,7 +44,7 @@
               <div class="row remove-col-padding">
                 <div class="settings-options font-size">Kickers-TV</div>
                 <div class="settings-toggle-div">
-                  <ion-toggle class="settings-toggle" name="kickerstv" ng-model="kickerstv.checked" ng-change="kickerstvChange()">
+                  <ion-toggle class="settings-toggle" name="kickerstv" ng-model="settingsVM.kickerstv" ng-change="settingsVM.kickerstvChange()">
                   </ion-toggle>
                 </div>
               </div>
@@ -52,7 +53,7 @@
               <div class="row remove-col-padding">
                 <div class="settings-options font-size">Aktionen und Angebote</div>
                 <div class="settings-toggle-div">
-                  <ion-toggle class="settings-toggle" name="offer" ng-model="offer.checked" ng-change="offerChange()">
+                  <ion-toggle class="settings-toggle" name="offer" ng-model="settingsVM.offer" ng-change="settingsVM.offerChange()">
                   </ion-toggle>
                 </div>
               </div>
@@ -69,7 +70,7 @@
               <div class="row remove-col-padding">
                 <div class="settings-options font-size">Nur über WiFi abspielen</div>
                 <div class="settings-toggle-div">
-                  <ion-toggle class="settings-toggle" name="wifi" ng-model="wifi.checked" ng-change="wifiChange()">
+                  <ion-toggle class="settings-toggle" name="wifi" ng-model="settingsVM.wifi" ng-change="settingsVM.wifiChange()">
                   </ion-toggle>
                 </div>
               </div>
