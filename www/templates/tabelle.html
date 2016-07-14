@@ -1,11 +1,12 @@
 <!--
     Created by Linh on 02.09.15.
     Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
-    - final -
+
+     status: 14.07.2016 3:21 PM
 -->
 <ion-view hide-back-button="true">
   <ion-content class="has-subheader">
-    <ion-refresher on-refresh="refresh()"></ion-refresher>
+    <ion-refresher on-refresh="tableVM.refresh()"></ion-refresher>
     <div id="tabelle">
       <div class="row remove-col-padding tabelle-ueberschrift">
         <div class="col remove-col-padding custom-title">
@@ -20,7 +21,7 @@
             <span class="col col-10 tabelle-margin-right">Pkt.</span>
           </div>
           <div class="tabelle-ueberschrift-bottom-border">
-            <div ng-repeat="table in tableFeed">
+            <div ng-repeat="table in tableVM.tableFeed">
               <div class="row remove-col-padding" ng-class-odd="'odd'" ng-class-even="'even'" ng-if="table.is_kickers">
                 <span class="col col-10 tabelle-margin-left tabelle-font-color">{{table.position}}</span>
                 <span class="col custom-col-35 tabelle-font-color">{{table.name}}</span>

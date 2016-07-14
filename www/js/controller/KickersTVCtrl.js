@@ -9,9 +9,9 @@
     .module('module.kickerstv', ['ionicLazyLoad', 'loadingInterceptor'])
     .controller('KickersTVCtrl', KTVController)
 
-  KTVController.$inject = ['$log', '$scope', '$rootScope', 'KickersTVService', '$ionicSideMenuDelegate', '$ionicPopup', '$timeout'];
+  KTVController.$inject = ['$scope', '$rootScope', 'KickersTVService', '$ionicSideMenuDelegate', '$ionicPopup', '$timeout'];
 
-  function KTVController($log, $scope, $rootScope, KickersTVService, $ionicSideMenuDelegate, $ionicPopup, $timeout) {
+  function KTVController($scope, $rootScope, KickersTVService, $ionicSideMenuDelegate, $ionicPopup, $timeout) {
     $ionicSideMenuDelegate.canDragContent(true);
     var vm = this;
     vm.videosFeed = [];
@@ -78,5 +78,4 @@
 
     vm._init();
   }
-
 })();

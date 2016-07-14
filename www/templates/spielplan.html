@@ -1,12 +1,13 @@
 <!--
     Created by Linh on 02.09.15.
     Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
-    - final -
+
+    status: 14.07.2016 2:26 PM
 -->
 <ion-view hide-back-button="true">
   <ion-content lazy-scroll class="has-subheader" delegate-handle="spielplan-scroll">
-    <ion-refresher on-refresh="refresh()"></ion-refresher>
-    <div ng-repeat="game in matchListing">
+    <ion-refresher on-refresh="scheduleVM.refresh()"></ion-refresher>
+    <div ng-repeat="game in scheduleVM.matchListing">
       <div id="{{game.date}}">
         <div ng-if="game.date == anchorDate">
           <div class="arena-border-box-shadow spielplan-first-column anchor-highlight-item">
@@ -48,7 +49,7 @@
           </div>
           <div class="col"></div>
         </div>
-        <div ng-if="game.date != anchorDate">
+        <div ng-if="game.date != scheduleVM.anchorDate">
           <div class="arena-border-box-shadow spielplan-first-column">
             <div class="news-image-text">
               <div class="news-image-text-display">

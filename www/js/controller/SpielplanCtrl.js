@@ -2,44 +2,54 @@
  * Created by Linh on 02.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
  *
- * - final -
+ * status: 14.07.2016 3:40 PM
  */
-angular.module('module.spielplan', ['ionicLazyLoad', 'dateFilter'])
-  .controller('SpielplanCtrl', function($rootScope, $scope, $ionicModal, SpielplanService, $ionicSideMenuDelegate, $location, $ionicScrollDelegate, $timeout){
+(function () {
+  'use strict';
+
+  angular
+    .module('module.spielplan', ['ionicLazyLoad', 'dateFilter'])
+    .controller('SpielplanCtrl', SpielplanController);
+
+  SpielplanController.$inject = ['$rootScope', '$scope', 'SpielplanService', '$ionicSideMenuDelegate', '$location', '$ionicScrollDelegate', '$timeout'];
+
+  function SpielplanController($rootScope, $scope, SpielplanService, $ionicSideMenuDelegate, $location, $ionicScrollDelegate, $timeout) {
     $ionicSideMenuDelegate.canDragContent(true);
-    var getCurrentDay = new Date().getTime();
-    var showContent = false;
-    $scope.anchorDate = null;
-    $scope.matchListing = [];
+    var vm = this;
+    vm.getCurrentDay = new Date().getTime();
+    vm.anchorDate = null;
+    vm.matchListing = [];
 
-    $scope.$on('$ionicView.beforeEnter', function() {
-      $ionicSideMenuDelegate.toggleLeft(false);
+    vm._init = _init;
+    vm.refresh = refresh;
+
+    function _init() {
       $rootScope.$broadcast('show_loader');
-      SpielplanService.fetchSpielPlanData();
-    });
+      SpielplanService.fetchSpielPlanData()
+        .then(function(success) {
+          setMatchListingFeed(success);
+          $timeout(function () {
+            $rootScope.$broadcast('hide_loader');
+            goToNextGame();
+          }, 500);
+        });
 
-    $rootScope.$on('show_content_spielplan', function() {
-      setMatchListingFeed(SpielplanService.getData());
-      showContent = true;
-      console.log("request success spielplan");
-    });
+    }
 
-    $scope.$on('$ionicView.afterEnter', function() {
-      hideLoader();
-    });
+    function refresh() {
+      SpielplanService.fetchSpielPlanData()
+        .then(function(success) {
+          setMatchListingFeed(success);
+          $scope.$broadcast('scroll.refreshComplete');
+        });
+    }
 
-    $scope.refresh = function(){
-      SpielplanService.fetchSpielPlanData();
-      setMatchListingFeed(SpielplanService.getData());
-      $scope.$broadcast('scroll.refreshComplete');
-    };
-
-    function setMatchListingFeed(matches){
-      for(var i = 0; i < matches.match.length; i++) {
+    function setMatchListingFeed(matches) {
+      for (var i = 0; i < matches.match.length; i++) {
         var splitDate = matches.match[i].eventdate_start.split(" ");
         var date = splitDate[0];
         var time = splitDate[1];
-        $scope.matchListing.push({
+        vm.matchListing.push({
           matchday: matches.match[i].matchday,
           date: date, time: time,
           team_home: matches.match[i].team_home,
@@ -52,39 +62,29 @@ angular.module('module.spielplan', ['ionicLazyLoad', 'dateFilter'])
       }
     }
 
-    function setAnchorDate(date, matches){
+    function setAnchorDate(date, matches) {
       var setDate = date.split("-");
       var splitDate = setDate[1] + "/" + setDate[2] + "/" + setDate[0];
       var compareDate = new Date(splitDate).getTime();
-      if(getCurrentDay > compareDate){
-        for(var i = 0; i < matches.match.length; i++){
+      if (vm.getCurrentDay > compareDate) {
+        for (var i = 0; i < matches.match.length; i++) {
           var splitDate2 = matches.match[i].eventdate_start.split(" ");
           var date2 = splitDate2[0];
-          if(date2 == date){
-            var splitDate3 = matches.match[i+1].eventdate_start.split(" ");
-            $scope.anchorDate = splitDate3[0];
+          if (date2 == date) {
+            var splitDate3 = matches.match[i + 1].eventdate_start.split(" ");
+            vm.anchorDate = splitDate3[0];
           }
         }
       }
     }
 
-    function goToNextGame(){
-      $location.hash($scope.anchorDate);
+    function goToNextGame() {
+      $location.hash(vm.anchorDate);
       $ionicScrollDelegate.$getByHandle('spielplan-scroll').anchorScroll(true);
       $ionicScrollDelegate.$getByHandle('spielplan-scroll').freezeScroll(false);
       $ionicScrollDelegate.$getByHandle('spielplan-scroll').resize();
     }
 
-    function hideLoader(){
-      if(showContent){
-        $rootScope.$broadcast('hide_loader');
-        $timeout(function(){
-          goToNextGame();
-        }, 500);
-      }else{
-        $timeout(function(){
-          hideLoader();
-        }, 1000);
-      }
-    }
-  });
+    vm._init();
+  }
+})();

@@ -23,28 +23,6 @@ angular.module('module.app', ['ionic', 'loadingInterceptor'])
       $('#loaderInterceptor').hide();
     });
 
-    $rootScope.$on('http_request_success_home', function(){
-      $rootScope.$broadcast('show_content_home');
-    });
-    $rootScope.$on('http_request_success_kader', function(){
-      $rootScope.$broadcast('show_content_kader');
-    });
-    $rootScope.$on('http_request_success_matchcenter', function(){
-      $rootScope.$broadcast('show_content_matchcenter');
-    });
-    $rootScope.$on('http_request_success_news', function(){
-      $rootScope.$broadcast('show_content_news');
-    });
-    $rootScope.$on('http_request_success_singlenews', function(){
-      $rootScope.$broadcast('show_content_singlenews');
-    });
-    $rootScope.$on('http_request_success_spielplan', function(){
-      $rootScope.$broadcast('show_content_spielplan');
-    });
-    $rootScope.$on('http_request_success_tabelle', function(){
-      $rootScope.$broadcast('show_content_tabelle');
-    });
-
     var lockButton = false;
     $('#submenu').hide();
     $scope.detailsFeed = [];

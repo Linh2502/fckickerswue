@@ -288,7 +288,7 @@ angular.module('starter', [
         views: {
           'menuContent': {
             templateUrl: 'templates/spielplan.html',
-            controller: 'SpielplanCtrl'
+            controller: 'SpielplanCtrl as scheduleVM'
           }
         }
       })
@@ -299,7 +299,7 @@ angular.module('starter', [
         views: {
           'menuContent': {
             templateUrl: 'templates/tabelle.html',
-            controller: 'TabelleCtrl'
+            controller: 'TabelleCtrl as tableVM'
           }
         }
       })
