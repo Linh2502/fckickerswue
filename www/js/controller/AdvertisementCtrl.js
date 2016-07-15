@@ -23,55 +23,52 @@
     vm._init = _init;
 
     function _init() {
-      vm.boolean = true;
-      nextState();
-      //AdvertisementService.getAdsData()
-      //  .then(function(success) {
-      //    if($stateParams.localAd){
-      //      vm.showBanner = success;
-      //      vm.boolean = true;
-      //      nextState();
-      //    }else{
-      //      if(success.data.image[0].valid_from*1000 <= time) {
-      //        vm.showBanner = success.data.image[0].url;
-      //        AdvertisementService.saveToLocalSystem()
-      //          .then(function(success) {
-      //            vm.boolean = true;
-      //            nextState();
-      //          });
-      //      }
-      //    }
-      //    nextState();
-      //  }, function(error) {
-      //    vm.boolean = false;
-      //    nextState();
-      //  });
+      AdvertisementService.getAdsData()
+        .then(function(success) {
+          if($stateParams.localAd){
+            vm.showBanner = success;
+            vm.boolean = true;
+            nextState();
+          }else{
+            if(success.data.image[0].valid_from*1000 <= time) {
+              vm.showBanner = success.data.image[0].url;
+              AdvertisementService.saveToLocalSystem()
+                .then(function(success) {
+                  vm.boolean = true;
+                  nextState();
+                });
+            }
+          }
+          nextState();
+        }, function(error) {
+          vm.boolean = false;
+          nextState();
+        });
     }
 
     function nextState() {
-      $state.transitionTo('app.home');
-      //if(boolean){
-      //  $timeout(function(){
-      //    $cordovaSplashscreen.hide();
-      //  }, 500);
-      //  if($stateParams.connection.hasInternet){
-      //    $('#advertisement').delay(3000).fadeOut(400);
-      //    $timeout(function(){
-      //      $state.transitionTo('app.home');
-      //    }, 3500);
-      //  }else{
-      //    $cordovaSplashscreen.hide();
-      //    $state.transitionTo('app.error');
-      //  }
-      //}else{
-      //  vm.showBanner = null;
-      //  if($stateParams.connection.hasInternet){
-      //    $state.transitionTo('app.home');
-      //  }else{
-      //    $cordovaSplashscreen.hide();
-      //    $state.transitionTo('app.error');
-      //  }
-      //}
+      if(boolean){
+        $timeout(function(){
+          $cordovaSplashscreen.hide();
+        }, 500);
+        if($stateParams.connection.hasInternet){
+          $('#advertisement').delay(3000).fadeOut(400);
+          $timeout(function(){
+            $state.transitionTo('app.home');
+          }, 3500);
+        }else{
+          $cordovaSplashscreen.hide();
+          $state.transitionTo('app.error');
+        }
+      }else{
+        vm.showBanner = null;
+        if($stateParams.connection.hasInternet){
+          $state.transitionTo('app.home');
+        }else{
+          $cordovaSplashscreen.hide();
+          $state.transitionTo('app.error');
+        }
+      }
     }
   }
 })();

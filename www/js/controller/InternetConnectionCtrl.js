@@ -8,10 +8,9 @@
   angular
     .module('module.internet', ['ionic'])
     .run(function($ionicPlatform, $state, $ionicHistory, AdvertisementService, $cordovaFile){
-      AdvertisementService.fetchAdsData()
-        .then(function(success) {
-          $state.go('werbepartner', {connection: {hasInternet: true}, localAd: true})
-        });
+      $ionicPlatform.ready(function() {
+        $state.go('app.home');
+      })
       //$ionicPlatform.ready(function(){
       //  $ionicHistory.nextViewOptions({
       //    disableAnimate: true

@@ -11,9 +11,9 @@
     .module('module.tabelle', [])
     .controller('TabelleCtrl', TabelleController);
 
-  TabelleController.$inject = ['$rootScope', '$scope', 'TabelleService', '$ionicSideMenuDelegate', '$timeout'];
+  TabelleController.$inject = ['$rootScope', '$scope', 'TabelleService', '$ionicSideMenuDelegate'];
 
-  function TabelleController($rootScope, $scope, TabelleService, $ionicSideMenuDelegate, $timeout) {
+  function TabelleController($rootScope, $scope, TabelleService, $ionicSideMenuDelegate) {
     $ionicSideMenuDelegate.canDragContent(true);
     var vm = this;
     vm.tableFeed = [];
@@ -25,7 +25,6 @@
       $rootScope.$broadcast('show_loader');
       TabelleService.fetchTableData()
         .then(function(success) {
-          console.error(success);
           setTableFeed(success);
           $rootScope.$broadcast('hide_loader');
         });

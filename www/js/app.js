@@ -1,53 +1,51 @@
 /**
  * Created by Linh on 02.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
- *
- * status: 14.07.2016 6:53 PM
  */
 angular.module('starter', [
-  'ionic',
-  'ngCordova',
-  'tabSlideBox',
-  'ionicLazyLoad',
-  'dateFilter',
-  'ngSanitize',
-  'youtube-embed',
-  'directive.countdown',
-  'directive.externallink',
-  'directive.logo',
-  'directive.slideboxheight',
-  'ngIOS9UIWebViewPatch',
-  'factory.splash',
-  'service.advertisement',
-  'service.home',
-  'service.kader',
-  'service.kickerstv',
-  'service.matchcenter',
-  'service.news',
-  'service.singlenews',
-  'service.singleplayer',
-  'service.spielplan',
-  'service.tabelle',
-  'module.app',
-  'module.advertisement',
-  'module.arena',
-  'module.datenschutz',
-  'module.error',
-  'module.home',
-  'module.internet',
-  'module.kader',
-  'module.kickerstv',
-  'module.matchcenter',
-  'module.news',
-  'module.singlenews',
-  'module.singleplayer',
-  'module.newsletter',
-  'module.settings',
-  'module.spielplan',
-  'module.tabelle',
-  'module.reconnect',
-  'module.reloadcontent'
-])
+    'ionic',
+    'ngCordova',
+    'tabSlideBox',
+    'ionicLazyLoad',
+    'dateFilter',
+    'ngSanitize',
+    'youtube-embed',
+    'directive.countdown',
+    'directive.externallink',
+    'directive.logo',
+    'directive.slideboxheight',
+    'ngIOS9UIWebViewPatch',
+    'factory.splash',
+    'service.advertisement',
+    'service.home',
+    'service.kader',
+    'service.kickerstv',
+    'service.matchcenter',
+    'service.news',
+    'service.singlenews',
+    'service.singleplayer',
+    'service.spielplan',
+    'service.tabelle',
+    'module.app',
+    'module.advertisement',
+    'module.arena',
+    'module.datenschutz',
+    'module.error',
+    'module.home',
+    'module.internet',
+    'module.kader',
+    'module.kickerstv',
+    'module.matchcenter',
+    'module.news',
+    'module.singlenews',
+    'module.singleplayer',
+    'module.newsletter',
+    'module.settings',
+    'module.spielplan',
+    'module.tabelle',
+    'module.reconnect',
+    'module.reloadcontent'
+  ])
   .constant('ApiEndpoint', {
     url: 'https://www.wuerzburger-kickers.de/ajax/kickers/',
     version: '?app_version=1.0.30'
@@ -70,19 +68,19 @@ angular.module('starter', [
     //});
   })
 
-  .filter('trusted', ['$sce', function($sce){
-    return function(url) {
-      if(url!=undefined){
+  .filter('trusted', ['$sce', function ($sce) {
+    return function (url) {
+      if (url != undefined) {
         var splitLinkAtEmbed = url.split("/embed/");
         var newLink = splitLinkAtEmbed[1].split("?");
         return $sce.trustAsResourceUrl("https://www.youtube.com/embed/" + newLink[0] + "?rel=0&showinfo=0&controls=0&ps=docs&modestbranding=1");
-      }else{
+      } else {
         return undefined;
       }
     }
   }])
 
-  .config(function($ionicConfigProvider, $stateProvider, $urlRouterProvider) {
+  .config(function ($ionicConfigProvider, $stateProvider, $urlRouterProvider) {
     $ionicConfigProvider.backButton.previousTitleText(false).text('');
     $ionicConfigProvider.views.swipeBackEnabled(false);
     $ionicConfigProvider.views.transition('ios');
@@ -99,13 +97,9 @@ angular.module('starter', [
       .state('werbepartner', {
         cache: true,
         url: '/werbepartner',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/werbepartner.html',
-            controller: 'AdvertisementCtrl as adVM',
-            params: {connection: null, localAd: null}
-          }
-        }
+        templateUrl: 'templates/werbepartner.html',
+        controller: 'AdvertisementCtrl',
+        params: {connection: null, localAd: null}
       })
 
       .state('reload', {
@@ -119,12 +113,8 @@ angular.module('starter', [
         cache: true,
         url: '/app',
         abstract: true,
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/menu.html',
-            controller: 'AppCtrl as appVM'
-          }
-        }
+        templateUrl: 'templates/menu.html',
+        controller: 'AppCtrl as appVM'
       })
 
       .state('app.arena', {
@@ -155,7 +145,12 @@ angular.module('starter', [
         views: {
           'menuContent': {
             templateUrl: 'templates/error.html',
-            controller: 'ErrorCtrl as errorVM'
+            controller: 'ErrorCtrl as errorVM',
+            resolve: {
+              splash: function (SplashScreen) {
+                return SplashScreen.removeSplash();
+              }
+            }
           }
         }
       })
@@ -220,7 +215,7 @@ angular.module('starter', [
         views: {
           'menuContent': {
             templateUrl: 'templates/matchcenter.html',
-            controller: 'MatchCenterCtrl as mcVM'
+            controller: 'MatchCenterCtrl'
           }
         }
       })
@@ -256,7 +251,7 @@ angular.module('starter', [
             templateUrl: 'templates/singleplayer.html',
             controller: 'SinglePlayerCtrl',
             resolve: {
-              singlePlayer: function($stateParams){
+              singlePlayer: function ($stateParams) {
                 return $stateParams.playerId;
               }
             }

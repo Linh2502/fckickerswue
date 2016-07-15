@@ -10,11 +10,11 @@ angular.module('factory.splash', [])
         var deferred = $q.defer();
         $ionicPlatform.ready(function(){
           $timeout(function(){
-            $cordovaSplashscreen.hide();
+            //$cordovaSplashscreen.hide();
             deferred.resolve();
           }, 500);
         });
         return deferred.promise;
       }
     };
-  })
+  });

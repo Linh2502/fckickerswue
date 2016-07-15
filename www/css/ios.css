@@ -219,7 +219,7 @@ and (min-device-width : 321px) {
   }
 
   .button.back-button {
-    top: -20px;
+    margin-top: -20px;
     font-size: 14px;
   }
 
