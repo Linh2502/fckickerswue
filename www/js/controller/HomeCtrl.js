@@ -11,9 +11,9 @@
     .module('module.home', ['ionicLazyLoad', 'dateFilter'])
     .controller('HomeCtrl', HomeController);
 
-  HomeController.$inject = ['$rootScope', '$timeout', 'HomeService', 'MatchcenterService', '$ionicSideMenuDelegate', '$ionicSlideBoxDelegate', '$state', '$ionicPopup', '$cordovaSplashscreen'];
+  HomeController.$inject = ['$rootScope', '$scope', '$timeout', 'HomeService', 'MatchcenterService', '$ionicSideMenuDelegate', '$ionicSlideBoxDelegate', '$state', '$ionicPopup', '$cordovaSplashscreen'];
 
-  function HomeController($rootScope, $timeout, HomeService, MatchcenterService, $ionicSideMenuDelegate, $ionicSlideBoxDelegate, $state, $ionicPopup, $cordovaSplashscreen) {
+  function HomeController($rootScope, $scope, $timeout, HomeService, MatchcenterService, $ionicSideMenuDelegate, $ionicSlideBoxDelegate, $state, $ionicPopup, $cordovaSplashscreen) {
     $ionicSideMenuDelegate.canDragContent(true);
     var vm = this;
     vm.newsFeed = [];
@@ -100,7 +100,7 @@
       var splitDate = matches.next.eventdate_start.split(" ");
       var date = splitDate[0];
       var time = splitDate[1];
-      vm.date = date + "T" + time;
+      $scope.date = date + "T" + time;
 
       vm.gamesFeed.push(
         {
