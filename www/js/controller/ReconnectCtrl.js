@@ -22,7 +22,7 @@
         if (navigator.connection.type == Connection.NONE || navigator.connection.type == Connection.UNKNOWN) {
           $state.go('app.error');
         } else {
-          $state.go('reload', {connection: {hasInternet: true}});
+          $state.go('reload', {connection: true});
         }
       }
     })

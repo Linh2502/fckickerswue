@@ -98,8 +98,8 @@ angular.module('starter', [
         cache: true,
         url: '/werbepartner',
         templateUrl: 'templates/werbepartner.html',
-        controller: 'AdvertisementCtrl',
-        params: {connection: null, localAd: null}
+        controller: 'AdvertisementCtrl as adVM',
+        params: {connection: null, localAd: null, data: null, locationPath: null}
       })
 
       .state('reload', {
@@ -215,7 +215,7 @@ angular.module('starter', [
         views: {
           'menuContent': {
             templateUrl: 'templates/matchcenter.html',
-            controller: 'MatchCenterCtrl'
+            controller: 'MatchCenterCtrl as mcVM'
           }
         }
       })

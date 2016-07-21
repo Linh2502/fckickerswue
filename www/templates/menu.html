@@ -3,7 +3,10 @@
     <ion-nav-bar class="bar-dark custom-background">
       <div>
         <ion-nav-title class="custom-title">
-          <div class="text-align-center">Offizielle App</div>
+          <div class="text-align-center">
+            <div class="button button-clear fa fa-bars custom-button" ng-click="appVM.openSideMenu()">
+            </div>
+          </div>
         </ion-nav-title>
         <div class="bar bar-subheader subheader">
           <div class="row div-kickers-slogan bar-subheader" logo-switcher></div>
@@ -13,8 +16,6 @@
         <div class="fwk-logo kickers-logo" ui-sref="app.home" ng-click="appVM.clearHistory()"></div>
       </div>
       <ion-nav-buttons side="left">
-        <button class="button button-clear fa fa-bars custom-button" menu-toggle="left">
-        </button>
       </ion-nav-buttons>
     </ion-nav-bar>
     <ion-nav-view name="menuContent">

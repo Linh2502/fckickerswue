@@ -16,6 +16,7 @@
   function ErrorController($state, $ionicPopup, $ionicHistory) {
     var vm = this;
     vm.refreshContent = refreshContent;
+    $('#loaderInterceptor').hide();
 
     $ionicHistory.nextViewOptions({
       disableAnimate: true

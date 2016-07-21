@@ -23,46 +23,42 @@
     vm._init = _init;
 
     function _init() {
-      AdvertisementService.getAdsData()
-        .then(function(success) {
-          if($stateParams.localAd){
-            vm.showBanner = success;
-            vm.boolean = true;
-            nextState();
-          }else{
-            if(success.data.image[0].valid_from*1000 <= time) {
-              vm.showBanner = success.data.image[0].url;
-              AdvertisementService.saveToLocalSystem()
-                .then(function(success) {
-                  vm.boolean = true;
-                  nextState();
-                });
-            }
-          }
-          nextState();
-        }, function(error) {
+      if($stateParams.data) {
+        if($stateParams.data.data.image[0].valid_from*1000 <= vm.time) {
+          vm.showBanner = $stateParams.data.data.image[0].url;
+          AdvertisementService.saveToLocalSystem($stateParams.data, $stateParams.locationPath)
+            .then(function(success) {
+              vm.boolean = true;
+              nextState();
+            });
+        } else {
           vm.boolean = false;
           nextState();
-        });
+        }
+      } else {
+        vm.showBanner = $stateParams.localAd;
+        vm.boolean = true;
+        nextState();
+      }
     }
 
     function nextState() {
-      if(boolean){
+      if(vm.boolean){
         $timeout(function(){
           $cordovaSplashscreen.hide();
         }, 500);
-        if($stateParams.connection.hasInternet){
+        if($stateParams.connection){
           $('#advertisement').delay(3000).fadeOut(400);
           $timeout(function(){
             $state.transitionTo('app.home');
-          }, 3500);
+          }, 3000);
         }else{
           $cordovaSplashscreen.hide();
           $state.transitionTo('app.error');
         }
       }else{
         vm.showBanner = null;
-        if($stateParams.connection.hasInternet){
+        if($stateParams.connection){
           $state.transitionTo('app.home');
         }else{
           $cordovaSplashscreen.hide();
@@ -70,5 +66,7 @@
         }
       }
     }
+
+    vm._init();
   }
 })();

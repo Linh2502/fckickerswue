@@ -14,23 +14,13 @@
   AdvertisementService.$inject = ['$rootScope', '$http', 'ApiEndpoint', '$state', '$ionicPlatform', '$cordovaFileTransfer', '$q'];
 
   function AdvertisementService($rootScope, $http, ApiEndpoint, $state, $ionicPlatform, $cordovaFileTransfer, $q) {
-      var dates = null;
 
       return {
-        setData: function (data) {
-          dates = data;
-        },
-        getAdsData: function () {
-          var defer = $q.defer();
-          defer.resolve(dates);
-          return defer.promise;
-        },
         fetchAdsData: function() {
           var defer = $q.defer();
           $http.get(ApiEndpoint.url + 'app--adscreen' + ApiEndpoint.version + '&uuid=' + ionic.Platform.device().uuid)
             .then(function(response){
-              dates = x2js.xml_str2json(response.data);
-              defer.resolve(dates);
+              defer.resolve(x2js.xml_str2json(response.data));
             }, function(error){
               $state.go('app.error');
             });
@@ -38,18 +28,17 @@
         },
         skipFetching: function(pathToImage) {
           var defer = $q.defer();
-          dates = pathToImage;
           defer.resolve(pathToImage);
           return defer.promise;
         },
-        saveToLocalSystem: function() {
+        saveToLocalSystem: function(data, locationPath) {
           var defer = $q.defer();
           $ionicPlatform.ready(function() {
-            var targetPath = cordova.file.documentsDirectory + "adImage.png";
+            var targetPath = locationPath + "adImage.png";
             var options = {};
             var bool = true;
 
-            $cordovaFileTransfer.download(dates.data.image[0].url, targetPath, options, bool)
+            $cordovaFileTransfer.download(data.data.image[0].url, targetPath, options, bool)
               .then(function(result) {
                 defer.resolve(result);
               }, function(err) {

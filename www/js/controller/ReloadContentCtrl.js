@@ -14,7 +14,7 @@
   ReloadContentController.$inject = ['$state', '$stateParams'];
 
   function ReloadContentController($state, $stateParams) {
-    if ($stateParams.connection.hasInternet) {
+    if ($stateParams.connection) {
       $state.transitionTo('app.home');
     } else {
       $state.transitionTo('app.error');

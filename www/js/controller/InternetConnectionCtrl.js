@@ -7,33 +7,56 @@
 (function () {
   angular
     .module('module.internet', ['ionic'])
-    .run(function($ionicPlatform, $state, $ionicHistory, AdvertisementService, $cordovaFile){
-      $ionicPlatform.ready(function() {
-        $state.go('app.home');
+    .run(function ($ionicPlatform, $state, $ionicHistory, AdvertisementService, $cordovaFile, $cordovaNetwork) {
+      $ionicPlatform.ready(function () {
+        $ionicHistory.nextViewOptions({
+          disableAnimate: true
+        });
+        if (window.Connection) {
+          if (navigator.connection.type == Connection.NONE || navigator.connection.type == Connection.UNKNOWN) {
+            $state.go('app.error');
+          } else {
+            if (ionic.Platform.isIOS()) {
+              $cordovaFile.checkFile(cordova.file.documentsDirectory, "adImage.png")
+                .then(function (success) {
+                  AdvertisementService.skipFetching(cordova.file.documentsDirectory + "adImage.png")
+                    .then(function (success) {
+                      $state.go('werbepartner', {
+                        connection: true,
+                        localAd: cordova.file.documentsDirectory + "adImage.png",
+                        data: null,
+                        locationPath: cordova.file.documentsDirectory
+                      });
+                    });
+                }, function (error) {
+                  AdvertisementService.fetchAdsData()
+                    .then(function (success) {
+                      $state.go('werbepartner', {connection: true, localAd: null, data: success, locationPath: cordova.file.documentsDirectory})
+                    });
+                });
+            } else {
+              $cordovaFile.checkFile(cordova.file.externalDataDirectory, "adImage.png")
+                .then(function (success) {
+                  AdvertisementService.skipFetching(cordova.file.externalDataDirectory + "adImage.png")
+                    .then(function (success) {
+                      $state.go('werbepartner', {
+                        connection: true,
+                        localAd: cordova.file.externalDataDirectory + "adImage.png",
+                        data: null,
+                        locationPath: cordova.file.externalDataDirectory
+                      });
+                    });
+                }, function (error) {
+                  AdvertisementService.fetchAdsData()
+                    .then(function (success) {
+                      $state.go('werbepartner', {connection: true, localAd: null, data: success, locationPath: cordova.file.externalDataDirectory})
+                    });
+                });
+            }
+          }
+        }
       })
-      //$ionicPlatform.ready(function(){
-      //  $ionicHistory.nextViewOptions({
-      //    disableAnimate: true
-      //  });
-      //  if(window.Connection){
-      //    if(navigator.connection.type == Connection.NONE || navigator.connection.type == Connection.UNKNOWN) {
-      //      $state.go('app.error');
-      //    }else {
-      //      $cordovaFile.checkFile(cordova.file.documentsDirectory, "adImage.png")
-      //        .then(function (success) {
-      //          AdvertisementService.skipFetching(cordova.file.documentsDirectory + "adImage.png")
-      //            .then(function(success) {
-      //              $state.go('werbepartner', {connection: {hasInternet: true}, localAd: false});
-      //            });
-      //        }, function (error) {
-      //          AdvertisementService.fetchAdsData()
-      //            .then(function(success) {
-      //              $state.go('werbepartner', {connection: {hasInternet: true}, localAd: true})
-      //            });
-      //        });
-      //    }
-      //  }
-      //})
     })
-    .controller('InternetConnectionCtrl', function($rootScope, $state) {});
+    .controller('InternetConnectionCtrl', function ($rootScope, $state) {
+    });
 })();

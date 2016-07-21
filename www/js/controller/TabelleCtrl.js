@@ -39,6 +39,7 @@
     }
 
     function setTableFeed(table) {
+      vm.tableFeed = [];
       for (var i = 0; i < table.row.length; i++) {
         vm.tableFeed.push(table.row[i]);
       }

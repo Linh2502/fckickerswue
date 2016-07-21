@@ -30,6 +30,7 @@
     vm.navigateToSettings = navigateToSettings;
     vm.closeMenu = closeMenu;
     vm.navigateBack = navigateBack;
+    vm.openSideMenu = openSideMenu;
 
     $rootScope.devWidth = ((window.innerWidth > 0) ? window.innerWidth : screen.width);
     $rootScope.$on('show_loader', function () {
@@ -83,6 +84,10 @@
       if ($location.path().indexOf("settings") > -1) {
         handleNavigation("app.home");
       }
+    }
+
+    function openSideMenu() {
+      $ionicSideMenuDelegate.toggleLeft(true);
     }
 
     function handleNavigation(state) {

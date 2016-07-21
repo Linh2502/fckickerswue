@@ -11,9 +11,9 @@
     .module('service.home', [])
     .service('HomeService', HomeService);
 
-  HomeService.$inject = ['$rootScope', '$http', 'ApiEndpoint', '$q', '$log'];
+  HomeService.$inject = ['$rootScope', '$http', 'ApiEndpoint', '$q', '$log', '$state'];
 
-  function HomeService($rootScope, $http, ApiEndpoint, $q, $log) {
+  function HomeService($rootScope, $http, ApiEndpoint, $q, $log, $state) {
     var dates = null;
 
     return {
