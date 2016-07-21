@@ -18,7 +18,7 @@
       return {
         fetchAdsData: function() {
           var defer = $q.defer();
-          $http.get(ApiEndpoint.url + 'app--adscreen' + ApiEndpoint.version + '&uuid=' + ionic.Platform.device().uuid)
+          $http.get(ApiEndpoint.url + 'app--adscreen' + ApiEndpoint.version + '&uuid=' + ionic.Platform.device().uuid + '&deviceWidth=' + ((window.innerWidth > 0) ? window.innerWidth : screen.width) + '&deviceHeight=' + ((window.innerHeight > 0) ? window.innerHeight : screen.height))
             .then(function(response){
               defer.resolve(x2js.xml_str2json(response.data));
             }, function(error){

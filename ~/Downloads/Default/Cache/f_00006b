@@ -1,0 +1,1199 @@
+/**
+ * Created by Linh on 04.10.15.
+ * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
+ */
+
+/*
+ * ---------------------------
+ * -----Screen Resolution-----
+ * --iPhone 6, iPhone 6 Plus--
+ * ---------------------------
+ */
+
+@media only screen
+and (min-device-width : 321px) {
+  .image-arena {
+    background: url(../img/grafiken/3x/arena@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-datenschutz {
+    background: url(../img/grafiken/3x/datenschutz@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-impressum {
+    background: url(../img/grafiken/3x/impressum@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-kader {
+    background: url(../img/grafiken/3x/kader@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-kickerstv {
+    background: url(../img/grafiken/3x/kickers-TV@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-kontakt {
+    background: url(../img/grafiken/3x/kontakt@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-news {
+    background: url(../img/grafiken/3x/news@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-newsletter {
+    background: url(../img/grafiken/3x/newsletter@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-spielplan {
+    background: url(../img/grafiken/3x/spielplan@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-tabelle {
+    background: url(../img/grafiken/3x/tabelle@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-home {
+    background: url(../img/bilddaten/3x/9020minuten@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .custom-title {
+    font-family: Lato-Regular;
+    text-transform: uppercase;
+    font-size: 12px !important;
+    border-color: #ffffff;
+  }
+
+  .custom-heading {
+    margin-top: 8px;
+    margin-left: 18px;
+    margin-bottom: 7px;
+    font-size: 13px !important;
+  }
+
+  .custom-button {
+    margin-left: 10px;
+    font-size: 20px !important;
+    display: block !important;
+  }
+
+  .kickers-logo {
+    height: 60px;
+    width: 60px;
+    margin-left: 15px;
+    margin-top: 10px;
+    background: url(../img/bilddaten/3x/kickers_1097_Logo_2@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .zweite-liga-size {
+    height: 60px;
+    width: 60px;
+    margin-left: 15px;
+    margin-top: 10px;
+    background: url(../img/bilddaten/3x/Kickers-einfach-machen@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .kickers-slogan {
+    height: 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .game-soccerteam-fontstyle {
+    font-family: Lato-Bold;
+    font-size: 12px;
+  }
+
+  .game-countdown-style {
+    height: 40px;
+    font-size: 10px !important;
+    text-align:right;
+    color: #cfd5d5
+  }
+
+  .game-countdown-empty-column {
+    font-size: 20px;
+    width: 6.66%;
+    text-align: center
+  }
+
+  .game-countdown-font-size {
+    height: 40px;
+    font-size: 40px;
+    text-align: center
+  }
+
+  .game-countdown-images {
+    height: 40px;
+  }
+
+  .game-islive {
+    background: url(../img/appbilder/livetickerx3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 40px;
+    width: inherit;
+  }
+
+  .custom-side-menu-item {
+    font-family: Lato-Regular;
+    text-transform: uppercase;
+    font-size: 11px !important;
+    line-height: 5px;
+    border-bottom: 1px solid #F5F7F7;
+    border-top: 1px solid #F5F7F7;
+  }
+
+  .custom-side-menu-item-small {
+    line-height: 1px;
+    font-size: 12px !important;
+  }
+
+  .news-feed,
+  .videos-feed {
+    height: 300px;
+    border-bottom: 1px solid #F2F4F4;
+  }
+
+  .slider {
+    padding-bottom: 25px;
+  }
+
+  .soccer-logo {
+    max-width: 65px;
+    max-height: 65px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .matchcenter-liveticker {
+    font-family: Lato-Regular;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+  }
+
+  .custom-list {
+    font-size: 12px;
+    line-height: 150%
+  }
+
+  .custom-list ul li {
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    list-style: disc outside;
+    margin-right: 15px;
+  }
+
+  .button.back-button {
+    margin-top: -20px;
+    font-size: 14px;
+  }
+
+  .settings-notification-column {
+    text-align: center;
+    font-size: 14px !important;
+  }
+
+  .settings-notification-font {
+    font-size: 13px !important;
+    color: white;
+    font-family: Lato-Regular;
+    border: none;
+  }
+
+  .font-size {
+    font-size: 13px !important;
+  }
+
+  .navigation-match-center {
+    vertical-align: middle;
+    font-size: 12px;
+  }
+
+  .navigation-match-center-ball {
+    margin-right: 5px;
+    vertical-align: middle;
+    height: 12px;
+  }
+
+  .news-games-result {
+    text-align: center;
+    font-size: 30px;
+    font-family: Lato-Bold;
+  }
+
+  .home-video-image {
+    width: 100%;
+    height: 180px;
+    oveflow: hidden;
+  }
+
+  .image-height {
+    height: 180px;
+    overflow: hidden;
+  }
+
+  .video-height {
+    height: 180px;
+  }
+
+  .news-image-text {
+    height: 50px;
+    display:table;
+  }
+
+  .singlenews-text {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 12px;
+  }
+
+  .spiel-feed-game-title {
+    margin-bottom: -5px;
+    font-size: 13px !important
+  }
+
+  .spiel-feed-third-column-height {
+    height: 70px;
+  }
+
+  .spiel-countdown-height {
+    height: 45px;
+  }
+
+  .spiel-feed-date-height {
+    height: 10px;
+  }
+
+  .spiel-feed-matchcenter-emptyheight {
+    height: 20px;
+  }
+
+  .spiel-feed-match-center-style {
+    height: 30px;
+    background-color: #C4C6C6;
+    text-align: center;
+    font-size: 13px !important;
+  }
+
+  .spiel-feed-match-center-ball {
+    margin-right: 5px;
+    vertical-align: middle;
+    height: 15px;
+  }
+
+  .spiel-feed-columns {
+    width: 90% !important;
+    margin: auto !important;
+    min-height: 55px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .spiel-feed {
+    height: 280px;
+    border-bottom: 1px solid #F2F4F4;
+  }
+
+  .spiel-feed-first-column-height {
+    height: 55px;
+    display: table;
+  }
+
+  .video-image-red-style {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .video-image-play-button-style {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    margin-top: -40px;
+    margin-left: -40px;
+  }
+
+  .video-image-play-button-style-kickerstv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    margin-top: -40px;
+    margin-left: -40px;
+  }
+
+  .singleplayer-caret-size {
+    font-size: 20px;
+  }
+
+  .matchcenter-title-size {
+    font-size: 13px !important;
+  }
+
+  .matchcenter-ball {
+    margin-right: 5px;
+    vertical-align: middle;
+    height: 15px;
+  }
+
+  .title-margin-left {
+    margin-left: 60px !important
+  }
+
+  .kontakt-font-header {
+    font-size: 16px !important;
+  }
+
+  .overlay-image {
+    height: 180px;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+/*
+ * ---------------------------
+ * -----Screen Resolution-----
+ * --iPhone 5, iPhone 5 Plus--
+ * ---------------------------
+ */
+
+@media only screen
+and (max-device-width : 320px) {
+  .image-arena {
+    background: url(../img/grafiken/2x/arena@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-datenschutz {
+    background: url(../img/grafiken/2x/datenschutz@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-impressum {
+    background: url(../img/grafiken/2x/impressum@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-kader {
+    background: url(../img/grafiken/2x/kader@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-kickerstv {
+    background: url(../img/grafiken/2x/kickers-TV@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-kontakt {
+    background: url(../img/grafiken/2x/kontakt@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-news {
+    background: url(../img/grafiken/2x/news@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-newsletter {
+    background: url(../img/grafiken/2x/newsletter@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-spielplan {
+    background: url(../img/grafiken/2x/spielplan@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-tabelle {
+    background: url(../img/grafiken/2x/tabelle@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-home {
+    background: url(../img/bilddaten/2x/9020minuten@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .custom-title {
+    font-family: Lato-Regular;
+    text-transform: uppercase;
+    font-size: 10px !important;
+    border-color: #ffffff;
+  }
+
+  .custom-heading {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 7px;
+    font-size: 11px !important;
+  }
+
+  .custom-button {
+    margin-left: 9px;
+    font-size: 18px !important;
+    display: block !important;
+  }
+
+  .kickers-logo {
+    height: 50px;
+    width: 50px;
+    margin-left: 15px;
+    margin-top: 15px;
+    background: url(../img/bilddaten/3x/kickers_1097_Logo_2@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .zweite-liga-size {
+    height: 50px;
+    width: 50px;
+    margin-left: 15px;
+    margin-top: 5px;
+    background: url(../img/bilddaten/3x/Kickers-einfach-machen@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .kickers-slogan {
+    height: 14px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .game-soccerteam-fontstyle {
+    font-family: Lato-Bold;
+    font-size: 10px;
+  }
+
+  .game-countdown-style {
+    height: 35px;
+    font-size: 8px !important;
+    text-align:right;
+    color: #cfd5d5
+  }
+
+  .game-countdown-empty-column {
+    font-size: 18px;
+    width: 6.66%;
+    text-align: center
+  }
+
+  .game-countdown-font-size {
+    height: 35px;
+    font-size: 35px;
+    text-align: center
+  }
+
+  .game-countdown-images {
+    height: 35px;
+  }
+
+  .game-islive {
+    background: url(../img/appbilder/livetickerx2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 30px;
+    width: inherit;
+  }
+
+  .custom-side-menu-item {
+    font-family: Lato-Regular;
+    text-transform: uppercase;
+    font-size: 9px !important;
+    line-height: 4px;
+    border-bottom: 1px solid #F5F7F7;
+    border-top: 1px solid #F5F7F7;
+  }
+
+  .custom-side-menu-item-small {
+    line-height: 1px;
+    font-size: 10px !important;
+  }
+
+  .news-feed,
+  .videos-feed {
+    height: 280px;
+    border-bottom: 1px solid #F2F4F4;
+  }
+
+  .slider {
+    padding-bottom: 22px;
+  }
+
+  .soccer-logo {
+    max-width: 55px;
+    max-height: 55px;
+    margin-top: 9px;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+
+  .matchcenter-liveticker {
+    font-family: Lato-Regular;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 9px;
+  }
+
+  .custom-list {
+    font-size: 9px;
+    line-height: 150%
+  }
+
+  .custom-list ul li {
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    list-style: disc outside;
+    margin-right: 15px;
+  }
+
+  .button.back-button {
+    margin-top: -20px;
+    font-size: 13px;
+  }
+
+  .settings-notification-column {
+    text-align: center;
+    font-size: 12px !important;
+  }
+
+  .settings-notification-font {
+    font-size: 11px !important;
+    color: white;
+    font-family: Lato-Regular;
+    border: none;
+  }
+
+  .font-size {
+    font-size: 10px;
+  }
+
+  .navigation-match-center {
+    vertical-align: middle;
+    font-size: 10px;
+  }
+
+  .navigation-match-center-ball {
+    margin-right: 5px;
+    vertical-align: middle;
+    height: 10px;
+  }
+
+  .news-games-result {
+    text-align: center;
+    font-size: 28px;
+    font-family: Lato-Bold;
+  }
+
+  .home-video-image {
+    width: 100%;
+    height: 160px;
+  }
+
+  .image-height {
+    height: 160px;
+    overflow: hidden;
+  }
+
+  .video-height {
+    height: 160px;
+  }
+
+  .news-image-text {
+    height: 40px;
+    display:table;
+  }
+
+  .singlenews-text {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 10px;
+  }
+
+  .spiel-feed-game-title {
+    margin-bottom: -5px;
+    font-size: 11px !important
+  }
+
+  .spiel-feed-third-column-height {
+    height: 60px;
+  }
+
+  .spiel-countdown-height {
+    height: 40px;
+  }
+
+  .spiel-feed-date-height {
+    height: 10px;
+  }
+
+  .spiel-feed-matchcenter-emptyheight {
+    height: 10px;
+  }
+
+  .spiel-feed-match-center-style {
+    height: 25px;
+    background-color: #C4C6C6;
+    text-align: center;
+    font-size: 11px !important;
+  }
+
+  .spiel-feed-match-center-ball {
+    margin-right: 5px;
+    vertical-align: middle;
+    height: 13px;
+  }
+
+  .spiel-feed-columns {
+    width: 90% !important;
+    margin: auto !important;
+    min-height: 45px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .spiel-feed {
+    height: 260px;
+    border-bottom: 1px solid #F2F4F4;
+  }
+
+  .spiel-feed-first-column-height {
+    height: 45px;
+    display: table;
+  }
+
+  .video-image-red-style {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .video-image-play-button-style {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+
+  .video-image-play-button-style-kickerstv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+
+  .singleplayer-caret-size {
+    font-size: 18px;
+  }
+
+  .matchcenter-title-size {
+    font-size: 11px !important;
+  }
+
+  .matchcenter-ball {
+    margin-right: 5px;
+    vertical-align: middle;
+    height: 13px;
+  }
+
+  .title-margin-left {
+    margin-left: 45px !important
+  }
+
+  .kontakt-font-header {
+    font-size: 14px !important;
+  }
+
+  .overlay-image {
+    height: 160px;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+/*
+ * ---------------------------
+ * -----Screen Resolution-----
+ * ----iPhone 4s and below----
+ * ---------------------------
+ */
+
+@media only screen
+and (max-device-width : 300px) {
+  .image-arena {
+    background: url(../img/grafiken/arena.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-datenschutz {
+    background: url(../img/grafiken/datenschutz.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-impressum {
+    background: url(../img/grafiken/impressum.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-kader {
+    background: url(../img/grafiken/kader.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-kickerstv {
+    background: url(../img/grafiken/kickers-TV.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-kontakt {
+    background: url(../img/grafiken/kontakt.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-news {
+    background: url(../img/grafiken/news.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-newsletter {
+    background: url(../img/grafiken/newsletter.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-spielplan {
+    background: url(../img/grafiken/spielplan.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-tabelle {
+    background: url(../img/grafiken/tabelle.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .image-home {
+    background: url(../img/bilddaten/9020minuten.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .custom-title {
+    font-family: Lato-Regular;
+    text-transform: uppercase;
+    font-size: 9px !important;
+    border-color: #ffffff;
+  }
+
+  .custom-heading {
+    margin-top: 7px;
+    margin-left: 17px;
+    margin-bottom: 7px;
+    font-size: 10px !important;
+  }
+
+  .custom-button {
+    margin-left: 8px;
+    font-size: 17px !important;
+    display: block !important;
+  }
+
+  .kickers-logo {
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+    margin-top: 20px;
+    background: url(../img/bilddaten/3x/kickers_1097_Logo_2@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .zweite-liga-size {
+    height: 40px;
+    width: 40px;
+    margin-left: 15px;
+    margin-top: 5px;
+    background: url(../img/bilddaten/3x/Kickers-einfach-machen@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .kickers-slogan {
+    height: 13px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .game-soccerteam-fontstyle {
+    font-family: Lato-Bold;
+    font-size: 10px;
+  }
+
+  .game-countdown-style {
+    height: 30px;
+    font-size: 7px !important;
+    text-align:right;
+    color: #cfd5d5
+  }
+
+  .game-countdown-empty-column {
+    font-size: 18px;
+    width: 6.66%;
+    text-align: center
+  }
+
+  .game-countdown-font-size {
+    height: 30px;
+    font-size: 30px;
+    text-align: center
+  }
+
+  .game-countdown-images {
+    height: 30px;
+  }
+
+  .game-islive {
+    background: url(../img/appbilder/livetickerx1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 25px;
+    width: inherit;
+  }
+
+  .custom-side-menu-item {
+    font-family: Lato-Regular;
+    text-transform: uppercase;
+    font-size: 8px !important;
+    line-height: 3px;
+    border-bottom: 1px solid #F5F7F7;
+    border-top: 1px solid #F5F7F7;
+  }
+
+  .custom-side-menu-item-small {
+    line-height: 1px;
+    font-size: 9px !important;
+  }
+
+  .news-feed,
+  .videos-feed {
+    height: 260px;
+    border-bottom: 1px solid #F2F4F4;
+  }
+
+  .slider {
+    padding-bottom: 20px;
+  }
+
+  .soccer-logo {
+    max-width: 45px;
+    max-height: 45px;
+    margin-top: 8px;
+    margin-bottom: 3px;
+    text-align: center;
+  }
+
+  .matchcenter-liveticker {
+    font-family: Lato-Regular;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 8px;
+  }
+
+  .custom-list {
+    font-size: 8px;
+    line-height: 150%
+  }
+
+  .custom-list ul li {
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    list-style: disc outside;
+    margin-right: 15px;
+  }
+
+  .button.back-button {
+    margin-top: -20px;
+    font-size: 12px;
+  }
+
+  .settings-notification-column {
+    text-align: center;
+    font-size: 11px !important;
+  }
+
+  .settings-notification-font {
+    font-size: 10px !important;
+    color: white;
+    font-family: Lato-Regular;
+    border: none;
+  }
+
+  .font-size {
+    font-size: 9px;
+  }
+
+  .navigation-match-center {
+    vertical-align: middle;
+    font-size: 9px;
+  }
+
+  .navigation-match-center-ball {
+    margin-right: 5px;
+    vertical-align: middle;
+    height: 9px;
+  }
+
+  .news-games-result {
+    text-align: center;
+    font-size: 27px;
+    font-family: Lato-Bold;
+  }
+
+  .home-video-image {
+    width: 100%;
+    height: 140px;
+  }
+
+  .image-height {
+    height: 140px;
+    overflow: hidden;
+  }
+
+  .video-height {
+    height: 140px;
+  }
+
+  .news-image-text {
+    height: 30px;
+    display:table;
+  }
+
+  .singlenews-text {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 9px;
+  }
+
+  .spiel-feed-game-title {
+    margin-bottom: -5px;
+    font-size: 10px !important
+  }
+
+  .spiel-feed-third-column-height {
+    height: 60px;
+  }
+
+  .spiel-countdown-height {
+    height: 40px;
+  }
+
+  .spiel-feed-date-height {
+    height: 10px;
+  }
+
+  .spiel-feed-matchcenter-emptyheight {
+    height: 10px;
+  }
+
+  .spiel-feed-match-center-style {
+    height: 20px;
+    background-color: #C4C6C6;
+    text-align: center;
+    font-size: 10px !important;
+  }
+
+  .spiel-feed-match-center-ball {
+    margin-right: 5px;
+    vertical-align: middle;
+    height: 12px;
+  }
+
+  .spiel-feed-columns {
+    width: 90% !important;
+    margin: auto !important;
+    min-height: 40px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .spiel-feed {
+    height: 250px;
+    border-bottom: 1px solid #F2F4F4;
+  }
+
+  .spiel-feed-first-column-height {
+    height: 40px;
+    display: table;
+  }
+
+  .video-image-red-style {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .video-image-play-button-style {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    margin-top: -25px;
+    margin-left: -25px;
+  }
+
+  .video-image-play-button-style-kickerstv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    margin-top: -25px;
+    margin-left: -25px;
+  }
+
+  .singleplayer-caret-size {
+    font-size: 17px;
+  }
+
+  .matchcenter-title-size {
+    font-size: 10px !important;
+  }
+
+  .matchcenter-ball {
+    margin-right: 5px;
+    vertical-align: middle;
+    height: 12px;
+  }
+
+  .title-margin-left {
+    margin-left: 35px !important
+  }
+
+  .kontakt-font-header {
+    font-size: 13px !important;
+  }
+
+  .overlay-image {
+    height: 140px;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+  }
+}
