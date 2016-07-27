@@ -96,6 +96,13 @@ and (min-device-width : 321px) {
     border-color: #ffffff;
   }
 
+  .custom-title-date {
+    font-family: Lato-Regular;
+    text-transform: uppercase;
+    font-size: 8px !important;
+    border-color: #ffffff;
+  }
+
   .custom-heading {
     margin-top: 8px;
     margin-left: 18px;
@@ -121,8 +128,8 @@ and (min-device-width : 321px) {
   }
 
   .zweite-liga-size {
-    height: 60px;
-    width: 60px;
+    height: 65px;
+    width: 65px;
     margin-left: 15px;
     margin-top: 10px;
     background: url(../img/bilddaten/3x/Kickers-einfach-machen@3x.png);
@@ -192,7 +199,7 @@ and (min-device-width : 321px) {
 
   .news-feed,
   .videos-feed {
-    height: 300px;
+    height: 305px;
     border-bottom: 1px solid #F2F4F4;
   }
 
@@ -229,8 +236,14 @@ and (min-device-width : 321px) {
     margin-right: 15px;
   }
 
-  .button.back-button {
-    margin-top: -20px;
+  .platform-ios .button.back-button {
+    margin-top: 42px;
+    font-size: 14px;
+  }
+
+  .platform-android .button.back-button,
+  .platform-browser .button.back-button {
+    margin-top: 24px;
     font-size: 14px;
   }
 
@@ -283,7 +296,7 @@ and (min-device-width : 321px) {
   }
 
   .news-image-text {
-    height: 50px;
+    height: 60px;
     display:table;
   }
 
@@ -358,18 +371,18 @@ and (min-device-width : 321px) {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 80px;
-    margin-top: -40px;
-    margin-left: -40px;
+    width: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
   }
 
   .video-image-play-button-style-kickerstv {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 80px;
-    margin-top: -40px;
-    margin-left: -40px;
+    width: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
   }
 
   .singleplayer-caret-size {
@@ -495,6 +508,13 @@ and (max-device-width : 320px) {
     border-color: #ffffff;
   }
 
+  .custom-title-date {
+    font-family: Lato-Regular;
+    text-transform: uppercase;
+    font-size: 6px !important;
+    border-color: #ffffff;
+  }
+
   .custom-heading {
     margin-top: 10px;
     margin-left: 20px;
@@ -520,8 +540,8 @@ and (max-device-width : 320px) {
   }
 
   .zweite-liga-size {
-    height: 50px;
-    width: 50px;
+    height: 55px;
+    width: 55px;
     margin-left: 15px;
     margin-top: 15px;
     background: url(../img/bilddaten/3x/Kickers-einfach-machen@3x.png);
@@ -591,7 +611,7 @@ and (max-device-width : 320px) {
 
   .news-feed,
   .videos-feed {
-    height: 280px;
+    height: 285px;
     border-bottom: 1px solid #F2F4F4;
   }
 
@@ -628,8 +648,14 @@ and (max-device-width : 320px) {
     margin-right: 15px;
   }
 
-  .button.back-button {
-    margin-top: -20px;
+  .platform-ios .button.back-button {
+    margin-top: 42px;
+    font-size: 13px;
+  }
+
+  .platform-android .button.back-button,
+  .platform-browser .button.back-button {
+    margin-top: 24px;
     font-size: 13px;
   }
 
@@ -756,9 +782,9 @@ and (max-device-width : 320px) {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 60px;
-    margin-top: -30px;
-    margin-left: -30px;
+    width: 80px;
+    margin-top: -40px;
+    margin-left: -40px;
   }
 
   .video-image-play-button-style-kickerstv {
@@ -766,8 +792,8 @@ and (max-device-width : 320px) {
     top: 50%;
     left: 50%;
     width: 80px;
-    margin-top: -30px;
-    margin-left: -30px;
+    margin-top: -40px;
+    margin-left: -40px;
   }
 
   .singleplayer-caret-size {
@@ -893,6 +919,13 @@ and (max-device-width : 300px) {
     border-color: #ffffff;
   }
 
+  .custom-title-date {
+    font-family: Lato-Regular;
+    text-transform: uppercase;
+    font-size: 5px !important;
+    border-color: #ffffff;
+  }
+
   .custom-heading {
     margin-top: 7px;
     margin-left: 17px;
@@ -918,8 +951,8 @@ and (max-device-width : 300px) {
   }
 
   .zweite-liga-size {
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
     margin-left: 15px;
     margin-top: 20px;
     background: url(../img/bilddaten/3x/Kickers-einfach-machen@3x.png);
@@ -989,7 +1022,7 @@ and (max-device-width : 300px) {
 
   .news-feed,
   .videos-feed {
-    height: 260px;
+    height: 265px;
     border-bottom: 1px solid #F2F4F4;
   }
 
@@ -1026,8 +1059,14 @@ and (max-device-width : 300px) {
     margin-right: 15px;
   }
 
-  .button.back-button {
-    margin-top: -20px;
+  .platform-ios .button.back-button {
+    margin-top: 42px;
+    font-size: 12px;
+  }
+
+  .platform-android .button.back-button,
+  .platform-browser .button.back-button {
+    margin-top: 24px;
     font-size: 12px;
   }
 
@@ -1154,18 +1193,18 @@ and (max-device-width : 300px) {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 50px;
-    margin-top: -25px;
-    margin-left: -25px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
   }
 
   .video-image-play-button-style-kickerstv {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 80px;
-    margin-top: -25px;
-    margin-left: -25px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
   }
 
   .singleplayer-caret-size {

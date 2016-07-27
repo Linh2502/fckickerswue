@@ -17,8 +17,8 @@
               </div>
               <div class="news-image-text custom-background">
                 <div class="news-image-text-display">
-                  <div class="custom-title news-image-date">| {{news.date | dateFilter}}</div>
-                  <div class="custom-title news-image-title">{{news.title}}</div>
+                  <div class="custom-title-date news-image-date">| {{news.date | dateFilter}}</div>
+                  <div class="custom-title news-image-title"> {{news.title}}</div>
                 </div>
               </div>
             </div>
@@ -155,21 +155,31 @@
         </div>
       </div>
     </div>
+    <div class="aktionen-feed">
+      <div class="image-height text-align-center">
+        <img image-lazy-loader="dots"/>
+      </div>
+      <div class="news-image-text">
+        <div class="news-image-text-display">
+          <div class="custom-title-date news-image-date">| Aktion</div>
+          <div class="custom-title news-image-title">Test</div>
+        </div>
+      </div>
+    </div>
     <div class="videos-feed">
-      <p class="custom-title custom-heading">Kickers TV</p>
       <ion-slide-box delegate-handle="video" does-continue="true" >
         <ion-slide ng-repeat="video in homeVM.videosFeed">
-          <div class="custom-background videos-position-relative">
+          <div class="videos-position-relative">
             <div ng-attr-id="{{ 'home-' + video.id}}" class="overlay-image">
               <img src="{{video.image_red}}" class="video-image-red-style" />
-              <img src="img/bilddaten/3x/play_Button@3x.png" class="video-image-play-button-style" ng-click="homeVM.playVideo(player, video)" />
+              <img src="img/bilddaten/3x/Playbutton@3x.png" class="video-image-play-button-style" ng-click="homeVM.playVideo(player, video)" />
             </div>
             <div class="video-height">
               <youtube-video video-url="video.link" class="home-video-image video-z-index" player="player"></youtube-video>
             </div>
-            <div class="custom-background news-image-text">
+            <div class="news-image-text">
               <div class="news-image-text-display">
-                <div class="custom-title news-image-date">| {{video.title}}</div>
+                <div class="custom-title-date news-image-date">| {{video.title}}</div>
                 <div class="custom-title news-image-title">{{video.subtitle}}</div>
               </div>
             </div>

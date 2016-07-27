@@ -20,7 +20,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  margin-top: 108px;
+  margin-top: 82px;
   z-index: 100;
   background-color: white;
 }
@@ -64,13 +64,14 @@
 .platform-android .custom-side-menu,
 .platform-browser .custom-side-menu {
   border-right: 1px solid #F2F4F4;
-  top: 44px !important;
+  top: 82px !important;
+  height: 65%;
 }
 
 .platform-ios .custom-side-menu {
   border-right: 1px solid #F2F4F4;
-  top: 64px !important;
-
+  top: 82px !important;
+  height: 65%;
 }
 
 .item .item-content {
@@ -551,9 +552,10 @@
 
 .news-image-title {
   font-family: Lato-Bold !important;
-  margin-left: 20px;
+  margin-left: 24px;
   line-height: 120%;
-  margin-right: 20px
+  margin-right: 24px;
+  margin-top: 3px;
 }
 
 .news-ticket-margin {
@@ -1062,4 +1064,48 @@
 
 .bar-navigation-button {
   font-size: 20px !important;
+}
+
+.logo-sub-header {
+  top: 88px !important;
+  height: 44px !important;
+}
+
+.has-logo-subheader {
+  top: 132px !important;
+}
+
+.custom-tabs {
+  z-index: 10;
+  height: 20%;
+  line-height: 2.5;
+  border-top: 2px solid #E00C1E !important;
+}
+
+.float-left {
+  float: left;
+}
+
+.tabs-fanshop {
+  background: url(../img/bilddaten/3x/Grafik-Kickers-Fanschop@3x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 15px;
+}
+
+.tabs-tickets {
+  background: url(../img/bilddaten/3x/Grafik-Kickers-Tickets@3x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 15px;
+}
+
+.tabs-website {
+  background: url(../img/bilddaten/3x/Grafik-Kickers-Webseite@3x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 15px;
 }

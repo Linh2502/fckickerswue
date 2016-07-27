@@ -5,7 +5,7 @@
     status: 14.07.2016 2:26 PM
 -->
 <ion-view hide-back-button="true">
-  <ion-content lazy-scroll class="has-subheader" delegate-handle="spielplan-scroll">
+  <ion-content lazy-scroll class="has-logo-subheader" delegate-handle="spielplan-scroll">
     <ion-refresher on-refresh="scheduleVM.refresh()"></ion-refresher>
     <div ng-repeat="game in scheduleVM.matchListing">
       <div id="{{game.date}}">

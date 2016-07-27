@@ -303,6 +303,17 @@ angular.module('starter', [
         }
       })
 
+      .state('app.aktionen', {
+        cache: false,
+        url: '/aktionen',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/aktionen.html',
+            controller: 'AktionenCtrl as aktionenVM'
+          }
+        }
+      })
+
       .state('app.reconnect', {
         cache: false,
         url: '/reconnect',

@@ -5,7 +5,7 @@
     status: 14.07.2016 3:41 PM
 -->
 <ion-view hide-back-button="true">
-  <ion-content lazy-scroll class="has-subheader">
+  <ion-content lazy-scroll class="has-logo-subheader">
     <ion-refresher on-refresh="newsVM.refresh()"></ion-refresher>
     <div class="set-max-width" id="news">
       <div ng-if="!newsVM.isLive">
@@ -90,7 +90,7 @@
             </div>
             <div class="news-image-text custom-background">
               <div class="news-image-text-display">
-                <div class="custom-title news-image-date">| {{news.date | dateFilter}}</div>
+                <div class="custom-title-date news-image-date">| {{news.date | dateFilter}}</div>
                 <div class="custom-title news-image-title">{{news.title}}</div>
               </div>
             </div>

@@ -1,9 +1,5 @@
-if (!angular && require){
-    var angular = require('angular');
-}
-
 /* global YT */
-angular.module('youtube-embed', ['ng'])
+angular.module('youtube-embed', [])
 .service ('youtubeEmbedUtils', ['$window', '$rootScope', function ($window, $rootScope) {
     var Service = {}
 
@@ -26,7 +22,7 @@ angular.module('youtube-embed', ['ng'])
                 // "http://www.youtube.com/attribution_link?a=pxa6goHqzaA&amp;u=%2Fwatch%3Fv%3DdPdgx30w9sU%26feature%3Dshare"
                 // have the real query string URI encoded behind a ';'.
                 // at this point, `id is 'pxa6goHqzaA;u=%2Fwatch%3Fv%3DdPdgx30w9sU%26feature%3Dshare'
-                var uriComponent = decodeURIComponent(id.split(';')[1]);
+                var uriComponent = decodeURIComponent(pieces[1]);
                 id = ('http://youtube.com' + uriComponent)
                         .replace(youtubeRegexp, '$1');
             } else {
@@ -98,6 +94,7 @@ angular.module('youtube-embed', ['ng'])
     if (typeof YT === "undefined") {
         // ...grab on to global callback, in case it's eventually loaded
         $window.onYouTubeIframeAPIReady = applyServiceIsReady;
+        console.log('Unable to find YouTube iframe library on this page.')
     } else if (YT.loaded) {
         Service.ready = true;
     } else {
@@ -106,7 +103,7 @@ angular.module('youtube-embed', ['ng'])
 
     return Service;
 }])
-.directive('youtubeVideo', ['youtubeEmbedUtils', function (youtubeEmbedUtils) {
+.directive('youtubeVideo', ['$window', 'youtubeEmbedUtils', function ($window, youtubeEmbedUtils) {
     var uniqId = 1;
 
     // from YT.PlayerState
@@ -120,6 +117,10 @@ angular.module('youtube-embed', ['ng'])
     };
 
     var eventPrefix = 'youtube.player.';
+
+    $window.YTConfig = {
+        host: 'https://www.youtube.com'
+    };
 
     return {
         restrict: 'EA',
