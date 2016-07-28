@@ -2,8 +2,8 @@
  * Created by Linh on 02.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
  */
-.platform-android #loaderInterceptor,
-.platform-browser #loaderInterceptor {
+.platform-browser #loaderInterceptor,
+.platform-android #loaderInterceptor {
   position: fixed;
   top: 0;
   right: 0;
@@ -13,6 +13,37 @@
   z-index: 100;
   background-color: white;
 }
+.platform-browser .bar .title,
+.platform-android .bar .title {
+  height: 82px !important;
+}
+.platform-browser .bar .button,
+.platform-android .bar .button {
+  min-height: 82px !important;
+  line-height: 82px !important;
+}
+.platform-browser .custom-side-menu,
+.platform-android .custom-side-menu {
+  border-right: 1px solid #F2F4F4;
+  top: 82px !important;
+  height: 69%;
+}
+.platform-browser .has-logo-subheader,
+.platform-android .has-logo-subheader {
+  top: 132px !important;
+}
+.platform-browser .bar,
+.platform-android .bar {
+  padding: 0;
+  margin: 0 0 !important;
+  height: 82px !important;
+}
+.platform-browser .logo-sub-header,
+.platform-android .logo-sub-header {
+  top: 88px !important;
+  height: 44px !important;
+}
+
 
 .platform-ios #loaderInterceptor {
   position: fixed;
@@ -23,6 +54,39 @@
   margin-top: 82px;
   z-index: 100;
   background-color: white;
+}
+.platform-ios .custom-side-menu {
+  border-right: 1px solid #F2F4F4;
+  top: 102px !important;
+  height: 65%;
+}
+.platform-ios .bar .title {
+  height: 102px !important;
+}
+.platform-ios .bar .button {
+  min-height: 102px !important;
+  line-height: 82px !important;
+}
+.platform-ios .custom-bar {
+  padding: 0;
+  margin: 0 0 !important;
+  height: 102px !important;
+}
+.platform-ios .logo-sub-header {
+  top: 108px !important;
+  height: 44px !important;
+}
+.platform-ios .has-logo-subheader {
+  top: 152px !important;
+}
+.platform-ios .has-subheader {
+  top: 108px !important;
+}
+
+.bar {
+  padding: 0;
+  margin: 0 0 !important;
+  height: 102px !important;
 }
 
 .ajax-loader {
@@ -61,19 +125,6 @@
   color: #ffffff;
 }
 
-.platform-android .custom-side-menu,
-.platform-browser .custom-side-menu {
-  border-right: 1px solid #F2F4F4;
-  top: 82px !important;
-  height: 69%;
-}
-
-.platform-ios .custom-side-menu {
-  border-right: 1px solid #F2F4F4;
-  top: 82px !important;
-  height: 65%;
-}
-
 .item .item-content {
   background-color: transparent !important;
 }
@@ -91,7 +142,7 @@
 }
 
 .custom-row-border {
-  border-bottom: 1px solid #F2F4F4
+  border-bottom: 1px solid #F2F4F4;
 }
 
 .remove-col-padding {
@@ -100,7 +151,7 @@
 
 .remove-href-link {
   color: inherit;
-  text-decoration: none
+  text-decoration: none;
 }
 
 .active {
@@ -130,12 +181,6 @@
   color: #5F6061;
   opacity: 1;
   width: 30px;
-}
-
-.bar {
-  padding: 0;
-  margin: 0 0 !important;
-  height: 82px !important;
 }
 
 .title-center {
@@ -265,15 +310,15 @@
 }
 
 .arena-border-box-shadow {
-  -webkit-box-shadow: 0px 0px 58px -19px rgba(207,207,207,1) !important;
-  -moz-box-shadow: 0px 0px 58px -19px rgba(207,207,207,1) !important;
-  box-shadow: 0px 0px 58px -19px rgba(207,207,207,1) !important;
+  -webkit-box-shadow: 0px 0px 58px -19px #cfcfcf !important;
+  -moz-box-shadow: 0px 0px 58px -19px #cfcfcf !important;
+  box-shadow: 0px 0px 58px -19px #cfcfcf !important;
 }
 
 .arena-border-bottom-box-shadow {
-  -webkit-box-shadow: 0px 14px 58px -19px rgba(207,207,207,1) !important;
-  -moz-box-shadow: 0px 14px 58px -19px rgba(207,207,207,1) !important;
-  box-shadow: 0px 14px 58px -19px rgba(207,207,207,1) !important;
+  -webkit-box-shadow: 0px 14px 58px -19px #cfcfcf !important;
+  -moz-box-shadow: 0px 14px 58px -19px #cfcfcf !important;
+  box-shadow: 0px 14px 58px -19px #cfcfcf !important;
 }
 
 .platform-ios .item-toggle .toggle {
@@ -297,8 +342,8 @@
   padding-right: 0px;
 }
 
-.warning{
-  border:1px solid red;
+.warning {
+  border: 1px solid red;
 }
 
 /*
@@ -306,7 +351,6 @@
  * -------- Settings ---------
  * ---------------------------
  */
-
 .settings-background {
   background-color: #EBECED;
 }
@@ -355,30 +399,42 @@
 }
 
 @keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
 @-moz-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
 @-webkit-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
 @-ms-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
 .platform-ios .fwk-logo {
   position: absolute;
   z-index: 100;
   left: 0;
-  top: 20px
+  top: 20px;
 }
 
 .platform-android .fwk-logo,
@@ -386,14 +442,14 @@
   position: absolute;
   z-index: 100;
   left: 0;
-  top: 0px
+  top: 0px;
 }
 
 .platform-ios .zweite-liga-logo {
   position: absolute;
   z-index: 100;
   right: 15px;
-  top: 10px
+  top: 10px;
 }
 
 .platform-android .zweite-liga-logo,
@@ -401,7 +457,7 @@
   position: absolute;
   z-index: 100;
   right: 15px;
-  top: 0px
+  top: 0px;
 }
 
 /*
@@ -409,12 +465,11 @@
  * ------ Advertisement ------
  * ---------------------------
  */
-
 #advertisement {
   text-align: center;
   width: 100%;
   height: 100vh;
-  line-height: 100vh
+  line-height: 100vh;
 }
 
 .vertical-align-mid {
@@ -440,7 +495,6 @@
  * --------- Tabelle ---------
  * ---------------------------
  */
-
 .tabelle-ueberschrift {
   background-color: #FFFFFF;
   padding: 0;
@@ -449,7 +503,7 @@
 }
 
 .tabelle-ueberschrift-bottom-border {
-  border-bottom: 1px solid #E9999F
+  border-bottom: 1px solid #E9999F;
 }
 
 .tabelle-margin-left {
@@ -465,7 +519,6 @@
  * -------- Navigation -------
  * ---------------------------
  */
-
 .subheader {
   display: table;
   border-bottom: 1px solid #F5F7F7;
@@ -484,7 +537,7 @@
 }
 
 .custom-side-menu-item:hover,
-.custom-side-menu-item:focus{
+.custom-side-menu-item:focus {
   background-color: #EDEFEF !important;
 }
 
@@ -495,17 +548,17 @@
 
 .navigation-setting {
   text-align: right;
-  border-top: 1px solid #DDDDDD
+  border-top: 1px solid #DDDDDD;
 }
 
 .navigation-cog {
   margin-right: -15pt;
   margin-left: 5pt;
-  line-height: 5pt
+  line-height: 5pt;
 }
 
 .platform-android .nav-back-button,
-.platform-browser .nav-back-button{
+.platform-browser .nav-back-button {
   position: absolute;
   color: black !important;
   top: 70px !important;
@@ -529,7 +582,6 @@
  * ----------- News ----------
  * ---------------------------
  */
-
 .news-image {
   width: 100%;
 }
@@ -541,7 +593,7 @@
 .news-image-text-display {
   display: table-cell;
   vertical-align: middle;
-  text-align: left
+  text-align: left;
 }
 
 .news-image-date {
@@ -573,7 +625,7 @@
   margin-left: 20px;
   margin-bottom: 5px;
   line-height: 150%;
-  margin-right: 20px
+  margin-right: 20px;
 }
 
 /*
@@ -581,7 +633,6 @@
  * ----------- Home ----------
  * ---------------------------
  */
-
 .set-max-width {
   width: 100%;
 }
@@ -610,7 +661,7 @@
 }
 
 .video-image-red-div {
-  z-index: 10
+  z-index: 10;
 }
 
 .video-z-index {
@@ -626,11 +677,11 @@
   background-color: #E40D1F;
   position: fixed;
   bottom: 0;
-  width: 100%
+  width: 100%;
 }
 
 .popup-button-width {
-  width: 37.5%
+  width: 37.5%;
 }
 
 .popup-button-background {
@@ -643,11 +694,10 @@
  * -------- Spielplan --------
  * ---------------------------
  */
-
 .spielplan-first-column {
   background-color: #ffffff;
   border-bottom: 1px solid #E9EAEB;
-  border-top: 1px solid #E9EAEB
+  border-top: 1px solid #E9EAEB;
 }
 
 .spielplan-empty-col-background-color {
@@ -671,7 +721,6 @@
  * ---------- Kader ----------
  * ---------------------------
  */
-
 .singleplayer-image-background {
   background-color: #FAFBFC;
   padding-left: 0;
@@ -753,7 +802,7 @@
 }
 
 .kader-player-trikot-width {
-  text-align:right;
+  text-align: right;
   width: 20%;
 }
 
@@ -766,7 +815,6 @@
  * ------- Newsletter --------
  * ---------------------------
  */
-
 .display-table {
   display: table;
 }
@@ -798,7 +846,7 @@
 }
 
 .newsletter-submit:hover,
-.newsletter-submit:focus{
+.newsletter-submit:focus {
   background-color: darkred;
   color: lightgray;
 }
@@ -808,7 +856,6 @@
  * -------- Kontakt ----------
  * ---------------------------
  */
-
 .kontakt-column-padding {
   padding-left: 0;
   padding-right: 0;
@@ -824,7 +871,6 @@
  * ---------- Arena ----------
  * ---------------------------
  */
-
 .arena-column-height {
   height: 55px;
 }
@@ -850,7 +896,7 @@
 }
 
 .arena-border-color {
-  border: 1px solid #EDEFEF
+  border: 1px solid #EDEFEF;
 }
 
 .arena-plan-margin {
@@ -864,47 +910,47 @@
 
 .arena-stehplätze-oberrang {
   margin-right: 5px;
-  color: #E10F21
+  color: #E10F21;
 }
 
 .arena-sitzplätze-oberrang {
   margin-right: 5px;
-  color: #68696A
+  color: #68696A;
 }
 
 .arena-stehplätze-tribüne {
   margin-right: 5px;
-  color: #E63F4C
+  color: #E63F4C;
 }
 
 .arena-sitzplätze-tribüne {
   margin-right: 5px;
-  color: #8E8F90
+  color: #8E8F90;
 }
 
 .arena-sitzplätze-medien {
   margin-right: 5px;
-  color: #ED6F7A
+  color: #ED6F7A;
 }
 
 .arena-medien {
   margin-right: 5px;
-  color: #F29FA6
+  color: #F29FA6;
 }
 
 .arena-sitzplätze-vip {
   margin-right: 5px;
-  color: #434445
+  color: #434445;
 }
 
 .arena-kabine {
   margin-right: 5px;
-  color: #D9DADB
+  color: #D9DADB;
 }
 
 .arena-mixed-zone {
   margin-right: 5px;
-  color: #B3B4B5
+  color: #B3B4B5;
 }
 
 /*
@@ -912,7 +958,6 @@
  * ------- Match Center ------
  * ---------------------------
  */
-
 .matchcenter-title-background {
   background-color: #C4C6C6 !important;
 }
@@ -983,11 +1028,11 @@
 }
 
 .handle {
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.35), 0 1px 1px rgba(0, 0, 0, 0.15) !important
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.35), 0 1px 1px rgba(0, 0, 0, 0.15) !important;
 }
 
 .platform-android .item,
-.platform-browser .item{
+.platform-browser .item {
   border: none;
 }
 
@@ -1024,9 +1069,9 @@
 }
 
 .href-link {
-  cursor:pointer;
-  color:blue;
-  text-decoration:underline;
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
 }
 
 .anchor-highlight-item {
@@ -1042,7 +1087,7 @@
 }
 
 .font-color-gray {
-  color: rgba(0, 0, 0, 0.3)
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .arena-maps {
@@ -1064,15 +1109,6 @@
 
 .bar-navigation-button {
   font-size: 20px !important;
-}
-
-.logo-sub-header {
-  top: 88px !important;
-  height: 44px !important;
-}
-
-.has-logo-subheader {
-  top: 132px !important;
 }
 
 .custom-tabs {

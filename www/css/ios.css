@@ -237,7 +237,7 @@ and (min-device-width : 321px) {
   }
 
   .platform-ios .button.back-button {
-    margin-top: 42px;
+    margin-top: 54px !important;
     font-size: 14px;
   }
 
@@ -649,7 +649,7 @@ and (max-device-width : 320px) {
   }
 
   .platform-ios .button.back-button {
-    margin-top: 42px;
+    margin-top: 54px !important;
     font-size: 13px;
   }
 
@@ -1060,7 +1060,7 @@ and (max-device-width : 300px) {
   }
 
   .platform-ios .button.back-button {
-    margin-top: 42px;
+    margin-top: 54px !important;
     font-size: 12px;
   }
 
