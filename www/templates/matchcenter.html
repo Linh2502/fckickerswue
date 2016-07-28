@@ -5,7 +5,7 @@
     status: 14.07.2016 6:22 PM
 -->
 <ion-view hide-back-button="true">
-  <ion-content class="has-logo-subheader singleplayer-image-background" delegate-handle="resize">
+  <ion-content class="has-subheader singleplayer-image-background" delegate-handle="resize">
     <div class="custom-row-border">
       <div class="col matchcenter-title-background">
         <div class="col custom-title text-align-center matchcenter-title-size">
@@ -19,9 +19,7 @@
         <div class="row">
           <div class="col col-25"></div>
           <div class="col col-50">{{mcVM.detailsFeed.matchday}}</div>
-          <div class="col col-25 text-align-right">
-            <img src="img/bilddaten/3x/logo-dfl-dritte-liga@3x.png" class="spiel-feed-matchcenter-emptyheight" />
-          </div>
+          <div class="col col-25"></div>
         </div>
       </div>
     </div>
@@ -63,11 +61,11 @@
             <span ng-show="mcVM.detailsFeed.matchday.indexOf('Liga-Spiel') > -1" class="col vertical-align-mid font-size font-color-gray">Tabelle</span>
           </div>
           <div class="row remove-col-padding matchcenter-slide-box-width" id="standard">
-            <span class="col vertical-align-mid font-size" ng-click="mcVM.loadDetailsFeed()"><a class="remove-href-link font-size" href="javascript:;">Spielbericht</a></span>
-            <span class="col vertical-align-mid font-size" ng-click="mcVM.loadDetailsFeed()"><a class="remove-href-link font-size" href="javascript:;">Daten</a></span>
-            <span class="col vertical-align-mid font-size" ng-click="mcVM.loadLiveTicker()"><a class="remove-href-link font-size" href="javascript:;">Live-Ticker</a></span>
-            <span class="col vertical-align-mid font-size" ng-click="mcVM.loadVideosFeed()"><a class="remove-href-link font-size" href="javascript:;">Kickers TV</a></span>
-            <span ng-show="mcVM.detailsFeed.matchday.indexOf('Liga-Spiel') > -1" class="col vertical-align-mid font-size" ng-click="mcVM.loadTableFeed()"><a class="remove-href-link font-size" href="javascript:;">Tabelle</a></span>
+            <span class="col vertical-align-mid font-size" ng-click="mcVM.freezeScroll()"><a class="remove-href-link font-size" href="javascript:;">Spielbericht</a></span>
+            <span class="col vertical-align-mid font-size" ng-click="mcVM.freezeScroll()"><a class="remove-href-link font-size" href="javascript:;">Daten</a></span>
+            <span class="col vertical-align-mid font-size" ng-click="mcVM.freezeScroll()"><a class="remove-href-link font-size" href="javascript:;">Live-Ticker</a></span>
+            <span class="col vertical-align-mid font-size" ng-click="mcVM.freezeScroll()"><a class="remove-href-link font-size" href="javascript:;">Kickers TV</a></span>
+            <span ng-show="mcVM.detailsFeed.matchday.indexOf('Liga-Spiel') > -1" class="col vertical-align-mid font-size" ng-click="mcVM.freezeScroll()"><a class="remove-href-link font-size" href="javascript:;">Tabelle</a></span>
           </div>
         </div>
       </div>
@@ -214,14 +212,14 @@
                 <div class="custom-background videos-position-relative">
                   <div ng-attr-id="{{ 'matchcenter-' + video.id}}" class="overlay-image">
                     <img src="{{video.image}}" class="video-image-red-style" />
-                    <img src="img/bilddaten/3x/play_Button@3x.png" class="video-image-play-button-style" ng-click="mcVM.playVideo(player, video)" />
+                    <img src="img/bilddaten/3x/Playbutton@3x.png" class="video-image-play-button-style" ng-click="mcVM.playVideo(player, video)" />
                   </div>
                   <div class="video-height">
                     <youtube-video video-url="video.link" class="home-video-image video-z-index" player="player"></youtube-video>
                   </div>
                   <div class="custom-background news-image-text">
                     <div class="news-image-text-display">
-                      <div class="custom-title news-image-date">| {{video.title}}</div>
+                      <div class="custom-title-date news-image-date">| {{video.title}}</div>
                       <div class="custom-title news-image-title">{{video.subtitle}}</div>
                     </div>
                   </div>

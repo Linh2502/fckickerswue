@@ -33,7 +33,7 @@
           <div class="row custom-row-border spielplan-first-column">
             <div class="col col-40 col-center remove-col-padding text-align-center">
               <div class="text-align-center">
-                <img image-lazy-src="{{game.logo_home}}" class="soccer-logo" image-lazy-loader="dots"/>
+                <img src="{{game.logo_home}}" class="soccer-logo"/>
               </div>
               <div class="game-soccerteam-fontstyle">{{game.team_home}}</div>
             </div>
@@ -42,7 +42,7 @@
             </div>
             <div class="col col-40 col-center remove-col-padding text-align-center">
               <div class="text-align-center">
-                <img image-lazy-src="{{game.logo_away}}" class="soccer-logo" image-lazy-loader="dots"/>
+                <img src="{{game.logo_away}}" class="soccer-logo"/>
               </div>
               <div class="game-soccerteam-fontstyle">{{game.team_away}}</div>
             </div>
@@ -60,7 +60,7 @@
           <div class="row custom-row-border spielplan-first-column">
             <div class="col col-40 col-center remove-col-padding text-align-center">
               <div class="text-align-center">
-                <img image-lazy-src="{{game.logo_home}}" class="soccer-logo" image-lazy-loader="dots"/>
+                <img src="{{game.logo_home}}" class="soccer-logo"/>
               </div>
               <div class="game-soccerteam-fontstyle">{{game.team_home}}</div>
             </div>
@@ -69,7 +69,7 @@
             </div>
             <div class="col col-40 col-center remove-col-padding text-align-center">
               <div class="text-align-center">
-                <img image-lazy-src="{{game.logo_away}}" class="soccer-logo" image-lazy-loader="dots"/>
+                <img src="{{game.logo_away}}" class="soccer-logo"/>
               </div>
               <div class="game-soccerteam-fontstyle">{{game.team_away}}</div>
             </div>
@@ -78,7 +78,8 @@
         </div>
       </div>
     </div>
-    <div class="col spielplan-last-column">
+    <ion-infinite-scroll on-infinite="scheduleVM.loadFeed()" distance="1%" ng-if="scheduleVM.canLoadFeed"></ion-infinite-scroll>
+    <!--<div class="col spielplan-last-column">
       <div class="matchcenter-liveticker custom-title">
         <div class="row">
           <div class="col col-25"></div>
@@ -88,6 +89,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
   </ion-content>
 </ion-view>

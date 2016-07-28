@@ -17,6 +17,7 @@ angular.module('starter', [
     'ngIOS9UIWebViewPatch',
     'factory.splash',
     'service.advertisement',
+    'service.aktionen',
     'service.home',
     'service.kader',
     'service.kickerstv',
@@ -28,6 +29,7 @@ angular.module('starter', [
     'service.tabelle',
     'module.app',
     'module.advertisement',
+    'module.aktionen',
     'module.arena',
     'module.datenschutz',
     'module.error',
@@ -48,24 +50,24 @@ angular.module('starter', [
   ])
   .constant('ApiEndpoint', {
     url: 'https://www.wuerzburger-kickers.de/ajax/kickers/',
-    version: '?app_version=1.0.30'
+    version: '?app_version=1.0.40'
   })
 
   .run(function($rootScope, $ionicLoading, $ionicPlatform) {
-    $rootScope.uuid = '&uuid=' + ionic.Platform.device().uuid;
-    //$ionicPlatform.ready(function() {
-    //  $rootScope.uuid = '&uuid=' + ionic.Platform.device().uuid;
-    //  if (window.cordova && window.cordova.plugins.Keyboard) {
-    //    cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-    //    cordova.plugins.Keyboard.disableScroll(true);
-    //  }
-    //  window.parsePlugin.initialize('H68ppzb0DIIIujrb2obzFuv66sclqsPLTuBprOoG', 'AyGtfTXRzcvVYMnCfZmPkjTK7TPVcfzmPcEkTOUt', function() {
-    //    console.log('Parse initialized successfully.');
-    //    window.parsePlugin.getInstallationId(function(id) {}, function(e) {});
-    //  }, function(e) {
-    //    console.log('Failure to initialize Parse.');
-    //  });
-    //});
+    //$rootScope.uuid = '&uuid=' + ionic.Platform.device().uuid;
+    $ionicPlatform.ready(function() {
+      $rootScope.uuid = '&uuid=' + ionic.Platform.device().uuid;
+      if (window.cordova && window.cordova.plugins.Keyboard) {
+        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+        cordova.plugins.Keyboard.disableScroll(true);
+      }
+      window.parsePlugin.initialize('H68ppzb0DIIIujrb2obzFuv66sclqsPLTuBprOoG', 'AyGtfTXRzcvVYMnCfZmPkjTK7TPVcfzmPcEkTOUt', function() {
+        console.log('Parse initialized successfully.');
+        window.parsePlugin.getInstallationId(function(id) {}, function(e) {});
+      }, function(e) {
+        console.log('Failure to initialize Parse.');
+      });
+    });
   })
 
   .filter('trusted', ['$sce', function ($sce) {

@@ -29,10 +29,7 @@
     vm.playVideo = playVideo;
     vm.previousView = previousView;
     vm.nextView = nextView;
-    vm.loadLiveTicker = loadLiveTicker;
-    vm.loadDetailsFeed = loadDetailsFeed;
-    vm.loadVideosFeed = loadVideosFeed;
-    vm.loadTableFeed = loadTableFeed;
+    vm.freezeScroll = freezeScroll;
     vm.disableSwipe = disableSwipe;
 
     function _init() {
@@ -42,6 +39,7 @@
           vm.detailsFeed = success.data.details;
           setLiveTickerFeed(success.data.liveticker);
           setVideosFeed(success.data.videos);
+          setTableFeed(success.data.table);
 
           if ($stateParams.game != null) {
             if ($stateParams.game.isLive) {
@@ -63,7 +61,9 @@
             $ionicSlideBoxDelegate.$getByHandle('matchcenter').slide(0);
           }
 
-          $rootScope.$broadcast('hide_loader');
+          $timeout(function() {
+            $rootScope.$broadcast('hide_loader');
+          }, 500);
         });
     }
 
@@ -116,17 +116,16 @@
           $('#spinner').hide();
           $('#live').fadeTo(1000, 1);
         }, 1500);
-        vm.liveTickerFeed = [];
-        vm.detailsFeed = [];
         MatchcenterService.refreshLiveTicker()
           .then(function (success) {
             vm.detailsFeed = success.data.details;
+            vm.liveTickerFeed = [];
             setLiveTickerFeed(success.data.liveticker);
             $timeout(function () {
               $('#spinner').show();
               $('#live').fadeTo(1000, 0.25);
               refreshLiveTickerFeed();
-            }, 30000);
+            }, 10000);
           });
       }
     }
@@ -159,71 +158,29 @@
       }
     }
 
+    function freezeScroll() {
+      $ionicScrollDelegate.freezeAllScrolls(true);
+      $timeout(function () {
+        $ionicScrollDelegate.freezeAllScrolls(false);
+      }, 1000);
+    }
+
     function previousView() {
       if (!vm.isLive) {
         $ionicSlideBoxDelegate.previous();
-        loadContent($ionicSlideBoxDelegate.currentIndex());
       }
     }
 
     function nextView() {
       if (!vm.isLive) {
         $ionicSlideBoxDelegate.next();
-        loadContent($ionicSlideBoxDelegate.currentIndex());
       }
-    }
-
-    function loadLiveTicker() {
-      $('#spinner').show();
-      $('#live').fadeTo(1000, 0.25);
-      $timeout(function () {
-        setLiveTickerFeed(MatchcenterService.getLiveTickerData());
-        $('#spinner').hide();
-        $('#live').fadeTo(1000, 1);
-      }, 1000);
-      refreshLiveTickerFeed();
-    }
-
-    function loadDetailsFeed() {
-      $ionicScrollDelegate.freezeAllScrolls(true);
-      $('#live').show();
-      $('#kickersTV').show();
-      vm.detailsFeed = MatchcenterService.getDetailsData();
-      $timeout(function () {
-        $ionicScrollDelegate.freezeAllScrolls(false);
-      }, 1000);
-    }
-
-    function loadVideosFeed() {
-      $ionicScrollDelegate.freezeAllScrolls(true);
-      setVideosFeed(MatchcenterService.getVideosData());
-      $timeout(function () {
-        $ionicScrollDelegate.freezeAllScrolls(false);
-      }, 1000);
-    }
-
-    function loadTableFeed() {
-      $ionicScrollDelegate.freezeAllScrolls(true);
-      setTableFeed(MatchcenterService.getTableData());
-      $timeout(function () {
-        $ionicScrollDelegate.freezeAllScrolls(false);
-      }, 1000);
     }
 
     function disableSwipe() {
       $ionicSlideBoxDelegate.enableSlide(false);
     }
 
-    function loadContent(index) {
-      if (index == 0 || index == 1) {
-        vm.loadDetailsFeed();
-      } else if (index == 2) {
-        vm.loadLiveTicker();
-      } else if (index == 3) {
-        vm.loadVideosFeed();
-      } else if (index == 4) {
-        vm.loadTableFeed();
-      }
-    }
+    vm._init();
   }
 })();

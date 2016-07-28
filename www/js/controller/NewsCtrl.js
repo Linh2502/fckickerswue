@@ -18,12 +18,15 @@
     var vm = this;
     vm.newsFeed = [];
     vm.game = [];
+    vm.isLive = false;
 
     vm._init = _init;
     vm.refresh = refresh;
     vm.navigateToNews = navigateToNews;
+    vm.navigateToLiveTicker = navigateToLiveTicker;
 
     function _init() {
+      vm.isLive = $rootScope.isLive;
       $rootScope.$broadcast('show_loader');
       HomeService.fetchHomeData()
         .then(function(success) {
@@ -88,6 +91,14 @@
 
     function navigateToNews(id) {
       $state.go('app.singlenews', {newsId: id});
+    }
+
+    function navigateToLiveTicker() {
+      if ($rootScope.isLive) {
+        $state.go('app.matchcenter', {game: {isLive: true}});
+      } else {
+        $state.go('app.matchcenter', {game: {isLive: false}});
+      }
     }
 
     vm._init();

@@ -27,6 +27,7 @@
     vm.detailsFeed = null;
     vm.getHomeData = null;
     vm.getMatchCenterData = null;
+    vm.activeSlideNews = 0;
 
     vm._init = _init;
     vm.autoPlay = autoPlay;
@@ -34,6 +35,8 @@
     vm.playVideo = playVideo;
     vm.navigateToNews = navigateToNews;
     vm.navigateToMatchCenter = navigateToMatchCenter;
+    vm.navigateToLiveTicker = navigateToLiveTicker;
+    vm.reslide = reslide;
 
     function _init() {
       //$cordovaSplashscreen.hide();
@@ -51,7 +54,7 @@
             .then(function(success) {
               vm.getMatchCenterData = success;
               vm.detailsFeed = success.data.details;
-              setLiveTickerTime();
+              setLiveTickerTime(success.data.details);
               checkLiveTicker();
               $rootScope.$broadcast('hide_loader');
             });
@@ -65,13 +68,13 @@
     $rootScope.$on('isNotLive', function () {
       vm.gamesFeed = [];
       vm.detailsFeed = [];
-      vm.detailsFeed = MatchcenterService.getDetailsData();
+      vm.detailsFeed = vm.getMatchCenterData.data.details;
       setGamesFeed(vm.getHomeData.data.matches);
       $timeout.cancel();
     });
 
-    function setLiveTickerTime() {
-      var splitLiveDate = MatchcenterService.getDetailsData().eventdate_start.split(" ");
+    function setLiveTickerTime(details) {
+      var splitLiveDate = details.eventdate_start.split(" ");
       var liveDate = splitLiveDate[0];
       var liveTime = splitLiveDate[1];
       vm.liveDateDay = liveDate;
@@ -148,11 +151,11 @@
     }
 
     function switchView(index) {
-      if (index == 0) {
+      if (index === 0) {
         $timeout(function () {
           $ionicSlideBoxDelegate.$getByHandle('spiel').next();
         }, 6000);
-      } else if (index == 1) {
+      } else if (index === 1) {
         $timeout(function () {
           $ionicSlideBoxDelegate.$getByHandle('spiel').previous();
         }, 6000);
@@ -194,6 +197,26 @@
     function navigateToMatchCenter() {
       $ionicSideMenuDelegate.toggleLeft(false);
       $state.go('app.matchcenter', {game: {isLive: false}});
+    }
+
+    function navigateToLiveTicker() {
+      if ($rootScope.isLive) {
+        $state.go('app.matchcenter', {game: {isLive: true}});
+      } else {
+        $state.go('app.matchcenter', {game: {isLive: false}});
+      }
+    }
+
+    function reslide(index) {
+      if (index === 4) {
+        $timeout(function () {
+          vm.activeSlideNews = 0;
+        }, 5000);
+      } else {
+        $timeout(function () {
+          vm.activeSlideNews = index+1;
+        }, 5000);
+      }
     }
 
     vm._init();

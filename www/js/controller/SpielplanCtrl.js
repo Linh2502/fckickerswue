@@ -19,33 +19,45 @@
     vm.getCurrentDay = new Date().getTime();
     vm.anchorDate = null;
     vm.matchListing = [];
+    vm.initialFeed = 15;
+    vm.loadNextFeed = 5;
+    vm.currentFeed = 0;
+    vm.canLoadFeed = false;
+    vm.matchData = null;
 
     vm._init = _init;
     vm.refresh = refresh;
+    vm.loadFeed = loadFeed;
 
     function _init() {
       $rootScope.$broadcast('show_loader');
       SpielplanService.fetchSpielPlanData()
         .then(function(success) {
-          setMatchListingFeed(success);
+          vm.matchData = success;
+          setMatchListingFeed(success, vm.initialFeed, vm.currentFeed);
           $timeout(function () {
             $rootScope.$broadcast('hide_loader');
             goToNextGame();
+            vm.canLoadFeed = true;
           }, 500);
         });
 
     }
 
     function refresh() {
+      vm.matchListing = [];
+      vm.initialFeed = 15;
+      vm.currentFeed = 0;
+      vm.canLoadFeed = true;
       SpielplanService.fetchSpielPlanData()
         .then(function(success) {
-          setMatchListingFeed(success);
+          setMatchListingFeed(success, vm.initialFeed, vm.currentFeed);
           $scope.$broadcast('scroll.refreshComplete');
         });
     }
 
-    function setMatchListingFeed(matches) {
-      for (var i = 0; i < matches.match.length; i++) {
+    function setMatchListingFeed(matches, matchLength, currentLength) {
+      for (var i = currentLength; i < matchLength; i++) {
         var splitDate = matches.match[i].eventdate_start.split(" ");
         var date = splitDate[0];
         var time = splitDate[1];
@@ -83,6 +95,24 @@
       $ionicScrollDelegate.$getByHandle('spielplan-scroll').anchorScroll(true);
       $ionicScrollDelegate.$getByHandle('spielplan-scroll').freezeScroll(false);
       $ionicScrollDelegate.$getByHandle('spielplan-scroll').resize();
+    }
+
+    function loadFeed() {
+      vm.currentFeed = vm.initialFeed;
+
+      if((vm.matchData.match.length - vm.initialFeed) < 5) {
+        vm.initialFeed += (vm.matchData.match.length - vm.initialFeed);
+        setMatchListingFeed(vm.matchData, vm.initialFeed, vm.currentFeed);
+        $scope.$broadcast('scroll.infiniteScrollComplete');
+      } else {
+        vm.initialFeed += vm.loadNextFeed;
+        setMatchListingFeed(vm.matchData, vm.initialFeed, vm.currentFeed);
+        $scope.$broadcast('scroll.infiniteScrollComplete');
+      }
+
+      if(vm.initialFeed === vm.matchData.match.length) {
+        vm.canLoadFeed = false;
+      }
     }
 
     vm._init();
