@@ -32,8 +32,7 @@ angular.module('directive.countdown', [])
         var _minute = _second * 60;
         var _hour = _minute * 60;
         var _day = _hour * 24;
-
-        var distance = new Date(dt) - new Date() - (36000 * 100);
+        var distance = new Date(dt + 'Z') - new Date() - 72000 * 100;
 
         if (distance < 1 || scope.detailsFeed.live == 'true') {
           scope.zeroCountdown = true;
