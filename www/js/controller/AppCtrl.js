@@ -31,6 +31,10 @@
     vm.closeMenu = closeMenu;
     vm.navigateBack = navigateBack;
     vm.openSideMenu = openSideMenu;
+    vm.clearHistory = clearHistory;
+    vm.resizeContent = resizeContent;
+    vm.navigateToLiveTicker = navigateToLiveTicker;
+    vm.navigateToHome = navigateToHome;
 
     $rootScope.devWidth = ((window.innerWidth > 0) ? window.innerWidth : screen.width);
     $rootScope.$on('show_loader', function () {
@@ -87,7 +91,8 @@
     }
 
     function openSideMenu() {
-      $ionicSideMenuDelegate.toggleLeft(true);
+      if($location.path() !== '/app/error')
+        $ionicSideMenuDelegate.toggleLeft(true);
     }
 
     function handleNavigation(state) {
@@ -100,15 +105,17 @@
       }
     }
 
-    vm.clearHistory = clearHistory;
-    vm.resizeContent = resizeContent;
-    vm.navigateToLiveTicker = navigateToLiveTicker;
-
     function clearHistory() {
       $ionicHistory.nextViewOptions({
         historyRoot: true,
         disableBack: true
       })
+    }
+
+    function navigateToHome() {
+      clearHistory();
+      if($location.path() !== '/app/error')
+        $state.go('app.home');
     }
 
     function resizeContent() {

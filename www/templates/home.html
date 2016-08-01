@@ -8,7 +8,7 @@
   <ion-content lazy-scroll class="has-subheader" delegate-handle="content">
     <div class="news-feed">
       <p class="custom-title custom-heading">News</p>
-      <ion-slide-box does-continue="true" auto-play="homeVM.autoPlay" slide-interval="5000" delegate-handle="news" on-slide-changed="homeVM.reslide($index)" active-slide="homeVM.activeSlideNews">
+      <ion-slide-box delegate-handle="news" auto-play="homeVM.autoPlay" on-slide-changed="homeVM.reslide($index)" active-slide="homeVM.activeSlideNews">
         <ion-slide ng-repeat="news in homeVM.newsFeed">
           <a nav-transition="ios" class="remove-href-link" ng-click="homeVM.navigateToNews(news.id)">
             <div class="custom-background">

@@ -2,7 +2,7 @@
  * Created by Linh on 02.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
  *
- * status: 14.07.2016 6:10 PM
+ * status: 28.07.2016 6:10 PM
  */
 (function () {
   'use strict';
@@ -11,16 +11,16 @@
     .module('module.matchcenter', [])
     .controller('MatchCenterCtrl', MatchCenterController);
 
-  MatchCenterController.$inject = ['$rootScope', '$timeout', 'MatchcenterService', '$ionicSideMenuDelegate', '$ionicPopup', '$ionicSlideBoxDelegate', '$stateParams', '$ionicScrollDelegate'];
+  MatchCenterController.$inject = ['$rootScope', '$timeout', 'MatchcenterService', '$ionicSideMenuDelegate', '$ionicPopup', '$ionicSlideBoxDelegate', '$stateParams', '$ionicScrollDelegate', '$q'];
 
-  function MatchCenterController($rootScope, $timeout, MatchcenterService, $ionicSideMenuDelegate, $ionicPopup, $ionicSlideBoxDelegate, $stateParams, $ionicScrollDelegate) {
+  function MatchCenterController($rootScope, $timeout, MatchcenterService, $ionicSideMenuDelegate, $ionicPopup, $ionicSlideBoxDelegate, $stateParams, $ionicScrollDelegate, $q) {
     $ionicSideMenuDelegate.canDragContent(true);
     var vm = this;
-    vm.matchCenterFeed = null;
-    vm.liveTickerFeed = [];
+    vm.matchCenterFeed = false;
+    vm.liveTickerFeed = false;
     vm.detailsFeed = [];
-    vm.videosFeed = [];
-    vm.tableFeed = [];
+    vm.videosFeed = false;
+    vm.tableFeed = null;
     vm.html = [];
     vm.isLive = false;
     vm.enableLiveTickerInfiniteScroll = false;
@@ -31,15 +31,16 @@
     vm.nextView = nextView;
     vm.freezeScroll = freezeScroll;
     vm.disableSwipe = disableSwipe;
+    vm.loadLiveTicker = loadLiveTicker;
+    vm.loadVideosData = loadVideosData;
+    vm.loadTableData = loadTableData;
 
     function _init() {
       $rootScope.$broadcast('show_loader');
       MatchcenterService.refreshLiveTicker()
         .then(function (success) {
+          vm.matchCenterFeed = success;
           vm.detailsFeed = success.data.details;
-          setLiveTickerFeed(success.data.liveticker);
-          setVideosFeed(success.data.videos);
-          setTableFeed(success.data.table);
 
           if ($stateParams.game != null) {
             if ($stateParams.game.isLive) {
@@ -61,23 +62,24 @@
             $ionicSlideBoxDelegate.$getByHandle('matchcenter').slide(0);
           }
 
-          $timeout(function() {
-            $rootScope.$broadcast('hide_loader');
-          }, 500);
+          $rootScope.$broadcast('hide_loader');
         });
     }
 
     function setLiveTickerFeed(liveticker) {
+      var defer = $q.defer();
       vm.liveTickerFeed = [];
       for (var i = 0; i < liveticker.item.length; i++) {
-        if (i < liveticker.item.length) {
-          vm.liveTickerFeed.push({
-            minute: checkIfHasValue(liveticker.item[i].minute),
-            type: checkIfHasValue(liveticker.item[i].type),
-            text: liveticker.item[i].text
-          });
+        vm.liveTickerFeed.push({
+          minute: checkIfHasValue(liveticker.item[i].minute),
+          type: checkIfHasValue(liveticker.item[i].type),
+          text: liveticker.item[i].text
+        });
+        if(i+1 === liveticker.item.length) {
+          defer.resolve();
         }
       }
+      return defer.promise;
     }
 
     function checkIfHasValue(value) {
@@ -89,18 +91,25 @@
     }
 
     function setVideosFeed(videos) {
+      var defer = $q.defer();
       vm.videosFeed = [];
       if (videos == undefined) {
         vm.videosFeed = null;
+        defer.resolve();
       } else {
         if (!videos.item.length) {
           vm.videosFeed.push(videos.item);
+          defer.resolve();
         } else {
           for (var i = 0; i < videos.item.length; i++) {
             vm.videosFeed.push(videos.item[i]);
+            if(i+1 === videos.item.length) {
+              defer.resolve();
+            }
           }
         }
       }
+      return defer.promise;
     }
 
     function setTableFeed(tables) {
@@ -163,6 +172,35 @@
       $timeout(function () {
         $ionicScrollDelegate.freezeAllScrolls(false);
       }, 1000);
+    }
+
+    function loadLiveTicker() {
+      if(!vm.liveTickerFeed) {
+        $('#spinner').show();
+        setLiveTickerFeed(vm.matchCenterFeed.data.liveticker)
+          .then(function(success) {
+            $('#spinner').hide();
+          }, function(error) {
+          });
+      }
+    }
+
+    function loadVideosData() {
+      if(!vm.videosFeed) {
+        setVideosFeed(vm.matchCenterFeed.data.videos)
+          .then(function(success) {
+          }, function(error) {
+          });
+      }
+    }
+
+    function loadTableData() {
+      if(!vm.tableFeed) {
+        setTableFeed(vm.matchCenterFeed.data.table)
+          .then(function(success) {
+          }, function(error) {
+          });
+      }
     }
 
     function previousView() {

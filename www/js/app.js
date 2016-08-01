@@ -50,11 +50,12 @@ angular.module('starter', [
   ])
   .constant('ApiEndpoint', {
     url: 'https://www.wuerzburger-kickers.de/ajax/kickers/',
+    //url: 'http://kunden.i-cue-medien.de/www.wuerzburger-kickers.de-relaunch/_/ajax/kickers/',
     version: '?app_version=1.0.40'
   })
 
   .run(function($rootScope, $ionicLoading, $ionicPlatform) {
-    //$rootScope.uuid = '&uuid=' + ionic.Platform.device().uuid;
+    $rootScope.uuid = '&uuid=' + ionic.Platform.device().uuid;
     $ionicPlatform.ready(function() {
       $rootScope.uuid = '&uuid=' + ionic.Platform.device().uuid;
       if (window.cordova && window.cordova.plugins.Keyboard) {
@@ -120,7 +121,7 @@ angular.module('starter', [
       })
 
       .state('app.arena', {
-        cache: false,
+        cache: true,
         url: '/arena',
         views: {
           'menuContent': {
@@ -131,7 +132,7 @@ angular.module('starter', [
       })
 
       .state('app.datenschutz', {
-        cache: false,
+        cache: true,
         url: '/datenschutz',
         views: {
           'menuContent': {
@@ -158,7 +159,7 @@ angular.module('starter', [
       })
 
       .state('app.home', {
-        cache: false,
+        cache: true,
         url: '/home',
         views: {
           'menuContent': {
@@ -169,7 +170,7 @@ angular.module('starter', [
       })
 
       .state('app.impressum', {
-        cache: false,
+        cache: true,
         url: '/impressum',
         views: {
           'menuContent': {
@@ -201,7 +202,7 @@ angular.module('starter', [
       })
 
       .state('app.kontakt', {
-        cache: false,
+        cache: true,
         url: '/kontakt',
         views: {
           'menuContent': {
@@ -211,7 +212,7 @@ angular.module('starter', [
       })
 
       .state('app.matchcenter', {
-        cache: false,
+        cache: true,
         url: '/matchcenter',
         params: {game: null},
         views: {
@@ -234,7 +235,7 @@ angular.module('starter', [
       })
 
       .state('app.singlenews', {
-        cache: false,
+        cache: true,
         url: '/news/:newsId',
         views: {
           'menuContent': {
@@ -262,7 +263,7 @@ angular.module('starter', [
       })
 
       .state('app.newsletter', {
-        cache: false,
+        cache: true,
         url: '/newsletter',
         views: {
           'menuContent': {
@@ -284,7 +285,7 @@ angular.module('starter', [
       })
 
       .state('app.spielplan', {
-        cache: false,
+        cache: true,
         url: '/spielplan',
         views: {
           'menuContent': {
@@ -295,7 +296,7 @@ angular.module('starter', [
       })
 
       .state('app.tabelle', {
-        cache: false,
+        cache: true,
         url: '/tabelle',
         views: {
           'menuContent': {
@@ -306,7 +307,7 @@ angular.module('starter', [
       })
 
       .state('app.aktionen', {
-        cache: false,
+        cache: true,
         url: '/aktionen',
         views: {
           'menuContent': {

@@ -63,9 +63,9 @@
           <div class="row remove-col-padding matchcenter-slide-box-width" id="standard">
             <span class="col vertical-align-mid font-size" ng-click="mcVM.freezeScroll()"><a class="remove-href-link font-size" href="javascript:;">Spielbericht</a></span>
             <span class="col vertical-align-mid font-size" ng-click="mcVM.freezeScroll()"><a class="remove-href-link font-size" href="javascript:;">Daten</a></span>
-            <span class="col vertical-align-mid font-size" ng-click="mcVM.freezeScroll()"><a class="remove-href-link font-size" href="javascript:;">Live-Ticker</a></span>
-            <span class="col vertical-align-mid font-size" ng-click="mcVM.freezeScroll()"><a class="remove-href-link font-size" href="javascript:;">Kickers TV</a></span>
-            <span ng-show="mcVM.detailsFeed.matchday.indexOf('Liga-Spiel') > -1" class="col vertical-align-mid font-size" ng-click="mcVM.freezeScroll()"><a class="remove-href-link font-size" href="javascript:;">Tabelle</a></span>
+            <span class="col vertical-align-mid font-size" ng-click="mcVM.loadLiveTicker()"><a class="remove-href-link font-size" href="javascript:;">Live-Ticker</a></span>
+            <span class="col vertical-align-mid font-size" ng-click="mcVM.loadVideosData()"><a class="remove-href-link font-size" href="javascript:;">Kickers TV</a></span>
+            <span ng-show="mcVM.detailsFeed.matchday.indexOf('Liga-Spiel') > -1" class="col vertical-align-mid font-size" ng-click="mcVM.loadTableData()"><a class="remove-href-link font-size" href="javascript:;">Tabelle</a></span>
           </div>
         </div>
       </div>

@@ -4797,8 +4797,9 @@ a.item {
 .item-complex .item-content, .item-radio .item-content {
   position: relative;
   z-index: 2;
-  padding: 16px 49px 16px 16px;
-  border: none;
+  padding: 16px 49px 16px 6px;
+  margin-left: 10px;
+  border-bottom: 2px solid #F2F4F4;
   background-color: #fff; }
 
 a.item-content {

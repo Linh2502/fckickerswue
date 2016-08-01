@@ -45,7 +45,7 @@ angular.module('directive.slideboxheight', [])
                   height: newHeight + 'px'
                 }, 500);
               }
-            }, 500);
+            }, 1000);
           }
         });
       }
