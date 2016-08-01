@@ -17,15 +17,15 @@
     var dates = null;
 
     return {
-      fetchNewsData: function () {
+      fetchAktionenData: function () {
         var defer = $q.defer();
         $http.get(ApiEndpoint.url + 'app--news' + ApiEndpoint.version + $rootScope.uuid)
           .then(function (response) {
-            $log.info("Succeeded in requesting news data", response);
+            $log.info("Succeeded in requesting aktionen data", response);
             dates = x2js.xml_str2json(response.data);
             defer.resolve(dates.data.news);
           }, function (error) {
-            $log.info("Succeeded in requesting news data", error);
+            $log.info("Succeeded in requesting aktionen data", error);
             $state.go('app.error');
           });
         return defer.promise;

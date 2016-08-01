@@ -25,7 +25,6 @@
       title: "Keine Internetverbindung",
       content: "Beim Herstellen der Verbindung zum Würzburger Kickers - Server ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
     }).then(function (res) {
-
     });
 
     function refreshContent() {

@@ -1,21 +1,21 @@
+<ion-nav-bar class="bar-dark black-background">
+    <div>
+        <ion-nav-title class="custom-title bar display-table">
+            <div class="text-align-center display-table-cell news-image vertical-align-mid">
+                <div class="button button-clear fa fa-bars bar-navigation-button"
+                     ng-click="appVM.openSideMenu()">
+                </div>
+            </div>
+        </ion-nav-title>
+        <ion-nav-back-button class="button nav-back-button" ng-click="appVM.navigateBack()">
+        </ion-nav-back-button>
+        <div class="fwk-logo kickers-logo" ng-click="appVM.navigateToHome()"></div>
+        <div class="zweite-liga-logo zweite-liga-size"></div>
+    </div>
+</ion-nav-bar>
 <ion-side-menus enable-menu-with-back-views="false">
     <ion-side-menu-content class="remove-box-shadow">
-        <ion-nav-bar class="bar-dark black-background">
-            <div>
-                <ion-nav-title class="custom-title bar display-table">
-                    <div class="text-align-center display-table-cell news-image vertical-align-mid">
-                        <div class="button button-clear fa fa-bars bar-navigation-button"
-                             ng-click="appVM.openSideMenu()">
-                        </div>
-                    </div>
-                </ion-nav-title>
-                <div bar-switcher></div>
-                <ion-nav-back-button class="button nav-back-button" ng-click="appVM.navigateBack()">
-                </ion-nav-back-button>
-                <div class="fwk-logo kickers-logo" ng-click="appVM.navigateToHome()"></div>
-                <div class="zweite-liga-logo zweite-liga-size"></div>
-            </div>
-        </ion-nav-bar>
+        <div bar-switcher></div>
         <ion-nav-view name="menuContent">
             <div id="loaderInterceptor"><img src="img/grafiken/3x/ladeball@3x.gif" class="ajax-loader"/></div>
         </ion-nav-view>

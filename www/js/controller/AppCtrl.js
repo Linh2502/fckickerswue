@@ -92,7 +92,10 @@
 
     function openSideMenu() {
       if($location.path() !== '/app/error')
-        $ionicSideMenuDelegate.toggleLeft(true);
+        if(!$ionicSideMenuDelegate.isOpenLeft())
+          $ionicSideMenuDelegate.toggleLeft(true);
+        else
+          $ionicSideMenuDelegate.toggleLeft(false);
     }
 
     function handleNavigation(state) {
