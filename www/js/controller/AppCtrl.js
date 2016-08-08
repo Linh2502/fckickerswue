@@ -91,7 +91,11 @@
         handleNavigation("app.home");
       }
       if (/\d/.test($location.path()) && $location.path().indexOf("aktionen") > -1) {
-        handleNavigation("app.aktionen");
+        if ($ionicHistory.backView().stateName == "app.home") {
+          handleNavigation("app.home");
+        } else {
+          handleNavigation("app.aktionen");
+        }
       }
     }
 

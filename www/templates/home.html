@@ -155,16 +155,24 @@
         </div>
       </div>
     </div>
-    <div class="aktionen-feed">
-      <div class="image-height text-align-center">
-        <img image-lazy-loader="dots"/>
-      </div>
-      <div class="news-image-text">
-        <div class="news-image-text-display">
-          <div class="custom-title-date news-image-date">| Aktion</div>
-          <div class="custom-title news-image-title">Test</div>
-        </div>
-      </div>
+    <div class="videos-feed">
+      <ion-slide-box delegate-handle="promotion" auto-play="homeVM.autoPlay" on-slide-changed="homeVM.reslide($index)" active-slide="homeVM.activeSlideNews">
+        <ion-slide ng-repeat="promotion in homeVM.promotionFeed">
+          <a nav-transition="ios" class="remove-href-link" ng-click="homeVM.navigateToPromotion(promotion.id)">
+            <div class="custom-background">
+              <div class="image-height text-align-center">
+                <img src="{{promotion.image}}" class="news-image" image-lazy-loader="dots"/>
+              </div>
+              <div class="news-image-text custom-background">
+                <div class="news-image-text-display">
+                  <div class="custom-title-date news-image-date">| {{promotion.date | dateFilter}}</div>
+                  <div class="custom-title news-image-title" ng-bind-html="promotion.title"></div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </ion-slide>
+      </ion-slide-box>
     </div>
     <div class="videos-feed">
       <ion-slide-box delegate-handle="video" does-continue="true" >
@@ -175,9 +183,9 @@
               <img src="img/bilddaten/3x/Playbutton@3x.png" class="video-image-play-button-style" ng-click="homeVM.playVideo(player, video)" />
             </div>
             <div class="video-height">
-              <youtube-video video-url="video.link" class="home-video-image video-z-index" player="player"></youtube-video>
+              <youtube-video video-url="video.videoLink" class="home-video-image video-z-index" player="player"></youtube-video>
             </div>
-            <div class="news-image-text">
+            <div class="news-image-text custom-background">
               <div class="news-image-text-display">
                 <div class="custom-title-date news-image-date" ng-bind-html="video.title"></div>
                 <div class="custom-title news-image-title" ng-bind-html="video.subtitle"></div>

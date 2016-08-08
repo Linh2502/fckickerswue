@@ -44,11 +44,13 @@
 
     function setVideosFeed(videos) {
       for (var i = 0; i < videos.item.length; i++) {
+        videos.item[i].videoLink = '';
         vm.videosFeed.push(videos.item[i]);
       }
     }
 
     function playVideo(player, video) {
+      video.videoLink = video.link;
       if (navigator.connection.type == Connection.NONE || navigator.connection.type == Connection.UNKNOWN) {
         $ionicPopup.alert({
           title: "Keine Internetverbindung",

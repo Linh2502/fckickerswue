@@ -109,10 +109,12 @@
         defer.resolve();
       } else {
         if (!videos.item.length) {
+          videos.item.videoLink = '';
           vm.videosFeed.push(videos.item);
           defer.resolve();
         } else {
           for (var i = 0; i < videos.item.length; i++) {
+            videos.item[i].videoLink = '';
             vm.videosFeed.push(videos.item[i]);
             if(i+1 === videos.item.length) {
               defer.resolve();
@@ -152,6 +154,7 @@
     }
 
     function playVideo(player, video) {
+      video.videoLink = video.link;
       if (navigator.connection.type == Connection.NONE || navigator.connection.type == Connection.UNKNOWN) {
         $ionicPopup.alert({
           title: "Keine Internetverbindung",
