@@ -25,6 +25,7 @@
     });
 
     var vm = this;
+    vm.showBackButton = true;
 
     vm.closeSettings = closeSettings;
     vm.navigateToSettings = navigateToSettings;
@@ -71,6 +72,7 @@
     }
 
     function closeMenu() {
+      vm.showBackButton = true;
       $ionicSideMenuDelegate.toggleLeft(false);
     }
 
@@ -94,11 +96,15 @@
     }
 
     function openSideMenu() {
+      vm.showBackButton = false;
       if($location.path() !== '/app/error')
-        if(!$ionicSideMenuDelegate.isOpenLeft())
+        if(!$ionicSideMenuDelegate.isOpenLeft()) {
+          vm.showBackButton = false;
           $ionicSideMenuDelegate.toggleLeft(true);
-        else
+        } else {
+          vm.showBackButton = true;
           $ionicSideMenuDelegate.toggleLeft(false);
+        }
     }
 
     function handleNavigation(state) {

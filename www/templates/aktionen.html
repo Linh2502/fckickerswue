@@ -11,7 +11,7 @@
                         <div class="news-image-text custom-background">
                             <div class="news-image-text-display">
                                 <div class="custom-title-date news-image-date">| {{aktion.date | dateFilter}}</div>
-                                <div class="custom-title news-image-title">{{aktion.title}}</div>
+                                <div class="custom-title news-image-title" ng-bind-html="aktion.title"></div>
                             </div>
                         </div>
                     </div>

@@ -18,7 +18,7 @@
               <div class="news-image-text custom-background">
                 <div class="news-image-text-display">
                   <div class="custom-title-date news-image-date">| {{news.date | dateFilter}}</div>
-                  <div class="custom-title news-image-title"> {{news.title}}</div>
+                  <div class="custom-title news-image-title" ng-bind-html="news.title"></div>
                 </div>
               </div>
             </div>
@@ -32,7 +32,7 @@
           <div class="set-max-width">
             <div class="row custom-row-border spiel-feed-columns spiel-feed-first-column-height">
               <div class="spiel-feed-first-column-style">
-                <div class="custom-title spiel-feed-game-title">{{game.title}}</div>
+                <div class="custom-title spiel-feed-game-title" ng-bind-html="game.title"></div>
                 <div class="custom-title" ng-if="game.date">{{game.date | dateFilter}} {{game.time | timeFilter}} Uhr</div>
                 <div class="custom-title" ng-if="!game.date"></div>
               </div>
@@ -56,14 +56,14 @@
             <div class="row custom-row-border spiel-feed-columns">
               <div class="col col-40 col-center remove-col-padding text-align-center">
                 <img ng-src="{{game.soccerTeam.team_home.image}}" class="soccer-logo"/>
-                <div class="game-soccerteam-fontstyle">{{game.soccerTeam.team_home.name}}</div>
+                <div class="game-soccerteam-fontstyle" ng-bind-html="game.soccerTeam.team_home.name"></div>
               </div>
               <div class="col col-20 col-center remove-col-padding">
                 <div class="news-games-result">{{game.result}}</div>
               </div>
               <div class="col col-40 col-center remove-col-padding text-align-center">
                 <img ng-src="{{game.soccerTeam.team_away.image}}" class="soccer-logo"/>
-                <div class="game-soccerteam-fontstyle">{{game.soccerTeam.team_away.name}}</div>
+                <div class="game-soccerteam-fontstyle" ng-bind-html="game.soccerTeam.team_away.name"></div>
               </div>
             </div>
             <div class="row custom-row-border spiel-feed-columns spiel-feed-third-column-height" ng-if="game.tickets === 'Tickets'">
@@ -179,8 +179,8 @@
             </div>
             <div class="news-image-text">
               <div class="news-image-text-display">
-                <div class="custom-title-date news-image-date">| {{video.title}}</div>
-                <div class="custom-title news-image-title">{{video.subtitle}}</div>
+                <div class="custom-title-date news-image-date" ng-bind-html="video.title"></div>
+                <div class="custom-title news-image-title" ng-bind-html="video.subtitle"></div>
               </div>
             </div>
           </div>

@@ -28,7 +28,7 @@
         <div class="text-align-center">
           <img src="{{mcVM.detailsFeed.logo_home}}" class="soccer-logo" image-lazy-loader="dots"/>
         </div>
-        <div class="game-soccerteam-fontstyle">{{mcVM.detailsFeed.team_home}}</div>
+        <div class="game-soccerteam-fontstyle" ng-bind-html="mcVM.detailsFeed.team_home"></div>
       </div>
       <div class="col col-20 col-center remove-col-padding">
         <div class="news-games-result">{{mcVM.detailsFeed.result}}</div>
@@ -37,7 +37,7 @@
         <div class="text-align-center">
           <img src="{{mcVM.detailsFeed.logo_away}}" class="soccer-logo" image-lazy-loader="dots"/>
         </div>
-        <div class="game-soccerteam-fontstyle">{{mcVM.detailsFeed.team_away}}</div>
+        <div class="game-soccerteam-fontstyle" ng-bind-html="mcVM.detailsFeed.team_away"></div>
       </div>
     </div>
     <tab-slide-box>
@@ -65,7 +65,7 @@
             <span class="col vertical-align-mid font-size" ng-click="mcVM.freezeScroll()"><a class="remove-href-link font-size" href="javascript:;">Daten</a></span>
             <span class="col vertical-align-mid font-size" ng-click="mcVM.loadLiveTicker()"><a class="remove-href-link font-size" href="javascript:;">Live-Ticker</a></span>
             <span class="col vertical-align-mid font-size" ng-click="mcVM.loadVideosData()"><a class="remove-href-link font-size" href="javascript:;">Kickers TV</a></span>
-            <span ng-show="mcVM.detailsFeed.matchday.indexOf('Liga-Spiel') > -1" class="col vertical-align-mid font-size" ng-click="mcVM.loadTableData()"><a class="remove-href-link font-size" href="javascript:;">Tabelle</a></span>
+            <span class="col vertical-align-mid font-size" ng-click="mcVM.loadTableData()"><a class="remove-href-link font-size" href="javascript:;">Tabelle</a></span>
           </div>
         </div>
       </div>
@@ -78,7 +78,7 @@
                   <div class="row remove-col-padding">
                     <div class="col">
                       <div class="col">
-                        <p class="custom-font-bold arena-line-height">{{mcVM.detailsFeed.title || 'Kein Spielbericht vorhanden'}}</p>
+                        <p class="custom-font-bold arena-line-height" ng-bind-html="mcVM.detailsFeed.title || 'Kein Spielbericht vorhanden'"></p>
                         <div ng-if="mcVM.detailsFeed.title!==undefined">
                           <p class="font-size arena-line-height-double" ng-bind-html="mcVM.detailsFeed.text_report | externalLinks"></p>
                         </div>
@@ -170,10 +170,10 @@
                     </div>
                   </div>
                   <div class="col col-70" ng-if="!info.type">
-                    <div class="matchcenter-liveticker text-align-left font-size">{{info.text}}</div>
+                    <div class="matchcenter-liveticker text-align-left font-size" ng-bind-html="info.text"></div>
                   </div>
                   <div class="col col-70" ng-if="info.type === 'Tor' || info.type === 'Wechsel' || info.type === 'Karte-Gelb' || info.type === 'Karte-Rot' || info.type === 'Karte-Gelb-Rot' || info.type === 'Karte-Gelbrot'">
-                    <div class="matchcenter-liveticker text-align-left custom-font-bold font-size">{{info.text}}</div>
+                    <div class="matchcenter-liveticker text-align-left custom-font-bold font-size" ng-bind-html="info.text"></div>
                   </div>
                 </div>
                 <div class="row remove-col-padding arena-border-color" ng-if="info.type === 'Anpfiff' || info.type === 'Halbzeitpfiff' || info.type === 'Anpfiff-2hz' || info.type === 'Abpfiff'">
@@ -192,12 +192,12 @@
                     </div>
                   </div>
                   <div class="col col-70">
-                    <div class="matchcenter-liveticker text-align-left font-size">{{info.text}}</div>
+                    <div class="matchcenter-liveticker text-align-left font-size" ng-bind-html="info.text"></div>
                   </div>
                 </div>
                 <div class="row remove-col-padding arena-border-color" ng-if="!info.minute">
                   <div class="col matchcenter-padding-left" ng-if="!info.type">
-                    <div class="matchcenter-liveticker text-align-left font-size">{{info.text}}</div>
+                    <div class="matchcenter-liveticker text-align-left font-size" ng-bind-html="info.text"></div>
                   </div>
                 </div>
                 <div class="col matchcenter-liveticker-empty-col"></div>
@@ -219,8 +219,8 @@
                   </div>
                   <div class="custom-background news-image-text">
                     <div class="news-image-text-display">
-                      <div class="custom-title-date news-image-date">| {{video.title}}</div>
-                      <div class="custom-title news-image-title">{{video.subtitle}}</div>
+                      <div class="custom-title-date news-image-date" ng-bind-html="video.title"></div>
+                      <div class="custom-title news-image-title" ng-bind-html="video.subtitle"></div>
                     </div>
                   </div>
                 </div>
@@ -240,7 +240,7 @@
             </div>
           </div>
         </ion-slide>
-        <ion-slide dynamic-slides="tableFeed" ng-if="mcVM.detailsFeed.matchday.indexOf('Liga-Spiel') > -1">
+        <ion-slide dynamic-slides="tableFeed" ng-if="mcVM.showTable">
           <div>
             <div id="tabelle">
               <div class="row remove-col-padding tabelle-ueberschrift">
@@ -258,24 +258,24 @@
                   <div class="tabelle-ueberschrift-bottom-border">
                     <div ng-repeat="table in mcVM.tableFeed">
                       <div class="row remove-col-padding" ng-class-odd="'odd'" ng-class-even="'even'" ng-if="table.is_kickers">
-                        <span class="col col-10 tabelle-margin-left tabelle-font-color">{{table.position}}</span>
-                        <span class="col custom-col-35 tabelle-font-color">{{table.name}}</span>
-                        <span class="col col-10 tabelle-font-color">{{table.matches}}</span>
-                        <span class="col custom-col-7-5 tabelle-font-color">{{table.wins}}</span>
-                        <span class="col custom-col-7-5 tabelle-font-color">{{table.draws}}</span>
-                        <span class="col custom-col-7-5 tabelle-font-color">{{table.losses}}</span>
-                        <span class="col custom-col-12-5 tabelle-font-color">{{table.goals}}</span>
-                        <span class="col col-10 tabelle-margin-right tabelle-font-color">{{table.points}}</span>
+                        <span class="col col-10 tabelle-margin-left tabelle-font-color" ng-bind-html="table.position"></span>
+                        <span class="col custom-col-35 tabelle-font-color" ng-bind-html="table.name"></span>
+                        <span class="col col-10 tabelle-font-color" ng-bind-html="table.matches"></span>
+                        <span class="col custom-col-7-5 tabelle-font-color" ng-bind-html="table.wins"></span>
+                        <span class="col custom-col-7-5 tabelle-font-color" ng-bind-html="table.draws"></span>
+                        <span class="col custom-col-7-5 tabelle-font-color" ng-bind-html="table.losses"></span>
+                        <span class="col custom-col-12-5 tabelle-font-color" ng-bind-html="table.goals"></span>
+                        <span class="col col-10 tabelle-margin-right tabelle-font-color" ng-bind-html="table.points"></span>
                       </div>
                       <div class="row remove-col-padding" ng-class-odd="'odd'" ng-class-even="'even'" ng-if="!table.is_kickers">
-                        <span class="col col-10 tabelle-margin-left">{{table.position}}</span>
-                        <span class="col custom-col-35">{{table.name}}</span>
-                        <span class="col col-10">{{table.matches}}</span>
-                        <span class="col custom-col-7-5">{{table.wins}}</span>
-                        <span class="col custom-col-7-5">{{table.draws}}</span>
-                        <span class="col custom-col-7-5">{{table.losses}}</span>
-                        <span class="col custom-col-12-5">{{table.goals}}</span>
-                        <span class="col col-10 tabelle-margin-right">{{table.points}}</span>
+                        <span class="col col-10 tabelle-margin-left" ng-bind-html="table.position"></span>
+                        <span class="col custom-col-35" ng-bind-html="table.name"></span>
+                        <span class="col col-10" ng-bind-html="table.matches"></span>
+                        <span class="col custom-col-7-5" ng-bind-html="table.wins"></span>
+                        <span class="col custom-col-7-5" ng-bind-html="table.draws"></span>
+                        <span class="col custom-col-7-5" ng-bind-html="table.losses"></span>
+                        <span class="col custom-col-12-5" ng-bind-html="table.goals"></span>
+                        <span class="col col-10 tabelle-margin-right" ng-bind-html="table.points"></span>
                       </div>
                     </div>
                   </div>

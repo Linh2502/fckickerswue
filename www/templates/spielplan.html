@@ -35,7 +35,7 @@
               <div class="text-align-center">
                 <img src="{{game.logo_home}}" class="soccer-logo"/>
               </div>
-              <div class="game-soccerteam-fontstyle">{{game.team_home}}</div>
+              <div class="game-soccerteam-fontstyle" ng-bind-html="game.team_home"></div>
             </div>
             <div class="col col-20 col-center remove-col-padding">
               <div class="news-games-result">{{game.result}}</div>
@@ -44,7 +44,7 @@
               <div class="text-align-center">
                 <img src="{{game.logo_away}}" class="soccer-logo"/>
               </div>
-              <div class="game-soccerteam-fontstyle">{{game.team_away}}</div>
+              <div class="game-soccerteam-fontstyle" ng-bind-html="game.team_away"></div>
             </div>
           </div>
           <div class="col"></div>
@@ -53,7 +53,7 @@
           <div class="arena-border-box-shadow spielplan-first-column">
             <div class="news-image-text">
               <div class="news-image-text-display">
-                <div class="custom-title news-image-date">| {{game.date | dateFilter}} {{game.time | timeFilter}} Uhr - {{game.matchday}}</div>
+                <div class="custom-title news-image-date row">| {{game.date | dateFilter}} {{game.time | timeFilter}} Uhr - <div ng-bind-html="game.matchday"></div></div>
               </div>
             </div>
           </div>
@@ -62,7 +62,7 @@
               <div class="text-align-center">
                 <img src="{{game.logo_home}}" class="soccer-logo"/>
               </div>
-              <div class="game-soccerteam-fontstyle">{{game.team_home}}</div>
+              <div class="game-soccerteam-fontstyle" ng-bind-html="game.team_home"></div>
             </div>
             <div class="col col-20 col-center remove-col-padding">
               <div class="news-games-result">{{game.result}}</div>
@@ -71,7 +71,7 @@
               <div class="text-align-center">
                 <img src="{{game.logo_away}}" class="soccer-logo"/>
               </div>
-              <div class="game-soccerteam-fontstyle">{{game.team_away}}</div>
+              <div class="game-soccerteam-fontstyle" ng-bind-html="game.team_away"></div>
             </div>
           </div>
           <div class="col"></div>
@@ -79,16 +79,5 @@
       </div>
     </div>
     <ion-infinite-scroll on-infinite="scheduleVM.loadFeed()" distance="1%" ng-if="scheduleVM.canLoadFeed"></ion-infinite-scroll>
-    <!--<div class="col spielplan-last-column">
-      <div class="matchcenter-liveticker custom-title">
-        <div class="row">
-          <div class="col col-25"></div>
-          <div class="col col-50">2. Liga</div>
-          <div class="col col-25 text-align-right">
-            <img image-lazy-src="img/bilddaten/3x/logo-dfl-dritte-liga@3x.png" class="spielplan-last-column-logo" />
-          </div>
-        </div>
-      </div>
-    </div>-->
   </ion-content>
 </ion-view>

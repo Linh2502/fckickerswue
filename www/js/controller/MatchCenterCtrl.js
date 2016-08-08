@@ -24,6 +24,7 @@
     vm.html = [];
     vm.isLive = false;
     vm.enableLiveTickerInfiniteScroll = false;
+    vm.showTable = false;
 
     vm._init = _init;
     vm.playVideo = playVideo;
@@ -36,6 +37,7 @@
     vm.loadTableData = loadTableData;
 
     function _init() {
+      vm.showTable = false;
       $rootScope.$broadcast('show_loader');
       MatchcenterService.refreshLiveTicker()
         .then(function (success) {
@@ -70,9 +72,18 @@
       var defer = $q.defer();
       vm.liveTickerFeed = [];
       for (var i = 0; i < liveticker.item.length; i++) {
+        var minute = liveticker.item[i].minute;
+        var type = liveticker.item[i].type;
+        if(!minute) {
+          minute = minute.replace("<![CDATA[", "").replace("]]>", "");
+        }
+        if(!type) {
+          type = type.replace("<![CDATA[", "").replace("]]>", "");
+        }
+
         vm.liveTickerFeed.push({
-          minute: checkIfHasValue(liveticker.item[i].minute),
-          type: checkIfHasValue(liveticker.item[i].type),
+          minute: checkIfHasValue(minute.__cdata),
+          type: checkIfHasValue(type.__cdata),
           text: liveticker.item[i].text
         });
         if(i+1 === liveticker.item.length) {
@@ -113,6 +124,7 @@
     }
 
     function setTableFeed(tables) {
+      vm.showTable = true;
       vm.tableFeed = [];
       for (var i = 0; i < tables.row.length; i++) {
         vm.tableFeed.push(tables.row[i]);
@@ -186,6 +198,7 @@
     }
 
     function loadVideosData() {
+      vm.showTable = true;
       if(!vm.videosFeed) {
         setVideosFeed(vm.matchCenterFeed.data.videos)
           .then(function(success) {
@@ -195,6 +208,7 @@
     }
 
     function loadTableData() {
+      vm.showTable = true;
       if(!vm.tableFeed) {
         setTableFeed(vm.matchCenterFeed.data.table)
           .then(function(success) {

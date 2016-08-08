@@ -11,7 +11,7 @@
         <img id="singleNewsImage" ng-src="{{snVM.news[0].image}}" class="news-image"/>
         <p></p>
         <div id="singleNewsDate" class="custom-title sub-news-image-date">| {{snVM.news[0].date | dateFilter}}</div>
-        <div id="singleNewsTitle" class="custom-title sub-news-image-title">{{snVM.news[0].title}}</div>
+        <div id="singleNewsTitle" class="custom-title sub-news-image-title" ng-bind-html="snVM.news[0].title"></div>
       </div>
       <p></p>
       <div id="singleNewsText" ng-if="snVM.news[0].text !== undefined" class="custom-font-regular font-size singlenews-text" ng-bind-html="snVM.news[0].text | externalLinks"></div>

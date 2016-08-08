@@ -7,7 +7,7 @@
                 </div>
             </div>
         </ion-nav-title>
-        <ion-nav-back-button class="button nav-back-button" ng-click="appVM.navigateBack()">
+        <ion-nav-back-button id="backbutton" class="button nav-back-button" ng-click="appVM.navigateBack()" ng-show="appVM.showBackButton">
         </ion-nav-back-button>
         <div class="fwk-logo kickers-logo" ng-click="appVM.navigateToHome()"></div>
         <div class="zweite-liga-logo zweite-liga-size"></div>

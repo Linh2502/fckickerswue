@@ -22,6 +22,7 @@ angular.module('starter', [
     'service.kader',
     'service.kickerstv',
     'service.matchcenter',
+    'service.miscellaneous',
     'service.news',
     'service.singleaktion',
     'service.singlenews',
@@ -32,9 +33,11 @@ angular.module('starter', [
     'module.advertisement',
     'module.aktionen',
     'module.arena',
+    'module.contact',
     'module.datenschutz',
     'module.error',
     'module.home',
+    'module.impressum',
     'module.internet',
     'module.kader',
     'module.kickerstv',
@@ -141,7 +144,7 @@ angular.module('starter', [
                 views: {
                     'menuContent': {
                         templateUrl: 'templates/datenschutz.html',
-                        controller: 'DatenschutzCtrl'
+                        controller: 'DatenschutzCtrl as datenschutzVM'
                     }
                 }
             })
@@ -178,7 +181,8 @@ angular.module('starter', [
                 url: '/impressum',
                 views: {
                     'menuContent': {
-                        templateUrl: 'templates/impressum.html'
+                        templateUrl: 'templates/impressum.html',
+                        controller: 'ImpressumCtrl as impressumVM'
                     }
                 }
             })
@@ -210,7 +214,8 @@ angular.module('starter', [
                 url: '/kontakt',
                 views: {
                     'menuContent': {
-                        templateUrl: 'templates/kontakt.html'
+                        templateUrl: 'templates/kontakt.html',
+                        controller: 'KontaktCtrl as kontaktVM'
                     }
                 }
             })
