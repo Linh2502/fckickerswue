@@ -12,6 +12,13 @@
 
 @media only screen
 and (min-device-width : 321px) {
+  .image-aktionen {
+    background: url(../img/grafiken/3x/Aktionen@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
   .image-arena {
     background: url(../img/grafiken/3x/arena@3x.png);
     background-repeat: no-repeat;
@@ -425,6 +432,13 @@ and (min-device-width : 321px) {
 
 @media only screen
 and (max-device-width : 320px) {
+  .image-aktionen {
+    background: url(../img/grafiken/2x/Aktionen@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
   .image-arena {
     background: url(../img/grafiken/2x/arena@2x.png);
     background-repeat: no-repeat;
@@ -837,6 +851,13 @@ and (max-device-width : 320px) {
 
 @media only screen
 and (max-device-width : 300px) {
+  .image-aktionen {
+    background: url(../img/grafiken/Aktionen.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
   .image-arena {
     background: url(../img/grafiken/arena.png);
     background-repeat: no-repeat;

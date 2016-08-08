@@ -37,8 +37,11 @@
         }
       } else {
         vm.showBanner = $stateParams.localAd;
-        vm.boolean = true;
-        nextState();
+        AdvertisementService.saveToLocalSystem($stateParams.newData, $stateParams.locationPath)
+            .then(function(success) {
+              vm.boolean = true;
+              nextState();
+            });
       }
     }
 

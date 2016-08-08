@@ -88,6 +88,9 @@
       if ($location.path().indexOf("settings") > -1) {
         handleNavigation("app.home");
       }
+      if (/\d/.test($location.path()) && $location.path().indexOf("aktionen") > -1) {
+        handleNavigation("app.aktionen");
+      }
     }
 
     function openSideMenu() {

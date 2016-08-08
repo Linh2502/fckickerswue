@@ -13,6 +13,8 @@ angular.module('directive.logo', [])
         scope.$watch('$location.path()', function(locationPath) {
           if(locationPath == '/app/arena'){
             $element.html('<div class="bar bar-subheader logo-sub-header subheader"><div class="row div-kickers-slogan bar-subheader"><div class="image-logo image-arena kickers-slogan"></div></div></div>')
+          }else if(locationPath == '/app/aktionen' || /\d/.test(locationPath) && locationPath.indexOf("aktionen") > -1){
+            $element.html('<div class="bar bar-subheader logo-sub-header subheader"><div class="row div-kickers-slogan bar-subheader"><div class="image-logo image-aktionen kickers-slogan"></div></div></div>')
           }else if(locationPath == '/app/datenschutz'){
             $element.html('<div class="bar bar-subheader logo-sub-header subheader"><div class="row div-kickers-slogan bar-subheader"><div class="image-logo image-datenschutz kickers-slogan"></div></div></div>')
           }else if(locationPath == '/app/impressum'){
