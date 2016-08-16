@@ -101,7 +101,7 @@
 
     function openSideMenu() {
       vm.showBackButton = false;
-      if($location.path() !== '/app/error')
+      if($location.path() !== '/app/error' && $location.path() !== '/app/reconnect')
         if(!$ionicSideMenuDelegate.isOpenLeft()) {
           vm.showBackButton = false;
           $ionicSideMenuDelegate.toggleLeft(true);

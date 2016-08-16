@@ -12,6 +12,36 @@
 
 @media only screen
 and (min-device-width : 321px) {
+  h1 {
+    font-family: Lato-Regular;
+    text-transform: uppercase;
+    font-size: 14px !important;
+    border-color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+
+  h2 {
+    font-family: Lato-Regular;
+    font-size: 14px !important;
+    border-color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 0px;
+    color: #E00C1E;
+  }
+
+  h3, h4 {
+    font-family: Lato-Regular;
+    font-size: 14px !important;
+    border-color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin: 0 0 5px;
+  }
+
   .image-aktionen {
     background: url(../img/grafiken/3x/Aktionen@3x.png);
     background-repeat: no-repeat;
@@ -139,6 +169,17 @@ and (min-device-width : 321px) {
     width: 65px;
     margin-left: 15px;
     margin-top: 10px;
+    background: url(../img/bilddaten/3x/Kickers-einfach-machen@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .platform-ios .zweite-liga-size {
+    height: 45px;
+    width: 45px;
+    margin-left: 15px;
+    margin-top: 15px;
     background: url(../img/bilddaten/3x/Kickers-einfach-machen@3x.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -437,6 +478,36 @@ and (min-device-width : 321px) {
 
 @media only screen
 and (max-device-width : 320px) {
+  h1 {
+    font-family: Lato-Regular;
+    text-transform: uppercase;
+    font-size: 12px !important;
+    border-color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+
+  h2 {
+    font-family: Lato-Regular;
+    font-size: 12px !important;
+    border-color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 0px;
+    color: #E00C1E;
+  }
+
+  h3, h4 {
+    font-family: Lato-Regular;
+    font-size: 12px !important;
+    border-color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin: 0 0 5px;
+  }
+
   .image-aktionen {
     background: url(../img/grafiken/2x/Aktionen@2x.png);
     background-repeat: no-repeat;
@@ -564,6 +635,17 @@ and (max-device-width : 320px) {
     width: 55px;
     margin-left: 15px;
     margin-top: 15px;
+    background: url(../img/bilddaten/3x/Kickers-einfach-machen@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .platform-ios .zweite-liga-size {
+    height: 45px;
+    width: 45px;
+    margin-left: 15px;
+    margin-top: 20px;
     background: url(../img/bilddaten/3x/Kickers-einfach-machen@3x.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -861,6 +943,37 @@ and (max-device-width : 320px) {
 
 @media only screen
 and (max-device-width : 300px) {
+  h1 {
+    font-family: Lato-Regular;
+    text-transform: uppercase;
+    font-size: 11px !important;
+    border-color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+
+  h2 {
+    font-family: Lato-Regular;
+    font-size: 11px !important;
+    border-color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 0px;
+    color: #E00C1E;
+  }
+
+  h3, h4 {
+    font-family: Lato-Regular;
+    font-size: 11px !important;
+    border-color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-family: Lato-Regular;
+    margin: 0 0 5px;
+  }
+
   .image-aktionen {
     background: url(../img/grafiken/Aktionen.png);
     background-repeat: no-repeat;
@@ -988,6 +1101,17 @@ and (max-device-width : 300px) {
     width: 45px;
     margin-left: 15px;
     margin-top: 20px;
+    background: url(../img/bilddaten/3x/Kickers-einfach-machen@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .platform-ios .zweite-liga-size {
+    height: 45px;
+    width: 45px;
+    margin-left: 15px;
+    margin-top: 25px;
     background: url(../img/bilddaten/3x/Kickers-einfach-machen@3x.png);
     background-repeat: no-repeat;
     background-size: contain;

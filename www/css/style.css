@@ -2,6 +2,15 @@
  * Created by Linh on 02.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
  */
+ul {
+  text-align: left;
+  margin-left: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  list-style: disc outside;
+  margin-right: 15px;
+}
+
 .platform-browser #loaderInterceptor,
 .platform-android #loaderInterceptor {
   position: fixed;
@@ -988,7 +997,7 @@
 
 .matchcenter-slide-box-width {
   text-align: center;
-  width: 140% !important;
+  width: 150% !important;
 }
 
 .matchcenter-liveticker-empty-col {
@@ -1145,3 +1154,4 @@
   background-position: center;
   height: 15px;
 }
+

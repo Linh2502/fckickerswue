@@ -26,14 +26,17 @@
             if ($stateParams.data) {
                 vm.showBanner = $stateParams.data.data.image[0].url;
                 AdvertisementService.saveToLocalSystem($stateParams.data, $stateParams.locationPath)
-                    .then(function(success) {
+                    .then(function (success) {
                         vm.boolean = true;
                         nextState();
                     });
             } else {
                 vm.showBanner = $stateParams.localAd;
-                vm.boolean = false;
-                nextState();
+                AdvertisementService.saveToLocalSystem($stateParams.newData, $stateParams.locationPath)
+                    .then(function (success) {
+                        vm.boolean = false;
+                        nextState();
+                    });
             }
         }
 
@@ -45,25 +48,24 @@
                 if ($stateParams.connection) {
                     $('#advertisement').delay(3000).fadeOut(400);
                     $timeout(function () {
-                        $state.transitionTo('app.home');
+                        $state.go('app.home');
                     }, 3000);
                 } else {
                     $cordovaSplashscreen.hide();
-                    $state.transitionTo('app.error');
+                    $state.go('app.error');
                 }
             } else {
-                AdvertisementService.saveToLocalSystem($stateParams.newData, $stateParams.locationPath)
-                    .then(function(success) {
-                        if ($stateParams.connection) {
-                            $('#advertisement').delay(3000).fadeOut(400);
-                            $timeout(function () {
-                                $state.transitionTo('app.home');
-                            }, 3000);
-                        } else {
-                            $cordovaSplashscreen.hide();
-                            $state.transitionTo('app.error');
-                        }
-                    });
+                $timeout(function () {
+                    $cordovaSplashscreen.hide();
+                }, 500);
+                if ($stateParams.connection) {
+                    $timeout(function () {
+                        $state.go('app.home');
+                    }, 3000);
+                } else {
+                    $cordovaSplashscreen.hide();
+                    $state.go('app.error');
+                }
             }
         }
 
