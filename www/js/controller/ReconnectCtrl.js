@@ -11,20 +11,41 @@
     .module('module.reconnect', [])
     .controller('ReconnectCtrl', ReconnectController);
 
-  ReconnectController.$inject = ['$ionicPlatform', '$state', '$ionicHistory'];
+  ReconnectController.$inject = ['$ionicPlatform', '$state', '$ionicHistory', '$timeout'];
 
-  function ReconnectController($ionicPlatform, $state, $ionicHistory) {
+  function ReconnectController($ionicPlatform, $state, $ionicHistory, $timeout) {
     $ionicPlatform.ready(function () {
       $ionicHistory.nextViewOptions({
-        disableAnimate: true
+        disableAnimate: true,
+        disableBack: true
       });
-      if (window.Connection) {
-        if (navigator.connection.type == Connection.NONE || navigator.connection.type == Connection.UNKNOWN) {
-          $state.go('app.error');
-        } else {
-          $state.go('reload', {connection: true});
+      $('#loaderInterceptor').show();
+
+      var index = 1;
+
+      function counter() {
+        $timeout(function() {
+          if(index === 10) {
+            $state.go('app.error');
+          } else {
+            index++;
+            counter();
+            reconnect();
+          }
+        }, 1000);
+      }
+
+      function reconnect() {
+        if (window.Connection) {
+          if (navigator.connection.type == Connection.NONE || navigator.connection.type == Connection.UNKNOWN) {
+            $state.go('app.error');
+          } else {
+            $state.go('reload', {connection: true});
+          }
         }
       }
+
+      counter();
     })
   }
 })();

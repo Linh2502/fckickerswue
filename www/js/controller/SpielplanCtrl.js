@@ -82,9 +82,11 @@
         for (var i = 0; i < matches.match.length; i++) {
           var splitDate2 = matches.match[i].eventdate_start.split(" ");
           var date2 = splitDate2[0];
+          console.log("date2: " + date2 + "; date: " + date);
           if (date2 === date) {
             var splitDate3 = matches.match[i + 1].eventdate_start.split(" ");
             vm.anchorDate = splitDate3[0];
+            console.log(vm.anchorDate);
           }
         }
       }

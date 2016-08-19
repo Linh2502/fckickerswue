@@ -8,7 +8,7 @@
   <ion-content lazy-scroll class="has-subheader" delegate-handle="content">
     <div class="news-feed">
       <p class="custom-title custom-heading">News</p>
-      <ion-slide-box delegate-handle="news" auto-play="homeVM.autoPlay" on-slide-changed="homeVM.reslide($index)" active-slide="homeVM.activeSlideNews">
+      <ion-slide-box delegate-handle="news" auto-play="homeVM.autoPlay" on-slide-changed="homeVM.reslideNews($index)" active-slide="homeVM.activeSlideNews">
         <ion-slide ng-repeat="news in homeVM.newsFeed">
           <a nav-transition="ios" class="remove-href-link" ng-click="homeVM.navigateToNews(news.id)">
             <div class="custom-background">
@@ -27,7 +27,7 @@
       </ion-slide-box>
     </div>
     <div class="spiel-feed">
-      <ion-slide-box delegate-handle="spiel" auto-play="homeVM.autoPlay" slide-interval="6000" on-slide-changed="homeVM.switchView($index)" ng-if="zeroCountdown === false">
+      <ion-slide-box delegate-handle="spiel" auto-play="homeVM.autoPlay" on-slide-changed="homeVM.switchView($index)" active-slide="homeVM.activeSlideGames" ng-if="zeroCountdown === false">
         <ion-slide ng-repeat="game in homeVM.gamesFeed">
           <div class="set-max-width">
             <div class="row custom-row-border spiel-feed-columns spiel-feed-first-column-height">
@@ -38,7 +38,7 @@
               </div>
               <div class="spiel-feed-rest-column-style"></div>
               <div class="spiel-feed-rest-column-style" ng-if="game.tickets">
-                <div ng-if="game.soccerTeam.team_home.name == 'FC Würzburger Kickers'">
+                <div ng-if="game.soccerTeam.team_home.name === 'FC Würzburger Kickers'">
                   <a class="custom-title remove-href-link text-align-center" browse-to="https://www.wuerzburger-kickers.de/de/flyeralarm-arena/tickets-bestellen">
                     <div class="custom-title custom-background">
                       <div>
@@ -156,15 +156,15 @@
       </div>
     </div>
     <div class="videos-feed">
-      <ion-slide-box delegate-handle="promotion" auto-play="homeVM.autoPlay" on-slide-changed="homeVM.reslide($index)" active-slide="homeVM.activeSlideNews">
+      <ion-slide-box delegate-handle="promotion" auto-play="homeVM.autoPlay" on-slide-changed="homeVM.reslidePromotions($index)" active-slide="homeVM.activeSlidePromotions">
         <ion-slide ng-repeat="promotion in homeVM.promotionFeed">
           <a nav-transition="ios" class="remove-href-link" ng-click="homeVM.navigateToPromotion(promotion.id)">
-            <div class="custom-background">
+            <div>
               <div class="image-height text-align-center">
                 <img src="{{promotion.image}}" class="news-image" image-lazy-loader="dots"/>
               </div>
               <div class="news-image-text">
-                <div class="news-image-text-display">
+                <div class="news-image-text-display custom-row-border">
                   <div class="custom-title-date news-image-date">| {{promotion.date | dateFilter}}</div>
                   <div class="custom-title news-image-title" ng-bind-html="promotion.title"></div>
                 </div>
@@ -175,7 +175,7 @@
       </ion-slide-box>
     </div>
     <div class="videos-feed">
-      <ion-slide-box delegate-handle="video" does-continue="true" >
+      <ion-slide-box delegate-handle="video" auto-play="homeVM.autoPlay" on-slide-changed="homeVM.reslideVideos($index)" active-slide="homeVM.activeSlideVideos">
         <ion-slide ng-repeat="video in homeVM.videosFeed">
           <div class="videos-position-relative">
             <div ng-attr-id="{{ 'home-' + video.id}}" class="overlay-image">
@@ -186,7 +186,7 @@
               <youtube-video video-url="video.videoLink" class="home-video-image video-z-index" player="player"></youtube-video>
             </div>
             <div class="news-image-text">
-              <div class="news-image-text-display">
+              <div class="news-image-text-display custom-row-border">
                 <div class="custom-title-date news-image-date" ng-bind-html="video.title"></div>
                 <div class="custom-title news-image-title" ng-bind-html="video.subtitle"></div>
               </div>

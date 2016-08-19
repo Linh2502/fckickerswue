@@ -28,7 +28,8 @@
         vm.detailsFeed = null;
         vm.getHomeData = null;
         vm.getMatchCenterData = null;
-        vm.activeSlideNews = 0;
+
+        vm.activeSlideNews, vm.activeSlideGames, vm.activeSlidePromotions, vm.activeSlideVideos = 0;
 
         vm._init = _init;
         vm.autoPlay = autoPlay;
@@ -38,7 +39,8 @@
         vm.navigateToMatchCenter = navigateToMatchCenter;
         vm.navigateToLiveTicker = navigateToLiveTicker;
         vm.navigateToPromotion = navigateToPromotion;
-        vm.reslide = reslide;
+        vm.reslideNews = reslideNews;
+        vm.reslidePromotions = reslidePromotions;
 
         function _init() {
             //$cordovaSplashscreen.hide();
@@ -174,14 +176,13 @@
         }
 
         function switchView(index) {
-            if (index === 0) {
+            if (index === 1) {
                 $timeout(function () {
-                    $ionicSlideBoxDelegate.$getByHandle('spiel').next();
-                }, 6000);
-            } else if (index === 1) {
+                    vm.activeSlideGames = 0;
+                }, 5000);
+            } else {
                 $timeout(function () {
-                    $ionicSlideBoxDelegate.$getByHandle('spiel').previous();
-                }, 6000);
+                }, 5000);
             }
         }
 
@@ -235,14 +236,35 @@
             $state.go('app.singleaktion', {aktionId: id});
         }
 
-        function reslide(index) {
+        function reslideNews(index) {
             if (index === 4) {
                 $timeout(function () {
                     vm.activeSlideNews = 0;
                 }, 5000);
             } else {
                 $timeout(function () {
-                    vm.activeSlideNews = index + 1;
+                }, 5000);
+            }
+        }
+
+        function reslidePromotions(index) {
+            if (index === 4) {
+                $timeout(function () {
+                    vm.activeSlidePromotions = 0;
+                }, 5000);
+            } else {
+                $timeout(function () {
+                }, 5000);
+            }
+        }
+
+        function reslideVideos(index) {
+            if (index === 2) {
+                $timeout(function () {
+                    vm.activeSlideVideos = 0;
+                }, 5000);
+            } else {
+                $timeout(function () {
                 }, 5000);
             }
         }

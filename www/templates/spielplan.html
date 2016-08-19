@@ -9,13 +9,20 @@
     <ion-refresher on-refresh="scheduleVM.refresh()"></ion-refresher>
     <div ng-repeat="game in scheduleVM.matchListing">
       <div id="{{game.date}}">
-        <div ng-if="game.date == anchorDate">
+        <div ng-if="game.date === scheduleVM.anchorDate">
           <div class="arena-border-box-shadow spielplan-first-column anchor-highlight-item">
             <div class="news-image-text row remove-col-padding">
               <div class="news-image-text-display anchor-highlight-item-width">
-                <div class="custom-title news-image-date">| {{game.date | dateFilter}} {{game.time | timeFilter}} Uhr - {{game.matchday}}</div>
+                <div class="custom-title news-image-date row">| {{game.date | dateFilter}} {{game.time | timeFilter}} Uhr
+                  <div ng-if="game.matchday.length > 1">
+                    - <div ng-bind-html="game.matchday"></div>
+                  </div>
+                  <div ng-if="game.matchday.length < 1">
+                    
+                  </div>
+                </div>
               </div>
-              <div class="spiel-feed-rest-column-style anchor-highlight-item-ticket-width" ng-if="game.team_home == 'FC Würzburger Kickers'">
+              <div class="spiel-feed-rest-column-style anchor-highlight-item-ticket-width" ng-if="game.team_home === 'FC Würzburger Kickers'">
                 <div>
                   <a class="custom-title remove-href-link text-align-center" browse-to="https://www.wuerzburger-kickers.de/de/flyeralarm-arena/tickets-bestellen">
                     <div class="custom-title custom-background news-ticket-margin">
@@ -27,7 +34,7 @@
                   </a>
                 </div>
               </div>
-              <div ng-if="game.team_home != 'FC Würzburger Kickers'"></div>
+              <div ng-if="game.team_home !== 'FC Würzburger Kickers'"></div>
             </div>
           </div>
           <div class="row custom-row-border spielplan-first-column">
@@ -49,7 +56,7 @@
           </div>
           <div class="col"></div>
         </div>
-        <div ng-if="game.date != scheduleVM.anchorDate">
+        <div ng-if="game.date !== scheduleVM.anchorDate">
           <div class="arena-border-box-shadow spielplan-first-column">
             <div class="news-image-text">
               <div class="news-image-text-display">

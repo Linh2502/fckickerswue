@@ -19,7 +19,8 @@
     $('#loaderInterceptor').hide();
 
     $ionicHistory.nextViewOptions({
-      disableAnimate: true
+      disableAnimate: true,
+      disableBack: true
     });
     $ionicPopup.alert({
       title: "Keine Internetverbindung",
