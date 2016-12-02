@@ -30,7 +30,6 @@
           } else {
             index++;
             counter();
-            reconnect();
           }
         }, 1000);
       }
@@ -46,6 +45,7 @@
       }
 
       counter();
+      reconnect();
     })
   }
 })();

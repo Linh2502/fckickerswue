@@ -37,6 +37,7 @@
 
         var vm = this;
         vm.showBackButton = true;
+        vm.isSideMenuOpen = false;
 
         vm.closeSettings = closeSettings;
         vm.navigateToSettings = navigateToSettings;
@@ -84,6 +85,7 @@
 
         function closeMenu() {
             vm.showBackButton = true;
+            vm.isSideMenuOpen = false;
             $ionicSideMenuDelegate.toggleLeft(false);
         }
 
@@ -115,9 +117,11 @@
             if ($location.path() !== '/app/error' && $location.path() !== '/app/reconnect')
                 if (!$ionicSideMenuDelegate.isOpenLeft()) {
                     vm.showBackButton = false;
+                    vm.isSideMenuOpen = true;
                     $ionicSideMenuDelegate.toggleLeft(true);
                 } else {
                     vm.showBackButton = true;
+                    vm.isSideMenuOpen = false;
                     $ionicSideMenuDelegate.toggleLeft(false);
                 }
         }
@@ -155,6 +159,7 @@
         }
 
         function navigateToLiveTicker() {
+            vm.isSideMenuOpen = false;
             if ($rootScope.isLive) {
                 $state.go('app.matchcenter', {game: {isLive: true}});
             } else {

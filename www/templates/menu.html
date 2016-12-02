@@ -1,29 +1,43 @@
 <ion-nav-bar class="bar-dark black-background">
     <div>
-        <ion-nav-title class="custom-title bar display-table">
-            <div class="text-align-center display-table-cell news-image vertical-align-mid">
-                <div class="button button-clear fa fa-bars bar-navigation-button"
-                     ng-click="appVM.openSideMenu()">
-                </div>
-            </div>
+        <ion-nav-title class="custom-title">
+            <div class="text-align-right" ng-class="{'display-none': appVM.isSideMenuOpen}">Offizielle App</div>
+            <div class="text-align-center" ng-class="{'display-none': !appVM.isSideMenuOpen}">Offizielle App</div>
         </ion-nav-title>
-        <ion-nav-back-button id="backbutton" class="button nav-back-button" ng-click="appVM.navigateBack()" ng-show="appVM.showBackButton">
-        </ion-nav-back-button>
-        <div class="fwk-logo kickers-logo" ng-click="appVM.navigateToHome()"></div>
-        <div class="zweite-liga-logo zweite-liga-size"></div>
+        <div class="bar bar-subheader subheader">
+            <div class="div-kickers-slogan bar-subheader">
+                <div class="bundesliga-logo"></div>
+                <div bar-switcher ng-class="{'display-none': appVM.isSideMenuOpen}"></div>
+            </div>
+            <ion-nav-back-button class="button nav-back-button" ng-click="appVM.navigateBack()">
+            </ion-nav-back-button>
+        </div>
+        <div class="display-table col" style="padding-left: 20%; padding-right: 20%" ng-class="{'display-none': appVM.isSideMenuOpen}">
+            <div class="fwk-logo kickers-logo display-table-cell" ng-click="appVM.navigateToHome()" ng-class="{'display-none': appVM.isSideMenuOpen}"></div>
+        </div>
     </div>
+    <ion-nav-buttons side="left">
+        <div class="button button-clear fa fa-bars bar-navigation-button" style="padding-left: 18px"
+             ng-class="{'display-none': appVM.isSideMenuOpen}" ng-click="appVM.openSideMenu()">
+        </div>
+        <div ng-class="{'display-none': !appVM.isSideMenuOpen}">
+            <img class="kickers-logo-small" src="img/bilddaten/3x/kickers_1097_Logo_2@3x.png"/>
+        </div>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <div class="button button-clear fa fa-bars bar-navigation-button" style="padding-right: 18px"
+             ng-class="{'display-none': !appVM.isSideMenuOpen}" ng-click="appVM.openSideMenu()">
+        </div>
+    </ion-nav-buttons>
 </ion-nav-bar>
 <ion-side-menus enable-menu-with-back-views="false">
     <ion-side-menu-content class="remove-box-shadow">
-        <div bar-switcher></div>
         <ion-nav-view name="menuContent">
             <div id="loaderInterceptor"><img src="img/grafiken/3x/ladeball@3x.gif" class="ajax-loader"/></div>
         </ion-nav-view>
     </ion-side-menu-content>
 
-    <ion-side-menu side="left" hide-nav-bar="false" width="{{0.9 * devWidth}}">
-        <ion-header-bar class="bar-dark black-background" align-title="center">
-        </ion-header-bar>
+    <ion-side-menu side="left" hide-nav-bar="false" width="{{0.85 * devWidth}}">
         <ion-content class="custom-side-menu" scroll="true" delegate-handle="resize">
             <ion-list class="list">
                 <ion-item nav-clear class="custom-side-menu-item navigation-setting" ui-sref-active="active" menu-toggle
@@ -74,19 +88,19 @@
                     </ion-item>
                     <div ng-show="showDropDown">
                         <ion-item nav-clear class="custom-side-menu-item" ui-sref-active="active" menu-toggle
-                                  ui-sref="app.kontakt">
+                                  ui-sref="app.kontakt" ng-click="appVM.closeMenu()">
                             <span class="custom-side-menu-item-dropdown">Kontakt</span>
                         </ion-item>
                         <ion-item nav-clear class="custom-side-menu-item" ui-sref-active="active" menu-toggle
-                                  ui-sref="app.newsletter">
+                                  ui-sref="app.newsletter" ng-click="appVM.closeMenu()">
                             <span class="custom-side-menu-item-dropdown">Newsletter</span>
                         </ion-item>
                         <ion-item nav-clear class="custom-side-menu-item" ui-sref-active="active" menu-toggle
-                                  ui-sref="app.datenschutz">
+                                  ui-sref="app.datenschutz" ng-click="appVM.closeMenu()">
                             <span class="custom-side-menu-item-dropdown">Datenschutz</span>
                         </ion-item>
                         <ion-item nav-clear class="custom-side-menu-item" ui-sref-active="active" menu-toggle
-                                  ui-sref="app.impressum">
+                                  ui-sref="app.impressum" ng-click="appVM.closeMenu()">
                             <span class="custom-side-menu-item-dropdown">Impressum</span>
                         </ion-item>
                     </div>

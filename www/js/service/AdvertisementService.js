@@ -11,9 +11,9 @@
     .module('service.advertisement', ['ionic'])
     .service('AdvertisementService', AdvertisementService);
 
-  AdvertisementService.$inject = ['$rootScope', '$http', 'ApiEndpoint', '$state', '$ionicPlatform', '$cordovaFileTransfer', '$q'];
+  AdvertisementService.$inject = ['$http', 'ApiEndpoint', '$state', '$ionicPlatform', '$cordovaFileTransfer', '$q'];
 
-  function AdvertisementService($rootScope, $http, ApiEndpoint, $state, $ionicPlatform, $cordovaFileTransfer, $q) {
+  function AdvertisementService($http, ApiEndpoint, $state, $ionicPlatform, $cordovaFileTransfer, $q) {
 
       return {
         fetchAdsData: function() {

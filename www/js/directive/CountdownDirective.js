@@ -32,7 +32,13 @@ angular.module('directive.countdown', [])
         var _minute = _second * 60;
         var _hour = _minute * 60;
         var _day = _hour * 24;
-        var distance = new Date(dt + 'Z') - new Date() - 72000 * 100;
+        var today = new Date();
+        var distance;
+        if (today.dst()) {
+          distance = new Date(dt + 'Z') - new Date() - 72000 * 100;
+        } else {
+          distance = new Date(dt + 'Z') - new Date() - 36000 * 100;
+        }
 
         if (distance < 1 || scope.detailsFeed.live == 'true') {
           scope.zeroCountdown = true;
@@ -91,6 +97,16 @@ angular.module('directive.countdown', [])
         scope.hours = ["img/countdown-Zahlen/3x/0@3x.png", "img/countdown-Zahlen/3x/0@3x.png"];
         scope.minutes = ["img/countdown-Zahlen/3x/0@3x.png", "img/countdown-Zahlen/3x/0@3x.png"];
         scope.seconds = ["img/countdown-Zahlen/3x/0@3x.png", "img/countdown-Zahlen/3x/0@3x.png"];
+      }
+
+      Date.prototype.stdTimezoneOffset = function() {
+        var jan = new Date(this.getFullYear(), 0, 1);
+        var jul = new Date(this.getFullYear(), 6, 1);
+        return Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+      }
+
+      Date.prototype.dst = function() {
+        return this.getTimezoneOffset() < this.stdTimezoneOffset();
       }
     }
   }])

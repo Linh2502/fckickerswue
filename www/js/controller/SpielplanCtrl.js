@@ -64,8 +64,8 @@
         vm.matchListing.push({
           matchday: matches.match[i].matchday,
           date: date, time: time,
-          team_home: matches.match[i].team_home,
-          team_away: matches.match[i].team_away,
+          team_home: matches.match[i].team_home.__cdata,
+          team_away: matches.match[i].team_away.__cdata,
           logo_home: matches.match[i].logo_home,
           logo_away: matches.match[i].logo_away,
           result: matches.match[i].result
@@ -82,11 +82,9 @@
         for (var i = 0; i < matches.match.length; i++) {
           var splitDate2 = matches.match[i].eventdate_start.split(" ");
           var date2 = splitDate2[0];
-          console.log("date2: " + date2 + "; date: " + date);
           if (date2 === date) {
             var splitDate3 = matches.match[i + 1].eventdate_start.split(" ");
             vm.anchorDate = splitDate3[0];
-            console.log(vm.anchorDate);
           }
         }
       }

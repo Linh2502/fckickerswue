@@ -23,12 +23,26 @@
     vm.offer = window.localStorage['OffersChannelSubscription'];
     vm.wifi = window.localStorage['WifiEnabled'];
 
+    vm._init = _init;
     vm.goalsChange = goalsChange;
     vm.gameChange = gameChange;
     vm.newsChange = newsChange;
     vm.kickerstvChange = kickerstvChange;
     vm.offerChange = offerChange;
     vm.wifiChange = wifiChange;
+
+    function _init() {
+      $('#loaderInterceptor').hide();
+      vm.goals = window.localStorage['LiveTickerChannelSubscription'] === 'true';
+      vm.game = window.localStorage['GameChannelSubscription'] === 'true';
+      vm.news = window.localStorage['TopNewsChannelSubscription'] === 'true';
+      vm.kickerstv = window.localStorage['KickersTVChannelSubscription'] === 'true';
+      vm.offer = window.localStorage['OffersChannelSubscription'] === 'true';
+      vm.wifi = window.localStorage['WifiEnabled'] === 'true';
+
+      console.error(vm.goals);
+      console.error(vm.wifi);
+    }
 
     function goalsChange() {
       $timeout(function () {
@@ -140,5 +154,7 @@
         }
       }, 0);
     }
+
+    _init();
   }
 })();

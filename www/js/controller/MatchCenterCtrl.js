@@ -62,6 +62,7 @@
             vm.isLive = false;
             $ionicSlideBoxDelegate.$getByHandle('matchcenter').slide(1);
             $ionicSlideBoxDelegate.$getByHandle('matchcenter').slide(0);
+            setLiveTickerFeed(vm.matchCenterFeed.data.liveticker);
           }
 
           $rootScope.$broadcast('hide_loader');
@@ -126,11 +127,15 @@
     }
 
     function setTableFeed(tables) {
+      var defer = $q.defer();
       vm.showTable = true;
       vm.tableFeed = [];
       for (var i = 0; i < tables.row.length; i++) {
         vm.tableFeed.push(tables.row[i]);
+        if(i === tables.row.length)
+          defer.resolve();
       }
+      return defer.promise;
     }
 
     function refreshLiveTickerFeed() {

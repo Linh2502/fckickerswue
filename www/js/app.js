@@ -54,8 +54,8 @@ angular.module('starter', [
     'module.reloadcontent'
 ])
     .constant('ApiEndpoint', {
-        //url: 'https://www.wuerzburger-kickers.de/ajax/kickers/',
-        url: 'http://kunden.i-cue-medien.de/www.wuerzburger-kickers.de-relaunch/_/ajax/kickers/',
+        url: 'https://www.wuerzburger-kickers.de/ajax/kickers/',
+        //url: 'http://kunden.i-cue-medien.de/www.wuerzburger-kickers.de-relaunch/_/ajax/kickers/',
         version: '?app_version=1.0.40'
     })
 
@@ -166,7 +166,7 @@ angular.module('starter', [
             })
 
             .state('app.home', {
-                cache: true,
+                cache: false,
                 url: '/home',
                 views: {
                     'menuContent': {

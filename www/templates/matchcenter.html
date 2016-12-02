@@ -6,19 +6,11 @@
 -->
 <ion-view hide-back-button="true">
     <ion-content class="has-subheader singleplayer-image-background" delegate-handle="resize">
-        <div class="custom-row-border">
-            <div class="col matchcenter-title-background">
-                <div class="col custom-title text-align-center matchcenter-title-size">
-                    <img src="img/bilddaten/3x/kickers_Ball@3x.png" class="matchcenter-ball"/>
-                    <span class="vertical-align-mid">Match Center</span>
-                </div>
-            </div>
-        </div>
         <div class="matchcenter-3-liga">
             <div class="matchcenter-liveticker custom-title">
                 <div class="row">
                     <div class="col col-25"></div>
-                    <div class="col col-50">{{mcVM.detailsFeed.matchday}}</div>
+                    <div class="col col-50" ng-if="mcVM.detailsFeed.matchday.__cnt !== 0">{{mcVM.detailsFeed.matchday}}</div>
                     <div class="col col-25"></div>
                 </div>
             </div>
@@ -140,122 +132,138 @@
                 </ion-slide>
                 <ion-slide dynamic-slides="liveTickerFeed">
                     <div>
-                        <div ng-if="mcVM.liveTickerFeed.info!==undefined">
-                            <ion-spinner id="spinner" class="vertical-align-mid"></ion-spinner>
-                            <div id="live">
-                                <div ng-repeat="info in mcVM.liveTickerFeed">
-                                    <div class="row remove-col-padding arena-border-color font-size"
-                                         ng-if="info.minute">
-                                        <div class="col-20 row remove-col-padding even" ng-if="!info.type">
-                                            <div class="col col-center">
-                                                <div class="matchcenter-liveticker custom-font-bold font-size">
-                                                    {{info.minute}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-20 row remove-col-padding matchcenter-goal-color"
-                                             ng-if="info.type === 'Tor'">
-                                            <div class="col col-center">
-                                                <div class="matchcenter-liveticker font-color-white custom-font-bold font-size">
-                                                    {{info.minute}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-20 row remove-col-padding matchcenter-change-color"
-                                             ng-if="info.type === 'Wechsel' || info.type === 'Karte-Gelb' || info.type === 'Karte-Rot' || info.type === 'Karte-Gelb-Rot' || info.type === 'Karte-Gelbrot'">
-                                            <div class="col col-center">
-                                                <div class="matchcenter-liveticker font-color-white custom-font-bold font-size">
-                                                    {{info.minute}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-10 row remove-col-padding">
-                                            <div class="col col-center text-align-center vertical-align-mid"
-                                                 ng-if="!info.type">
-                                                <div class="matchcenter-liveticker"></div>
-                                            </div>
-                                            <div class="col col-center text-align-center vertical-align-mid"
-                                                 ng-if="info.type === 'Tor'">
-                                                <div class="matchcenter-liveticker"><i class="fa fa-futbol-o"></i></div>
-                                            </div>
-                                            <div class="col col-center text-align-center vertical-align-mid"
-                                                 ng-if="info.type === 'Wechsel'">
-                                                <div class="matchcenter-liveticker"><i class="fa fa-refresh"></i></div>
-                                            </div>
-                                            <div class="col col-center text-align-center vertical-align-mid"
-                                                 ng-if="info.type === 'Karte-Gelb'">
-                                                <div class="matchcenter-liveticker"><i
-                                                        class="fa fa-file matchcenter-yellow-color"></i></div>
-                                            </div>
-                                            <div class="col col-center text-align-center vertical-align-mid"
-                                                 ng-if="info.type === 'Karte-Rot'">
-                                                <div class="matchcenter-liveticker"><i
-                                                        class="fa fa-file matchcenter-goal-color"></i></div>
-                                            </div>
-                                            <div class="col col-center text-align-center vertical-align-mid"
-                                                 ng-if="info.type === 'Karte-Gelb-Rot' || info.type === 'Karte-Gelbrot'">
-                                                <div class="matchcenter-liveticker"><i
-                                                        class="fa fa-file matchcenter-yellow-color"></i> <i
-                                                        class="fa fa-file matchcenter-goal-color"></i></div>
-                                            </div>
-                                        </div>
-                                        <div class="col col-70" ng-if="!info.type">
-                                            <div class="matchcenter-liveticker text-align-left font-size"
-                                                 ng-bind-html="info.text"></div>
-                                        </div>
-                                        <div class="col col-70"
-                                             ng-if="info.type === 'Tor' || info.type === 'Wechsel' || info.type === 'Karte-Gelb' || info.type === 'Karte-Rot' || info.type === 'Karte-Gelb-Rot' || info.type === 'Karte-Gelbrot'">
-                                            <div class="matchcenter-liveticker text-align-left custom-font-bold font-size"
-                                                 ng-bind-html="info.text"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row remove-col-padding arena-border-color"
-                                         ng-if="info.type === 'Anpfiff' || info.type === 'Halbzeitpfiff' || info.type === 'Anpfiff-2hz' || info.type === 'Abpfiff'">
-                                        <div class="custom-col-30 row remove-col-padding">
-                                            <div class="col col-center text-align-center vertical-align-mid"
-                                                 ng-if="info.type === 'Anpfiff'">
-                                                <div class="matchcenter-liveticker"><img
-                                                        src="img/grafiken/Anpfiff.png"/></div>
-                                            </div>
-                                            <div class="col col-center text-align-center vertical-align-mid"
-                                                 ng-if="info.type === 'Halbzeitpfiff'">
-                                                <div class="matchcenter-liveticker"><img
-                                                        src="img/grafiken/Abpfiff.png"/></i></div>
-                                            </div>
-                                            <div class="col col-center text-align-center vertical-align-mid"
-                                                 ng-if="info.type === 'Anpfiff-2hz'">
-                                                <div class="matchcenter-liveticker"><img
-                                                        src="img/grafiken/Anpfiff.png"/></i></div>
-                                            </div>
-                                            <div class="col col-center text-align-center vertical-align-mid"
-                                                 ng-if="info.type === 'Abpfiff'">
-                                                <div class="matchcenter-liveticker"><img
-                                                        src="img/grafiken/Abpfiff.png"/></i></div>
-                                            </div>
-                                        </div>
-                                        <div class="col col-70">
-                                            <div class="matchcenter-liveticker text-align-left font-size"
-                                                 ng-bind-html="info.text"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row remove-col-padding arena-border-color" ng-if="!info.minute">
-                                        <div class="col matchcenter-padding-left" ng-if="!info.type">
-                                            <div class="matchcenter-liveticker text-align-left font-size"
-                                                 ng-bind-html="info.text"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col matchcenter-liveticker-empty-col"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div ng-if="mcVM.liveTickerFeed.info===undefined">
+                        <div ng-if="mcVM.matchCenterFeed.data.liveticker === undefined">
                             <div class="col kontakt-column-padding">
                                 <div class="col custom-font-regular font-size text-align-left">
                                     <div class="row remove-col-padding">
                                         <div class="col">
                                             <div class="col">
-                                                <p class="custom-font-regular font-size text-align-left">Kein
+                                                <p class="custom-font-bold font-size text-align-left">Kein
                                                     Live-Ticker vorhanden</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-if="mcVM.matchCenterFeed.data.liveticker !== undefined">
+                            <div ng-if="mcVM.liveTickerFeed !== undefined">
+                                <ion-spinner id="spinner" class="vertical-align-mid"></ion-spinner>
+                                <div id="live">
+                                    <div ng-repeat="info in mcVM.liveTickerFeed">
+                                        <div class="row remove-col-padding arena-border-color font-size"
+                                             ng-if="info.minute">
+                                            <div class="col-20 row remove-col-padding even" ng-if="!info.type">
+                                                <div class="col col-center">
+                                                    <div class="matchcenter-liveticker custom-font-bold font-size">
+                                                        {{info.minute}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-20 row remove-col-padding matchcenter-goal-color"
+                                                 ng-if="info.type === 'Tor'">
+                                                <div class="col col-center">
+                                                    <div class="matchcenter-liveticker font-color-white custom-font-bold font-size">
+                                                        {{info.minute}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-20 row remove-col-padding matchcenter-change-color"
+                                                 ng-if="info.type === 'Wechsel' || info.type === 'Karte-Gelb' || info.type === 'Karte-Rot' || info.type === 'Karte-Gelb-Rot' || info.type === 'Karte-Gelbrot'">
+                                                <div class="col col-center">
+                                                    <div class="matchcenter-liveticker font-color-white custom-font-bold font-size">
+                                                        {{info.minute}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-10 row remove-col-padding">
+                                                <div class="col col-center text-align-center vertical-align-mid"
+                                                     ng-if="!info.type">
+                                                    <div class="matchcenter-liveticker"></div>
+                                                </div>
+                                                <div class="col col-center text-align-center vertical-align-mid"
+                                                     ng-if="info.type === 'Tor'">
+                                                    <div class="matchcenter-liveticker"><i class="fa fa-futbol-o"></i></div>
+                                                </div>
+                                                <div class="col col-center text-align-center vertical-align-mid"
+                                                     ng-if="info.type === 'Wechsel'">
+                                                    <div class="matchcenter-liveticker"><i class="fa fa-refresh"></i></div>
+                                                </div>
+                                                <div class="col col-center text-align-center vertical-align-mid"
+                                                     ng-if="info.type === 'Karte-Gelb'">
+                                                    <div class="matchcenter-liveticker"><i
+                                                            class="fa fa-file matchcenter-yellow-color"></i></div>
+                                                </div>
+                                                <div class="col col-center text-align-center vertical-align-mid"
+                                                     ng-if="info.type === 'Karte-Rot'">
+                                                    <div class="matchcenter-liveticker"><i
+                                                            class="fa fa-file matchcenter-goal-color"></i></div>
+                                                </div>
+                                                <div class="col col-center text-align-center vertical-align-mid"
+                                                     ng-if="info.type === 'Karte-Gelb-Rot' || info.type === 'Karte-Gelbrot'">
+                                                    <div class="matchcenter-liveticker"><i
+                                                            class="fa fa-file matchcenter-yellow-color"></i> <i
+                                                            class="fa fa-file matchcenter-goal-color"></i></div>
+                                                </div>
+                                            </div>
+                                            <div class="col col-70" ng-if="!info.type">
+                                                <div class="matchcenter-liveticker text-align-left font-size"
+                                                     ng-bind-html="info.text"></div>
+                                            </div>
+                                            <div class="col col-70"
+                                                 ng-if="info.type === 'Tor' || info.type === 'Wechsel' || info.type === 'Karte-Gelb' || info.type === 'Karte-Rot' || info.type === 'Karte-Gelb-Rot' || info.type === 'Karte-Gelbrot'">
+                                                <div class="matchcenter-liveticker text-align-left custom-font-bold font-size"
+                                                     ng-bind-html="info.text"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row remove-col-padding arena-border-color"
+                                             ng-if="info.type === 'Anpfiff' || info.type === 'Halbzeitpfiff' || info.type === 'Anpfiff-2hz' || info.type === 'Abpfiff'">
+                                            <div class="custom-col-30 row remove-col-padding">
+                                                <div class="col col-center text-align-center vertical-align-mid"
+                                                     ng-if="info.type === 'Anpfiff'">
+                                                    <div class="matchcenter-liveticker"><img
+                                                            src="img/grafiken/Anpfiff.png"/></div>
+                                                </div>
+                                                <div class="col col-center text-align-center vertical-align-mid"
+                                                     ng-if="info.type === 'Halbzeitpfiff'">
+                                                    <div class="matchcenter-liveticker"><img
+                                                            src="img/grafiken/Abpfiff.png"/></i></div>
+                                                </div>
+                                                <div class="col col-center text-align-center vertical-align-mid"
+                                                     ng-if="info.type === 'Anpfiff-2hz'">
+                                                    <div class="matchcenter-liveticker"><img
+                                                            src="img/grafiken/Anpfiff.png"/></i></div>
+                                                </div>
+                                                <div class="col col-center text-align-center vertical-align-mid"
+                                                     ng-if="info.type === 'Abpfiff'">
+                                                    <div class="matchcenter-liveticker"><img
+                                                            src="img/grafiken/Abpfiff.png"/></i></div>
+                                                </div>
+                                            </div>
+                                            <div class="col col-70">
+                                                <div class="matchcenter-liveticker text-align-left font-size"
+                                                     ng-bind-html="info.text"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row remove-col-padding arena-border-color" ng-if="!info.minute">
+                                            <div class="col matchcenter-padding-left" ng-if="!info.type">
+                                                <div class="matchcenter-liveticker text-align-left font-size"
+                                                     ng-bind-html="info.text"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col matchcenter-liveticker-empty-col"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-if="mcVM.liveTickerFeed === undefined">
+                                <div class="col kontakt-column-padding">
+                                    <div class="col custom-font-regular font-size text-align-left">
+                                        <div class="row remove-col-padding">
+                                            <div class="col">
+                                                <div class="col">
+                                                    <p class="custom-font-bold font-size text-align-left">Kein
+                                                        Live-Ticker vorhanden</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

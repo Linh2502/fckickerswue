@@ -55,7 +55,6 @@ angular.module('module.kader', ['ionicLazyLoad'])
       $scope.midfield = splitIntoHalf($scope.getSquadMidfield);
       $ionicScrollDelegate.$getByHandle('resize').resize();
       showContent = true;
-      console.log("request success kader");
     });
 
     $scope.$on('$ionicView.afterEnter', function() {

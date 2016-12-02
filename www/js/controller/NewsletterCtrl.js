@@ -22,7 +22,6 @@
     vm.subscribe = subscribe;
 
     function subscribe(subscriptionForm) {
-      console.log(subscriptionForm);
       if (subscriptionForm.$invalid) {
         if (!subscriptionForm.email.$valid) {
           $('#emailError').show();

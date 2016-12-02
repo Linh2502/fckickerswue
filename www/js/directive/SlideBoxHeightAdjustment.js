@@ -29,7 +29,6 @@ angular.module('directive.slideboxheight', [])
           if($rootScope.isLive){
             $timeout(function(){
               newHeight = $('.slider-slide', elem).eq(val).innerHeight();
-              console.log(newHeight);
               if (newHeight) {
                 elem.animate({
                   height: newHeight + 'px'
@@ -39,7 +38,6 @@ angular.module('directive.slideboxheight', [])
           }else{
             $timeout(function(){
               newHeight = $('.slider-slide', elem).eq(val).innerHeight();
-              console.log(newHeight);
               if (newHeight) {
                 elem.animate({
                   height: newHeight + 'px'

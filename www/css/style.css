@@ -25,16 +25,17 @@ ul {
 .platform-browser .bar .title,
 .platform-android .bar .title {
   height: 82px !important;
+  margin: 0 3%;
 }
 .platform-browser .bar .button,
 .platform-android .bar .button {
-  min-height: 82px !important;
-  line-height: 82px !important;
+  min-height: 42px !important;
+  line-height: 42px !important;
 }
 .platform-browser .custom-side-menu,
 .platform-android .custom-side-menu {
   border-right: 1px solid #F2F4F4;
-  top: 82px !important;
+  top: 100px !important;
   height: 69%;
 }
 .platform-browser .has-logo-subheader,
@@ -45,7 +46,7 @@ ul {
 .platform-android .bar {
   padding: 0;
   margin: 0 0 !important;
-  height: 82px !important;
+  height: 44px !important;
 }
 .platform-browser .logo-sub-header,
 .platform-android .logo-sub-header {
@@ -71,10 +72,11 @@ ul {
 }
 .platform-ios .bar .title {
   height: 102px !important;
+  margin: 0 3%;
 }
 .platform-ios .bar .button {
-  min-height: 102px !important;
-  line-height: 82px !important;
+  min-height: 62px !important;
+  line-height: 42px !important;
 }
 .platform-ios .custom-bar {
   padding: 0;
@@ -89,13 +91,17 @@ ul {
   top: 152px !important;
 }
 .platform-ios .has-subheader {
-  top: 108px !important;
+  top: 138px !important;
+}
+
+.has-subheader {
+  top: 138px !important;
 }
 
 .bar {
   padding: 0;
   margin: 0 0 !important;
-  height: 102px !important;
+  height: 64px !important;
 }
 
 .ajax-loader {
@@ -168,7 +174,7 @@ ul {
 }
 
 .kickers-logo-small {
-  width: 30px;
+  width: 35px;
   margin-left: 10px;
   margin-top: 5px;
 }
@@ -440,7 +446,7 @@ ul {
   }
 }
 .platform-ios .fwk-logo {
-  position: absolute;
+  position: relative;
   z-index: 100;
   left: 0;
   top: 20px;
@@ -448,7 +454,7 @@ ul {
 
 .platform-android .fwk-logo,
 .platform-browser .fwk-logo {
-  position: absolute;
+  position: relative;
   z-index: 100;
   left: 0;
   top: 0;
@@ -1155,3 +1161,12 @@ ul {
   height: 15px;
 }
 
+.bar-subheader {
+  height: 44px;
+}
+
+.bar .title + .button:last-child, .bar > .button + .button:last-child, .bar > .button.pull-right, .bar .buttons.pull-right, .bar .title + .buttons {
+  right: 0;
+  top: 0;
+  bottom: 0;
+}

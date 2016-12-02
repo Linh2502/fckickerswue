@@ -64,16 +64,16 @@
         {
           title: 'Nächstes Spiel', date: date, time: time, type: 'Uhr', tickets: 'Tickets',
           soccerTeam: {
-            team_away: {name: matches.next.team_away, image: matches.next.logo_away},
-            team_home: {name: matches.next.team_home, image: matches.next.logo_home}
+            team_away: {name: matches.next.team_away.__cdata, image: matches.next.logo_away},
+            team_home: {name: matches.next.team_home.__cdata, image: matches.next.logo_home}
           },
           result: matches.next.result
         },
         {
           title: 'Letztes Spiel', matchCenter: 'Match Center',
           soccerTeam: {
-            team_away: {name: matches.previous.team_away, image: matches.previous.logo_away},
-            team_home: {name: matches.previous.team_home, image: matches.previous.logo_home}
+            team_away: {name: matches.previous.team_away.__cdata, image: matches.previous.logo_away},
+            team_home: {name: matches.previous.team_home.__cdata, image: matches.previous.logo_home}
           },
           result: matches.previous.result
         }
