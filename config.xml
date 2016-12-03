@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.fwk.linh" version="1.0.40" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>FCK</name>
+<widget id="com.icue.fwk" version="1.0.40" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>FC Würzburger Kickers</name>
   <description>
     Offizielle FC Würzburger Kickers App für Android und iOS.
   </description>

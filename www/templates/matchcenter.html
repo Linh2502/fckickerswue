@@ -153,7 +153,7 @@
                                     <div ng-repeat="info in mcVM.liveTickerFeed">
                                         <div class="row remove-col-padding arena-border-color font-size"
                                              ng-if="info.minute">
-                                            <div class="col-20 row remove-col-padding even" ng-if="!info.type">
+                                            <div class="col-20 row remove-col-padding even" ng-if="!info.type || info.type === ''">
                                                 <div class="col col-center">
                                                     <div class="matchcenter-liveticker custom-font-bold font-size">
                                                         {{info.minute}}

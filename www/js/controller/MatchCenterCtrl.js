@@ -74,6 +74,7 @@
       vm.liveTickerFeed = [];
       for (var i = 0; i < liveticker.item.length; i++) {
         var minute = liveticker.item[i].minute;
+        console.error(minute);
         var type = liveticker.item[i].type;
         if(!minute) {
           minute = minute.replace("<![CDATA[", "").replace("]]>", "");
@@ -83,8 +84,8 @@
         }
 
         vm.liveTickerFeed.push({
-          minute: checkIfHasValue(minute.__cdata),
-          type: checkIfHasValue(type.__cdata),
+          minute: checkIfHasValue(minute),
+          type: checkIfHasValue(type),
           text: liveticker.item[i].text
         });
         if(i+1 === liveticker.item.length) {

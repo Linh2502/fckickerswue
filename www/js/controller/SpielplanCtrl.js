@@ -64,8 +64,8 @@
         vm.matchListing.push({
           matchday: matches.match[i].matchday,
           date: date, time: time,
-          team_home: matches.match[i].team_home.__cdata,
-          team_away: matches.match[i].team_away.__cdata,
+          team_home: matches.match[i].team_home,
+          team_away: matches.match[i].team_away,
           logo_home: matches.match[i].logo_home,
           logo_away: matches.match[i].logo_away,
           result: matches.match[i].result

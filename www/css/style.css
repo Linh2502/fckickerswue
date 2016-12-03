@@ -67,7 +67,7 @@ ul {
 }
 .platform-ios .custom-side-menu {
   border-right: 1px solid #F2F4F4;
-  top: 102px !important;
+  top: 112px !important;
   height: 65%;
 }
 .platform-ios .bar .title {
@@ -91,7 +91,7 @@ ul {
   top: 152px !important;
 }
 .platform-ios .has-subheader {
-  top: 138px !important;
+  top: 158px !important;
 }
 
 .has-subheader {
@@ -450,6 +450,15 @@ ul {
   z-index: 100;
   left: 0;
   top: 20px;
+}
+
+.platform-ios .bar-subheader {
+  top: 44px !important;
+  height: 44px !important;
+}
+
+.platform-ios .ios-bar {
+  top: 64px !important;
 }
 
 .platform-android .fwk-logo,
@@ -1164,6 +1173,8 @@ ul {
 .bar-subheader {
   height: 44px;
 }
+
+
 
 .bar .title + .button:last-child, .bar > .button + .button:last-child, .bar > .button.pull-right, .bar .buttons.pull-right, .bar .title + .buttons {
   right: 0;

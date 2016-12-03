@@ -22,10 +22,10 @@
         })
         .controller('AppCtrl', AppController);
 
-    AppController.$inject = ['$location', '$rootScope', '$timeout', '$state', '$ionicSideMenuDelegate',
+    AppController.$inject = ['$location', '$scope', '$rootScope', '$timeout', '$state', '$ionicSideMenuDelegate',
         '$ionicHistory', '$ionicScrollDelegate', '$ionicPlatform'];
 
-    function AppController($location, $rootScope, $timeout, $state, $ionicSideMenuDelegate,
+    function AppController($location, $scope, $rootScope, $timeout, $state, $ionicSideMenuDelegate,
                            $ionicHistory, $ionicScrollDelegate, $ionicPlatform) {
         $ionicSideMenuDelegate.edgeDragThreshold(20);
         $ionicSideMenuDelegate.canDragContent(true);
@@ -56,6 +56,13 @@
         $rootScope.$on('hide_loader', function () {
             $('#loaderInterceptor').hide();
         });
+
+        $scope.$watch(function () {
+                return $ionicSideMenuDelegate.isOpenLeft();
+            },
+            function (isOpen) {
+                vm.isSideMenuOpen = isOpen;
+            });
 
         var lockButton = false;
         $('#submenu').hide();
