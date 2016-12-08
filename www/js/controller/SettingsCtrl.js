@@ -39,9 +39,6 @@
       vm.kickerstv = window.localStorage['KickersTVChannelSubscription'] === 'true';
       vm.offer = window.localStorage['OffersChannelSubscription'] === 'true';
       vm.wifi = window.localStorage['WifiEnabled'] === 'true';
-
-      console.error(vm.goals);
-      console.error(vm.wifi);
     }
 
     function goalsChange() {

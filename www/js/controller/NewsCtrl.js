@@ -33,8 +33,8 @@
           setGamesFeed(success.data.matches);
           NewsService.fetchNewsData()
             .then(function(success) {
-              setNewsFeed(success);
               $rootScope.$broadcast('hide_loader');
+              setNewsFeed(success);
             });
         });
     }

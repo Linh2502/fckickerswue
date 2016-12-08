@@ -193,7 +193,7 @@ angular.module('starter', [
                 views: {
                     'menuContent': {
                         templateUrl: 'templates/kader.html',
-                        controller: 'KaderCtrl'
+                        controller: 'KaderCtrl as kaderVM'
                     }
                 }
             })
@@ -262,7 +262,7 @@ angular.module('starter', [
                 views: {
                     'menuContent': {
                         templateUrl: 'templates/singleplayer.html',
-                        controller: 'SinglePlayerCtrl',
+                        controller: 'SinglePlayerCtrl as spVM',
                         resolve: {
                             singlePlayer: function ($stateParams) {
                                 return $stateParams.playerId;

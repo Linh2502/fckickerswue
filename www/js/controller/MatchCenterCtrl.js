@@ -74,7 +74,6 @@
       vm.liveTickerFeed = [];
       for (var i = 0; i < liveticker.item.length; i++) {
         var minute = liveticker.item[i].minute;
-        console.error(minute);
         var type = liveticker.item[i].type;
         if(!minute) {
           minute = minute.replace("<![CDATA[", "").replace("]]>", "");

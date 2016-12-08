@@ -2,34 +2,32 @@
  * Created by Linh on 17.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
  */
-angular.module('service.kader', [])
-  .service('KaderService', function ($rootScope, $http, ApiEndpoint, $state) {
-    var dates = null;
+(function () {
+    'use strict';
 
-    return {
-      setData: function (data) {
-        dates = data;
-      },
-      getGoalPlayerData: function () {
-        return dates.data.squad.goal;
-      },
-      getDefensePlayerData: function () {
-        return dates.data.squad.defense;
-      },
-      getMidFieldPlayerData: function () {
-        return dates.data.squad.midfield;
-      },
-      getOffensePlayerData: function () {
-        return dates.data.squad.offense;
-      },
-      fetchKaderData: function () {
-        $http.get(ApiEndpoint.url + 'app--squad' + ApiEndpoint.version + $rootScope.uuid)
-          .then(function(response){
-            dates = x2js.xml_str2json(response.data);
-            $rootScope.$broadcast('http_request_success_kader');
-          }, function(error){
-            $state.go('app.error');
-          });
-      }
+    angular
+        .module('service.kader', [])
+        .service('KaderService', KaderService);
+
+    KaderService.$inject = ['$rootScope', '$http', 'ApiEndpoint', '$state', '$q', '$log'];
+
+    function KaderService($rootScope, $http, ApiEndpoint, $state, $q, $log) {
+        var dates = null;
+
+        return {
+            fetchKaderData: function () {
+                var defer = $q.defer();
+                $http.get(ApiEndpoint.url + 'app--squad' + ApiEndpoint.version + $rootScope.uuid)
+                    .then(function (response) {
+                        $log.info("Succeeded in requesting kader data", response);
+                        dates = x2js.xml_str2json(response.data);
+                        defer.resolve(dates.data.squad);
+                    }, function (error) {
+                        $log.info("Failed in requesting kader data", response);
+                        $state.go('app.error');
+                    });
+                return defer.promise;
+            }
+        }
     }
-  })
+})();

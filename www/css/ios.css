@@ -133,7 +133,7 @@ and (min-device-width : 321px) {
   .custom-title-date {
     font-family: Lato-Regular;
     text-transform: uppercase;
-    font-size: 8px !important;
+    font-size: 10px !important;
     border-color: #ffffff;
   }
 
@@ -606,7 +606,7 @@ and (max-device-width : 320px) {
   .custom-title-date {
     font-family: Lato-Regular;
     text-transform: uppercase;
-    font-size: 6px !important;
+    font-size: 8px !important;
     border-color: #ffffff;
   }
 
@@ -1079,7 +1079,7 @@ and (max-device-width : 300px) {
   .custom-title-date {
     font-family: Lato-Regular;
     text-transform: uppercase;
-    font-size: 5px !important;
+    font-size: 7px !important;
     border-color: #ffffff;
   }
 
