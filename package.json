@@ -17,16 +17,15 @@
   "cordovaPlugins": [
     "cordova-plugin-device",
     "cordova-plugin-console",
-    "com.ionic.keyboard",
     "cordova-plugin-inappbrowser",
     "cordova-plugin-network-information",
     "cordova-plugin-statusbar",
-    "org.apache.cordova.core.parseplugin",
     "cordova-plugin-splashscreen",
     "cordova-plugin-whitelist",
     "cordova-plugin-crosswalk-webview",
     "cordova-plugin-file",
-    "cordova-plugin-file-transfer"
+    "cordova-plugin-file-transfer",
+    "onesignal-cordova-plugin"
   ],
   "cordovaPlatforms": [
     "android",

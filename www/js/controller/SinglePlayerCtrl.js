@@ -42,7 +42,11 @@
 
         function splitHistory(history){
             var html = "";
-            var split = history.__cdata.split(",");
+            if (history.__cdata) {
+                var split = history.__cdata.split(",")
+            } else {
+                var split = history.split(",");
+            }
             for(var i = 0; i < split.length; i++){
                 html+= split[i] + "<br>";
             }

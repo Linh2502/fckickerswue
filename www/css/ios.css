@@ -163,7 +163,7 @@ and (min-device-width : 321px) {
   .bundesliga-logo {
     height: 44px;
     width: auto;
-    background: url(../img/bilddaten/3x/logo-bundesliga@3x.png);
+    background: url(../img/bilddaten/2x/logo-bundesliga@2x.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;

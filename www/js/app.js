@@ -67,14 +67,24 @@ angular.module('starter', [
                 cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
                 cordova.plugins.Keyboard.disableScroll(true);
             }
-            window.parsePlugin.initialize('H68ppzb0DIIIujrb2obzFuv66sclqsPLTuBprOoG', 'AyGtfTXRzcvVYMnCfZmPkjTK7TPVcfzmPcEkTOUt', function () {
-                console.log('Parse initialized successfully.');
-                window.parsePlugin.getInstallationId(function (id) {
-                }, function (e) {
-                });
-            }, function (e) {
-                console.log('Failure to initialize Parse.');
-            });
+            // window.parsePlugin.initialize('H68ppzb0DIIIujrb2obzFuv66sclqsPLTuBprOoG', 'AyGtfTXRzcvVYMnCfZmPkjTK7TPVcfzmPcEkTOUt', function () {
+            //     console.log('Parse initialized successfully.');
+            //     window.parsePlugin.setBadgeNumber(0);
+            //     window.parsePlugin.getInstallationId(function (id) {
+            //     }, function (e) {
+            //     });
+            // }, function (e) {
+            //     console.log('Failure to initialize Parse.');
+            // });
+
+            var notificationOpenedCallback = function(jsonData) {
+                console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+            };
+
+            window.plugins.OneSignal
+                .startInit("d83d692c-7f83-469c-9bde-82371d11225d")
+                .handleNotificationOpened(notificationOpenedCallback)
+                .endInit();
         });
     })
 
