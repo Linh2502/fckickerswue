@@ -45,18 +45,11 @@
       $timeout(function () {
         if (vm.goals) {
           window.localStorage['LiveTickerChannelSubscription'] = 'true';
-          window.parsePlugin.subscribe('LiveTickerChannel', function () {
-          }, function (e) {
-          });
-          window.parsePlugin.subscribe('subscribed', function () {
-          }, function (e) {
-          });
+          window.plugins.OneSignal.sendTag('LiveTickerChannel', true);
         }
         if (!vm.goals) {
           window.localStorage['LiveTickerChannelSubscription'] = 'false';
-          window.parsePlugin.unsubscribe('LiveTickerChannel', function () {
-          }, function (e) {
-          });
+          window.plugins.OneSignal.deleteTag('LiveTickerChannel');
         }
       }, 0);
     }
@@ -65,18 +58,11 @@
       $timeout(function () {
         if (vm.game) {
           window.localStorage['GameChannelSubscription'] = 'true';
-          window.parsePlugin.subscribe('GameChannel', function () {
-          }, function (e) {
-          });
-          window.parsePlugin.subscribe('subscribed', function () {
-          }, function (e) {
-          });
+          window.plugins.OneSignal.sendTag('GameChannel', true);
         }
         if (!vm.game) {
           window.localStorage['GameChannelSubscription'] = 'false';
-          window.parsePlugin.unsubscribe('GameChannel', function () {
-          }, function (e) {
-          });
+          window.plugins.OneSignal.deleteTag('GameChannel');
         }
       }, 0);
     }
@@ -85,18 +71,11 @@
       $timeout(function () {
         if (vm.news) {
           window.localStorage['TopNewsChannelSubscription'] = 'true';
-          window.parsePlugin.subscribe('TopNewsChannel', function () {
-          }, function (e) {
-          });
-          window.parsePlugin.subscribe('subscribed', function () {
-          }, function (e) {
-          });
+          window.plugins.OneSignal.sendTag('TopNewsChannel', true);
         }
         if (!vm.news) {
           window.localStorage['TopNewsChannelSubscription'] = 'false';
-          window.parsePlugin.unsubscribe('TopNewsChannel', function () {
-          }, function (e) {
-          });
+          window.plugins.OneSignal.deleteTag('TopNewsChannel');
         }
       }, 0);
     }
@@ -105,18 +84,11 @@
       $timeout(function () {
         if (vm.kickerstv) {
           window.localStorage['KickersTVChannelSubscription'] = 'true';
-          window.parsePlugin.subscribe('KickersTVChannel', function () {
-          }, function (e) {
-          });
-          window.parsePlugin.subscribe('subscribed', function () {
-          }, function (e) {
-          });
+          window.plugins.OneSignal.sendTag('KickersTVChannel', true);
         }
         if (!vm.kickerstv) {
           window.localStorage['KickersTVChannelSubscription'] = 'false';
-          window.parsePlugin.unsubscribe('KickersTVChannel', function () {
-          }, function (e) {
-          });
+          window.plugins.OneSignal.deleteTag('KickersTVChannel');
         }
       }, 0);
     }
@@ -125,18 +97,11 @@
       $timeout(function () {
         if (vm.offer) {
           window.localStorage['OffersChannelSubscription'] = 'true';
-          window.parsePlugin.subscribe('OffersChannel', function () {
-          }, function (e) {
-          });
-          window.parsePlugin.subscribe('subscribed', function () {
-          }, function (e) {
-          });
+          window.plugins.OneSignal.sendTag('OffersChannel', true);
         }
         if (!vm.offer) {
           window.localStorage['OffersChannelSubscription'] = 'false';
-          window.parsePlugin.unsubscribe('OffersChannel', function () {
-          }, function (e) {
-          });
+          window.plugins.OneSignal.deleteTag('OffersChannel');
         }
       }, 0);
     }
