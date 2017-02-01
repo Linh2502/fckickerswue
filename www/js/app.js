@@ -63,10 +63,10 @@ angular.module('starter', [
         $rootScope.uuid = '&uuid=' + ionic.Platform.device().uuid;
         $ionicPlatform.ready(function () {
             $rootScope.uuid = '&uuid=' + ionic.Platform.device().uuid;
-            if (window.cordova && window.cordova.plugins.Keyboard) {
-                cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-                cordova.plugins.Keyboard.disableScroll(true);
-            }
+            // if (window.cordova && window.cordova.plugins.Keyboard) {
+            //     cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+            //     cordova.plugins.Keyboard.disableScroll(true);
+            // }
             // window.parsePlugin.initialize('H68ppzb0DIIIujrb2obzFuv66sclqsPLTuBprOoG', 'AyGtfTXRzcvVYMnCfZmPkjTK7TPVcfzmPcEkTOUt', function () {
             //     console.log('Parse initialized successfully.');
             //     window.parsePlugin.setBadgeNumber(0);
@@ -85,6 +85,7 @@ angular.module('starter', [
                 .startInit("d83d692c-7f83-469c-9bde-82371d11225d")
                 .handleNotificationOpened(notificationOpenedCallback)
                 .endInit();
+
         });
     })
 
