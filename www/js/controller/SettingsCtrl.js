@@ -8,7 +8,7 @@
   'use strict';
 
   angular
-    .module('module.settings', [])
+    .module('module.settings', ['ionic'])
     .controller('SettingsCtrl', SettingsController);
 
   SettingsController.$inject = ['$timeout', '$ionicSideMenuDelegate'];
@@ -33,12 +33,31 @@
 
     function _init() {
       $('#loaderInterceptor').hide();
-      vm.goals = window.localStorage['LiveTickerChannelSubscription'] === 'true';
-      vm.game = window.localStorage['GameChannelSubscription'] === 'true';
-      vm.news = window.localStorage['TopNewsChannelSubscription'] === 'true';
-      vm.kickerstv = window.localStorage['KickersTVChannelSubscription'] === 'true';
-      vm.offer = window.localStorage['OffersChannelSubscription'] === 'true';
-      vm.wifi = window.localStorage['WifiEnabled'] === 'true';
+      if (ionic.Platform.isAndroid()) {
+        if (window.localStorage['resetNotificationOnceForAndroid']) {
+          vm.goals = window.localStorage['LiveTickerChannelSubscription'] === 'true';
+          vm.game = window.localStorage['GameChannelSubscription'] === 'true';
+          vm.news = window.localStorage['TopNewsChannelSubscription'] === 'true';
+          vm.kickerstv = window.localStorage['KickersTVChannelSubscription'] === 'true';
+          vm.offer = window.localStorage['OffersChannelSubscription'] === 'true';
+          vm.wifi = window.localStorage['WifiEnabled'] === 'true';
+        } else {
+          vm.goals = false;
+          vm.game = false;
+          vm.news = false;
+          vm.kickerstv = false;
+          vm.offer = false;
+          vm.wifi = false;
+          window.localStorage['resetNotificationOnceForAndroid'] = 'true';
+        }
+      } else {
+        vm.goals = window.localStorage['LiveTickerChannelSubscription'] === 'true';
+        vm.game = window.localStorage['GameChannelSubscription'] === 'true';
+        vm.news = window.localStorage['TopNewsChannelSubscription'] === 'true';
+        vm.kickerstv = window.localStorage['KickersTVChannelSubscription'] === 'true';
+        vm.offer = window.localStorage['OffersChannelSubscription'] === 'true';
+        vm.wifi = window.localStorage['WifiEnabled'] === 'true';
+      }
     }
 
     function goalsChange() {

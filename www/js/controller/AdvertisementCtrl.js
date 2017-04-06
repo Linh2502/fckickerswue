@@ -23,6 +23,7 @@
         vm._init = _init;
 
         function _init() {
+          //$state.go('app.home');
             if ($stateParams.data) {
                 vm.showBanner = $stateParams.data.data.image[0].url;
                 AdvertisementService.saveToLocalSystem($stateParams.data, $stateParams.locationPath)

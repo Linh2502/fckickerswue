@@ -35,6 +35,7 @@
     vm.loadLiveTicker = loadLiveTicker;
     vm.loadVideosData = loadVideosData;
     vm.loadTableData = loadTableData;
+    vm.refresh = refresh;
 
     function _init() {
       vm.showTable = false;
@@ -47,7 +48,6 @@
           if ($stateParams.game != null) {
             if ($stateParams.game.isLive) {
               vm.isLive = true;
-              $rootScope.isLive = true;
               $ionicSlideBoxDelegate.$getByHandle('matchcenter').slide(2);
               $('#standard').hide();
               refreshLiveTickerFeed();
@@ -56,6 +56,7 @@
               vm.isLive = false;
               $ionicSlideBoxDelegate.$getByHandle('matchcenter').slide(1);
               $ionicSlideBoxDelegate.$getByHandle('matchcenter').slide(0);
+              setLiveTickerFeed(vm.matchCenterFeed.data.liveticker);
             }
           } else {
             $('#spinner').hide();
@@ -72,25 +73,30 @@
     function setLiveTickerFeed(liveticker) {
       var defer = $q.defer();
       vm.liveTickerFeed = [];
-      for (var i = 0; i < liveticker.item.length; i++) {
-        var minute = liveticker.item[i].minute;
-        var type = liveticker.item[i].type;
-        if(!minute) {
-          minute = minute.replace("<![CDATA[", "").replace("]]>", "");
-        }
-        if(!type) {
-          type = type.replace("<![CDATA[", "").replace("]]>", "");
-        }
+      if(liveticker) {
+        for (var i = 0; i < liveticker.item.length; i++) {
+          var minute = liveticker.item[i].minute;
+          var type = liveticker.item[i].type;
+          if(!minute) {
+            minute = minute.replace("<![CDATA[", "").replace("]]>", "");
+          }
+          if(!type) {
+            type = type.replace("<![CDATA[", "").replace("]]>", "");
+          }
 
-        vm.liveTickerFeed.push({
-          minute: checkIfHasValue(minute),
-          type: checkIfHasValue(type),
-          text: liveticker.item[i].text
-        });
-        if(i+1 === liveticker.item.length) {
-          defer.resolve();
+          vm.liveTickerFeed.push({
+            minute: checkIfHasValue(minute),
+            type: checkIfHasValue(type),
+            text: liveticker.item[i].text
+          });
+          if(i+1 === liveticker.item.length) {
+            defer.resolve();
+          }
         }
+      } else {
+        defer.resolve();
       }
+
       return defer.promise;
     }
 
@@ -148,12 +154,14 @@
           .then(function (success) {
             vm.detailsFeed = success.data.details;
             vm.liveTickerFeed = [];
-            setLiveTickerFeed(success.data.liveticker);
-            $timeout(function () {
-              $('#spinner').show();
-              $('#live').fadeTo(1000, 0.25);
-              refreshLiveTickerFeed();
-            }, 10000);
+            setLiveTickerFeed(success.data.liveticker)
+                .then(function(success) {
+                    $timeout(function () {
+                        $('#spinner').show();
+                        $('#live').fadeTo(1000, 0.25);
+                        refreshLiveTickerFeed();
+                    }, 10000);
+                });
           });
       }
     }
@@ -195,7 +203,7 @@
     }
 
     function loadLiveTicker() {
-      if(!vm.liveTickerFeed) {
+      if(vm.liveTickerFeed) {
         $('#spinner').show();
         setLiveTickerFeed(vm.matchCenterFeed.data.liveticker)
           .then(function(success) {
@@ -239,6 +247,15 @@
 
     function disableSwipe() {
       $ionicSlideBoxDelegate.enableSlide(false);
+    }
+
+    function refresh() {
+      MatchcenterService.refreshLiveTicker()
+        .then(function (success) {
+          vm.matchCenterFeed = success;
+          vm.detailsFeed = success.data.details;
+          $rootScope.$broadcast('scroll.refreshComplete');
+        })
     }
 
     vm._init();

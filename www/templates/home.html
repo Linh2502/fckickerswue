@@ -27,7 +27,7 @@
       </ion-slide-box>
     </div>
     <div class="spiel-feed">
-      <ion-slide-box delegate-handle="spiel" auto-play="homeVM.autoPlay" on-slide-changed="homeVM.switchView($index)" active-slide="homeVM.activeSlideGames" ng-if="zeroCountdown === false">
+      <ion-slide-box delegate-handle="spiel" auto-play="homeVM.autoPlay" on-slide-changed="homeVM.switchView($index)" active-slide="homeVM.activeSlideGames" ng-if="homeVM.getMatchCenterData.data.details.live === 'false'">
         <ion-slide ng-repeat="game in homeVM.gamesFeed">
           <div class="set-max-width">
             <div class="row custom-row-border spiel-feed-columns spiel-feed-first-column-height">
@@ -118,7 +118,7 @@
           </div>
         </ion-slide>
       </ion-slide-box>
-      <div ng-if="zeroCountdown === true">
+      <div ng-if="homeVM.getMatchCenterData.data.details.live === 'true'">
         <div class="set-max-width">
           <div class="row custom-row-border spiel-feed-columns spiel-feed-first-column-height">
             <div class="spiel-feed-first-column-style">
@@ -131,14 +131,14 @@
           <div class="row custom-row-border spiel-feed-columns">
             <div class="col col-40 col-center remove-col-padding text-align-center">
               <img ng-src="{{homeVM.detailsFeed.logo_home}}" class="soccer-logo"/>
-              <div class="game-soccerteam-fontstyle">{{homeVM.detailsFeed.team_home}}</div>
+              <div class="game-soccerteam-fontstyle" ng-bind-html="homeVM.detailsFeed.team_home"></div>
             </div>
             <div class="col col-20 col-center remove-col-padding">
               <div class="news-games-result">{{homeVM.detailsFeed.result}}</div>
             </div>
             <div class="col col-40 col-center remove-col-padding text-align-center">
               <img ng-src="{{homeVM.detailsFeed.logo_away}}" class="soccer-logo"/>
-              <div class="game-soccerteam-fontstyle">{{homeVM.detailsFeed.team_away}}</div>
+              <div class="game-soccerteam-fontstyle" ng-bind-html="homeVM.detailsFeed.team_away"></div>
             </div>
           </div>
           <div class="row custom-row-border spiel-feed-columns spiel-feed-third-column-height">

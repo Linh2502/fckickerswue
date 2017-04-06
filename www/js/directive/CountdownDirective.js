@@ -42,14 +42,12 @@ angular.module('directive.countdown', [])
 
         if (distance < 1 || scope.detailsFeed.live == 'true') {
           scope.zeroCountdown = true;
-          $rootScope.isLive = true;
           if (!broadCastOnce) {
             $rootScope.$broadcast('isLive');
             broadCastOnce = true;
           }
         } else {
           scope.zeroCountdown = false;
-          $rootScope.isLive = false;
           if (broadCastOnce) {
             broadCastOnce = false;
             $rootScope.$broadcast('isNotLive');

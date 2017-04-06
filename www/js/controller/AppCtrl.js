@@ -69,23 +69,40 @@
 
         checkSettingsNotification();
         function checkSettingsNotification() {
-            if (window.localStorage['showSettingsNotificationOnce']) {
-                window.localStorage['showSettingsNotificationCounter'] = +window.localStorage['showSettingsNotificationCounter'] + 1;
+            if(ionic.Platform.isAndroid()) {
+                if (window.localStorage['showSettingsNotificationOnceForAndroid']) {
+                    window.localStorage['showSettingsNotificationCounterForAndroid'] = +window.localStorage['showSettingsNotificationCounterForAndroid'] + 1;
+                } else {
+                    window.localStorage['showSettingsNotificationCounterForAndroid'] = 1;
+                    $timeout(function () {
+                        $('#settings-notification').show();
+                    }, 5000);
+                }
             } else {
-                window.localStorage['showSettingsNotificationCounter'] = 1;
-                $timeout(function () {
-                    $('#settings-notification').show();
-                }, 5000);
+                if (window.localStorage['showSettingsNotificationOnce']) {
+                    window.localStorage['showSettingsNotificationCounter'] = +window.localStorage['showSettingsNotificationCounter'] + 1;
+                } else {
+                    window.localStorage['showSettingsNotificationCounter'] = 1;
+                    $timeout(function () {
+                        $('#settings-notification').show();
+                    }, 5000);
+                }
             }
         }
 
         function closeSettings() {
             window.localStorage['showSettingsNotificationOnce'] = 'true';
+            if(ionic.Platform.isAndroid()) {
+                window.localStorage['showSettingsNotificationOnceForAndroid'] = 'true';
+            }
             $('#settings-notification').hide();
         }
 
         function navigateToSettings() {
             window.localStorage['showSettingsNotificationOnce'] = 'true';
+            if(ionic.Platform.isAndroid()) {
+                window.localStorage['showSettingsNotificationOnceForAndroid'] = 'true';
+            }
             $('#settings-notification').hide();
             handleNavigation("app.settings");
         }

@@ -157,18 +157,18 @@
         }
 
         function checkLiveTicker() {
-            if ($rootScope.isLive) {
-                MatchcenterService.refreshLiveTicker()
-                    .then(function (success) {
-                        vm.gamesFeed = [];
-                        vm.detailsFeed = [];
-                        vm.detailsFeed = success.data.details;
-                        setGamesFeed(vm.getMatchCenterData.data.matches);
-                        $timeout(function () {
-                            checkLiveTicker();
-                        }, 30000);
-                    });
-            }
+          MatchcenterService.refreshLiveTicker()
+            .then(function (success) {
+              if (success.data.details.live === 'true') {
+                $rootScope.isLive = true;
+                vm.gamesFeed = [];
+                vm.detailsFeed = [];
+                vm.detailsFeed = success.data.details;
+                $timeout(function () {
+                  checkLiveTicker();
+                }, 30000);
+              }
+            })
         }
 
         function autoPlay() {
@@ -225,7 +225,7 @@
         }
 
         function navigateToLiveTicker() {
-            if ($rootScope.isLive) {
+            if (vm.getMatchCenterData.data.details.live === 'true') {
                 $state.go('app.matchcenter', {game: {isLive: true}});
             } else {
                 $state.go('app.matchcenter', {game: {isLive: false}});
