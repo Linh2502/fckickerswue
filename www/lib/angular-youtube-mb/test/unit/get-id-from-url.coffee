@@ -1,11 +1,7 @@
+
 describe 'getIdFromURL', ->
-    getIdFromURL = angular.noop
-
-    beforeEach ->
-        module 'youtube-embed'
-        inject (_youtubeEmbedUtils_) ->
-            getIdFromURL = _youtubeEmbedUtils_.getIdFromURL
-
+    $injector = angular.injector ['youtube-embed']
+    getIdFromURL = $injector.get('youtubeEmbedUtils').getIdFromURL
 
     it 'should handle regular query strings', ->
         url = 'https://www.youtube.com/watch?v=nViWpVc1x_4&feature=youtu.be'

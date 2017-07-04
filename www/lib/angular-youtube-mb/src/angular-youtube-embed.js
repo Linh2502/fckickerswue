@@ -1,5 +1,5 @@
 /* global YT */
-angular.module('youtube-embed', [])
+angular.module('youtube-embed', ['ng'])
 .service ('youtubeEmbedUtils', ['$window', '$rootScope', function ($window, $rootScope) {
     var Service = {}
 
@@ -94,7 +94,6 @@ angular.module('youtube-embed', [])
     if (typeof YT === "undefined") {
         // ...grab on to global callback, in case it's eventually loaded
         $window.onYouTubeIframeAPIReady = applyServiceIsReady;
-        console.log('Unable to find YouTube iframe library on this page.')
     } else if (YT.loaded) {
         Service.ready = true;
     } else {
@@ -103,7 +102,7 @@ angular.module('youtube-embed', [])
 
     return Service;
 }])
-.directive('youtubeVideo', ['$window', 'youtubeEmbedUtils', function ($window, youtubeEmbedUtils) {
+.directive('youtubeVideo', ['youtubeEmbedUtils', function (youtubeEmbedUtils) {
     var uniqId = 1;
 
     // from YT.PlayerState
@@ -117,10 +116,6 @@ angular.module('youtube-embed', [])
     };
 
     var eventPrefix = 'youtube.player.';
-
-    $window.YTConfig = {
-        host: 'https://www.youtube.com'
-    };
 
     return {
         restrict: 'EA',

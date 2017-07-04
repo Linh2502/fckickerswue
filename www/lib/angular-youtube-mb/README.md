@@ -59,13 +59,13 @@ $scope.anotherGoodOne = 'https://www.youtube.com/watch?v=18-xvIjH8T4';
 If you are using browserify or webpack, make sure you've installed this module:
 
 ```shell
-$ npm install --save angular-youtube-embed
+$ npm install --save angular-youtube-mb
 ```
 
 and use it in your code like this:
 
 ```javascript
-require('angular-youtube-embed');
+require('angular-youtube-mb');
 ```
 
 ## Is that it?
