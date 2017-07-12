@@ -2,91 +2,213 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d6bbe80-77a0-40d0-a7b0-6931dc97532b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/youtube/widget_api.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/angular-ui-router/api/angular-ui-router.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_loaders.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_split-pane.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/ionicons/_ionicons-animation.scss" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/appbilder/arena-Plan.png" afterPath="$PROJECT_DIR$/www/img/appbilder/arena-Plan.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/appbilder/arena-Plan@3x.png" afterPath="$PROJECT_DIR$/www/img/appbilder/arena-Plan@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/appbilder/icue-Logo.png" afterPath="$PROJECT_DIR$/www/img/appbilder/icue-Logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/appbilder/mainpost-Logo.png" afterPath="$PROJECT_DIR$/www/img/appbilder/mainpost-Logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/appbilder/parken.png" afterPath="$PROJECT_DIR$/www/img/appbilder/parken.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/appbilder/parken@3x.png" afterPath="$PROJECT_DIR$/www/img/appbilder/parken@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/2x/9020minuten@2x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/2x/9020minuten@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/2x/kickers_1097_Logo_2@2x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/2x/kickers_1097_Logo_2@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/2x/kickers_Ball@2x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/2x/kickers_Ball@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/2x/logo-dfl-dritte-liga@2x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/2x/logo-dfl-dritte-liga@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/2x/play_Button@2x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/2x/play_Button@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/3x/9020minuten@3x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/3x/9020minuten@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/3x/kickers_1097_Logo_2@3x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/3x/kickers_1097_Logo_2@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/3x/kickers_Ball@3x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/3x/kickers_Ball@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/3x/logo-dfl-dritte-liga@3x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/3x/logo-dfl-dritte-liga@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/3x/play_Button@3x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/3x/play_Button@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/9020minuten.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/9020minuten.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/kickers_1097_Logo_2.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/kickers_1097_Logo_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/kickers_Ball.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/kickers_Ball.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/logo-dfl-dritte-liga.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/logo-dfl-dritte-liga.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/play_Button.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/play_Button.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/0.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/1.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/0@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/0@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/1@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/1@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/2@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/2@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/3@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/3@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/4@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/4@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/5@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/5@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/6@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/6@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/7@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/7@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/8@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/8@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/9@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/9@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/0@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/0@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/1@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/1@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/2@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/2@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/3@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/3@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/4@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/4@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/5@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/5@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/6@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/6@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/7@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/7@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/8@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/8@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/9@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/9@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/4.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/5.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/6.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/7.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/8.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/9.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/1.png" afterPath="$PROJECT_DIR$/www/img/grafiken/1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/10.png" afterPath="$PROJECT_DIR$/www/img/grafiken/10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/11.png" afterPath="$PROJECT_DIR$/www/img/grafiken/11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/12.png" afterPath="$PROJECT_DIR$/www/img/grafiken/12.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/13.png" afterPath="$PROJECT_DIR$/www/img/grafiken/13.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/14.png" afterPath="$PROJECT_DIR$/www/img/grafiken/14.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/14@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/14@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/15.png" afterPath="$PROJECT_DIR$/www/img/grafiken/15.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/16.png" afterPath="$PROJECT_DIR$/www/img/grafiken/16.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/17.png" afterPath="$PROJECT_DIR$/www/img/grafiken/17.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/18.png" afterPath="$PROJECT_DIR$/www/img/grafiken/18.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/18@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/18@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/19.png" afterPath="$PROJECT_DIR$/www/img/grafiken/19.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/20@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/20@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/21.png" afterPath="$PROJECT_DIR$/www/img/grafiken/21.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/22.png" afterPath="$PROJECT_DIR$/www/img/grafiken/22.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/23@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/23@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/24.png" afterPath="$PROJECT_DIR$/www/img/grafiken/24.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/25.png" afterPath="$PROJECT_DIR$/www/img/grafiken/25.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/26.png" afterPath="$PROJECT_DIR$/www/img/grafiken/26.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/27.png" afterPath="$PROJECT_DIR$/www/img/grafiken/27.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/28.png" afterPath="$PROJECT_DIR$/www/img/grafiken/28.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/29.png" afterPath="$PROJECT_DIR$/www/img/grafiken/29.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/10@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/10@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/11@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/11@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/12@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/12@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/13@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/13@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/14@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/14@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/15@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/15@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/16@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/16@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/17@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/17@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/18@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/18@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/19@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/19@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/1@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/1@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/21@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/21@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/22@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/22@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/24@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/24@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/25@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/25@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/26@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/26@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/27@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/27@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/28@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/28@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/29@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/29@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/2@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/2@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/30@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/30@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/31@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/31@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/32@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/32@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/33@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/33@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/34@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/34@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/35@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/35@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/36@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/36@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/37@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/37@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/38@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/38@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/39@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/39@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/3@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/3@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/40@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/40@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/4@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/4@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/5@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/5@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/6@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/6@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/7@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/7@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/8@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/8@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/9@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/9@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/arena@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/arena@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/kader@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/kader@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/kader_2015@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/kader_2015@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/news@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/news@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/spielplan@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/spielplan@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/tabelle@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/tabelle@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/30.png" afterPath="$PROJECT_DIR$/www/img/grafiken/30.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/31.png" afterPath="$PROJECT_DIR$/www/img/grafiken/31.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/32.png" afterPath="$PROJECT_DIR$/www/img/grafiken/32.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/33.png" afterPath="$PROJECT_DIR$/www/img/grafiken/33.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/34.png" afterPath="$PROJECT_DIR$/www/img/grafiken/34.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/35.png" afterPath="$PROJECT_DIR$/www/img/grafiken/35.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/36.png" afterPath="$PROJECT_DIR$/www/img/grafiken/36.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/37.png" afterPath="$PROJECT_DIR$/www/img/grafiken/37.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/38.png" afterPath="$PROJECT_DIR$/www/img/grafiken/38.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/39.png" afterPath="$PROJECT_DIR$/www/img/grafiken/39.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/10@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/10@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/11@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/11@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/12@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/12@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/13@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/13@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/14@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/14@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/15@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/15@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/16@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/16@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/17@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/17@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/18@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/18@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/19@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/19@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/1@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/1@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/21@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/21@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/22@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/22@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/24@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/24@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/25@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/25@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/26@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/26@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/27@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/27@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/28@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/28@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/29@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/29@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/2@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/2@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/30@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/30@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/31@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/31@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/32@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/32@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/33@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/33@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/34@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/34@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/35@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/35@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/36@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/36@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/37@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/37@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/38@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/38@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/39@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/39@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/3@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/3@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/40@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/40@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/4@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/4@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/5@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/5@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/6@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/6@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/7@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/7@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/8@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/8@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/9@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/9@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/Aktionen@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/Aktionen@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/arena@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/arena@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/kader@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/kader@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/kader_2015@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/kader_2015@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/ladeball@3x.gif" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/ladeball@3x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/news@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/news@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/spielplan@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/spielplan@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/tabelle@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/tabelle@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/4.png" afterPath="$PROJECT_DIR$/www/img/grafiken/4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/40.png" afterPath="$PROJECT_DIR$/www/img/grafiken/40.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/4@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/4@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/5.png" afterPath="$PROJECT_DIR$/www/img/grafiken/5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/6.png" afterPath="$PROJECT_DIR$/www/img/grafiken/6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/7.png" afterPath="$PROJECT_DIR$/www/img/grafiken/7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/7@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/7@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/8.png" afterPath="$PROJECT_DIR$/www/img/grafiken/8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/8@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/8@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/9.png" afterPath="$PROJECT_DIR$/www/img/grafiken/9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/9@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/9@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/Abpfiff.png" afterPath="$PROJECT_DIR$/www/img/grafiken/Abpfiff.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/Anpfiff.png" afterPath="$PROJECT_DIR$/www/img/grafiken/Anpfiff.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/arena.png" afterPath="$PROJECT_DIR$/www/img/grafiken/arena.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/kader.png" afterPath="$PROJECT_DIR$/www/img/grafiken/kader.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/kader_2015.png" afterPath="$PROJECT_DIR$/www/img/grafiken/kader_2015.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/news.png" afterPath="$PROJECT_DIR$/www/img/grafiken/news.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/spielplan.png" afterPath="$PROJECT_DIR$/www/img/grafiken/spielplan.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/tabelle.png" afterPath="$PROJECT_DIR$/www/img/grafiken/tabelle.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/ionic.png" afterPath="$PROJECT_DIR$/www/img/ionic.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic.config.json" afterPath="$PROJECT_DIR$/ionic.config.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/ios.css" afterPath="$PROJECT_DIR$/www/css/ios.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/style.css" afterPath="$PROJECT_DIR$/www/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/InternetConnectionCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/InternetConnectionCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-animate/.bower.json" afterPath="$PROJECT_DIR$/www/lib/angular-animate/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-animate/angular-animate.js" afterPath="$PROJECT_DIR$/www/lib/angular-animate/angular-animate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-animate/angular-animate.min.js" afterPath="$PROJECT_DIR$/www/lib/angular-animate/angular-animate.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-animate/angular-animate.min.js.map" afterPath="$PROJECT_DIR$/www/lib/angular-animate/angular-animate.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-animate/bower.json" afterPath="$PROJECT_DIR$/www/lib/angular-animate/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-animate/package.json" afterPath="$PROJECT_DIR$/www/lib/angular-animate/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-sanitize/.bower.json" afterPath="$PROJECT_DIR$/www/lib/angular-sanitize/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-sanitize/angular-sanitize.js" afterPath="$PROJECT_DIR$/www/lib/angular-sanitize/angular-sanitize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-sanitize/angular-sanitize.min.js" afterPath="$PROJECT_DIR$/www/lib/angular-sanitize/angular-sanitize.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-sanitize/angular-sanitize.min.js.map" afterPath="$PROJECT_DIR$/www/lib/angular-sanitize/angular-sanitize.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-sanitize/bower.json" afterPath="$PROJECT_DIR$/www/lib/angular-sanitize/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-sanitize/package.json" afterPath="$PROJECT_DIR$/www/lib/angular-sanitize/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-ui-router/.bower.json" afterPath="$PROJECT_DIR$/www/lib/angular-ui-router/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-ui-router/CHANGELOG.md" afterPath="$PROJECT_DIR$/www/lib/angular-ui-router/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-ui-router/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/www/lib/angular-ui-router/CONTRIBUTING.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-ui-router/LICENSE" afterPath="$PROJECT_DIR$/www/lib/angular-ui-router/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-ui-router/README.md" afterPath="$PROJECT_DIR$/www/lib/angular-ui-router/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-ui-router/bower.json" afterPath="$PROJECT_DIR$/www/lib/angular-ui-router/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-ui-router/release/angular-ui-router.js" afterPath="$PROJECT_DIR$/www/lib/angular-ui-router/release/angular-ui-router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-ui-router/release/angular-ui-router.min.js" afterPath="$PROJECT_DIR$/www/lib/angular-ui-router/release/angular-ui-router.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-ui-router/src/common.js" afterPath="$PROJECT_DIR$/www/lib/angular-ui-router/src/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-ui-router/src/resolve.js" afterPath="$PROJECT_DIR$/www/lib/angular-ui-router/src/resolve.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-ui-router/src/state.js" afterPath="$PROJECT_DIR$/www/lib/angular-ui-router/src/state.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-ui-router/src/stateDirectives.js" afterPath="$PROJECT_DIR$/www/lib/angular-ui-router/src/stateDirectives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-ui-router/src/stateFilters.js" afterPath="$PROJECT_DIR$/www/lib/angular-ui-router/src/stateFilters.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-ui-router/src/urlMatcherFactory.js" afterPath="$PROJECT_DIR$/www/lib/angular-ui-router/src/urlMatcherFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-ui-router/src/urlRouter.js" afterPath="$PROJECT_DIR$/www/lib/angular-ui-router/src/urlRouter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-ui-router/src/view.js" afterPath="$PROJECT_DIR$/www/lib/angular-ui-router/src/view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-ui-router/src/viewDirective.js" afterPath="$PROJECT_DIR$/www/lib/angular-ui-router/src/viewDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-ui-router/src/viewScroll.js" afterPath="$PROJECT_DIR$/www/lib/angular-ui-router/src/viewScroll.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-youtube-mb/.bower.json" afterPath="$PROJECT_DIR$/www/lib/angular-youtube-mb/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-youtube-mb/README.md" afterPath="$PROJECT_DIR$/www/lib/angular-youtube-mb/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-youtube-mb/bower.json" afterPath="$PROJECT_DIR$/www/lib/angular-youtube-mb/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-youtube-mb/dist/angular-youtube-embed.min.js" afterPath="$PROJECT_DIR$/www/lib/angular-youtube-mb/dist/angular-youtube-embed.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-youtube-mb/package.json" afterPath="$PROJECT_DIR$/www/lib/angular-youtube-mb/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-youtube-mb/src/angular-youtube-embed.js" afterPath="$PROJECT_DIR$/www/lib/angular-youtube-mb/src/angular-youtube-embed.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular-youtube-mb/test/unit/get-id-from-url.coffee" afterPath="$PROJECT_DIR$/www/lib/angular-youtube-mb/test/unit/get-id-from-url.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/.bower.json" afterPath="$PROJECT_DIR$/www/lib/ionic/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/README.md" afterPath="$PROJECT_DIR$/www/lib/ionic/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/bower.json" afterPath="$PROJECT_DIR$/www/lib/ionic/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/css/ionic.css" afterPath="$PROJECT_DIR$/www/lib/ionic/css/ionic.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/css/ionic.min.css" afterPath="$PROJECT_DIR$/www/lib/ionic/css/ionic.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/js/ionic-angular.js" afterPath="$PROJECT_DIR$/www/lib/ionic/js/ionic-angular.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/js/ionic-angular.min.js" afterPath="$PROJECT_DIR$/www/lib/ionic/js/ionic-angular.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/js/ionic.bundle.js" afterPath="$PROJECT_DIR$/www/lib/ionic/js/ionic.bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/js/ionic.bundle.min.js" afterPath="$PROJECT_DIR$/www/lib/ionic/js/ionic.bundle.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/js/ionic.js" afterPath="$PROJECT_DIR$/www/lib/ionic/js/ionic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/js/ionic.min.js" afterPath="$PROJECT_DIR$/www/lib/ionic/js/ionic.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_bar.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_bar.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_button-bar.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_button-bar.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_button.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_button.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_checkbox.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_checkbox.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_form.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_form.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_grid.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_grid.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_items.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_items.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_menu.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_menu.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_mixins.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_mixins.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_popover.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_popover.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_radio.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_radio.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_range.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_range.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_refresher.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_refresher.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_scaffolding.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_scaffolding.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_slide-box.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_slide-box.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_tabs.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_tabs.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_toggle.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_toggle.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_type.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_type.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_variables.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/ionic.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/ionic.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/ionicons/_ionicons-font.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/ionicons/_ionicons-font.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/ionicons/_ionicons-icons.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/ionicons/_ionicons-icons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/ionicons/_ionicons-variables.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/ionicons/_ionicons-variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/ionicons/ionicons.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/ionicons/ionicons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/youtube/youtube_api.js" afterPath="$PROJECT_DIR$/www/lib/youtube/youtube_api.js" />
     </list>
     <ignored path="KickersApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -109,28 +231,8 @@
       <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="712">
-              <caret line="83" column="65" lean-forward="true" selection-start-line="83" selection-start-column="65" selection-end-line="83" selection-end-column="65" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="24" column="48" lean-forward="false" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdvertisementCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/controller/AdvertisementCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="21" lean-forward="true" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+            <state relative-caret-position="497">
+              <caret line="75" column="88" selection-start-line="75" selection-start-column="88" selection-end-line="75" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -139,8 +241,8 @@
       <file leaf-file-name="InternetConnectionCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/controller/InternetConnectionCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+            <state relative-caret-position="75">
+              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -149,8 +251,8 @@
       <file leaf-file-name="youtube_api.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/lib/youtube/youtube_api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="30">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -161,8 +263,8 @@
       <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+            <state relative-caret-position="720">
+              <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -172,7 +274,7 @@
         <entry file="file://$PROJECT_DIR$/ionic.config.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="15" selection-end-column="4" />
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="15" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -182,7 +284,7 @@
         <entry file="file://$PROJECT_DIR$/bower.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -191,18 +293,20 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-              <folding />
+            <state relative-caret-position="480">
+              <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+              <folding>
+                <marker date="1499864080000" expanded="true" signature="142:196" ph="{&quot;angular-youtube-embed&quot;: &quot;^1.3.0&quot;...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".bowerrc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.bowerrc">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="525">
+              <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -286,7 +390,6 @@
         <option value="$PROJECT_DIR$/plugins/android.json" />
         <option value="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/platforms/ios/ios.json" />
-        <option value="$PROJECT_DIR$/www/js/controller/AppCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/controller/SettingsCtrl.js" />
         <option value="$PROJECT_DIR$/www/templates/matchcenter.html" />
         <option value="$PROJECT_DIR$/www/js/directive/CountdownDirective.js" />
@@ -297,13 +400,14 @@
         <option value="$PROJECT_DIR$/www/js/controller/HomeCtrl.js" />
         <option value="$PROJECT_DIR$/platforms/ios/Podfile" />
         <option value="$PROJECT_DIR$/ionic.config.json" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/www/js/controller/AdvertisementCtrl.js" />
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/www/lib/youtube/widget_api.js" />
         <option value="$PROJECT_DIR$/www/lib/youtube/youtube_api.js" />
         <option value="$PROJECT_DIR$/www/js/app.js" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/js/controller/AdvertisementCtrl.js" />
+        <option value="$PROJECT_DIR$/www/js/controller/AppCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/controller/InternetConnectionCtrl.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/config.xml" />
@@ -321,27 +425,43 @@
     </gulpfiles>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
   <component name="ProjectFrameBounds">
     <option name="width" value="2560" />
     <option name="height" value="1440" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
-      <showMembers ProjectPane="true" />
+      <showMembers ProjectPane="false" />
       <showModules />
       <showLibraryContents />
       <hideEmptyPackages />
       <abbreviatePackageNames />
       <autoscrollToSource />
       <autoscrollFromSource />
-      <sortByType ProjectPane="true" />
+      <sortByType ProjectPane="false" />
       <manualOrder />
       <foldersAlwaysOnTop value="false" />
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Project Files" />
+        <subPane subId="Default" />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -349,10 +469,6 @@
               <option name="myItemId" value="KickersApp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KickersApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -360,7 +476,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="KickersApp" />
+              <option name="myItemId" value="fckickerswue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -374,7 +490,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="KickersApp" />
+              <option name="myItemId" value="fckickerswue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -382,7 +498,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -392,15 +508,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="KickersApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="fckickerswue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -410,19 +518,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="KickersApp" />
+              <option name="myItemId" value="fckickerswue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="directive" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -432,19 +532,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="KickersApp" />
+              <option name="myItemId" value="fckickerswue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="splash" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -454,7 +554,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="fckickerswue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="KickersApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fckickerswue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -462,39 +584,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KickersApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KickersApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="platforms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KickersApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KickersApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="platforms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ios" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
+        <option name="show-excluded-files" value="false" />
       </pane>
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
@@ -505,7 +596,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="editor.config.accepted" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/kickers" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -531,8 +622,8 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="FullScreen" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="JSON" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -571,20 +662,7 @@
     <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
       <envs />
@@ -613,7 +691,7 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
+      <command value="run-script" />
       <scripts />
       <node-interpreter value="project" />
       <envs />
@@ -655,6 +733,9 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",SHOW_CLASSES,ALPHA_COMPARATOR,HIDE_INHERITED" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -709,11 +790,13 @@
       <workItem from="1490719701160" duration="1248000" />
       <workItem from="1491322483168" duration="3394000" />
       <workItem from="1491466133261" duration="3345000" />
+      <workItem from="1499772995110" duration="1657000" />
+      <workItem from="1499845087513" duration="2951000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103634000" />
+    <option name="totallyTimeSpent" value="108242000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -729,37 +812,27 @@
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23828278" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.37331215" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20378457" sideWeight="0.6266878" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3350365" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19574636" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="736" y="87" width="497" height="1360" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3258786" sideWeight="0.37331215" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20378457" sideWeight="0.6266878" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32285115" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24931075" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23795621" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20378457" sideWeight="0.6266878" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32285115" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2621951" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19589257" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43892047" sideWeight="0.48768863" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -827,42 +900,39 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/platforms/android/android.json" />
-    <entry file="file://$PROJECT_DIR$/platforms/android/onesignal-cordova-plugin/fwk-build-extras-onesignal.gradle" />
-    <entry file="file://$PROJECT_DIR$/platforms/platforms.json" />
     <entry file="file://$PROJECT_DIR$/platforms/ios/ios.json" />
     <entry file="file://$PROJECT_DIR$/www/js/controller/SettingsCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-687">
-          <caret line="52" column="14" lean-forward="false" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/service/AdvertisementService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-155">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/werbepartner.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/menu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1664">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/service/MatchcenterService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -917,11 +987,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/android/splash/drawable-port-ldpi-screen.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/android/splash/drawable-port-hdpi-screen.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -935,38 +1000,37 @@
     <entry file="file://$PROJECT_DIR$/www/js/controller/ImpressumCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/news.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/matchcenter.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="49" />
+          <caret line="8" column="49" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controller/NewsCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="87" column="54" lean-forward="true" selection-start-line="87" selection-start-column="10" selection-end-line="87" selection-end-column="54" />
+          <caret line="87" column="54" selection-start-line="87" selection-start-column="10" selection-end-line="87" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/fetch.json" />
     <entry file="file://$PROJECT_DIR$/plugins/ios.json" />
-    <entry file="file://$PROJECT_DIR$/plugins/android.json" />
     <entry file="file://$PROJECT_DIR$/www/js/directive/CountdownDirective.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
-          <caret line="45" column="44" lean-forward="true" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
+          <caret line="45" column="44" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -974,31 +1038,21 @@
     <entry file="file://$PROJECT_DIR$/www/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
-          <caret line="120" column="61" lean-forward="false" selection-start-line="120" selection-start-column="49" selection-end-line="120" selection-end-column="61" />
+          <caret line="120" column="61" selection-start-line="120" selection-start-column="49" selection-end-line="120" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controller/MatchCenterCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
-          <caret line="155" column="19" lean-forward="false" selection-start-line="155" selection-start-column="15" selection-end-line="155" selection-end-column="19" />
-          <folding />
+          <caret line="155" column="19" selection-start-line="155" selection-start-column="15" selection-end-line="155" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controller/HomeCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2520">
-          <caret line="168" column="26" lean-forward="true" selection-start-line="168" selection-start-column="26" selection-end-line="168" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controller/AppCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2790">
-          <caret line="186" column="36" lean-forward="true" selection-start-line="186" selection-start-column="36" selection-end-line="186" selection-end-column="36" />
-          <folding />
+          <caret line="168" column="26" selection-start-line="168" selection-start-column="26" selection-end-line="168" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1006,49 +1060,67 @@
     <entry file="file://$PROJECT_DIR$/ionic.project">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/lib/youtube/widget_api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2385">
-          <caret line="161" column="222" lean-forward="false" selection-start-line="161" selection-start-column="222" selection-end-line="161" selection-end-column="222" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
+          <caret line="161" column="222" selection-start-line="161" selection-start-column="222" selection-end-line="161" selection-end-column="222" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
-          <caret line="75" column="6" lean-forward="false" selection-start-line="75" selection-start-column="6" selection-end-line="75" selection-end-column="6" />
-          <folding />
+          <caret line="75" column="6" selection-start-line="75" selection-start-column="6" selection-end-line="75" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/lib/ionic/bower.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.bowerrc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controller/AppCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="44" column="37" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controller/AdvertisementCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+    <entry file="file://$PROJECT_DIR$/www/lib/youtube/youtube_api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        <state relative-caret-position="30">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic.config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="15" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -1056,65 +1128,83 @@
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic.config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="15" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/lib/youtube/youtube_api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="24" column="48" lean-forward="false" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+        <state relative-caret-position="525">
+          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controller/AdvertisementCtrl.js">
+    <entry file="file://$PROJECT_DIR$/plugins/android.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="21" lean-forward="true" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+        <state relative-caret-position="135">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+        <state relative-caret-position="480">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+          <folding>
+            <marker date="1499864080000" expanded="true" signature="142:196" ph="{&quot;angular-youtube-embed&quot;: &quot;^1.3.0&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/ios.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="1147" column="0" selection-start-line="1147" selection-start-column="0" selection-end-line="1147" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="478" column="30" selection-start-line="478" selection-start-column="26" selection-end-line="478" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controller/InternetConnectionCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+        <state relative-caret-position="75">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/android/splash/drawable-port-ldpi-screen.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/android/icon/drawable-hdpi-icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="83" column="65" lean-forward="true" selection-start-line="83" selection-start-column="65" selection-end-line="83" selection-end-column="65" />
+        <state relative-caret-position="497">
+          <caret line="75" column="88" selection-start-line="75" selection-start-column="88" selection-end-line="75" selection-end-column="88" />
           <folding />
         </state>
       </provider>

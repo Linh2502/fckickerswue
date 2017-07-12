@@ -14,7 +14,7 @@
         $ionicHistory.nextViewOptions({
           disableAnimate: true
         });
-        if (navigator.connection.type == "none" || navigator.connection.type == "unknown") {
+        if (!navigator.onLine) {d
           $state.go('app.error');
         } else {
           if (ionic.Platform.isIOS()) {
