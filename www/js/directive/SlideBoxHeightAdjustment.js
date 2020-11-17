@@ -11,7 +11,7 @@ angular.module('directive.slideboxheight', [])
       require: ['^ionSlideBox'],
       link: function(scope, elem, attrs, slider) {
         scope.$watch(function() {
-          return scope.$eval(attrs.dynamicSlides).length;
+          return scope.$eval(attrs.dynamicSlides);
         }, function(val) {
           slider[0].__slider.update();
         });
@@ -29,7 +29,6 @@ angular.module('directive.slideboxheight', [])
           if($rootScope.isLive){
             $timeout(function(){
               newHeight = $('.slider-slide', elem).eq(val).innerHeight();
-              console.log(newHeight);
               if (newHeight) {
                 elem.animate({
                   height: newHeight + 'px'
@@ -37,13 +36,14 @@ angular.module('directive.slideboxheight', [])
               }
             }, 1500);
           }else{
-            newHeight = $('.slider-slide', elem).eq(val).innerHeight();
-            console.log(newHeight);
-            if (newHeight) {
-              elem.animate({
-                height: newHeight + 'px'
-              }, 500);
-            }
+            $timeout(function(){
+              newHeight = $('.slider-slide', elem).eq(val).innerHeight();
+              if (newHeight) {
+                elem.animate({
+                  height: newHeight + 'px'
+                }, 500);
+              }
+            }, 1500);
           }
         });
       }

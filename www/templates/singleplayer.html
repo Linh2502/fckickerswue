@@ -6,19 +6,19 @@
 <ion-view>
   <ion-content class="has-subheader">
     <ion-slide-box show-pager="false" auto-play="false" does-continue="true" delegate-handle="slide-box" active-slide="currentPlayer">
-      <ion-slide ng-repeat="player in playerTeam">
+      <ion-slide ng-repeat="player in spVM.playerTeam">
         <div>
           <img ng-src="{{player.image}}" class="set-max-width"/>
           <div class="col singleplayer-image-background">
             <div class="col custom-title singleplayer-div">
               <div class="row remove-col-padding">
-                <div class="singleplayer-caret-left" ng-click="previousPlayer()"><i class="fa fa-caret-left singleplayer-caret-size"></i></div>
+                <div class="singleplayer-caret-left" ng-click="spVM.previousPlayer()"><i class="fa fa-caret-left singleplayer-caret-size"></i></div>
                 <div class="singleplayer-trikot-div">
                   <img ng-src="{{player.trikotno}}" class="singleplayer-trikot-height">
                 </div>
-                <div class="singleplayer-title">{{player.title}}</div>
+                <div class="singleplayer-title" ng-bind-html="player.title"></div>
                 <div class="singleplayer-trikot-div"></div>
-                <div class="singleplayer-caret-right" ng-click="nextPlayer()"><i class="fa fa-caret-right singleplayer-caret-size"></i></div>
+                <div class="singleplayer-caret-right" ng-click="spVM.nextPlayer()"><i class="fa fa-caret-right singleplayer-caret-size"></i></div>
               </div>
             </div>
           </div>
@@ -30,31 +30,31 @@
               <div class="row remove-col-padding singleplayer-even-background border-top-bottom">
                 <div class="col col-10"></div>
                 <div class="col col-40">Geboren am</div>
-                <div class="col col-50 custom-font-bold">{{player.birthday}}</div>
+                <div class="col col-50 custom-font-bold" ng-bind-html="player.birthday"></div>
               </div>
               <div class="singleplayer-empty-column"></div>
               <div class="row remove-col-padding singleplayer-odd-background border-top-bottom">
                 <div class="col col-10"></div>
                 <div class="col col-40">Grösse</div>
-                <div class="col col-50 custom-font-bold">{{player.height}}</div>
+                <div class="col col-50 custom-font-bold" ng-bind-html="player.height"></div>
               </div>
               <div class="singleplayer-empty-column"></div>
               <div class="row remove-col-padding singleplayer-even-background border-top-bottom">
                 <div class="col col-10"></div>
                 <div class="col col-40">Nationalität</div>
-                <div class="col col-50 custom-font-bold">{{player.nationality}}</div>
+                <div class="col col-50 custom-font-bold" ng-bind-html="player.nationality"></div>
               </div>
               <div class="singleplayer-empty-column"></div>
               <div class="row remove-col-padding singleplayer-odd-background border-top-bottom">
                 <div class="col col-10"></div>
                 <div class="col col-40">Position</div>
-                <div class="col col-50 custom-font-bold">{{playerPosition}}</div>
+                <div class="col col-50 custom-font-bold" ng-bind-html="playerPosition"></div>
               </div>
               <div class="singleplayer-empty-column"></div>
               <div class="row remove-col-padding singleplayer-even-background border-top-bottom">
                 <div class="col col-10"></div>
                 <div class="col col-40">Bei den Kickers seit</div>
-                <div class="col col-50 custom-font-bold">{{player.kicker_since}}</div>
+                <div class="col col-50 custom-font-bold" ng-bind-html="player.kicker_since"></div>
               </div>
               <div class="singleplayer-empty-column"></div>
               <div class="row remove-col-padding singleplayer-odd-background">

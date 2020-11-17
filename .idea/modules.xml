@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$USER_HOME$/WebstormProjects/KickersApp/.idea/KickersApp.iml" filepath="$USER_HOME$/WebstormProjects/KickersApp/.idea/KickersApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/fckickerswue.iml" filepath="$PROJECT_DIR$/.idea/fckickerswue.iml" />
     </modules>
   </component>
 </project>

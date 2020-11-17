@@ -1,125 +1,193 @@
 /**
  * Created by Linh on 02.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
+ *
+ * status: 28.07.2016 6:10 PM
  */
-angular.module('module.matchcenter', [])
-  .controller('MatchCenterCtrl', function($rootScope, $scope, $ionicModal, $timeout, MatchcenterService, $ionicSideMenuDelegate, $ionicPopup, $ionicSlideBoxDelegate, $stateParams, $ionicScrollDelegate){
+(function () {
+  'use strict';
+
+  angular
+    .module('module.matchcenter', [])
+    .controller('MatchCenterCtrl', MatchCenterController);
+
+  MatchCenterController.$inject = ['$rootScope', '$timeout', 'MatchcenterService', '$ionicSideMenuDelegate', '$ionicPopup', '$ionicSlideBoxDelegate', '$stateParams', '$ionicScrollDelegate', '$q'];
+
+  function MatchCenterController($rootScope, $timeout, MatchcenterService, $ionicSideMenuDelegate, $ionicPopup, $ionicSlideBoxDelegate, $stateParams, $ionicScrollDelegate, $q) {
     $ionicSideMenuDelegate.canDragContent(true);
-    $scope.matchCenterFeed = null;
-    $scope.liveTickerFeed = [];
-    $scope.detailsFeed = [];
-    $scope.videosFeed = [];
-    $scope.tableFeed = [];
-    $scope.html = [];
-    $scope.isLive = false;
-    $scope.enableLiveTickerInfiniteScroll = false;
-    var showContent = false;
+    var vm = this;
+    vm.matchCenterFeed = false;
+    vm.liveTickerFeed = false;
+    vm.detailsFeed = [];
+    vm.videosFeed = false;
+    vm.tableFeed = null;
+    vm.html = [];
+    vm.isLive = false;
+    vm.enableLiveTickerInfiniteScroll = false;
+    vm.showTable = false;
 
-    $scope.$on('$ionicView.beforeEnter', function() {
-      $ionicSideMenuDelegate.toggleLeft(false);
+    vm._init = _init;
+    vm.playVideo = playVideo;
+    vm.previousView = previousView;
+    vm.nextView = nextView;
+    vm.freezeScroll = freezeScroll;
+    vm.disableSwipe = disableSwipe;
+    vm.loadLiveTicker = loadLiveTicker;
+    vm.loadVideosData = loadVideosData;
+    vm.loadTableData = loadTableData;
+    vm.refresh = refresh;
+
+    function _init() {
+      vm.showTable = false;
       $rootScope.$broadcast('show_loader');
-      $('#spielbericht').hide();
-      $('#live').hide();
-      $('#kickersTV').hide();
-      $('#tabelle').hide();
-      MatchcenterService.refreshLiveTicker();
-    });
+      MatchcenterService.refreshLiveTicker()
+        .then(function (success) {
+          vm.matchCenterFeed = success;
+          vm.detailsFeed = success.data.details;
 
-    $rootScope.$on('show_content_matchcenter', function() {
-      $scope.detailsFeed = MatchcenterService.getDetailsData();
-      setLiveTickerFeed(MatchcenterService.getLiveTickerData());
-      setVideosFeed(MatchcenterService.getVideosData());
-      showContent = true;
-      console.log("request success matchcenter");
-    });
+          if ($stateParams.game != null) {
+            if ($stateParams.game.isLive) {
+              vm.isLive = true;
+              $ionicSlideBoxDelegate.$getByHandle('matchcenter').slide(2);
+              $('#standard').hide();
+              refreshLiveTickerFeed();
+            } else {
+              $('#spinner').hide();
+              vm.isLive = false;
+              $ionicSlideBoxDelegate.$getByHandle('matchcenter').slide(1);
+              $ionicSlideBoxDelegate.$getByHandle('matchcenter').slide(0);
+              setLiveTickerFeed(vm.matchCenterFeed.data.liveticker);
+            }
+          } else {
+            $('#spinner').hide();
+            vm.isLive = false;
+            $ionicSlideBoxDelegate.$getByHandle('matchcenter').slide(1);
+            $ionicSlideBoxDelegate.$getByHandle('matchcenter').slide(0);
+            setLiveTickerFeed(vm.matchCenterFeed.data.liveticker);
+          }
 
-    $scope.$on('$ionicView.afterEnter', function(){
-      $('#tabelle').show();
-      $('#spielbericht').show();
-      hideLoader();
-    });
-
-    function setLiveTickerFeed(liveticker){
-      $scope.liveTickerFeed = [];
-      for(var i = 0; i < liveticker.item.length; i++){
-        if(i < liveticker.item.length){
-          $scope.liveTickerFeed.push({
-            minute: checkIfHasValue(liveticker.item[i].minute), type: checkIfHasValue(liveticker.item[i].type), text: liveticker.item[i].text
-          });
-        }
-      }
+          $rootScope.$broadcast('hide_loader');
+        });
     }
 
-    function checkIfHasValue(value){
-      if(typeof value === 'object'){
+    function setLiveTickerFeed(liveticker) {
+      var defer = $q.defer();
+      vm.liveTickerFeed = [];
+      if(liveticker) {
+        for (var i = 0; i < liveticker.item.length; i++) {
+          var minute = liveticker.item[i].minute;
+          var type = liveticker.item[i].type;
+          if(!minute) {
+            minute = minute.replace("<![CDATA[", "").replace("]]>", "");
+          }
+          if(!type) {
+            type = type.replace("<![CDATA[", "").replace("]]>", "");
+          }
+
+          vm.liveTickerFeed.push({
+            minute: checkIfHasValue(minute),
+            type: checkIfHasValue(type),
+            text: liveticker.item[i].text
+          });
+          if(i+1 === liveticker.item.length) {
+            defer.resolve();
+          }
+        }
+      } else {
+        defer.resolve();
+      }
+
+      return defer.promise;
+    }
+
+    function checkIfHasValue(value) {
+      if (typeof value === 'object') {
         return null;
-      }else {
+      } else {
         return value;
       }
     }
 
-    function setVideosFeed(videos){
-      $scope.videosFeed = [];
-      if(videos == undefined){
-        $scope.videosFeed = null;
-      }else{
-        if(!videos.item.length){
-          $scope.videosFeed.push(videos.item);
-        }else{
-          for(var i = 0; i < videos.item.length; i++){
-            $scope.videosFeed.push(videos.item[i]);
+    function setVideosFeed(videos) {
+      var defer = $q.defer();
+      vm.videosFeed = [];
+      if (videos == undefined) {
+        vm.videosFeed = null;
+        defer.resolve();
+      } else {
+        if (!videos.item.length) {
+          videos.item.videoLink = '';
+          vm.videosFeed.push(videos.item);
+          defer.resolve();
+        } else {
+          for (var i = 0; i < videos.item.length; i++) {
+            videos.item[i].videoLink = '';
+            vm.videosFeed.push(videos.item[i]);
+            if(i+1 === videos.item.length) {
+              defer.resolve();
+            }
           }
         }
       }
+      return defer.promise;
     }
 
-    function setTableFeed(tables){
-      $scope.tableFeed = [];
-      for(var i = 0; i < tables.row.length; i++){
-        $scope.tableFeed.push(tables.row[i]);
+    function setTableFeed(tables) {
+      var defer = $q.defer();
+      vm.showTable = true;
+      vm.tableFeed = [];
+      for (var i = 0; i < tables.row.length; i++) {
+        vm.tableFeed.push(tables.row[i]);
+        if(i === tables.row.length)
+          defer.resolve();
       }
+      return defer.promise;
     }
 
-    function refreshLiveTickerFeed(){
-      if($scope.isLive){
-        $timeout(function(){
+    function refreshLiveTickerFeed() {
+      if (vm.isLive) {
+        $timeout(function () {
           $('#spinner').hide();
           $('#live').fadeTo(1000, 1);
         }, 1500);
-        MatchcenterService.refreshLiveTicker();
-        $scope.liveTickerFeed = [];
-        $scope.detailsFeed = [];
-        $scope.detailsFeed = MatchcenterService.getDetailsData();
-        setLiveTickerFeed(MatchcenterService.getLiveTickerData());
-        $timeout(function(){
-          $('#spinner').show();
-          $('#live').fadeTo(1000, 0.25);
-          refreshLiveTickerFeed();
-        }, 30000);
+        MatchcenterService.refreshLiveTicker()
+          .then(function (success) {
+            vm.detailsFeed = success.data.details;
+            vm.liveTickerFeed = [];
+            setLiveTickerFeed(success.data.liveticker)
+                .then(function(success) {
+                    $timeout(function () {
+                        $('#spinner').show();
+                        $('#live').fadeTo(1000, 0.25);
+                        refreshLiveTickerFeed();
+                    }, 10000);
+                });
+          });
       }
     }
 
-    $scope.playVideo = function(player, video){
-      if(navigator.connection.type == Connection.NONE || navigator.connection.type == Connection.UNKNOWN) {
+    function playVideo(player, video) {
+      video.videoLink = video.link;
+      if (navigator.connection.type == Connection.NONE || navigator.connection.type == Connection.UNKNOWN) {
         $ionicPopup.alert({
           title: "Keine Internetverbindung",
           content: "Beim Herstellen der Verbindung zum Würzburger Kickers - Server ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
-        }).then(function(res) {
+        }).then(function (res) {
         });
-      }else{
-        if(window.localStorage['WifiEnabled'] == 'true'){
-          if(navigator.connection.type == Connection.WIFI){
+      } else {
+        if (window.localStorage['WifiEnabled'] == 'true') {
+          if (navigator.connection.type == Connection.WIFI) {
             $('#matchcenter-' + video.id).hide();
             $('.video-z-index').show();
             player.playVideo();
-          }else{
+          } else {
             $ionicPopup.alert({
               title: "Keine WiFi-Verbindung vorhanden",
               content: "Sie sind nicht mit dem WiFi verbunden. Um Videos dennoch abspielen zu können, überprüfen Sie erneut Ihre Einstellungen."
-            }).then(function(res) {
+            }).then(function (res) {
             });
           }
-        }else{
+        } else {
           $('#matchcenter-' + video.id).hide();
           $('.video-z-index').show();
           player.playVideo();
@@ -127,107 +195,69 @@ angular.module('module.matchcenter', [])
       }
     }
 
-    $scope.previousView = function() {
-      if(!$scope.isLive) {
-        $ionicSlideBoxDelegate.previous();
-        loadContent($ionicSlideBoxDelegate.currentIndex());
-      }
-    }
-
-    $scope.nextView = function() {
-      if(!$scope.isLive) {
-        $ionicSlideBoxDelegate.next();
-        loadContent($ionicSlideBoxDelegate.currentIndex());
-      }
-    }
-
-    $timeout(function () {
-      $('.ex-link').click(function () {
-        var url = $(this).attr('href');
-        window.open(encodeURI(url), '_system', 'location=yes');
-        return false;
-      })
-    })
-
-    $scope.loadLiveTicker = function() {
-      $('#spinner').show();
-      $('#live').fadeTo(1000, 0.25);
-      $timeout(function(){
-        setLiveTickerFeed(MatchcenterService.getLiveTickerData());
-        $('#spinner').hide();
-        $('#live').fadeTo(1000, 1);
-      }, 1000);
-      refreshLiveTickerFeed();
-    }
-
-    $scope.loadDetailsFeed = function() {
+    function freezeScroll() {
       $ionicScrollDelegate.freezeAllScrolls(true);
-      $('#live').show();
-      $('#kickersTV').show();
-      $scope.detailsFeed = MatchcenterService.getDetailsData();
-      $timeout(function(){
+      $timeout(function () {
         $ionicScrollDelegate.freezeAllScrolls(false);
       }, 1000);
     }
 
-    $scope.loadVideosFeed = function() {
-      $ionicScrollDelegate.freezeAllScrolls(true);
-      setVideosFeed(MatchcenterService.getVideosData());
-      $timeout(function(){
-        $ionicScrollDelegate.freezeAllScrolls(false);
-      }, 1000);
-    }
-
-    $scope.loadTableFeed = function() {
-      $ionicScrollDelegate.freezeAllScrolls(true);
-      setTableFeed(MatchcenterService.getTableData());
-      $timeout(function(){
-        $ionicScrollDelegate.freezeAllScrolls(false);
-      }, 1000);
-    }
-
-    $scope.disableSwipe = function() {
-      $ionicSlideBoxDelegate.enableSlide(false);
-    };
-
-    function loadContent(index){
-      if(index == 0 || index == 1){
-        $scope.loadDetailsFeed();
-      }else if(index == 2){
-        $scope.loadLiveTicker();
-      }else if(index == 3){
-        $scope.loadVideosFeed();
-      }else if(index == 4){
-        $scope.loadTableFeed();
-      }
-    }
-
-    function hideLoader(){
-      if(showContent){
-        $rootScope.$broadcast('hide_loader');
-        if($stateParams.game != null){
-          if($stateParams.game.isLive){
-            $scope.isLive = true;
-            $rootScope.isLive = true;
-            $ionicSlideBoxDelegate.$getByHandle('matchcenter').slide(2);
-            $('#standard').hide();
-            refreshLiveTickerFeed();
-          }else{
+    function loadLiveTicker() {
+      if(vm.liveTickerFeed) {
+        $('#spinner').show();
+        setLiveTickerFeed(vm.matchCenterFeed.data.liveticker)
+          .then(function(success) {
             $('#spinner').hide();
-            $scope.isLive = false;
-            $ionicSlideBoxDelegate.$getByHandle('matchcenter').slide(1);
-            $ionicSlideBoxDelegate.$getByHandle('matchcenter').slide(0);
-          }
-        }else{
-          $('#spinner').hide();
-          $scope.isLive = false;
-          $ionicSlideBoxDelegate.$getByHandle('matchcenter').slide(1);
-          $ionicSlideBoxDelegate.$getByHandle('matchcenter').slide(0);
-        }
-      }else{
-        $timeout(function(){
-          hideLoader();
-        }, 1000);
+          }, function(error) {
+          });
       }
     }
-  });
+
+    function loadVideosData() {
+      vm.showTable = true;
+      if(!vm.videosFeed) {
+        setVideosFeed(vm.matchCenterFeed.data.videos)
+          .then(function(success) {
+          }, function(error) {
+          });
+      }
+    }
+
+    function loadTableData() {
+      vm.showTable = true;
+      if(!vm.tableFeed) {
+        setTableFeed(vm.matchCenterFeed.data.table)
+          .then(function(success) {
+          }, function(error) {
+          });
+      }
+    }
+
+    function previousView() {
+      if (!vm.isLive) {
+        $ionicSlideBoxDelegate.previous();
+      }
+    }
+
+    function nextView() {
+      if (!vm.isLive) {
+        $ionicSlideBoxDelegate.next();
+      }
+    }
+
+    function disableSwipe() {
+      $ionicSlideBoxDelegate.enableSlide(false);
+    }
+
+    function refresh() {
+      MatchcenterService.refreshLiveTicker()
+        .then(function (success) {
+          vm.matchCenterFeed = success;
+          vm.detailsFeed = success.data.details;
+          $rootScope.$broadcast('scroll.refreshComplete');
+        })
+    }
+
+    vm._init();
+  }
+})();

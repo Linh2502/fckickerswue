@@ -1,43 +1,48 @@
 <!--
     Created by Linh on 02.09.15.
     Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
-    - final -
+
+    status: 14.07.2016 1:58 PM
 -->
 <ion-view hide-back-button="true">
-  <ion-content class="has-subheader">
+  <ion-content class="has-logo-subheader">
     <div class="col">
       <div class="col custom-font-regular font-size">
-        <div id="success" class="display-none">
+        <div ng-show="newsLetterVM.showSuccess">
           <div class="custom-font-bold">Vielen Dank für Ihre Anmeldung.</div>
           <div>Sie erhalten in Kürze eine E-Mail um Ihre Anmeldung zu bestätigen.</div>
         </div>
-        <form name="subscriptionForm" novalidate="" ng-submit="subscribe(subscriptionForm)" id="form">
+        <form ng-show="newsLetterVM.showSubscriptionForm" name="subscriptionForm" novalidate="" ng-submit="newsLetterVM.subscribe(subscriptionForm)">
           <div class="row display-table">
             <p>Anrede</p>
-            <div class="row remove-col-padding" ng-init="gender=''">
-              <label class="custom-col-33">
-                <input class="tabelle-margin-right font-size" type="radio" name="gender" ng-model="gender" value="Herr">Herr
-              </label>
-              <label class="custom-col-33">
-                <input class="tabelle-margin-right font-size" type="radio" name="gender" ng-model="gender" value="Frau">Frau
-              </label>
+            <div class="row remove-col-padding" ng-init="newsLetterVM.gender='Herr'">
+              <div class="col-50">
+                <label>
+                  <input class="font-size" type="radio" name="gender" ng-model="newsLetterVM.gender" value="Herr">Herr
+                </label>
+              </div>
+              <div class="col-50">
+                <label>
+                  <input class="font-size" type="radio" name="gender" ng-model="newsLetterVM.gender" value="Frau">Frau
+                </label>
+              </div>
             </div>
           </div>
           <div class="col"></div>
           <div class="row display-table font-size">
             <label>
               <p>Vorname</p>
-              <input class="newsletter-input-text" type="text" name="surname" ng-model="surname" value="">
+              <input class="newsletter-input-text" type="text" name="surname" ng-model="newsLetterVM.surname" value="">
             </label>
             <div class="row spiel-feed-matchcenter-emptyheight"></div>
             <label>
               <p>Nachname</p>
-              <input class="newsletter-input-text" type="text" name="name" ng-model="name" value="">
+              <input class="newsletter-input-text" type="text" name="name" ng-model="newsLetterVM.name" value="">
             </label>
             <div class="row spiel-feed-matchcenter-emptyheight"></div>
             <label>
               <p>E-Mail*</p>
-              <input class="newsletter-input-text" name="email" type="email" ng-model="email" required>
+              <input class="newsletter-input-text" name="email" type="email" ng-model="newsLetterVM.email" required>
             </label>
             <label>
               <p ng-show="subscriptionForm.email.$error.required" id="emailError" class="newsletter-error font-size">Bitte geben Sie eine gültige E-Mail-Adresse ein!</p>
@@ -48,7 +53,7 @@
                 Ja, bitte senden Sie mir den Newsletter kostenlos an die oben genannte E-Mail-Adresse
               </div>
               <div class="settings-toggle-div">
-                <ion-toggle class="settings-toggle" name="subscribe" ng-model="permission" ng-true-value="true" ng-false-value="false" required>
+                <ion-toggle class="settings-toggle" name="subscribe" ng-model="newsLetterVM.permission" ng-true-value="true" ng-false-value="false" required>
                 </ion-toggle>
               </div>
             </label>

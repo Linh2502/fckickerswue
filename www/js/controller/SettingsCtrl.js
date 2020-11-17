@@ -2,126 +2,140 @@
  * Created by Linh on 02.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
  *
- * - final -
+ * status: 14.07.2016 2:26 PM
  */
-angular.module('module.settings', [])
-  .controller('SettingsCtrl', function($scope, $ionicModal, $timeout, $ionicSideMenuDelegate){
+(function () {
+  'use strict';
+
+  angular
+    .module('module.settings', ['ionic'])
+    .controller('SettingsCtrl', SettingsController);
+
+  SettingsController.$inject = ['$timeout', '$ionicSideMenuDelegate'];
+
+  function SettingsController($timeout, $ionicSideMenuDelegate) {
     $ionicSideMenuDelegate.canDragContent(true);
-    $scope.$on('$ionicView.beforeEnter', function() {
-      if(window.localStorage['LiveTickerChannelSubscription'] == 'true'){
-        $scope.goals = { checked: true };
-      }else {
-        $scope.goals = { checked: false };
-      }
+    var vm = this;
+    vm.goals = window.localStorage['LiveTickerChannelSubscription'];
+    vm.game = window.localStorage['GameChannelSubscription'];
+    vm.news = window.localStorage['TopNewsChannelSubscription'];
+    vm.kickerstv = window.localStorage['KickersTVChannelSubscription'];
+    vm.offer = window.localStorage['OffersChannelSubscription'];
+    vm.wifi = window.localStorage['WifiEnabled'];
 
-      if(window.localStorage['GameChannelSubscription'] == 'true'){
-        $scope.game = { checked: true };
-      }else {
-        $scope.game = { checked: false };
-      }
+    vm._init = _init;
+    vm.goalsChange = goalsChange;
+    vm.gameChange = gameChange;
+    vm.newsChange = newsChange;
+    vm.kickerstvChange = kickerstvChange;
+    vm.offerChange = offerChange;
+    vm.wifiChange = wifiChange;
 
-      if(window.localStorage['TopNewsChannelSubscription'] == 'true'){
-        $scope.news = { checked: true };
-      }else {
-        $scope.news = { checked: false };
+    function _init() {
+      $('#loaderInterceptor').hide();
+      if (ionic.Platform.isAndroid()) {
+        if (window.localStorage['resetNotificationOnceForAndroid']) {
+          vm.goals = window.localStorage['LiveTickerChannelSubscription'] === 'true';
+          vm.game = window.localStorage['GameChannelSubscription'] === 'true';
+          vm.news = window.localStorage['TopNewsChannelSubscription'] === 'true';
+          vm.kickerstv = window.localStorage['KickersTVChannelSubscription'] === 'true';
+          vm.offer = window.localStorage['OffersChannelSubscription'] === 'true';
+          vm.wifi = window.localStorage['WifiEnabled'] === 'true';
+        } else {
+          vm.goals = false;
+          vm.game = false;
+          vm.news = false;
+          vm.kickerstv = false;
+          vm.offer = false;
+          vm.wifi = false;
+          window.localStorage['resetNotificationOnceForAndroid'] = 'true';
+        }
+      } else {
+        vm.goals = window.localStorage['LiveTickerChannelSubscription'] === 'true';
+        vm.game = window.localStorage['GameChannelSubscription'] === 'true';
+        vm.news = window.localStorage['TopNewsChannelSubscription'] === 'true';
+        vm.kickerstv = window.localStorage['KickersTVChannelSubscription'] === 'true';
+        vm.offer = window.localStorage['OffersChannelSubscription'] === 'true';
+        vm.wifi = window.localStorage['WifiEnabled'] === 'true';
       }
+    }
 
-      if(window.localStorage['KickersTVChannelSubscription'] == 'true'){
-        $scope.kickerstv = { checked: true };
-      }else {
-        $scope.kickerstv = { checked: false };
-      }
-
-      if(window.localStorage['OffersChannelSubscription'] == 'true'){
-        $scope.offer = { checked: true };
-      }else {
-        $scope.offer = { checked: false };
-      }
-
-      if(window.localStorage['WifiEnabled'] == 'true'){
-        $scope.wifi = { checked: true };
-      }else {
-        $scope.wifi = { checked: false };
-      }
-    });
-
-    $scope.goalsChange = function() {
-      $timeout(function() {
-        if($scope.goals.checked){
+    function goalsChange() {
+      $timeout(function () {
+        if (vm.goals) {
           window.localStorage['LiveTickerChannelSubscription'] = 'true';
-          window.parsePlugin.subscribe('LiveTickerChannel', function() {}, function(e) {});
-          window.parsePlugin.subscribe('subscribed', function() {}, function(e) {});
+          window.plugins.OneSignal.sendTag('LiveTickerChannel', true);
         }
-        if(!$scope.goals.checked){
+        if (!vm.goals) {
           window.localStorage['LiveTickerChannelSubscription'] = 'false';
-          window.parsePlugin.unsubscribe('LiveTickerChannel', function() {}, function(e) {});
+          window.plugins.OneSignal.deleteTag('LiveTickerChannel');
         }
       }, 0);
     }
-    $scope.gameChange = function() {
-      $timeout(function() {
-        if($scope.game.checked){
+
+    function gameChange() {
+      $timeout(function () {
+        if (vm.game) {
           window.localStorage['GameChannelSubscription'] = 'true';
-          window.parsePlugin.subscribe('GameChannel', function() {}, function(e) {});
-          window.parsePlugin.subscribe('subscribed', function() {}, function(e) {});
+          window.plugins.OneSignal.sendTag('GameChannel', true);
         }
-        if(!$scope.game.checked){
+        if (!vm.game) {
           window.localStorage['GameChannelSubscription'] = 'false';
-          window.parsePlugin.unsubscribe('GameChannel', function() {}, function(e) {});
+          window.plugins.OneSignal.deleteTag('GameChannel');
         }
       }, 0);
     }
 
-    $scope.newsChange = function() {
-      $timeout(function() {
-        if($scope.news.checked){
+    function newsChange() {
+      $timeout(function () {
+        if (vm.news) {
           window.localStorage['TopNewsChannelSubscription'] = 'true';
-          window.parsePlugin.subscribe('TopNewsChannel', function() {}, function(e) {});
-          window.parsePlugin.subscribe('subscribed', function() {}, function(e) {});
+          window.plugins.OneSignal.sendTag('TopNewsChannel', true);
         }
-        if(!$scope.news.checked){
+        if (!vm.news) {
           window.localStorage['TopNewsChannelSubscription'] = 'false';
-          window.parsePlugin.unsubscribe('TopNewsChannel', function() {}, function(e) {});
+          window.plugins.OneSignal.deleteTag('TopNewsChannel');
         }
       }, 0);
     }
 
-    $scope.kickerstvChange = function() {
-      $timeout(function() {
-        if($scope.kickerstv.checked){
+    function kickerstvChange() {
+      $timeout(function () {
+        if (vm.kickerstv) {
           window.localStorage['KickersTVChannelSubscription'] = 'true';
-          window.parsePlugin.subscribe('KickersTVChannel', function() {}, function(e) {});
-          window.parsePlugin.subscribe('subscribed', function() {}, function(e) {});
+          window.plugins.OneSignal.sendTag('KickersTVChannel', true);
         }
-        if(!$scope.kickerstv.checked){
+        if (!vm.kickerstv) {
           window.localStorage['KickersTVChannelSubscription'] = 'false';
-          window.parsePlugin.unsubscribe('KickersTVChannel', function() {}, function(e) {});
+          window.plugins.OneSignal.deleteTag('KickersTVChannel');
         }
       }, 0);
     }
 
-    $scope.offerChange = function() {
-      $timeout(function() {
-        if($scope.offer.checked){
+    function offerChange() {
+      $timeout(function () {
+        if (vm.offer) {
           window.localStorage['OffersChannelSubscription'] = 'true';
-          window.parsePlugin.subscribe('OffersChannel', function() {}, function(e) {});
-          window.parsePlugin.subscribe('subscribed', function() {}, function(e) {});
+          window.plugins.OneSignal.sendTag('OffersChannel', true);
         }
-        if(!$scope.offer.checked){
+        if (!vm.offer) {
           window.localStorage['OffersChannelSubscription'] = 'false';
-          window.parsePlugin.unsubscribe('OffersChannel', function() {}, function(e) {});
+          window.plugins.OneSignal.deleteTag('OffersChannel');
         }
       }, 0);
     }
 
-    $scope.wifiChange = function() {
-      $timeout(function() {
-        if($scope.wifi.checked) {
+    function wifiChange() {
+      $timeout(function () {
+        if (vm.wifi) {
           window.localStorage['WifiEnabled'] = 'true';
         }
-        if(!$scope.wifi.checked) {
+        if (!vm.wifi) {
           window.localStorage['WifiEnabled'] = 'false';
         }
       }, 0);
     }
-  })
+
+    _init();
+  }
+})();

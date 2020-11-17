@@ -1,33 +1,35 @@
 /**
  * Created by Linh on 15.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
+ *
+ * status: 14.07.2016 4:00 PM
  */
-angular.module('service.home', [])
-  .service('HomeService', function ($rootScope, $http, ApiEndpoint, $q) {
+(function () {
+  'use strict';
+
+  angular
+    .module('service.home', [])
+    .service('HomeService', HomeService);
+
+  HomeService.$inject = ['$rootScope', '$http', 'ApiEndpoint', '$q', '$log', '$state'];
+
+  function HomeService($rootScope, $http, ApiEndpoint, $q, $log, $state) {
     var dates = null;
 
     return {
-      setData: function (data) {
-        dates = data;
-      },
-      getNewsData: function () {
-        return dates.data.news;
-      },
-      getMatchesData: function () {
-        return dates.data.matches;
-      },
-      getVideosData: function () {
-        return dates.data.videos;
-      },
       fetchHomeData: function () {
         var defer = $q.defer();
         $http.get(ApiEndpoint.url + 'app--start' + ApiEndpoint.version + $rootScope.uuid)
-          .then(function(response){
+          .then(function (response) {
+            $log.info("Succeeded in requesting home data", response);
             dates = x2js.xml_str2json(response.data);
-            defer.resolve();
-          }, function(error){
+            defer.resolve(dates);
+          }, function (error) {
+            $log.info("Failed in requesting home data", error);
+            $state.go('app.error');
           });
         return defer.promise;
       }
     }
-  })
+  }
+})();

@@ -1,0 +1,26 @@
+<!--
+    Created by Linh on 08.08.16.
+    Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
+
+    status: 08.08.2016 9:44 AM
+-->
+<ion-view>
+    <ion-content class="has-logo-subheader">
+        <div>
+            <div>
+                <img id="singleNewsImage" ng-src="{{saVM.aktion[0].image}}" class="news-image"/>
+                <p></p>
+                <div class="news-image-text">
+                    <div class="news-image-text-display">
+                        <div class="custom-title-date news-image-date">| {{saVM.aktion[0].date | dateFilter}}</div>
+                        <div class="custom-title news-image-title" ng-bind-html="saVM.aktion[0].title"></div>
+                    </div>
+                </div>
+                <p></p>
+                <div id="singleNewsText" ng-if="saVM.aktion[0].text !== undefined" class="custom-font-regular font-size singlenews-text" ng-bind-html="saVM.aktion[0].text | externalLinks"></div>
+                <div id="singleNewsDate" class="custom-title sub-news-image-date"></div>
+                <div id="singleNewsTitle" class="custom-title sub-news-image-title" ></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -2,33 +2,75 @@
  * Created by Linh on 24.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
  *
- * - final -
+ * status: 14.07.2016 6:41 PM
  */
-angular.module('module.internet', ['ionic'])
-  .run(function($ionicPlatform, $state, $ionicHistory, AdvertisementService, $cordovaFile){
-    $ionicPlatform.ready(function(){
-      $ionicHistory.nextViewOptions({
-        disableAnimate: true
-      });
-      if(window.Connection){
-        if(navigator.connection.type == Connection.NONE || navigator.connection.type == Connection.UNKNOWN) {
+(function () {
+  angular
+    .module('module.internet', ['ionic'])
+    .run(function ($ionicPlatform, $state, $ionicHistory, AdvertisementService, $cordovaFile, $cordovaNetwork) {
+      $ionicPlatform.ready(function () {
+        //$state.go('werbepartner', {connection: true, localAd: null, data: null, locationPath: null})
+
+        $ionicHistory.nextViewOptions({
+          disableAnimate: true
+        });
+        if (!navigator.onLine) {d
           $state.go('app.error');
-        }else {
-          $cordovaFile.checkFile(cordova.file.documentsDirectory, "adImage.png")
-            .then(function (success) {
-              AdvertisementService.skipFetching(cordova.file.documentsDirectory + "adImage.png");
-            }, function (error) {
-              AdvertisementService.fetchAdsData();
-            });
+        } else {
+          if (ionic.Platform.isIOS()) {
+            AdvertisementService.fetchAdsData()
+              .then(function (success) {
+                $cordovaFile.checkFile(cordova.file.documentsDirectory, "adImage.png")
+                  .then(function (checkFileSuccess) {
+                    AdvertisementService.skipFetching(cordova.file.documentsDirectory + "adImage.png")
+                      .then(function (skipFetchingSuccess) {
+                        $state.go('werbepartner', {
+                          connection: true,
+                          localAd: cordova.file.documentsDirectory + "adImage.png",
+                          locationPath: cordova.file.documentsDirectory,
+                          newData: success
+                        });
+                      });
+                  }, function (error) {
+                    $state.go('werbepartner', {
+                      connection: true,
+                      localAd: null,
+                      data: success,
+                      locationPath: cordova.file.documentsDirectory
+                    })
+                  });
+              }, function (error) {
+                $state.go('app.error');
+              });
+          } else {
+            AdvertisementService.fetchAdsData()
+              .then(function (success) {
+                $cordovaFile.checkFile(cordova.file.externalDataDirectory, "adImage.png")
+                  .then(function (checkFileSuccess) {
+                    AdvertisementService.skipFetching(cordova.file.externalDataDirectory + "adImage.png")
+                      .then(function (skipFetchingSuccess) {
+                        $state.go('werbepartner', {
+                          connection: true,
+                          localAd: cordova.file.externalDataDirectory + "adImage.png",
+                          locationPath: cordova.file.externalDataDirectory,
+                          newData: success
+                        });
+                      });
+                  }, function (error) {
+                    $state.go('werbepartner', {
+                      connection: true,
+                      localAd: null,
+                      data: success,
+                      locationPath: cordova.file.externalDataDirectory
+                    })
+                  });
+              }, function (error) {
+                $state.go('app.error');
+              });
+          }
         }
-      }
+      })
     })
-  })
-  .controller('InternetConnectionCtrl', function($rootScope, $state) {
-    $rootScope.$on('http_request_success_ads', function(){
-      $state.go('werbepartner', {connection: {hasInternet: true}, localAd: false});
+    .controller('InternetConnectionCtrl', function ($rootScope, $state) {
     });
-    $rootScope.$on('http_skip_request_ads', function(){
-      $state.go('werbepartner', {connection: {hasInternet: true}, localAd: true})
-    });
-  });
+})();

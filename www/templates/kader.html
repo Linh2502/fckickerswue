@@ -4,7 +4,7 @@
     - final -
 -->
 <ion-view hide-back-button="true">
-  <ion-content lazy-scroll class="has-subheader kader-background-color" delegate-handle="resize">
+  <ion-content lazy-scroll class="has-logo-subheader kader-background-color" delegate-handle="resize">
     <div>
       <div>
         <div class="text-align-center">
@@ -13,25 +13,25 @@
       </div>
       <div class="col custom-title kader-sub-items-background border-bottom">
         <div class="row remove-col-padding border-bottom">
-          <span class="col vertical-align-mid" ng-class="{ active: showTab(1)}" ng-click="setTab(1)">Tor</span>
-          <span class="col vertical-align-mid" ng-class="{ active: showTab(2)}" ng-click="setTab(2)">Abwehr</span>
-          <span class="col active vertical-align-mid" ng-class="{ active: showTab(3)}" ng-click="setTab(3)">Mittelfeld</span>
-          <span class="col vertical-align-mid" ng-class="{ active: showTab(4)}" ng-click="setTab(4)">Sturm</span>
+          <span class="col vertical-align-mid" ng-class="{ active: kaderVM.showTab(1)}" ng-click="kaderVM.setTab(1)">Tor</span>
+          <span class="col vertical-align-mid" ng-class="{ active: kaderVM.showTab(2)}" ng-click="kaderVM.setTab(2)">Abwehr</span>
+          <span class="col active vertical-align-mid" ng-class="{ active: kaderVM.showTab(3)}" ng-click="kaderVM.setTab(3)">Mittelfeld</span>
+          <span class="col vertical-align-mid" ng-class="{ active: kaderVM.showTab(4)}" ng-click="kaderVM.setTab(4)">Sturm</span>
         </div>
       </div>
     </div>
-    <div id="Tor" ng-show="showTab(1)">
-      <div ng-repeat="player in goal">
+    <div id="Tor" ng-show="kaderVM.showTab(1)">
+      <div ng-repeat="player in kaderVM.goal">
         <div class="row kader-margin-top">
           <div class="custom-col-5"></div>
           <div class="custom-col-42-5 custom-row-border odd custom-title">
-            <a nav-transition="ios" class="remove-href-link" ng-click="viewPlayer(player[0], 'Tor', getSquadGoal)">
+            <a nav-transition="ios" class="remove-href-link" ng-click="kaderVM.viewPlayer(player[0], 'Tor', kaderVM.getSquadGoal)">
               <div class="kader-player-border">
                 <div class="text-align-center">
                   <img image-lazy-src="{{player[0].image}}" class="set-max-width vertical-align-mid text-align-center" image-lazy-loader="dots"/>
                 </div>
                 <div class="row">
-                  <div class="kader-player-title-width">{{player[0].title}}</div>
+                  <div class="kader-player-title-width" ng-bind-html="player[0].title"></div>
                   <div class="kader-player-trikot-width">
                     <img ng-src="{{player[0].trikotno}}" class="spiel-feed-matchcenter-emptyheight">
                   </div>
@@ -41,13 +41,13 @@
           </div>
           <div class="custom-col-5"></div>
           <div class="custom-col-42-5 custom-row-border odd custom-title" ng-if="player[1]">
-            <a class="remove-href-link" ng-click="viewPlayer(player[1], 'Tor', getSquadGoal)">
+            <a class="remove-href-link" ng-click="kaderVM.viewPlayer(player[1], 'Tor', kaderVM.getSquadGoal)">
               <div class="kader-player-border">
                 <div class="text-align-center">
                   <img image-lazy-src="{{player[1].image}}" class="set-max-width vertical-align-mid text-align-center" image-lazy-loader="dots"/>
                 </div>
                 <div class="row">
-                  <div class="kader-player-title-width">{{player[1].title}}</div>
+                  <div class="kader-player-title-width" ng-bind-html="player[1].title"></div>
                   <div class="kader-player-trikot-width">
                     <img ng-src="{{player[1].trikotno}}" class="spiel-feed-matchcenter-emptyheight">
                   </div>
@@ -59,18 +59,18 @@
         </div>
       </div>
     </div>
-    <div id="Abwehr" ng-show="showTab(2)">
-      <div ng-repeat="player in defense">
+    <div id="Abwehr" ng-show="kaderVM.showTab(2)">
+      <div ng-repeat="player in kaderVM.defense">
         <div class="row kader-margin-top">
           <div class="custom-col-5"></div>
           <div class="custom-col-42-5 custom-row-border odd custom-title">
-            <a class="remove-href-link" ng-click="viewPlayer(player[0], 'Abwehr', getSquadDefense)">
+            <a class="remove-href-link" ng-click="kaderVM.viewPlayer(player[0], 'Abwehr', kaderVM.getSquadDefense)">
               <div class="kader-player-border">
                 <div class="text-align-center">
                   <img image-lazy-src="{{player[0].image}}" class="set-max-width vertical-align-mid text-align-center" image-lazy-loader="dots"/>
                 </div>
                 <div class="row">
-                  <div class="kader-player-title-width">{{player[0].title}}</div>
+                  <div class="kader-player-title-width" ng-bind-html="player[0].title"></div>
                   <div class="kader-player-trikot-width">
                     <img ng-src="{{player[0].trikotno}}" class="spiel-feed-matchcenter-emptyheight">
                   </div>
@@ -80,13 +80,13 @@
           </div>
           <div class="custom-col-5"></div>
           <div class="custom-col-42-5 custom-row-border odd custom-title" ng-if="player[1]">
-            <a class="remove-href-link" ng-click="viewPlayer(player[1], 'Abwehr', getSquadDefense)" >
+            <a class="remove-href-link" ng-click="kaderVM.viewPlayer(player[1], 'Abwehr', kaderVM.getSquadDefense)" >
               <div class="kader-player-border">
                 <div class="text-align-center">
                   <img image-lazy-src="{{player[1].image}}" class="set-max-width vertical-align-mid text-align-center" image-lazy-loader="dots"/>
                 </div>
                 <div class="row">
-                  <div class="kader-player-title-width">{{player[1].title}}</div>
+                  <div class="kader-player-title-width" ng-bind-html="player[1].title"></div>
                   <div class="kader-player-trikot-width">
                     <img ng-src="{{player[1].trikotno}}" class="spiel-feed-matchcenter-emptyheight">
                   </div>
@@ -98,18 +98,18 @@
         </div>
       </div>
     </div>
-    <div id="Mittelfeld" ng-show="showTab(3)">
-      <div ng-repeat="player in midfield">
+    <div id="Mittelfeld" ng-show="kaderVM.showTab(3)">
+      <div ng-repeat="player in kaderVM.midfield">
         <div class="row kader-margin-top">
           <div class="custom-col-5"></div>
           <div class="custom-col-42-5 custom-row-border odd custom-title">
-            <a class="remove-href-link" ng-click="viewPlayer(player[0], 'Mittelfeld', getSquadMidfield)">
+            <a class="remove-href-link" ng-click="kaderVM.viewPlayer(player[0], 'Mittelfeld', kaderVM.getSquadMidfield)">
               <div class="kader-player-border">
                 <div class="text-align-center">
                   <img image-lazy-src="{{player[0].image}}" class="set-max-width vertical-align-mid text-align-center" image-lazy-loader="dots"/>
                 </div>
                 <div class="row">
-                  <div class="kader-player-title-width">{{player[0].title}}</div>
+                  <div class="kader-player-title-width" ng-bind-html="player[0].title"></div>
                   <div class="kader-player-trikot-width">
                     <img ng-src="{{player[0].trikotno}}" class="spiel-feed-matchcenter-emptyheight">
                   </div>
@@ -119,13 +119,13 @@
           </div>
           <div class="custom-col-5"></div>
           <div class="custom-col-42-5 custom-row-border odd custom-title" ng-if="player[1]">
-            <a class="remove-href-link" ng-click="viewPlayer(player[1], 'Mittelfeld', getSquadMidfield)">
+            <a class="remove-href-link" ng-click="kaderVM.viewPlayer(player[1], 'Mittelfeld', kaderVM.getSquadMidfield)">
               <div class="kader-player-border">
                 <div class="text-align-center">
                   <img image-lazy-src="{{player[1].image}}" class="set-max-width vertical-align-mid text-align-center" image-lazy-loader="dots"/>
                 </div>
                 <div class="row">
-                  <div class="kader-player-title-width">{{player[1].title}}</div>
+                  <div class="kader-player-title-width" ng-bind-html="player[1].title"></div>
                   <div class="kader-player-trikot-width">
                     <img ng-src="{{player[1].trikotno}}" class="spiel-feed-matchcenter-emptyheight">
                   </div>
@@ -137,18 +137,18 @@
         </div>
       </div>
     </div>
-    <div id="Sturm" ng-show="showTab(4)">
-      <div ng-repeat="player in offense">
+    <div id="Sturm" ng-show="kaderVM.showTab(4)">
+      <div ng-repeat="player in kaderVM.offense">
         <div class="row kader-margin-top">
           <div class="custom-col-5"></div>
           <div class="custom-col-42-5 custom-row-border odd custom-title">
-            <a class="remove-href-link" ng-click="viewPlayer(player[0], 'Sturm', getSquadOffense)">
+            <a class="remove-href-link" ng-click="kaderVM.viewPlayer(player[0], 'Sturm', kaderVM.getSquadOffense)">
               <div class="kader-player-border">
                 <div class="text-align-center">
                   <img image-lazy-src="{{player[0].image}}" class="set-max-width vertical-align-mid text-align-center" image-lazy-loader="dots"/>
                 </div>
                 <div class="row">
-                  <div class="kader-player-title-width">{{player[0].title}}</div>
+                  <div class="kader-player-title-width" ng-bind-html="player[0].title"></div>
                   <div class="kader-player-trikot-width">
                     <img ng-src="{{player[0].trikotno}}" class="spiel-feed-matchcenter-emptyheight">
                   </div>
@@ -158,13 +158,13 @@
           </div>
           <div class="custom-col-5"></div>
           <div class="custom-col-42-5 custom-row-border odd custom-title" ng-if="player[1]">
-            <a class="remove-href-link" ng-click="viewPlayer(player[1], 'Sturm', getSquadOffense)">
+            <a class="remove-href-link" ng-click="kaderVM.viewPlayer(player[1], 'Sturm', kaderVM.getSquadOffense)">
               <div class="kader-player-border">
                 <div class="text-align-center">
                   <img image-lazy-src="{{player[1].image}}" class="set-max-width vertical-align-mid text-align-center" image-lazy-loader="dots"/>
                 </div>
                 <div class="row">
-                  <div class="kader-player-title-width">{{player[1].title}}</div>
+                  <div class="kader-player-title-width" ng-bind-html="player[1].title"></div>
                   <div class="kader-player-trikot-width">
                     <img ng-src="{{player[1].trikotno}}" class="spiel-feed-matchcenter-emptyheight">
                   </div>

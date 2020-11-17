@@ -1,35 +1,63 @@
 {
-  "name": "FCWuerzburgerKickers",
-  "version": "1.0.30",
-  "description": "Würzburger Kickers: An Ionic project",
-  "dependencies": {
-    "angular-youtube-embed": "^1.1.0",
-    "gulp": "^3.5.6",
-    "gulp-concat": "^2.2.0",
-    "gulp-minify-css": "^0.3.0",
-    "gulp-rename": "^1.2.0"
-  },
-  "devDependencies": {
-    "bower": "^1.3.3",
-    "gulp-util": "^2.2.14",
-    "shelljs": "^0.3.0"
-  },
-  "cordovaPlugins": [
-    "cordova-plugin-device",
-    "cordova-plugin-console",
-    "com.ionic.keyboard",
-    "cordova-plugin-inappbrowser",
-    "cordova-plugin-network-information",
-    "cordova-plugin-statusbar",
-    "org.apache.cordova.core.parseplugin",
-    "cordova-plugin-splashscreen",
-    "cordova-plugin-whitelist",
-    "cordova-plugin-crosswalk-webview",
-    "cordova-plugin-file",
-    "cordova-plugin-file-transfer"
-  ],
-  "cordovaPlatforms": [
-    "android",
-    "ios"
-  ]
+    "name": "FCWuerzburgerKickers",
+    "version": "1.0.50",
+    "description": "Würzburger Kickers: An Ionic project",
+    "dependencies": {
+        "angular-youtube-embed": "^1.3.0",
+        "cordova-android": "^6.2.3",
+        "cordova-ios": "^4.4.0",
+        "cordova-plugin-compat": "^1.1.0",
+        "cordova-plugin-console": "^1.0.5",
+        "cordova-plugin-crosswalk-webview": "^2.3.0",
+        "cordova-plugin-device": "^1.1.4",
+        "cordova-plugin-file": "^4.3.3",
+        "cordova-plugin-file-transfer": "^1.6.3",
+        "cordova-plugin-inappbrowser": "^1.7.1",
+        "cordova-plugin-splashscreen": "^4.0.3",
+        "cordova-plugin-statusbar": "^2.2.1",
+        "cordova-plugin-whitelist": "^1.3.1",
+        "gulp": "^3.5.6",
+        "gulp-concat": "^2.2.0",
+        "gulp-minify-css": "^0.3.0",
+        "gulp-rename": "^1.2.0",
+        "gulp-sass": "^2.0.4",
+        "ionic-plugin-keyboard": "^2.2.1",
+        "onesignal-cordova-plugin": "^2.1.2"
+    },
+    "devDependencies": {
+        "@ionic/cli-plugin-cordova": "1.4.0",
+        "@ionic/cli-plugin-gulp": "1.0.1",
+        "@ionic/cli-plugin-ionic1": "2.0.0",
+        "bower": "^1.3.3",
+        "gulp-util": "^2.2.14",
+        "shelljs": "^0.3.0"
+    },
+    "cordovaPlatforms": [
+        "android",
+        "ios"
+    ],
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-console": {},
+            "cordova-plugin-crosswalk-webview": {
+                "XWALK_VERSION": "23+",
+                "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
+                "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
+                "XWALK_MODE": "embedded",
+                "XWALK_MULTIPLEAPK": "true"
+            },
+            "cordova-plugin-device": {},
+            "cordova-plugin-file": {},
+            "cordova-plugin-file-transfer": {},
+            "cordova-plugin-inappbrowser": {},
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-statusbar": {},
+            "cordova-plugin-whitelist": {},
+            "ionic-plugin-keyboard": {},
+            "onesignal-cordova-plugin": {}
+        },
+        "platforms": [
+            "android"
+        ]
+    }
 }

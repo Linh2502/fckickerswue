@@ -1,69 +1,70 @@
 <!--
     Created by Linh on 02.09.15.
     Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
-    - final -
+
+    status: 14.07.2016 3:41 PM
 -->
 <ion-view hide-back-button="true">
-  <ion-content lazy-scroll class="has-subheader">
-    <ion-refresher on-refresh="refresh()"></ion-refresher>
+  <ion-content lazy-scroll class="has-logo-subheader">
+    <ion-refresher on-refresh="newsVM.refresh()"></ion-refresher>
     <div class="set-max-width" id="news">
-      <div ng-if="!isLive">
+      <div ng-if="!newsVM.isLive">
         <div class="row custom-row-border spiel-feed-columns spiel-feed-first-column-height">
           <div class="spiel-feed-first-column-style">
-            <div class="custom-title spiel-feed-game-title">{{game[0].title}}</div>
-            <div class="custom-title">{{game[0].date | dateFilter}} {{game[0].time | timeFilter}} {{game[0].type}}</div>
+            <div class="custom-title spiel-feed-game-title">{{newsVM.game[0].title}}</div>
+            <div class="custom-title">{{newsVM.game[0].date | dateFilter}} {{newsVM.game[0].time | timeFilter}} {{newsVM.game[0].type}}</div>
           </div>
           <div class="spiel-feed-rest-column-style"></div>
-          <div class="spiel-feed-rest-column-style" ng-if="game[0].tickets">
-            <div ng-if="game[0].soccerTeam.team_home.name == 'FC Würzburger Kickers'">
+          <div class="spiel-feed-rest-column-style" ng-if="newsVM.game[0].tickets">
+            <div ng-if="newsVM.game[0].soccerTeam.team_home.name === 'FC Würzburger Kickers'">
               <a class="custom-title remove-href-link text-align-center" browse-to="https://www.etix.com/ticket/v/9808/flyeralarm-arena-fc-w%FCrzburger-kickers-?cobrand=FCWK">
                 <div class="custom-title custom-background">
                   <div>
-                    <span class="tabelle-margin-left">{{game[0].tickets}}</span>
+                    <span class="tabelle-margin-left">{{newsVM.game[0].tickets}}</span>
                     <i class="tabelle-margin-right fa fa-external-link spiel-fa-link"></i>
                   </div>
                 </div>
               </a>
             </div>
-            <div ng-if="game[0].soccerTeam.team_home.name != 'FC Würzburger Kickers'"></div>
+            <div ng-if="newsVM.game[0].soccerTeam.team_home.name != 'FC Würzburger Kickers'"></div>
           </div>
-          <div class="col col-30" ng-if="!game.tickets">
+          <div class="col col-30" ng-if="!newsVM.game.tickets">
           </div>
         </div>
         <div class="row custom-row-border spiel-feed-columns">
           <div class="col col-40 col-center remove-col-padding text-align-center">
-            <img ng-src="{{game[0].soccerTeam.team_home.image}}" class="soccer-logo"/>
-            <div class="game-soccerteam-fontstyle">{{game[0].soccerTeam.team_home.name}}</div>
+            <img ng-src="{{newsVM.game[0].soccerTeam.team_home.image}}" class="soccer-logo"/>
+            <div class="game-soccerteam-fontstyle" ng-bind-html="newsVM.game[0].soccerTeam.team_home.name"></div>
           </div>
           <div class="col col-20 col-center remove-col-padding">
-            <div class="news-games-result">{{game[0].result}}</div>
+            <div class="news-games-result">{{newsVM.game[0].result}}</div>
           </div>
           <div class="col col-40 col-center remove-col-padding text-align-center">
-            <img ng-src="{{game[0].soccerTeam.team_away.image}}" class="soccer-logo"/>
-            <div class="game-soccerteam-fontstyle">{{game[0].soccerTeam.team_away.name}}</div>
+            <img ng-src="{{newsVM.game[0].soccerTeam.team_away.image}}" class="soccer-logo"/>
+            <div class="game-soccerteam-fontstyle" ng-bind-html="newsVM.game[0].soccerTeam.team_away.name"></div>
           </div>
         </div>
       </div>
-      <div ng-if="isLive">
+      <div ng-if="newsVM.isLive">
         <div class="row custom-row-border spiel-feed-columns spiel-feed-first-column-height">
           <div class="spiel-feed-first-column-style">
             <div class="custom-title spiel-feed-game-title">Live</div>
-            <div class="custom-title">{{game[0].date | dateFilter}} {{game[0].time | timeFilter}} Uhr</div>
+            <div class="custom-title">{{newsVM.game[0].date | dateFilter}} {{newsVM.game[0].time | timeFilter}} Uhr</div>
           </div>
           <div class="spiel-feed-rest-column-style"></div>
           <div class="spiel-feed-rest-column-style"></div>
         </div>
         <div class="row custom-row-border spiel-feed-columns">
           <div class="col col-40 col-center remove-col-padding text-align-center">
-            <img ng-src="{{game[0].soccerTeam.team_home.image}}" class="soccer-logo"/>
-            <div class="game-soccerteam-fontstyle">{{game[0].soccerTeam.team_home.name}}</div>
+            <img ng-src="{{newsVM.game[0].soccerTeam.team_home.image}}" class="soccer-logo"/>
+            <div class="game-soccerteam-fontstyle">{{newsVM.game[0].soccerTeam.team_home.name}}</div>
           </div>
           <div class="col col-20 col-center remove-col-padding">
-            <div class="news-games-result">{{game[0].result}}</div>
+            <div class="news-games-result">{{newsVM.game[0].result}}</div>
           </div>
           <div class="col col-40 col-center remove-col-padding text-align-center">
-            <img ng-src="{{game[0].soccerTeam.team_away.image}}" class="soccer-logo"/>
-            <div class="game-soccerteam-fontstyle">{{game[0].soccerTeam.team_away.name}}</div>
+            <img ng-src="{{newsVM.game[0].soccerTeam.team_away.image}}" class="soccer-logo"/>
+            <div class="game-soccerteam-fontstyle">{{newsVM.game[0].soccerTeam.team_away.name}}</div>
           </div>
         </div>
         <div class="row custom-row-border spiel-feed-columns spiel-feed-third-column-height">
@@ -71,7 +72,7 @@
             <div class="col remove-col-padding">
               <div class="row remove-col-padding">
                 <div class="col">
-                  <div class="game-islive" ng-click="navigateToLiveTicker()"></div>
+                  <div class="game-islive" ng-click="newsVM.navigateToLiveTicker()"></div>
                 </div>
               </div>
             </div>
@@ -81,16 +82,16 @@
     </div>
     <div class="col"></div>
     <div class="news">
-      <div ng-repeat="news in newsFeed">
-        <a nav-transition="ios" class="remove-href-link" ng-click="navigateToNews(news.id)">
+      <div ng-repeat="news in newsVM.newsFeed">
+        <a nav-transition="ios" class="remove-href-link" ng-click="newsVM.navigateToNews(news.id)">
           <div class="custom-background">
             <div class="image-height">
               <img src="{{news.image}}" class="news-image" image-lazy-loader="dots"/>
             </div>
             <div class="news-image-text custom-background">
               <div class="news-image-text-display">
-                <div class="custom-title news-image-date">| {{news.date | dateFilter}}</div>
-                <div class="custom-title news-image-title">{{news.title}}</div>
+                <div class="custom-title-date news-image-date">| {{news.date | dateFilter}}</div>
+                <div class="custom-title news-image-title" ng-bind-html="news.title"></div>
               </div>
             </div>
           </div>

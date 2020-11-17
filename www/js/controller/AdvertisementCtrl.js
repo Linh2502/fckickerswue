@@ -2,52 +2,74 @@
  * Created by Linh on 25.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
  *
- * - final -
+ * status: 14.07.2016 6:25 PM
  */
-angular.module('module.advertisement', [])
-  .controller('AdvertisementCtrl', function($rootScope, $scope, $state, $stateParams, $timeout, AdvertisementService, $cordovaSplashscreen){
-    var ads = AdvertisementService.getAdsData();
-    var time = new Date().getTime();
-    var boolean = false;
-    $scope.showBanner = null;
+(function () {
+    'use strict';
 
-    checkBanner();
-    function checkBanner(){
-      if($stateParams.localAd){
-        $scope.showBanner = ads;
-        boolean = true;
-      }else{
-        if(ads.data.image[0].valid_from*1000 <= time) {
-          $scope.showBanner = ads.data.image[0].url;
-          AdvertisementService.saveToLocalSystem();
-          boolean = true;
-        }
-      }
-      nextState();
-    }
+    angular
+        .module('module.advertisement', [])
+        .controller('AdvertisementCtrl', AdvertisementController);
 
-    function nextState(){
-      if(boolean){
-        $timeout(function(){
-          $cordovaSplashscreen.hide();
-        }, 500);
-        if($stateParams.connection.hasInternet){
-          $('#advertisement').delay(3000).fadeOut(400);
-          $timeout(function(){
-            $state.transitionTo('app.home');
-          }, 3500);
-        }else{
-          $cordovaSplashscreen.hide();
-          $state.transitionTo('app.error');
+    AdvertisementController.$inject = ['$state', '$stateParams', '$timeout', 'AdvertisementService', '$cordovaSplashscreen'];
+
+    function AdvertisementController($state, $stateParams, $timeout, AdvertisementService, $cordovaSplashscreen) {
+        var vm = this;
+
+        vm.time = new Date().getTime();
+        vm.boolean = false;
+        vm.showBanner = null;
+
+        vm._init = _init;
+
+        function _init() {
+          //$state.go('app.home');
+            if ($stateParams.data) {
+                vm.showBanner = $stateParams.data.data.image[0].url;
+                AdvertisementService.saveToLocalSystem($stateParams.data, $stateParams.locationPath)
+                    .then(function (success) {
+                        vm.boolean = true;
+                        nextState();
+                    });
+            } else {
+                vm.showBanner = $stateParams.localAd;
+                AdvertisementService.saveToLocalSystem($stateParams.newData, $stateParams.locationPath)
+                    .then(function (success) {
+                        vm.boolean = false;
+                        nextState();
+                    });
+            }
         }
-      }else{
-        $scope.showBanner = null;
-        if($stateParams.connection.hasInternet){
-          $state.transitionTo('app.home');
-        }else{
-          $cordovaSplashscreen.hide();
-          $state.transitionTo('app.error');
+
+        function nextState() {
+            if (vm.boolean) {
+                $timeout(function () {
+                    $cordovaSplashscreen.hide();
+                }, 500);
+                if ($stateParams.connection) {
+                    $('#advertisement').delay(3000).fadeOut(400);
+                    $timeout(function () {
+                        $state.go('app.home');
+                    }, 3000);
+                } else {
+                    $cordovaSplashscreen.hide();
+                    $state.go('app.error');
+                }
+            } else {
+                $timeout(function () {
+                    $cordovaSplashscreen.hide();
+                }, 500);
+                if ($stateParams.connection) {
+                    $timeout(function () {
+                        $state.go('app.home');
+                    }, 3000);
+                } else {
+                    $cordovaSplashscreen.hide();
+                    $state.go('app.error');
+                }
+            }
         }
-      }
+
+        vm._init();
     }
-  })
+})();

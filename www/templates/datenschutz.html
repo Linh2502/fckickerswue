@@ -1,35 +1,38 @@
 <!--
     Created by Linh on 02.09.15.
     Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
+
+    status: 14.07.2016 6:51 PM
 -->
 <ion-view hide-back-button="true">
-  <ion-content class="has-subheader">
+  <ion-content class="has-logo-subheader">
     <div>
       <div class="col kontakt-column-padding">
         <div class="col custom-font-regular font-size text-align-left">
           <div class="row remove-col-padding">
             <div class="col">
               <div class="col">
-                <p class="custom-title custom-font-bold kontakt-kickers-font">Datenschutzerklärung</p>
-                <p class="custom-title custom-font-bold">Allgemein</p>
-                <p>
-                  Den Schutz Ihrer persönlichen Daten nehmen wir sehr ernst und behandeln personenbezogene Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung. <br>
-                  Grundsätzlich ist eine Nutzung der Applikation ohne die Angabe von personenbezogenen Daten möglich. Wenn aber Funktionen oder Services wie Push-Benachrichtigungen oder die Newsletter-Anmeldung in Anspruch genommen werden, ist die Angabe personenbezogener Daten erforderlich.
-                </p>
-                <br>
-                <p class="custom-title custom-font-bold">Verwendung personenbezogener Daten</p>
-                <p>
-                  Wir nutzen diese Daten im Rahmen der gesetzlichen Bestimmungen, z.B. zur Bereitstellung von Push-Benachrichtigung zum Spielstatus oder um Sie per E-Mail über News, Angebote und Aktionen zu informieren. <br>
-                  Die rechtlichen Grundlagen finden sich im Bundesdatenschutzgesetzt (BDSG) und dem Telemediengesetz (TMG). <br>
-                  Abhängig vom Endgerät wird eine Geräte-ID vergeben, um den Nutzer identifizieren zu können. Im Regelfall kann diese ID nicht mit personenbezogenen oder personenbeziehbaren Daten verbunden werden. <br>
-                  Die App verwendet ein Hilfsmodul um die Schnittstelle von YouTube, gehörig zur Google Inc., ansässig in San Bruno/Kalifornien, USA, anzusprechen und Videos einzubinden. Informationen zu Zweck und Umfang der Datenerhebung, die weitere Verarbeitung und Nutzung der Daten YouTube erhalten Sie in den dortigen Hinweisen zum Datenschutz unter <a browse-to="www.youtube.com">www.youtube.com</a>. <br>
-                </p>
-                <br>
-                <p class="custom-title custom-font-bold">Auskunft, Widerruf, Löschung</p>
-                <p>
-                  Sie haben jederzeit das Recht, auf Antrag unentgeltlich Auskunft über die personenbezogenen Daten, deren Herkunft und Empfänger sowie den Zweck der Datenverarbeitung zu erhalten. <br>
-                  Zusätzlich haben Sie das Recht auf Sperrung und Löschung Ihrer personenbezogenen Daten. Sie können einer Nutzung, Verarbeitung oder Übermittlung ihrer Daten jederzeit bei uns unter der E-Mail-Adresse <a browse-to="mailto:mail@wuerzburger-kickers.de" class="href-link">mail@wuerzburger-kickers.de</a> widersprechen, soweit dem keine gesetzliche Aufbewahrungspflicht entgegensteht.
-                </p>
+                <div ng-bind-html="datenschutzVM.disclaimer"></div>
+                <!--<p class="custom-title custom-font-bold kontakt-kickers-font">Datenschutzerklärung</p>-->
+                <!--<p class="custom-title custom-font-bold">Allgemein</p>-->
+                <!--<p>-->
+                  <!--Den Schutz Ihrer persönlichen Daten nehmen wir sehr ernst und behandeln personenbezogene Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung. <br>-->
+                  <!--Grundsätzlich ist eine Nutzung der Applikation ohne die Angabe von personenbezogenen Daten möglich. Wenn aber Funktionen oder Services wie Push-Benachrichtigungen oder die Newsletter-Anmeldung in Anspruch genommen werden, ist die Angabe personenbezogener Daten erforderlich.-->
+                <!--</p>-->
+                <!--<br>-->
+                <!--<p class="custom-title custom-font-bold">Verwendung personenbezogener Daten</p>-->
+                <!--<p>-->
+                  <!--Wir nutzen diese Daten im Rahmen der gesetzlichen Bestimmungen, z.B. zur Bereitstellung von Push-Benachrichtigung zum Spielstatus oder um Sie per E-Mail über News, Angebote und Aktionen zu informieren. <br>-->
+                  <!--Die rechtlichen Grundlagen finden sich im Bundesdatenschutzgesetzt (BDSG) und dem Telemediengesetz (TMG). <br>-->
+                  <!--Abhängig vom Endgerät wird eine Geräte-ID vergeben, um den Nutzer identifizieren zu können. Im Regelfall kann diese ID nicht mit personenbezogenen oder personenbeziehbaren Daten verbunden werden. <br>-->
+                  <!--Die App verwendet ein Hilfsmodul um die Schnittstelle von YouTube, gehörig zur Google Inc., ansässig in San Bruno/Kalifornien, USA, anzusprechen und Videos einzubinden. Informationen zu Zweck und Umfang der Datenerhebung, die weitere Verarbeitung und Nutzung der Daten YouTube erhalten Sie in den dortigen Hinweisen zum Datenschutz unter <a browse-to="www.youtube.com">www.youtube.com</a>. <br>-->
+                <!--</p>-->
+                <!--<br>-->
+                <!--<p class="custom-title custom-font-bold">Auskunft, Widerruf, Löschung</p>-->
+                <!--<p>-->
+                  <!--Sie haben jederzeit das Recht, auf Antrag unentgeltlich Auskunft über die personenbezogenen Daten, deren Herkunft und Empfänger sowie den Zweck der Datenverarbeitung zu erhalten. <br>-->
+                  <!--Zusätzlich haben Sie das Recht auf Sperrung und Löschung Ihrer personenbezogenen Daten. Sie können einer Nutzung, Verarbeitung oder Übermittlung ihrer Daten jederzeit bei uns unter der E-Mail-Adresse <a browse-to="mailto:mail@wuerzburger-kickers.de" class="href-link">mail@wuerzburger-kickers.de</a> widersprechen, soweit dem keine gesetzliche Aufbewahrungspflicht entgegensteht.-->
+                <!--</p>-->
               </div>
             </div>
           </div>

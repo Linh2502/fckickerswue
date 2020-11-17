@@ -1,43 +1,52 @@
 /**
  * Created by Linh on 25.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
+ *
+ * status: 14.07.2016 6:41 PM
  */
-angular.module('service.advertisement', ['ionic'])
-  .service('AdvertisementService', function ($rootScope, $http, ApiEndpoint, $state, $ionicPlatform, $cordovaFileTransfer) {
-    var dates = null;
+(function () {
+  'use strict';
 
-    return {
-      setData: function (data) {
-        dates = data;
-      },
-      getAdsData: function () {
-        return dates;
-      },
-      fetchAdsData: function() {
-          $http.get(ApiEndpoint.url + 'app--adscreen' + ApiEndpoint.version + '&uuid=' + ionic.Platform.device().uuid)
+  angular
+    .module('service.advertisement', ['ionic'])
+    .service('AdvertisementService', AdvertisementService);
+
+  AdvertisementService.$inject = ['$http', 'ApiEndpoint', '$state', '$ionicPlatform', '$cordovaFileTransfer', '$q'];
+
+  function AdvertisementService($http, ApiEndpoint, $state, $ionicPlatform, $cordovaFileTransfer, $q) {
+
+      return {
+        fetchAdsData: function() {
+          var defer = $q.defer();
+          $http.get(ApiEndpoint.url + 'app--adscreen' + ApiEndpoint.version + '&uuid=' + ionic.Platform.device().uuid + '&deviceWidth=' + ((window.innerWidth > 0) ? window.innerWidth : screen.width) + '&deviceHeight=' + ((window.innerHeight > 0) ? window.innerHeight : screen.height))
             .then(function(response){
-              dates = x2js.xml_str2json(response.data);
-              $rootScope.$broadcast('http_request_success_ads');
+              defer.resolve(x2js.xml_str2json(response.data));
             }, function(error){
               $state.go('app.error');
             });
-      },
-      skipFetching: function(pathToImage) {
-        dates = pathToImage;
-        $rootScope.$broadcast('http_skip_request_ads');
-      },
-      saveToLocalSystem: function() {
-        $ionicPlatform.ready(function() {
-          var targetPath = cordova.file.documentsDirectory + "adImage.png";
-          var options = {};
-          var bool = true;
+          return defer.promise;
+        },
+        skipFetching: function(pathToImage) {
+          var defer = $q.defer();
+          defer.resolve(pathToImage);
+          return defer.promise;
+        },
+        saveToLocalSystem: function(data, locationPath) {
+          var defer = $q.defer();
+          $ionicPlatform.ready(function() {
+            var targetPath = locationPath + "adImage.png";
+            var options = {};
+            var bool = true;
 
-          $cordovaFileTransfer.download(dates.data.image[0].url, targetPath, options, bool)
-            .then(function(result) {
-            }, function(err) {
-            }, function (progress) {
-            });
-        });
+            $cordovaFileTransfer.download(data.data.image[0].url, targetPath, options, bool)
+              .then(function(result) {
+                defer.resolve(result);
+              }, function(err) {
+              }, function (progress) {
+              });
+          });
+          return defer.promise;
+        }
       }
     }
-  })
+})();

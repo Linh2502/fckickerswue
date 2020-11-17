@@ -2,84 +2,213 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d6bbe80-77a0-40d0-a7b0-6931dc97532b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android-armv7-release-unsigned.apk" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/directive/SlideBoxHeightAdjustment.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/splash/ios/00-App-kickers-Splash-Screen_v01_2015-09-16@1242x2208.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/splash/ios/00-App-kickers-Splash-Screen_v01_2015-09-16@320x480.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/splash/ios/00-App-kickers-Splash-Screen_v01_2015-09-16@640x1136.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/splash/ios/00-App-kickers-Splash-Screen_v01_2015-09-16@640x960.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/splash/ios/00-App-kickers-Splash-Screen_v01_2015-09-16@750x1334.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/splash/ios/00-App-kickers-Splash-Screen_v01_2015-09-16@768x1024.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Appbilder/Arena-Google-Maps.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Appbilder/Arena-Google-Maps@3x.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ionic.project" afterPath="$PROJECT_DIR$/ionic.config.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/js/controller/DateFilter.js" afterPath="$PROJECT_DIR$/www/js/filter/DateFilter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/splash/android/1280x1920.png" afterPath="$PROJECT_DIR$/splash/android/1280x1920.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/splash/android/200x320.png" afterPath="$PROJECT_DIR$/splash/android/200x320.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/splash/android/320x480.png" afterPath="$PROJECT_DIR$/splash/android/320x480.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/splash/android/480x800.png" afterPath="$PROJECT_DIR$/splash/android/480x800.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/splash/android/720x1280.png" afterPath="$PROJECT_DIR$/splash/android/720x1280.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/splash/android/960x1600.png" afterPath="$PROJECT_DIR$/splash/android/960x1600.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/www/lib/angular/angular.min.js.gzip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/appbilder/arena-Plan.png" afterPath="$PROJECT_DIR$/www/img/appbilder/arena-Plan.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/appbilder/arena-Plan@3x.png" afterPath="$PROJECT_DIR$/www/img/appbilder/arena-Plan@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/appbilder/icue-Logo.png" afterPath="$PROJECT_DIR$/www/img/appbilder/icue-Logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/appbilder/mainpost-Logo.png" afterPath="$PROJECT_DIR$/www/img/appbilder/mainpost-Logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/appbilder/parken.png" afterPath="$PROJECT_DIR$/www/img/appbilder/parken.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/appbilder/parken@3x.png" afterPath="$PROJECT_DIR$/www/img/appbilder/parken@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/2x/9020minuten@2x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/2x/9020minuten@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/2x/kickers_1097_Logo_2@2x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/2x/kickers_1097_Logo_2@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/2x/kickers_Ball@2x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/2x/kickers_Ball@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/2x/logo-dfl-dritte-liga@2x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/2x/logo-dfl-dritte-liga@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/2x/play_Button@2x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/2x/play_Button@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/3x/9020minuten@3x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/3x/9020minuten@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/3x/kickers_1097_Logo_2@3x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/3x/kickers_1097_Logo_2@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/3x/kickers_Ball@3x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/3x/kickers_Ball@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/3x/logo-dfl-dritte-liga@3x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/3x/logo-dfl-dritte-liga@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/3x/play_Button@3x.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/3x/play_Button@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/9020minuten.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/9020minuten.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/kickers_1097_Logo_2.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/kickers_1097_Logo_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/kickers_Ball.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/kickers_Ball.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/logo-dfl-dritte-liga.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/logo-dfl-dritte-liga.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/bilddaten/play_Button.png" afterPath="$PROJECT_DIR$/www/img/bilddaten/play_Button.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/0.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/1.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/0@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/0@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/1@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/1@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/2@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/2@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/3@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/3@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/4@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/4@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/5@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/5@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/6@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/6@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/7@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/7@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/8@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/8@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/9@2x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/2x/9@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/0@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/0@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/1@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/1@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/2@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/2@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/3@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/3@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/4@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/4@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/5@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/5@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/6@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/6@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/7@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/7@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/8@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/8@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/9@3x.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/3x/9@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/4.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/5.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/6.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/7.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/8.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/countdown-Zahlen/9.png" afterPath="$PROJECT_DIR$/www/img/countdown-Zahlen/9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/1.png" afterPath="$PROJECT_DIR$/www/img/grafiken/1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/10.png" afterPath="$PROJECT_DIR$/www/img/grafiken/10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/11.png" afterPath="$PROJECT_DIR$/www/img/grafiken/11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/12.png" afterPath="$PROJECT_DIR$/www/img/grafiken/12.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/13.png" afterPath="$PROJECT_DIR$/www/img/grafiken/13.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/14.png" afterPath="$PROJECT_DIR$/www/img/grafiken/14.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/14@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/14@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/15.png" afterPath="$PROJECT_DIR$/www/img/grafiken/15.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/16.png" afterPath="$PROJECT_DIR$/www/img/grafiken/16.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/17.png" afterPath="$PROJECT_DIR$/www/img/grafiken/17.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/18.png" afterPath="$PROJECT_DIR$/www/img/grafiken/18.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/18@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/18@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/19.png" afterPath="$PROJECT_DIR$/www/img/grafiken/19.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/20@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/20@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/21.png" afterPath="$PROJECT_DIR$/www/img/grafiken/21.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/22.png" afterPath="$PROJECT_DIR$/www/img/grafiken/22.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/23@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/23@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/24.png" afterPath="$PROJECT_DIR$/www/img/grafiken/24.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/25.png" afterPath="$PROJECT_DIR$/www/img/grafiken/25.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/26.png" afterPath="$PROJECT_DIR$/www/img/grafiken/26.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/27.png" afterPath="$PROJECT_DIR$/www/img/grafiken/27.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/28.png" afterPath="$PROJECT_DIR$/www/img/grafiken/28.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/29.png" afterPath="$PROJECT_DIR$/www/img/grafiken/29.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/10@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/10@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/11@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/11@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/12@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/12@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/13@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/13@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/14@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/14@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/15@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/15@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/16@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/16@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/17@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/17@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/18@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/18@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/19@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/19@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/1@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/1@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/21@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/21@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/22@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/22@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/24@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/24@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/25@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/25@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/26@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/26@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/27@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/27@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/28@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/28@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/29@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/29@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/2@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/2@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/30@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/30@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/31@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/31@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/32@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/32@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/33@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/33@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/34@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/34@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/35@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/35@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/36@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/36@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/37@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/37@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/38@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/38@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/39@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/39@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/3@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/3@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/40@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/40@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/4@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/4@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/5@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/5@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/6@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/6@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/7@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/7@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/8@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/8@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/9@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/9@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/arena@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/arena@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/kader@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/kader@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/kader_2015@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/kader_2015@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/news@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/news@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/spielplan@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/spielplan@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/2x/tabelle@2x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/2x/tabelle@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/30.png" afterPath="$PROJECT_DIR$/www/img/grafiken/30.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/31.png" afterPath="$PROJECT_DIR$/www/img/grafiken/31.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/32.png" afterPath="$PROJECT_DIR$/www/img/grafiken/32.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/33.png" afterPath="$PROJECT_DIR$/www/img/grafiken/33.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/34.png" afterPath="$PROJECT_DIR$/www/img/grafiken/34.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/35.png" afterPath="$PROJECT_DIR$/www/img/grafiken/35.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/36.png" afterPath="$PROJECT_DIR$/www/img/grafiken/36.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/37.png" afterPath="$PROJECT_DIR$/www/img/grafiken/37.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/38.png" afterPath="$PROJECT_DIR$/www/img/grafiken/38.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/39.png" afterPath="$PROJECT_DIR$/www/img/grafiken/39.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/10@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/10@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/11@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/11@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/12@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/12@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/13@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/13@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/14@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/14@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/15@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/15@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/16@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/16@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/17@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/17@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/18@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/18@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/19@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/19@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/1@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/1@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/21@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/21@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/22@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/22@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/24@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/24@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/25@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/25@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/26@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/26@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/27@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/27@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/28@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/28@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/29@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/29@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/2@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/2@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/30@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/30@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/31@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/31@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/32@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/32@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/33@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/33@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/34@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/34@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/35@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/35@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/36@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/36@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/37@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/37@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/38@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/38@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/39@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/39@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/3@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/3@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/40@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/40@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/4@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/4@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/5@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/5@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/6@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/6@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/7@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/7@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/8@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/8@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/9@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/9@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/Aktionen@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/Aktionen@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/arena@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/arena@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/kader@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/kader@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/kader_2015@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/kader_2015@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/ladeball@3x.gif" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/ladeball@3x.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/news@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/news@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/spielplan@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/spielplan@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/3x/tabelle@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/3x/tabelle@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/4.png" afterPath="$PROJECT_DIR$/www/img/grafiken/4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/40.png" afterPath="$PROJECT_DIR$/www/img/grafiken/40.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/4@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/4@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/5.png" afterPath="$PROJECT_DIR$/www/img/grafiken/5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/6.png" afterPath="$PROJECT_DIR$/www/img/grafiken/6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/7.png" afterPath="$PROJECT_DIR$/www/img/grafiken/7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/7@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/7@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/8.png" afterPath="$PROJECT_DIR$/www/img/grafiken/8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/8@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/8@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/9.png" afterPath="$PROJECT_DIR$/www/img/grafiken/9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/9@3x.png" afterPath="$PROJECT_DIR$/www/img/grafiken/9@3x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/Abpfiff.png" afterPath="$PROJECT_DIR$/www/img/grafiken/Abpfiff.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/Anpfiff.png" afterPath="$PROJECT_DIR$/www/img/grafiken/Anpfiff.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/arena.png" afterPath="$PROJECT_DIR$/www/img/grafiken/arena.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/kader.png" afterPath="$PROJECT_DIR$/www/img/grafiken/kader.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/kader_2015.png" afterPath="$PROJECT_DIR$/www/img/grafiken/kader_2015.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/news.png" afterPath="$PROJECT_DIR$/www/img/grafiken/news.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/spielplan.png" afterPath="$PROJECT_DIR$/www/img/grafiken/spielplan.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/grafiken/tabelle.png" afterPath="$PROJECT_DIR$/www/img/grafiken/tabelle.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/ionic.png" afterPath="$PROJECT_DIR$/www/img/ionic.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/ios.css" afterPath="$PROJECT_DIR$/www/css/ios.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/style.css" afterPath="$PROJECT_DIR$/www/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/AdvertisementCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/AdvertisementCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/AppCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/AppCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/ArenaCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/ArenaCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/ErrorCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/ErrorCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/HomeCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/HomeCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/InternetConnectionCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/InternetConnectionCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/KaderCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/KaderCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/KickersTVCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/KickersTVCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/LoadingInterceptor.js" afterPath="$PROJECT_DIR$/www/js/controller/LoadingInterceptor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/MatchCenterCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/MatchCenterCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/NewsCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/NewsCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/SingleNewsCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/SingleNewsCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/SinglePlayerCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/SinglePlayerCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/SpielplanCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/SpielplanCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/TabelleCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/TabelleCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/directive/CountdownDirective.js" afterPath="$PROJECT_DIR$/www/js/directive/CountdownDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/directive/ExternalLinkDirective.js" afterPath="$PROJECT_DIR$/www/js/directive/ExternalLinkDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/directive/LogoDirective.js" afterPath="$PROJECT_DIR$/www/js/directive/LogoDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/service/AdvertisementService.js" afterPath="$PROJECT_DIR$/www/js/service/AdvertisementService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/service/HomeService.js" afterPath="$PROJECT_DIR$/www/js/service/HomeService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/service/KaderService.js" afterPath="$PROJECT_DIR$/www/js/service/KaderService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/service/KickersTVService.js" afterPath="$PROJECT_DIR$/www/js/service/KickersTVService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/service/MatchcenterService.js" afterPath="$PROJECT_DIR$/www/js/service/MatchcenterService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/service/NewsService.js" afterPath="$PROJECT_DIR$/www/js/service/NewsService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/service/SingleNewsService.js" afterPath="$PROJECT_DIR$/www/js/service/SingleNewsService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/service/SpielplanService.js" afterPath="$PROJECT_DIR$/www/js/service/SpielplanService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/service/TabelleService.js" afterPath="$PROJECT_DIR$/www/js/service/TabelleService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular/.bower.json" afterPath="$PROJECT_DIR$/www/lib/angular/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular/angular.js" afterPath="$PROJECT_DIR$/www/lib/angular/angular.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular/angular.min.js" afterPath="$PROJECT_DIR$/www/lib/angular/angular.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/www/lib/angular/angular.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular/bower.json" afterPath="$PROJECT_DIR$/www/lib/angular/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/angular/package.json" afterPath="$PROJECT_DIR$/www/lib/angular/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/arena.html" afterPath="$PROJECT_DIR$/www/templates/arena.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/datenschutz.html" afterPath="$PROJECT_DIR$/www/templates/datenschutz.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/error.html" afterPath="$PROJECT_DIR$/www/templates/error.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/home.html" afterPath="$PROJECT_DIR$/www/templates/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/impressum.html" afterPath="$PROJECT_DIR$/www/templates/impressum.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/kader.html" afterPath="$PROJECT_DIR$/www/templates/kader.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/kickerstv.html" afterPath="$PROJECT_DIR$/www/templates/kickerstv.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/kontakt.html" afterPath="$PROJECT_DIR$/www/templates/kontakt.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/matchcenter.html" afterPath="$PROJECT_DIR$/www/templates/matchcenter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/menu.html" afterPath="$PROJECT_DIR$/www/templates/menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/news.html" afterPath="$PROJECT_DIR$/www/templates/news.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/newsletter.html" afterPath="$PROJECT_DIR$/www/templates/newsletter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/settings.html" afterPath="$PROJECT_DIR$/www/templates/settings.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/singlenews.html" afterPath="$PROJECT_DIR$/www/templates/singlenews.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/spielplan.html" afterPath="$PROJECT_DIR$/www/templates/spielplan.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tabelle.html" afterPath="$PROJECT_DIR$/www/templates/tabelle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/werbepartner.html" afterPath="$PROJECT_DIR$/www/templates/werbepartner.html" />
     </list>
     <ignored path="KickersApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,7 +219,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -100,21 +228,85 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+            <state relative-caret-position="497">
+              <caret line="75" column="88" selection-start-line="75" selection-start-column="88" selection-end-line="75" selection-end-column="88" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArenaCtrl.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/js/controller/ArenaCtrl.js">
+      <file leaf-file-name="InternetConnectionCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/controller/InternetConnectionCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.08783784">
-              <caret line="14" column="91" selection-start-line="14" selection-start-column="91" selection-end-line="14" selection-end-column="91" />
+            <state relative-caret-position="75">
+              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="youtube_api.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/lib/youtube/youtube_api.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gulpfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ionic.config.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ionic.config.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="15" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bower.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bower.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+              <folding>
+                <marker date="1499864080000" expanded="true" signature="142:196" ph="{&quot;angular-youtube-embed&quot;: &quot;^1.3.0&quot;...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -127,12 +319,38 @@
       <list>
         <option value="Html5" />
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>loadVideosData</find>
+      <find>loadTableData</find>
+      <find>isLive</find>
+      <find>liveTicker</find>
+      <find>loadLiveTicker</find>
+      <find>setLiveTickerFeed</find>
+      <find>vm.getMatchCenterData.data</find>
+      <find>$rootScope.</find>
+      <find>bro</find>
+      <find>$broadcast</find>
+      <find>broadcast</find>
+      <find>setGamesFeed</find>
+      <find>$rootScope.live</find>
+      <find>$rootScope.isLive</find>
+      <find>cast</find>
+      <find>checkLiveTicker</find>
+      <find>spinner</find>
+      <find>getMatchCenterData</find>
+      <find>details.live</find>
+      <find>live</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -142,62 +360,62 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/www/css/ios.css" />
-        <option value="$PROJECT_DIR$/www/js/directive/SlideBoxHeightAdjustment.js" />
-        <option value="$PROJECT_DIR$/www/js/directive/LogoDirective.js" />
-        <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/templates/arena.html" />
-        <option value="$PROJECT_DIR$/www/templates/datenschutz.html" />
-        <option value="$PROJECT_DIR$/www/templates/error.html" />
-        <option value="$PROJECT_DIR$/www/templates/kader.html" />
-        <option value="$PROJECT_DIR$/www/templates/newsletter.html" />
-        <option value="$PROJECT_DIR$/www/templates/settings.html" />
-        <option value="$PROJECT_DIR$/www/templates/tabelle.html" />
-        <option value="$PROJECT_DIR$/www/js/controller/ErrorCtrl.js" />
-        <option value="$PROJECT_DIR$/www/js/controller/LoadingInterceptor.js" />
-        <option value="$PROJECT_DIR$/www/js/controller/SpielplanCtrl.js" />
-        <option value="$PROJECT_DIR$/www/js/controller/TabelleCtrl.js" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/www/js/controller/KaderCtrl.js" />
-        <option value="$PROJECT_DIR$/www/templates/matchcenter.html" />
-        <option value="$PROJECT_DIR$/www/js/controller/SingleNewsCtrl.js" />
-        <option value="$PROJECT_DIR$/www/css/style.css" />
-        <option value="$PROJECT_DIR$/www/templates/werbepartner.html" />
-        <option value="$PROJECT_DIR$/www/js/controller/MatchCenterCtrl.js" />
-        <option value="$PROJECT_DIR$/www/js/service/SingleNewsService.js" />
-        <option value="$PROJECT_DIR$/www/js/service/MatchcenterService.js" />
-        <option value="$PROJECT_DIR$/www/js/service/KaderService.js" />
-        <option value="$PROJECT_DIR$/www/js/service/TabelleService.js" />
-        <option value="$PROJECT_DIR$/www/js/service/SpielplanService.js" />
-        <option value="$PROJECT_DIR$/www/js/service/AdvertisementService.js" />
-        <option value="$PROJECT_DIR$/www/js/controller/InternetConnectionCtrl.js" />
-        <option value="$PROJECT_DIR$/www/js/controller/AdvertisementCtrl.js" />
-        <option value="$PROJECT_DIR$/platforms/ios/www/templates/menu.html" />
-        <option value="$PROJECT_DIR$/www/templates/kontakt.html" />
-        <option value="$PROJECT_DIR$/www/templates/impressum.html" />
-        <option value="$PROJECT_DIR$/www/js/service/KickersTVService.js" />
-        <option value="$PROJECT_DIR$/www/js/service/NewsService.js" />
-        <option value="$PROJECT_DIR$/www/js/controller/AppCtrl.js" />
-        <option value="$PROJECT_DIR$/www/templates/kickerstv.html" />
         <option value="$PROJECT_DIR$/www/js/controller/KickersTVCtrl.js" />
+        <option value="$PROJECT_DIR$/www/templates/error.html" />
         <option value="$PROJECT_DIR$/www/templates/news.html" />
-        <option value="$PROJECT_DIR$/www/js/controller/NewsCtrl.js" />
+        <option value="$PROJECT_DIR$/www/templates/singlenews.html" />
+        <option value="$PROJECT_DIR$/www/templates/singleaktion.html" />
+        <option value="$PROJECT_DIR$/www/templates/reconnect.html" />
+        <option value="$PROJECT_DIR$/www/js/controller/ErrorCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/service/HomeService.js" />
-        <option value="$PROJECT_DIR$/www/js/controller/HomeCtrl.js" />
-        <option value="$PROJECT_DIR$/www/js/directive/CountdownDirective.js" />
-        <option value="$PROJECT_DIR$/www/templates/home.html" />
+        <option value="$PROJECT_DIR$/www/js/service/AdvertisementService.js" />
+        <option value="$PROJECT_DIR$/www/js/controller/ReconnectCtrl.js" />
+        <option value="$PROJECT_DIR$/www/templates/settings.html" />
+        <option value="$PROJECT_DIR$/www/js/directive/LogoDirective.js" />
+        <option value="$PROJECT_DIR$/www/js/controller/NewsletterCtrl.js" />
+        <option value="$PROJECT_DIR$/www/js/controller/SpielplanCtrl.js" />
+        <option value="$PROJECT_DIR$/www/js/controller/NewsCtrl.js" />
         <option value="$PROJECT_DIR$/www/templates/spielplan.html" />
-        <option value="$PROJECT_DIR$/plugins/cordova-plugin-whitelist/plugin.xml" />
         <option value="$PROJECT_DIR$/www/templates/menu.html" />
-        <option value="$PROJECT_DIR$/config.xml" />
-        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/www/js/service/SinglePlayerService.js" />
+        <option value="$PROJECT_DIR$/www/js/service/KaderService.js" />
+        <option value="$PROJECT_DIR$/www/templates/kader.html" />
+        <option value="$PROJECT_DIR$/www/js/controller/KaderCtrl.js" />
+        <option value="$PROJECT_DIR$/www/templates/singleplayer.html" />
+        <option value="$PROJECT_DIR$/www/css/style.css" />
+        <option value="$PROJECT_DIR$/www/js/directive/SlideBoxHeightAdjustment.js" />
+        <option value="$PROJECT_DIR$/www/css/ios.css" />
+        <option value="$PROJECT_DIR$/www/js/controller/SinglePlayerCtrl.js" />
+        <option value="$PROJECT_DIR$/www/templates/newsletter.html" />
+        <option value="$PROJECT_DIR$/plugins/android.json" />
+        <option value="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/platforms/ios/ios.json" />
+        <option value="$PROJECT_DIR$/www/js/controller/SettingsCtrl.js" />
+        <option value="$PROJECT_DIR$/www/templates/matchcenter.html" />
+        <option value="$PROJECT_DIR$/www/js/directive/CountdownDirective.js" />
+        <option value="$PROJECT_DIR$/www/js/controller/MatchCenterCtrl.js" />
+        <option value="$PROJECT_DIR$/plugins/ios.json" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_79.json" />
+        <option value="$PROJECT_DIR$/www/templates/home.html" />
+        <option value="$PROJECT_DIR$/www/js/controller/HomeCtrl.js" />
+        <option value="$PROJECT_DIR$/platforms/ios/Podfile" />
+        <option value="$PROJECT_DIR$/ionic.config.json" />
+        <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/www/lib/youtube/widget_api.js" />
+        <option value="$PROJECT_DIR$/www/lib/youtube/youtube_api.js" />
         <option value="$PROJECT_DIR$/www/js/app.js" />
-        <option value="$PROJECT_DIR$/www/js/controller/ArenaCtrl.js" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/js/controller/AdvertisementCtrl.js" />
+        <option value="$PROJECT_DIR$/www/js/controller/AppCtrl.js" />
+        <option value="$PROJECT_DIR$/www/js/controller/InternetConnectionCtrl.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/config.xml" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" />
-  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <gulpfiles>
@@ -205,10 +423,14 @@
         <gulpfile-path>$PROJECT_DIR$/gulpfile.js</gulpfile-path>
       </GulpfileState>
     </gulpfiles>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="width" value="2560" />
+    <option name="height" value="1440" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -223,20 +445,23 @@
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
-      <showMembers />
+      <showMembers ProjectPane="false" />
       <showModules />
       <showLibraryContents />
       <hideEmptyPackages />
       <abbreviatePackageNames />
       <autoscrollToSource />
       <autoscrollFromSource />
-      <sortByType />
+      <sortByType ProjectPane="false" />
       <manualOrder />
-      <foldersAlwaysOnTop value="true" />
+      <foldersAlwaysOnTop value="false" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Project Files" />
+        <subPane subId="Default" />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -251,17 +476,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="KickersApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KickersApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KickersApp" />
+              <option name="myItemId" value="fckickerswue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -275,7 +490,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="KickersApp" />
+              <option name="myItemId" value="fckickerswue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -283,7 +498,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -293,19 +508,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="KickersApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
+              <option name="myItemId" value="fckickerswue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -315,19 +518,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="KickersApp" />
+              <option name="myItemId" value="fckickerswue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -337,15 +532,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="KickersApp" />
+              <option name="myItemId" value="fckickerswue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scss" />
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="splash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KickersApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fckickerswue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KickersApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fckickerswue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
+        <option name="show-excluded-files" value="false" />
       </pane>
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
@@ -353,11 +593,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="editor.config.accepted" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/kickers" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -365,15 +604,53 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="js-jscs-package" value="/usr/local/lib/node_modules/jscs" />
     <property name="prop_add_unversioned_files" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="106" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="107" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="111" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="905" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="106" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="107" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="111" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="905" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="JSON" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/resources/android/icon" />
+      <recent name="$PROJECT_DIR$/res" />
       <recent name="$PROJECT_DIR$/www/js/filter" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/www/img/appbilder" />
+      <recent name="$PROJECT_DIR$/resources/ios/splash" />
+      <recent name="$PROJECT_DIR$/resources/android/splash" />
+      <recent name="$PROJECT_DIR$/platforms" />
+      <recent name="$PROJECT_DIR$/resources/ios/icon" />
+      <recent name="$PROJECT_DIR$/resources/android" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.matchcenter.html">
     <configuration default="false" name="matchcenter.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KickersApp/www/templates/matchcenter.html">
@@ -385,14 +662,16 @@
     <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
       <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
     <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
@@ -402,6 +681,7 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
       <tasks />
@@ -413,10 +693,12 @@
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run-script" />
       <scripts />
+      <node-interpreter value="project" />
       <envs />
       <method />
     </configuration>
     <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter />
       <node-options />
       <working-directory>$PROJECT_DIR$</working-directory>
       <pass-parent-env>true</pass-parent-env>
@@ -449,7 +731,12 @@
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",SHOW_CLASSES,ALPHA_COMPARATOR,HIDE_INHERITED" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -458,9 +745,58 @@
       <changelist id="9d6bbe80-77a0-40d0-a7b0-6931dc97532b" name="Default" comment="" />
       <created>1443095542770</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1443095542770</updated>
+      <workItem from="1470424853507" duration="550000" />
+      <workItem from="1470565384388" duration="150000" />
+      <workItem from="1470639116453" duration="11961000" />
+      <workItem from="1470671202464" duration="4426000" />
+      <workItem from="1470675950328" duration="1617000" />
+      <workItem from="1470726447859" duration="62000" />
+      <workItem from="1470734292522" duration="75000" />
+      <workItem from="1471329773609" duration="6429000" />
+      <workItem from="1471623206398" duration="7930000" />
+      <workItem from="1471769829258" duration="39000" />
+      <workItem from="1471796357571" duration="1761000" />
+      <workItem from="1471801081069" duration="1122000" />
+      <workItem from="1471859037536" duration="28000" />
+      <workItem from="1471859840708" duration="3000" />
+      <workItem from="1472483187482" duration="18000" />
+      <workItem from="1472486000449" duration="38000" />
+      <workItem from="1474628157115" duration="1962000" />
+      <workItem from="1474890170195" duration="29000" />
+      <workItem from="1474890970639" duration="320000" />
+      <workItem from="1480612984549" duration="10868000" />
+      <workItem from="1480677636489" duration="4726000" />
+      <workItem from="1480809627018" duration="2540000" />
+      <workItem from="1480936498860" duration="30000" />
+      <workItem from="1481221639213" duration="7765000" />
+      <workItem from="1481558750397" duration="707000" />
+      <workItem from="1481789234671" duration="5463000" />
+      <workItem from="1481824703532" duration="7000" />
+      <workItem from="1485022043514" duration="1751000" />
+      <workItem from="1485597550638" duration="53000" />
+      <workItem from="1485812255104" duration="5152000" />
+      <workItem from="1485937707416" duration="3248000" />
+      <workItem from="1486022986759" duration="2557000" />
+      <workItem from="1486127673485" duration="34000" />
+      <workItem from="1486364362461" duration="1633000" />
+      <workItem from="1486378142815" duration="347000" />
+      <workItem from="1486483450105" duration="623000" />
+      <workItem from="1486541258086" duration="1374000" />
+      <workItem from="1487064803005" duration="39000" />
+      <workItem from="1487158653496" duration="555000" />
+      <workItem from="1490684905607" duration="2468000" />
+      <workItem from="1490719701160" duration="1248000" />
+      <workItem from="1491322483168" duration="3394000" />
+      <workItem from="1491466133261" duration="3345000" />
+      <workItem from="1499772995110" duration="1657000" />
+      <workItem from="1499845087513" duration="2951000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="108242000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -472,19 +808,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2366958" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.37331215" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19574636" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="736" y="87" width="497" height="1360" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3258786" sideWeight="0.37331215" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20378457" sideWeight="0.6266878" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32285115" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24931075" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23795621" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -492,12 +827,60 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44460228" sideWeight="0.48768863" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43892047" sideWeight="0.48768863" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670453" sideWeight="0.37331215" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20378457" sideWeight="0.6266878" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.234375" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26767275" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4403409" sideWeight="0.48768863" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -512,374 +895,316 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/js/external/angular-ios9-uiwebview.patch.js">
+    <entry file="file://$PROJECT_DIR$/platforms/ios/ios.json" />
+    <entry file="file://$PROJECT_DIR$/www/js/controller/SettingsCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-687">
+          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/service/AdvertisementService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25037935">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/factory/SplashScreenFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3414264">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/service/SinglePlayerService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/service/SingleNewsService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="103" selection-start-line="13" selection-start-column="103" selection-end-line="13" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.bowerrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="-155">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/ios/FC Würzburger Kickers/config.xml">
+    <entry file="file://$PROJECT_DIR$/www/templates/werbepartner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/ios/www/templates/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controller/SpielplanCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controller/MatchCenterCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/service/SpielplanService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="54" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/service/TabelleService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/kontakt.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25">
-          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/impressum.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4583335">
-          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/service/NewsService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/service/KickersTVService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/kickerstv.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72321427">
-          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/lib/ionic/js/ionic.bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5040917">
-          <caret line="24966" column="35" selection-start-line="24966" selection-start-column="35" selection-end-line="24966" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controller/KickersTVCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controller/NewsCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controller/HomeCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/directive/CountdownDirective.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.022123894">
-          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/lib/ionic/scss/ionic.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/lib/ionic/scss/_grid.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44954127">
-          <caret line="133" column="13" selection-start-line="133" selection-start-column="13" selection-end-line="133" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/lib/ionic/scss/_mixins.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3027523">
-          <caret line="512" column="10" selection-start-line="512" selection-start-column="10" selection-end-line="512" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/lib/ionic/scss/_loading.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.036697246">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/service/HomeService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55309737">
-          <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/spielplan.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6559633">
-          <caret line="83" column="47" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0191388">
-          <caret line="40" column="160" selection-start-line="40" selection-start-column="88" selection-end-line="40" selection-end-column="160" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/ios.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/cordova-plugin-whitelist/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28899083">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/android.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.14678898">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26785713">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/npm-debug.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic.config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33482143">
-          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19396552">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.editorconfig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53571427">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.25">
-          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46875">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="272.0">
-          <caret line="566" column="1" selection-start-line="566" selection-start-column="1" selection-end-line="566" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/ios.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12946428">
-          <caret line="1133" column="11" selection-start-line="1133" selection-start-column="11" selection-end-line="1133" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controller/AdvertisementCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4538905">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/lib/ionic/css/ionic.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6229508">
-          <caret line="424" column="0" selection-start-line="424" selection-start-column="0" selection-end-line="424" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/lib/ionic/scss/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.321428">
+        <state relative-caret-position="-1664">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/ionic.app.scss">
+    <entry file="file://$PROJECT_DIR$/www/js/service/MatchcenterService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8778626">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="345">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/ios/splash/Default-568h@2x~iphone.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/ios/splash/Default-667h.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/ios/splash/Default-736h.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/ios/splash/Default-Portrait@2x~ipad.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/ios/splash/Default~iphone.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/ios/splash/Default-Portrait~ipad.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/ios/splash/Default@2x~iphone.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/android/splash/image009.jpg" />
+    <entry file="file://$PROJECT_DIR$/resources/android/splash/drawable-port-xxxhdpi-screen.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/android/splash/drawable-port-xxhdpi-screen.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/android/splash/drawable-port-xhdpi-screen.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/android/splash/drawable-port-hdpi-screen.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/android/splash/drawable-port-mdpi-screen.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controller/ImpressumCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/matchcenter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="49" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controller/NewsCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="87" column="54" selection-start-line="87" selection-start-column="10" selection-end-line="87" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/fetch.json" />
+    <entry file="file://$PROJECT_DIR$/plugins/ios.json" />
+    <entry file="file://$PROJECT_DIR$/www/js/directive/CountdownDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="45" column="44" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_79.json" />
+    <entry file="file://$PROJECT_DIR$/www/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="120" column="61" selection-start-line="120" selection-start-column="49" selection-end-line="120" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controller/MatchCenterCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="155" column="19" selection-start-line="155" selection-start-column="15" selection-end-line="155" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controller/HomeCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2520">
+          <caret line="168" column="26" selection-start-line="168" selection-start-column="26" selection-end-line="168" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms/ios/Podfile" />
+    <entry file="file://$PROJECT_DIR$/ionic.project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/lib/youtube/widget_api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2385">
+          <caret line="161" column="222" selection-start-line="161" selection-start-column="222" selection-end-line="161" selection-end-column="222" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="465">
+          <caret line="75" column="6" selection-start-line="75" selection-start-column="6" selection-end-line="75" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/lib/ionic/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.bowerrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controller/AppCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.777027">
-          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        <state relative-caret-position="224">
+          <caret line="44" column="37" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controller/AdvertisementCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/www/lib/youtube/youtube_api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38135594">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="30">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic.config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="15" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controller/ArenaCtrl.js">
+    <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08783784">
-          <caret line="14" column="91" selection-start-line="14" selection-start-column="91" selection-end-line="14" selection-end-column="91" />
+        <state relative-caret-position="30">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/android.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+          <folding>
+            <marker date="1499864080000" expanded="true" signature="142:196" ph="{&quot;angular-youtube-embed&quot;: &quot;^1.3.0&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/ios.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="1147" column="0" selection-start-line="1147" selection-start-column="0" selection-end-line="1147" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="478" column="30" selection-start-line="478" selection-start-column="26" selection-end-line="478" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controller/InternetConnectionCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/android/splash/drawable-port-ldpi-screen.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/android/icon/drawable-hdpi-icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="75" column="88" selection-start-line="75" selection-start-column="88" selection-end-line="75" selection-end-column="88" />
           <folding />
         </state>
       </provider>

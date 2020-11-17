@@ -1,30 +1,35 @@
 /**
  * Created by Linh on 15.09.15.
  * Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
+ *
+ * status: 14.07.2016 3:38 PM
  */
-angular.module('service.news', [])
-  .service('NewsService', function ($rootScope, $http, ApiEndpoint, $state, $q) {
+(function () {
+  'use strict';
+
+  angular
+    .module('service.news', [])
+    .service('NewsService', NewsService);
+
+  NewsService.$inject = ['$rootScope', '$http', 'ApiEndpoint', '$state', '$q', '$log'];
+
+  function NewsService($rootScope, $http, ApiEndpoint, $state, $q, $log) {
     var dates = null;
 
     return {
-      setData: function (data) {
-        dates = data;
-      },
-      getData: function () {
-        return dates.data.news;
-      },
-      fetchNewsData: function(){
+      fetchNewsData: function () {
         var defer = $q.defer();
         $http.get(ApiEndpoint.url + 'app--news' + ApiEndpoint.version + $rootScope.uuid)
-          .then(function(response){
+          .then(function (response) {
+            $log.info("Succeeded in requesting news data", response);
             dates = x2js.xml_str2json(response.data);
-            $rootScope.$broadcast('http_request_success_news');
-            defer.resolve();
-          }, function(error){
+            defer.resolve(dates.data.news);
+          }, function (error) {
+            $log.info("Succeeded in requesting news data", error);
             $state.go('app.error');
           });
         return defer.promise;
       }
     }
-  })
-
+  }
+})();

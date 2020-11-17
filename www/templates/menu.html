@@ -1,100 +1,151 @@
-<ion-side-menus enable-menu-with-back-views="false">
-  <ion-side-menu-content class="remove-box-shadow">
-    <ion-nav-bar class="bar-dark custom-background">
-      <div>
+<ion-nav-bar class="bar-dark black-background">
+    <div>
         <ion-nav-title class="custom-title">
-          <div class="text-align-center">Offizielle App</div>
+            <div class="text-align-right" ng-class="{'display-none': appVM.isSideMenuOpen}">Offizielle App</div>
+            <div class="text-align-center" ng-class="{'display-none': !appVM.isSideMenuOpen}">Offizielle App</div>
         </ion-nav-title>
-        <div class="bar bar-subheader subheader">
-          <div class="row div-kickers-slogan bar-subheader" logo-switcher></div>
-          <ion-nav-back-button class="button nav-back-button" ng-click="navigateBack()">
-          </ion-nav-back-button>
+        <div class="bar bar-subheader subheader ios-bar">
+            <div class="div-kickers-slogan bar-subheader">
+                <div class="bundesliga-logo"></div>
+                <div bar-switcher ng-class="{'display-none': appVM.isSideMenuOpen}"></div>
+            </div>
+            <ion-nav-back-button class="button nav-back-button" ng-click="appVM.navigateBack()">
+            </ion-nav-back-button>
         </div>
-        <div class="fwk-logo kickers-logo" ui-sref="app.home" ng-click="clearHistory()"></div>
-      </div>
-      <ion-nav-buttons side="left">
-        <button class="button button-clear fa fa-bars custom-button" menu-toggle="left">
-        </button>
-      </ion-nav-buttons>
-    </ion-nav-bar>
-    <ion-nav-view name="menuContent">
-      <div id="loaderInterceptor"><img src="img/grafiken/3x/ladeball@3x.gif" class="ajax-loader"/></div>
-    </ion-nav-view>
-  </ion-side-menu-content>
-
-  <ion-side-menu side="left" width="{{0.9 * devWidth}}">
-    <ion-header-bar class="bar-dark custom-background" align-title="center">
-      <p side="left"><img class="kickers-logo-small" src="img/bilddaten/3x/kickers_1097_Logo_2@3x.png"/></p>
-      <p class="title custom-title title-margin-left">Offizielle App</p>
-    </ion-header-bar>
-    <ion-content class="custom-side-menu" scroll="true" delegate-handle="resize">
-      <ion-list class="list">
-        <ion-item nav-clear class="custom-side-menu-item navigation-setting" ui-sref-active="active" menu-toggle ui-sref="app.settings" ng-click="closeMenu()">
-          <span>Einstellungen</span>
-          <i class="fa fa-cog navigation-cog"></i>
-        </ion-item>
-        <ion-item nav-clear class="custom-side-menu-item matchcenter-title-background" ui-sref-active="active" menu-toggle ng-click="navigateToLiveTicker()">
-          <img src="img/bilddaten/3x/kickers_Ball@3x.png" class="navigation-match-center-ball"/>
-          <span class="navigation-match-center">Match Center</span>
-        </ion-item>
-        <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small active" ui-sref-active="active" menu-toggle ui-sref="app.home" ng-click="closeMenu()">
-          Home
-        </ion-item>
-        <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active" menu-toggle ui-sref="app.news" ng-click="closeMenu()">
-          News
-        </ion-item>
-        <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active" menu-toggle ui-sref="app.spielplan" ng-click="closeMenu()">
-          Spielplan
-        </ion-item>
-        <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active" menu-toggle ui-sref="app.tabelle" ng-click="closeMenu()">
-          Tabelle
-        </ion-item>
-        <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active" menu-toggle ui-sref="app.kickerstv" ng-click="closeMenu()">
-          Kickers TV
-        </ion-item>
-        <!---<ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active" menu-toggle ui-sref="app.kader" ng-click="closeMenu()">
-          Kader
-        </ion-item>-->
-        <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active" menu-toggle ui-sref="app.arena" ng-click="closeMenu()">
-          Arena
-        </ion-item>
-        <div ng-click="showDropDown = ! showDropDown">
-          <ion-item class="custom-side-menu-item" ng-click="resizeContent()">
-            <span>... Mehr</span>
-            <i class="fa fa-caret-down dropdown-caret"></i>
-          </ion-item>
-          <div ng-show="showDropDown">
-            <ion-item nav-clear class="custom-side-menu-item" ui-sref-active="active" menu-toggle ui-sref="app.kontakt">
-              <span class="custom-side-menu-item-dropdown">Kontakt</span>
-            </ion-item>
-            <ion-item nav-clear class="custom-side-menu-item" ui-sref-active="active" menu-toggle ui-sref="app.newsletter">
-              <span class="custom-side-menu-item-dropdown">Newsletter</span>
-            </ion-item>
-            <ion-item nav-clear class="custom-side-menu-item" ui-sref-active="active" menu-toggle ui-sref="app.datenschutz">
-              <span class="custom-side-menu-item-dropdown">Datenschutz</span>
-            </ion-item>
-            <ion-item nav-clear class="custom-side-menu-item" ui-sref-active="active" menu-toggle ui-sref="app.impressum">
-              <span class="custom-side-menu-item-dropdown">Impressum</span>
-            </ion-item>
-          </div>
+        <div class="display-table col" style="padding-left: 20%; padding-right: 20%" ng-class="{'display-none': appVM.isSideMenuOpen}">
+            <div class="fwk-logo kickers-logo display-table-cell" ng-click="appVM.navigateToHome()" ng-class="{'display-none': appVM.isSideMenuOpen}"></div>
         </div>
-        <ion-item class="remove-border"></ion-item>
-        <ion-item class="remove-border"></ion-item>
-      </ion-list>
-    </ion-content>
-    <div class="tabs tabs-icon-right custom-background" style="z-index:10">
-      <a class="tab-item custom-title" browse-to="https://shop.wuerzburger-kickers.de/">
-        <span>Shop</span>
-        <i class="fa fa-external-link navigation-external-link"></i>
-      </a>
-      <a class="tab-item custom-title navigation-tab-left-border" browse-to="https://www.wuerzburger-kickers.de/de/flyeralarm-arena/tickets-bestellen">
-        <span>Tickets</span>
-        <i class="fa fa-external-link navigation-external-link"></i>
-      </a>
-      <a class="tab-item custom-title navigation-tab-left-border" browse-to="http://www.wuerzburger-kickers.de/">
-        <span>Website</span>
-        <i class="fa fa-external-link navigation-external-link"></i>
-      </a>
     </div>
-  </ion-side-menu>
+    <ion-nav-buttons side="left">
+        <div class="button button-clear fa fa-bars bar-navigation-button" style="padding-left: 18px"
+             ng-class="{'display-none': appVM.isSideMenuOpen}" ng-click="appVM.openSideMenu()">
+        </div>
+        <div ng-class="{'display-none': !appVM.isSideMenuOpen}">
+            <img class="kickers-logo-small" src="img/bilddaten/3x/kickers_1097_Logo_2@3x.png"/>
+        </div>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <div class="button button-clear fa fa-bars bar-navigation-button" style="padding-right: 18px"
+             ng-class="{'display-none': !appVM.isSideMenuOpen}" ng-click="appVM.openSideMenu()">
+        </div>
+    </ion-nav-buttons>
+</ion-nav-bar>
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content class="remove-box-shadow">
+        <ion-nav-view name="menuContent">
+            <div id="loaderInterceptor"><img src="img/grafiken/3x/ladeball@3x.gif" class="ajax-loader"/></div>
+        </ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left" hide-nav-bar="false" width="{{0.85 * devWidth}}">
+        <ion-content class="custom-side-menu" scroll="true" delegate-handle="resize">
+            <ion-list class="list">
+                <ion-item nav-clear class="custom-side-menu-item navigation-setting" ui-sref-active="active" menu-toggle
+                          ui-sref="app.settings" ng-click="appVM.closeMenu()">
+                    <span>Einstellungen</span>
+                    <i class="fa fa-cog navigation-cog"></i>
+                </ion-item>
+                <ion-item nav-clear class="custom-side-menu-item matchcenter-title-background" ui-sref-active="active"
+                          menu-toggle ng-click="appVM.navigateToLiveTicker()">
+                    <img src="img/bilddaten/3x/kickers_Ball@3x.png" class="navigation-match-center-ball"/>
+                    <span class="navigation-match-center">Match Center</span>
+                </ion-item>
+                <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small active"
+                          ui-sref-active="active" menu-toggle ui-sref="app.home" ng-click="appVM.closeMenu()">
+                    Home
+                </ion-item>
+                <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active"
+                          menu-toggle ui-sref="app.news" ng-click="appVM.closeMenu()">
+                    News
+                </ion-item>
+                <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active"
+                          menu-toggle ui-sref="app.aktionen" ng-click="appVM.closeMenu()">
+                    Aktionen
+                </ion-item>
+                <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active"
+                          menu-toggle ui-sref="app.spielplan" ng-click="appVM.closeMenu()">
+                    Spielplan
+                </ion-item>
+                <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active"
+                          menu-toggle ui-sref="app.tabelle" ng-click="appVM.closeMenu()">
+                    Tabelle
+                </ion-item>
+                <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active"
+                          menu-toggle ui-sref="app.kickerstv" ng-click="appVM.closeMenu()">
+                    Kickers TV
+                </ion-item>
+                <ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active"
+                          menu-toggle ui-sref="app.kader" ng-click="appVM.closeMenu()">
+                    Kader
+                </ion-item>
+                <!---<ion-item nav-clear class="custom-side-menu-item custom-side-menu-item-small" ui-sref-active="active"
+                          menu-toggle ui-sref="app.arena" ng-click="appVM.closeMenu()">
+                    Arena
+                </ion-item>-->
+                <div ng-click="showDropDown = ! showDropDown">
+                    <ion-item class="custom-side-menu-item" ng-click="appVM.resizeContent()">
+                        <span>... Mehr</span>
+                        <i class="fa fa-caret-down dropdown-caret"></i>
+                    </ion-item>
+                    <div ng-show="showDropDown">
+                        <ion-item nav-clear class="custom-side-menu-item" ui-sref-active="active" menu-toggle
+                                  ui-sref="app.kontakt" ng-click="appVM.closeMenu()">
+                            <span class="custom-side-menu-item-dropdown">Kontakt</span>
+                        </ion-item>
+                        <ion-item nav-clear class="custom-side-menu-item" ui-sref-active="active" menu-toggle
+                                  ui-sref="app.newsletter" ng-click="appVM.closeMenu()">
+                            <span class="custom-side-menu-item-dropdown">Newsletter</span>
+                        </ion-item>
+                        <ion-item nav-clear class="custom-side-menu-item" ui-sref-active="active" menu-toggle
+                                  ui-sref="app.datenschutz" ng-click="appVM.closeMenu()">
+                            <span class="custom-side-menu-item-dropdown">Datenschutz</span>
+                        </ion-item>
+                        <ion-item nav-clear class="custom-side-menu-item" ui-sref-active="active" menu-toggle
+                                  ui-sref="app.impressum" ng-click="appVM.closeMenu()">
+                            <span class="custom-side-menu-item-dropdown">Impressum</span>
+                        </ion-item>
+                    </div>
+                </div>
+                <ion-item class="remove-border"></ion-item>
+                <ion-item class="remove-border"></ion-item>
+            </ion-list>
+        </ion-content>
+        <div class="tabs tabs-icon-right black-background custom-tabs display-table">
+            <div class="row display-table-cell vertical-align-mid">
+                <div class="custom-col-33 text-align-center float-left" browse-to="https://shop.wuerzburger-kickers.de/">
+                    <div class="row display-table">
+                        <div class="tabs-fanshop"></div>
+                    </div>
+                    <div class="row display-table">
+                        <a class="custom-title">
+                            <span>Shop</span>
+                            <i class="fa fa-external-link navigation-external-link"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="custom-col-33 text-align-center float-left" browse-to="https://www.wuerzburger-kickers.de/de/flyeralarm-arena/tickets-bestellen">
+                    <div class="row display-table">
+                        <div class="tabs-tickets"></div>
+                    </div>
+                    <div class="row display-table">
+                        <a class="custom-title">
+                            <span>Tickets</span>
+                            <i class="fa fa-external-link navigation-external-link"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="custom-col-33 text-align-center float-left" browse-to="http://www.wuerzburger-kickers.de/">
+                    <div class="row display-table">
+                        <div class="tabs-website"></div>
+                    </div>
+                    <div class="row display-table">
+                        <a class="custom-title">
+                            <span>Website</span>
+                            <i class="fa fa-external-link navigation-external-link"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-side-menu>
 </ion-side-menus>

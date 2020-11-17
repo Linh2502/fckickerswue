@@ -1,0 +1,23 @@
+<ion-view hide-back-button="true">
+    <ion-content lazy-scroll class="has-logo-subheader">
+        <ion-refresher on-refresh="aktionenVM.refresh()"></ion-refresher>
+        <div class="news">
+            <div ng-repeat="aktion in aktionenVM.aktionenFeed">
+                <a nav-transition="ios" class="remove-href-link" ng-click="aktionenVM.navigateToAktion(aktion.id)">
+                    <div class="custom-background">
+                        <div class="image-height">
+                            <img src="{{aktion.image}}" class="news-image" image-lazy-loader="dots"/>
+                        </div>
+                        <div class="news-image-text custom-background">
+                            <div class="news-image-text-display">
+                                <div class="custom-title-date news-image-date">| {{aktion.date | dateFilter}}</div>
+                                <div class="custom-title news-image-title" ng-bind-html="aktion.title"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="row"></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

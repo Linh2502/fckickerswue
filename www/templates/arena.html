@@ -1,25 +1,26 @@
 <!--
     Created by Linh on 02.09.15.
     Copyright icue-medienproduktion GmbH & Co. KG. All rights reserved.
-    - final -
+
+    status: 14.07.2016 6:51 PM
 -->
 <ion-view hide-back-button="true">
-  <ion-content lazy-scroll class="has-subheader" delegate-handle="resize">
+  <ion-content lazy-scroll class="has-logo-subheader" delegate-handle="resize">
     <div class="arena-column-height">
       <div class="col kontakt-column-padding arena-column-height">
         <div class="col custom-title arena-border-box-shadow text-align-center arena-border-color">
           <div class="row remove-col-padding">
-            <span class="col active vertical-align-mid" ng-class="{ active: showTab(1)}" ng-click="setTab(1)">Stadionplan</span>
-            <span class="col vertical-align-mid" ng-class="{ active: showTab(2)}" ng-click="setTab(2)">Parken</span>
-            <span class="col vertical-align-mid" ng-class="{ active: showTab(3)}" ng-click="setTab(3)">Anfahrt</span>
+            <span class="col active vertical-align-mid" ng-class="{ active: arenaVM.showTab(1)}" ng-click="arenaVM.setTab(1)">Stadionplan</span>
+            <span class="col vertical-align-mid" ng-class="{ active: arenaVM.showTab(2)}" ng-click="arenaVM.setTab(2)">Parken</span>
+            <span class="col vertical-align-mid" ng-class="{ active: arenaVM.showTab(3)}" ng-click="arenaVM.setTab(3)">Anfahrt</span>
           </div>
         </div>
       </div>
     </div>
-    <div id="Stadionplan" ng-show="showTab(1)">
+    <div id="Stadionplan" ng-show="arenaVM.showTab(1)">
       <div>
         <div class="col arena-plan-margin text-align-center">
-          <img class="arena-image-width" image-lazy-src="img/appbilder/arena-Plan@3x.png" image-lazy-loader="dots"/>
+          <img class="arena-image-width" src="img/appbilder/arena-Plan@3x.png"/>
         </div>
       </div>
       <div class="col"></div>
@@ -75,10 +76,10 @@
         </div>
       </div>
     </div>
-    <div id="Parken" ng-show="showTab(2)">
+    <div id="Parken" ng-show="arenaVM.showTab(2)">
       <div class="custom-row-border">
         <div class="col text-align-center">
-          <img class="arena-image-width" image-lazy-src="img/appbilder/parken@3x.png" image-lazy-loader="lines"/>
+          <img class="arena-image-width" src="img/appbilder/parken@3x.png"/>
         </div>
       </div>
       <div class="custom-row-border">
@@ -145,7 +146,7 @@
         </a>
       </div>
     </div>
-    <div id="Anfahrt" ng-show="showTab(3)">
+    <div id="Anfahrt" ng-show="arenaVM.showTab(3)">
       <div>
         <a class="remove-href-link" browse-to="https://www.google.de/maps/place/FC+W%C3%BCrzburger+Kickers/@49.7673476,9.9315861,17z/data=!3m1!4b1!4m2!3m1!1s0x47a29004af6dc71b:0xb4e13b93f4337623">
           <div class="set-max-width arena-maps" ></div>
